@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Exclude the public folder from the rewrite to prevent loops
+    RewriteRule ^public/ - [L]
+
+    # Rewrite everything else to the public folder
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+# Block access to sensitive files
+<FilesMatch "^\.env|composer\.json|composer\.lock|package\.json">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
