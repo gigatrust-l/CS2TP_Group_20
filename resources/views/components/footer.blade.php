@@ -22,7 +22,7 @@
             <div class="col-md-4 mb-4">
                 <h5>Get In Touch</h5>
                 <ul class="list-unstyled">
-                    <li><a href="" class="text-decoration-none">Contact Us</a></li>
+                    <li><a href="/contact" class="text-decoration-none">Contact Us</a></li>
                     <li>Email: <a class="text-decoration-none" href="mailto:NaturaleHelpDesk@gmail.com">NaturaleHelpDesk@gmail.com</a></li>
                 </ul>
             </div>
