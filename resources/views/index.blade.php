@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<footer lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <title>HealthSpace</title>
@@ -16,4 +14,3 @@
 <footer>
     @include('components/footer')
 </footer>
-</php>
