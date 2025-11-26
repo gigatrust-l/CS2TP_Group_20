@@ -91,7 +91,7 @@ nav button {
 
 }
 
-#product-selector {
+#recipe-selector {
     background-color: transparent;
     height: 65px;
     padding: 0px;
@@ -109,7 +109,7 @@ nav button {
     margin: auto;
 }
 
-.products {
+.recipes {
     text-align: center;
     align-items: center;
     max-height: 500px;
@@ -117,7 +117,7 @@ nav button {
     width: 100%;
 }
 
-.products img {
+.recipes img {
 
     max-width: 320px;
     width: 100%;
@@ -128,14 +128,14 @@ nav button {
 
 }
 
-#product {
+#recipe {
 
     padding-left: 20px;
 
     display: block;
 }
 
-#product p {
+#recipe p {
 
     padding-left: 10px;
 
@@ -200,7 +200,7 @@ nav button {
     }
 }
 
-.product-container{
+.recipe-container{
 
 
     display: flex;
@@ -209,7 +209,7 @@ nav button {
 
 }
 
-.product {
+.recipe {
 
     width: 350px;
 	height: 500px;
@@ -220,7 +220,7 @@ nav button {
 
 }
 
-.product-title {
+.recipe-title {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -231,7 +231,7 @@ padding-top:15px;
 }
 
 
-.product-image {
+.recipe-image {
 
     display: block;
     margin-left: auto;
@@ -243,7 +243,7 @@ padding-top:15px;
 
 }
 
-.product-description {
+.recipe-description {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -259,7 +259,7 @@ padding-top:15px;
 
 }
 
-.product-type {
+.recipe-type {
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 

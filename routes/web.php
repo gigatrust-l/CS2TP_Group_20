@@ -19,6 +19,11 @@ Route::get('/product}', function () {
     return view('products');
 });
 
+Route::get('/contact', function () {
+    return view('contact_form');
+});
+Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.submit');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -1,7 +1,6 @@
 <header class="main-header">
-    <a class="logo">
-        <img src="{{ asset('media/logo.png')}}" alt="HealthSpace Logo">
-        <h1 id="header-name"><em>HealthSpace</em></h1>
+    <a class="logo" href="/">
+        <img src="{{ asset('media/logo.png')}}" alt="Naturale Logo">
     </a>
     <nav>
         <a href="/">Home</a>
