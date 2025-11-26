@@ -24,6 +24,10 @@ Route::get('/contact', function () {
 });
 Route::post('/contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.submit');
 
+Route::get('/about', function () {
+    return view('about_us');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -14,7 +14,7 @@
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="/" class="text-decoration-none">Home</a></li>
-                    <li><a href="" class="text-decoration-none">About Us</a></li>
+                    <li><a href="/about" class="text-decoration-none">About Us</a></li>
                     <li><a href="/login" class="text-decoration-none">Login</a></li>
                 </ul>
             </div>
