@@ -44,6 +44,8 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
             </tr>
 
             <?php $runningTotal = 0;
+
+            $stock = true;
             
             foreach($cart as $item) {
                 
@@ -64,22 +66,50 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
                 <tr>
                 <td><?= $row["p_name"] ?></td>
                 <td>
-                    <form action="{{ route('cart.update') }}" method="post">
-                        @csrf
-                        <input type="hidden" name="pid" value="{{ $item['pid'] }}">
-                        <input type="number" name="quantity" value="{{ $item['quantity'] }}" min="1">
-                        <button type="submit">Update</button>
+                    <?php 
+                    if ($row['p_stock'] == 0) {
+                        $stock=false;
+                        echo "<p> Out Of Stock</p>";
+                    } else if ($row['p_stock'] < $item['quantity']) {
+                        $stock=false;
+                        echo "<p> Not enough stock for order</p>"; ?>
+                        <form action="{{ route('cart.update') }}" method="post">
+                            @csrf
+                            <input type="hidden" name="pid" value="{{ $item['pid'] }}">
+                            <input type="number" name="quantity" value="{{ $item['quantity'] }}" min="1" max="<?php echo $row['p_stock']; ?>">
+                            <button type="submit">Update</button>
 
-                    </form>
+                        </form>
+
+                    <?php } else {
+                        ?>
+
+
+                        <form action="{{ route('cart.update') }}" method="post">
+                            @csrf
+                            <input type="hidden" name="pid" value="{{ $item['pid'] }}">
+                            <input type="number" name="quantity" value="{{ $item['quantity'] }}" min="1" max="<?php echo $row['p_stock']; ?>">
+                            <button type="submit">Update</button>
+
+                        </form>
+
+                        <?php
+                    } 
+                    ?>
                 </td>
                 <td>£<?php echo $row['p_price'] * $item['quantity'];?></td>
                 <td>
-                    <a href="{{ route('cart.remove', $item['pid']) }}">Remove Item</a>
+                    <form action="{{ route('cart.remove', $item['pid']) }}" method="POST">
+                        @csrf
+                        <button type="submit">Remove</button>
+                    </form>
+
                 </td>
 
                 </tr>
 
             <?php 
+                if ($row['p_stock'] == 0) {$stock=false;}
                 $runningTotal += $row['p_price'] * $item['quantity'];
         
             }} ?>
@@ -88,7 +118,15 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
         <H2>Total: £<?echo $runningTotal?></h2>
 
-        <a href="/checkout">Checkout Now</a>
+        <?php if ($stock) { ?>
+
+        <a href="/checkout" >Checkout Now</a>
+
+        <?php } else { ?>
+
+        <p>Error In Basket</p>
+
+        <?php } ?>
 
         <?php } else { ?>
 

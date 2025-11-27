@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <?php
 
@@ -93,8 +93,8 @@ try {
                     @csrf
 
                     <input type="hidden" name="pid" value="{{ $prodid }}">
-                    <input type="number" name="quantity" value="1" min="1">
-                    <button type="submit">Add to Cart</button>
+                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>">
+                    <button type="submit"<?php if ($stock == 0) {echo "disabled";}?>>Add to Cart</button>
 
                 </form>
  
@@ -110,4 +110,4 @@ try {
 
 </body>
 
-</php>
+</html>
