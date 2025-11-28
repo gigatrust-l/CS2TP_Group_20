@@ -132,6 +132,20 @@ class CheckoutController extends Controller {
         $command = $db->prepare("UPDATE `orders` SET `o_status` = 'Processing' WHERE `oid` = :oid ");
         $command->execute([':oid'=>$oid]);
 
+        foreach ($cart as $item) {
+
+            $command = $db->prepare("SELECT * FROM products WHERE pid = :pid");
+            $command->execute([':pid'=>$item['pid']]);
+
+            foreach ($command as $row) {
+
+                $command2 = $db->prepare("UPDATE `products` SET `p_stock` = :newStock WHERE `oid` = :oid ");
+                $command2->execute([':oid'=>$oid, ':newStock'=>($row['p_stock']-$item['quantity'])]);
+
+            }
+
+        }
+
 
 
         return view('checkout.checkout_complete', compact('checkoutCart')); //returns view page for complete checkout
