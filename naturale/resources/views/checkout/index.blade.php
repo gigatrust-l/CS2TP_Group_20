@@ -30,7 +30,10 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
         <?php if (isset($cart)){if (count(value: $cart) > 0) {?>
 
-        <a href="{{ route('cart.clear') }}">Clear Cart</a>
+        <form action="{{ route('cart.clear') }}" method="POST">
+            @csrf
+            <button type="submit" class="btn btn-danger">Clear Cart</button>
+        </form>
 
         <table>
 
