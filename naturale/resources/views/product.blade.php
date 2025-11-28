@@ -37,6 +37,7 @@ try {
 	
 	foreach ($rows as $row) {
 
+
 		$name = $row["p_name"];
 		$description = $row["p_description"];
 		$price = $row["p_price"];
@@ -86,6 +87,16 @@ try {
                 <p>Stock Left: <?php echo $stock ?></p>
 
                 <p>Price: £<?php echo $price ?></p>
+
+                <form action="{{ route('cart.add') }}" method="post">
+
+                    @csrf
+
+                    <input type="hidden" name="pid" value="{{ $prodid }}">
+                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>">
+                    <button type="submit"<?php if ($stock == 0) {echo "disabled";}?>>Add to Cart</button>
+
+                </form>
  
 
             </div>
@@ -96,45 +107,7 @@ try {
 
     </div>
 
-    <div class="seperator"></div>
-
-    <footer id="main-footer">
-
-        <hr />
-
-        <div id="footer-links">
-
-            <a href="/">
-                <h2>Recipe Kitchen</h2>
-            </a>
-
-            <a href="/recipes">
-                <p>Recipes</p>
-            </a>
-
-            <a href="/contact">
-                <p>Contact Us</p>
-            </a>
-
-            <p class="filler">.</p>
-
-        </div>
-
-        <aside id="student-details">
-
-            <p class="student-text">Ethan Marsden</p>
-            <a href="mailto:240090270@aston.ac.uk">
-                <p class="student-text">240090270@aston.ac.uk</p>
-            </a>
-            <p class="student-text">240090270</p>
-
-        </aside>
-
-    </footer>
-
-    </div>
-
 
 </body>
 
-</php>
+</html>
