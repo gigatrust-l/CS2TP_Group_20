@@ -119,7 +119,8 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
         </table>
 
-        <H2>Total: £<?echo $runningTotal?></h2>
+        <h2>Total: £<?php echo $runningTotal ?></h2>
+
 
         <?php if ($stock) { ?>
 
