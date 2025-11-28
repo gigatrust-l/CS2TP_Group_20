@@ -1,5 +1,5 @@
-<!DOCTYPE php>
-<php lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <?php
 
@@ -141,4 +141,4 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
     
 </body>
 
-</php>
+</html>
