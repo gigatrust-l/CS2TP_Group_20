@@ -189,6 +189,8 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
 </html>
 
+<?php if ($user) { ?>
+
 <script>
 
     var addresses = <?php echo json_encode($addresses)?>;
@@ -261,3 +263,5 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
     }
 
 </script>
+
+<?php } ?>

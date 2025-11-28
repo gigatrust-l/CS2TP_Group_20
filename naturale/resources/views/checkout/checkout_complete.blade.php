@@ -48,7 +48,7 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
             foreach($rows as $row) {
 
-                ?> <li>{{ $row['p_name']}} - {{ $row['p_price'] }}</li> <?php
+                ?> <li> <?php echo $row['p_name'] ?> - <?php echo $row['p_price'] ?></li> <?php
                 $runningTotal += $row['p_price'] * $item['quantity'];
             
             }
@@ -57,7 +57,7 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
         ?> 
 
-        <h2>Total: £<?echo $runningTotal?></h2>
+        <h2>Total: £<?php echo $runningTotal ?></h2>
         
 
         

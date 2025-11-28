@@ -139,8 +139,8 @@ class CheckoutController extends Controller {
 
             foreach ($command as $row) {
 
-                $command2 = $db->prepare("UPDATE `products` SET `p_stock` = :newStock WHERE `oid` = :oid ");
-                $command2->execute([':oid'=>$oid, ':newStock'=>($row['p_stock']-$item['quantity'])]);
+                $command2 = $db->prepare("UPDATE `products` SET `p_stock` = :newStock WHERE `pid` = :pid ");
+                $command2->execute([':pid'=>$item['pid'], ':newStock'=>($row['p_stock']-$item['quantity'])]);
 
             }
 

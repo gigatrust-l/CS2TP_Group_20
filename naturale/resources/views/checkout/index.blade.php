@@ -121,7 +121,6 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
         <h2>Total: £<?php echo $runningTotal ?></h2>
 
-
         <?php if ($stock) { ?>
 
         <a href="/checkout" >Checkout Now</a>
