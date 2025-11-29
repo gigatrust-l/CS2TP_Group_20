@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,3 +41,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.view');
+Route::post('/product', [CartController::class, 'addItem'])->name('cart.add');
+Route::post('/cart/update', [CartController::class, 'updateItemQuantity'])->name('cart.update');
+Route::post('/cart/remove/{any}', [CartController::class, 'removeItem'])->name('cart.remove');
+Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
+
+Route::get('/checkout', [CheckoutController::class, 'viewCheckout'])->name('checkout.view');
+Route::post('/checkout', [CheckoutController::class, 'confirmCheckout'])->name('checkout.confirm');
+Route::get('/checkout/complete', [CheckoutController::class, 'completeCheckout'])->name('checkout.complete');
