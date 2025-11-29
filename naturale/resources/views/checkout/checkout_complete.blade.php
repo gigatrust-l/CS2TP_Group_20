@@ -14,7 +14,7 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
 <head>
     <meta charset="UTF-8" />
-    <title>Naturale</title>
+    <title>{{ config('app.name', 'Laravel') }} - Checkout Complete</title>
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
     
     <link rel="icon" href="{{ asset('/media/favicon.ico')}}" />

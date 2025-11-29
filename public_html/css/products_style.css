@@ -212,7 +212,7 @@ nav button {
 .product {
 
     width: 350px;
-	height: 500px;
+	height: 550px;
     outline: 0.01em solid black;
     border-radius: 15px;
     margin: 0;
@@ -226,7 +226,9 @@ nav button {
 
     text-align: center;
 
-padding-top:15px;
+	padding-top:15px;
+
+	height: 60px;
 
 }
 

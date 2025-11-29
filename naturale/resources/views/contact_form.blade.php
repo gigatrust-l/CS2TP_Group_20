@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Naturale - Contact Us</title>
+    <title>{{ config('app.name', 'Laravel') }} - Contact Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
 </head>

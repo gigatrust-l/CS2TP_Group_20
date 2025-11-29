@@ -57,7 +57,7 @@ try {
 
 <head>
     <meta charset="UTF-8" />
-    <title>Recipe Kitchen - <?php echo $name ?></title>
+    <title>{{ config('app.name', 'Laravel') }} - {{ $name }}</title>
     <link rel="stylesheet" href="{{ asset('css/product_style.css')}}" />
 	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
 </head>

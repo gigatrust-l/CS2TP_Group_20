@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Naturale - About Us</title>
+    <title>{{ config('app.name', 'Laravel') }} - About Us</title>
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>

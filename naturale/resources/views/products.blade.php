@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>HealthSpace - Products</title>
+    <title>{{ config('app.name', 'Laravel') }} - Product</title>
     <link rel="stylesheet" href="{{ asset('css/products_style.css')}}" />
 	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
 </head>
@@ -39,27 +39,39 @@
 
         	        try {
             
-            		$db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
-            	    $rows = $db->query("SELECT * FROM products");
+            			$db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
+            	    	$rows = $db->query("SELECT * FROM products");
+                    
+                    	$categories = [];
             
-                    foreach ($rows as $row) {
-                        ?>
-            	    <option value="<?= $row["p_category"] ?>" <?php if ($type == $row["p_category"]) echo 'selected'; ?>><?= $row["p_category"] ?></option>
+                    	foreach ($rows as $row) {
+                        
+                        	if (!in_array($row["p_category"],$categories)) {
+                        
+                        		$categories[] = $row["p_category"];                            
+                            
+                            }
 
-                <?php
+            			}
+            
+                    	foreach ($categories as $category) {
+                        	?>
+            	    		<option value="<?= $category ?>" <?php if ($type == $category) echo 'selected'; ?>><?= $category ?></option>
 
-            }
+                			<?php
 
-            } catch (PDOException $e) {
-                echo $e->getMessage();
-            }
+            			}
 
-            ?>
+            		} catch (PDOException $e) {
+                		echo $e->getMessage();
+            		}
+
+            		?>
         
-            </select>
+            	</select>
                 
                 
-        </div>
+        	</div>
             
         </div>
         <nav>
@@ -114,7 +126,7 @@
                 <div class="product">
 
                     <h2 class="product-title"><?= $row["p_name"] ?></h2>
-                    <img class="product-image" src="/public/<?= $row["p_image"] ?>">
+                    <img class="product-image" src="{{ asset($row['p_image']) }}">
                     <p class="product-description"><?= $row["p_description"] ?></p>
                     <p class="product-type"><?= $row["p_category"] ?></p>
                     <p class="product-type">£<?= $row["p_price"] ?></p>
