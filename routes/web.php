@@ -8,7 +8,7 @@ use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/products', function () {
     return view('products');
