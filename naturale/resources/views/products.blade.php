@@ -150,6 +150,8 @@
 
     </div>
 
+    @include('components/footer')
+
     
 
 </body>

@@ -66,6 +66,8 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
         ?>
 
     </section>
+
+    @include('components/footer')
     
 </body>
 

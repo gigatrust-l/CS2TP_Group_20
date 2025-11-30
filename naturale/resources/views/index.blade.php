@@ -12,6 +12,8 @@
 
 <body>
     @include('components/nav_bar_customer')
+
+    @include('components/footer')
 </body>
 
 </html>

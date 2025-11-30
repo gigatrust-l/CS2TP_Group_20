@@ -107,6 +107,8 @@ try {
 
     </div>
 
+    @include('components/footer')
+
 
 </body>
 

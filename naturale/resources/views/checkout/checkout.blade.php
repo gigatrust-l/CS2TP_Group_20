@@ -184,6 +184,8 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
         ?>
 
     </aside>
+
+    @include('components/footer')
     
 </body>
 
