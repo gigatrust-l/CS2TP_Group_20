@@ -7,5 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     protected $table = 'enquiries';
-    protected $fillable = ['name', 'email','subject','message'];
+    protected $primaryKey = 'eid';
+    public $timestamps = false;
+
+    protected $fillable = [
+        'e_name',
+        'e_email',
+        'e_subject',
+        'e_message',
+    ];
 }
+

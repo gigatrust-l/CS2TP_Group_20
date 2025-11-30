@@ -17,10 +17,10 @@ class ContactController extends Controller
         ]);
         // Save the message in the database
         Contact::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'subject' => $request->subject,
-            'message' => $request->message,
+            'e_name' => $request->name,
+            'e_email' => $request->email,
+            'e_subject' => $request->subject,
+            'e_message' => $request->message,
         ]);
         // Redirect and success message
         return back()->with('status', 'Thanks for contacting us! We will get back to you as soon as possible.');

@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
     return view('index');
@@ -30,9 +31,13 @@ Route::get('/about', function () {
     return view('about_us');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/orders', [OrderController::class, 'index'])->middleware(['auth'])->name('orders');
+
+Route::get('/orders/{order}', [OrderController::class, 'show'])
+    ->middleware(['auth'])
+    ->name('orders.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
