@@ -15,7 +15,7 @@ try {
 	$prodid =  trim($prodid, "/products/");
 
 	if (!is_numeric($prodid)) {
-        
+
 		header('Location: /products');
     	exit();}
 
@@ -29,12 +29,12 @@ try {
 
 	if ($count == 0) {
         // Redirect to the home page if no results
-        
+
 		header('Location: /products');
     	exit();
     }
 	$rows = $db->query("SELECT * FROM products WHERE pid = $prodid");
-	
+
 	foreach ($rows as $row) {
 
 
@@ -45,8 +45,11 @@ try {
         $stock = $row["p_stock"];
 		$category = $row["p_category"];
     	$feature = $row["p_feature"];
+        $ingredients = $row["p_ingredients"];
+        $instructions = $row["p_instructions"];
+        $volume = $row["p_volume"];
     }
-	
+
 
 } catch (PDOException $e) {
 	echo $e->getMessage();
@@ -57,57 +60,47 @@ try {
 
 <head>
     <meta charset="UTF-8" />
-    <title>Recipe Kitchen - <?php echo $name ?></title>
+    <title>Naturale Product Details - <?php echo $name ?></title>
     <link rel="stylesheet" href="{{ asset('css/product_style.css')}}" />
 	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     @include('components/nav_bar_customer')
 
-    <hr>
-
-
-    <div class="recipe-container">
-
-        <h1 id="recipe-title"><?php echo $name ?></h1>
-
-        <div class="recipe-img-desc">
-
-            <img class="recipe-img" src="../public/<?php echo $image ?>" />
-
-            <div>
-
-                <p><?php echo $description ?></p>
-
-                <p>Category: <?php echo $category ?></p>
-
-                <p>Feature: <?php echo $feature ?></p>
-
-                <p>Stock Left: <?php echo $stock ?></p>
-
-                <p>Price: £<?php echo $price ?></p>
-
-                <form action="{{ route('cart.add') }}" method="post">
-
-                    @csrf
-
-                    <input type="hidden" name="pid" value="{{ $prodid }}">
-                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>">
-                    <button type="submit"<?php if ($stock == 0) {echo "disabled";}?>>Add to Cart</button>
-
-                </form>
- 
-
+    <div class="container py-5">
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-3 mb-4">
+                    <img class="recipe-img" src="../public/<?php echo $image ?>" />
+            </div>
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h1 class="h2 mb-3"><?php echo $name ?></h1>
+                <div class="mb-3">
+                    <span class="h4">£<?php echo $price ?> | <?php echo $volume ?>ml</span>
+                </div>
+                <h5 class="my-1">Description</h5>
+                <p class="mb-2"><?php echo $description ?></p>
+                <h5 class="my-1">Ingredients</h5>
+                <p class="mb-2"><?php echo $ingredients ?></p>
+                <h5 class="my-1">How to use</h5>
+                <p class="mb-2"><?php echo $instructions ?></p>
             </div>
 
+            <div class="col-md-3">
+                <h1 class="h2 mb-3">Quantity</h1>
+                <form action="{{ route('cart.add') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="pid" value="{{ $prodid }}">
+                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>">
+                    <button class="btn btn-success" type="submit"<?php if ($stock == 0) {echo "disabled";}?>>Add to Cart</button>
+                </form>
+            </div>
         </div>
-
-        <br/>
-
     </div>
-
-
+@include('components/footer')
 </body>
 
 </html>
