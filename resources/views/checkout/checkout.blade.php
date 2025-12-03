@@ -10,13 +10,47 @@ $password = config('database.connections.mysql.password');
 
 $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
+$user = auth()->user();
+
+// Saved addresses
+$addresses = [];
+
+if($user) {
+    $stmt = $db->prepare("SELECT * FROM customer_address WHERE ca_cid = :uid");
+    $stmt->execute([':uid' => $user['id']]);
+    $rows = $stmt->fetchALL(PDO::FETCH_ASSOC);
+
+    foreach ($rows as $row) {
+        $addresses[] = [
+            $row['ca_line1'],
+            $row['ca_line2'],
+            $row['ca_city'],
+            $row['ca_county'],
+            $row['ca_postcode'],
+            $row['ca_country'],
+        ];
+    }
+}
+
+// To calculate the total price
+$total = 0;
+
+foreach ($cart as $item) {
+    $stmt = $db->prepare("SELECT p_price FROM products WHERE pid = :id");
+    $stmt->execute([':id' => $item['pid']]);
+    $price = $stmt->fetchColumn();
+    if ($price) {
+        $total += $price * $item['quantity'];
+    }
+}
+
 ?>
 
 <head>
     <meta charset="UTF-8" />
-    <title>Naturale</title>
+    <title>Naturale - Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
-    
     <link rel="icon" href="{{ asset('/media/favicon.ico')}}" />
 </head>
 
@@ -24,244 +58,234 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 <body>
     @include('components/nav_bar_customer')
 
-    <section style="float: left;">
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Checkout form</h2>
+            <p>Fill in the form below to complete checkout.</p>
+        </div>
 
-        <h1>Checkout</h1>
+        <div class="row g-5">
+            <!-- Left side: Billing, shipping and payment form -->
+            <div class="col-lg-7">
+                <h4 class="mb-3">Billing Address</h4>
 
-        <?php
+                <form action="{{ route('checkout.confirm') }}" method="POST">
+                    @csrf
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                   id="name" name="name"
+                                   value="{{ old('name', $user ? $user->name : '') }}" required>
+                            @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                   id="email" name="email"
+                                   value="{{ old('email', $user ? $user->email : '') }}" required>
+                            @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                    </div>
 
-        $user = auth()->user();
+                    <!-- Saved addresses -->
+                    @if($user && count($addresses) >0)
+                        <div class="mt-4 mb-3">
+                            <label class="form-label">Saved Addresses</label>
+                            <select class="form-select" id="address_drop_down">
+                                <option value="new">Use New Address</option>
+                                @foreach($addresses as $index => $a)
+                                    <option value="{{ $index }}">{{ implode(', ', $a) }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    @endif
 
-        ?>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label class="form-label">Address Line 1</label>
+                            <input type="text" class="form-control address_input"
+                                   id="addressLine1" name="addressLine1"
+                                   value="{{ old('addressLine1') }}" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Address Line 2</label>
+                            <input type="text" class="form-control address_input"
+                                   id="addressLine2" name="addressLine2"
+                                   value="{{ old('addressLine2') }}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">County</label>
+                            <input type="text" class="form-control address_input"
+                                   id="addressCounty" name="addressCounty"
+                                   value="{{ old('addressCounty') }}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Postcode</label>
+                            <input type="text" class="form-control address_input"
+                                   id="addressPostcode" name="addressPostcode"
+                                   value="{{ old('addressPostcode') }}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control address_input"
+                                   id="addressCountry" name="addressCountry"
+                                   value="{{ old('addressCountry') }}" required>
+                        </div>
+                    </div>
 
-        <form action="{{ route('checkout.confirm') }}" method="post">
-            @csrf
-            <div name="Personal details">
-                <h2>Personal Details</h2>
+                    <hr class="my-4">
 
-                <?php if ($user == null) {?>
+                    <h4 class="mb-3">Payment</h4>
 
-                <p>Full Name</p>
-                <input type="text" name="name" required/>
-                <p>Email Address</p>
-                <input type="email" name="email" required/>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Name on card</label>
+                            <input type="text" class="form-control @error('card_name') is-invalid @enderror"
+                                   id="cardName" name="card_name" required>
+                            @error('card_name') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Card number</label>
+                            <input type="text" class="form-control @error('card_number') is-invalid @enderror"
+                                   id="cardNumber" name="card_number" required>
+                            @error('card_number') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Expiry</label>
+                            <input type="text" class="form-control @error('card_expiry') is-invalid @enderror"
+                                   id="cardExpiry" name="card_expiry" placeholder="MM/YY" required>
+                            @error('card_expiry') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">CVV</label>
+                            <input type="text" class="form-control @error('card_CVV') is-invalid @enderror"
+                                   id="cardCVV" name="card_CVV" required>
+                            @error('card_CVV') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                    </div>
 
-                <?php } else { ?>
+                    <button class="btn btn-success w-100 btn-lg mt-4" type="submit">Complete Checkout</button>
 
-                <p>Full Name</p>
-                <input type="text" name="name" value="<?php echo $user['name'] ?>" required/>
-                <p>Email Address</p>
-                <input type="email" name="email" value="<?php echo $user['email'] ?>" required/>
-
-                
-                <?php } ?>
-
+                </form>
             </div>
 
-            <div name="address">
-                <h2>Address</h2>
-                <?php
-                
-                if ($user) {
+            <!-- Right side: order summary -->
+            <div class="col-lg-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Your Cart</span>
+                            <span class="badge rounded-pill text-bg-secondary">{{ array_sum(array_column($cart, 'quantity')) }}</span>
+                        </h4>
+                        <ul class="list-group mb-3">
+                            @foreach($cart as $item)
+                                    <?php
+                                    $stmt = $db->prepare("SELECT * FROM products WHERE pid = :id");
+                                    $stmt->execute([':id' => $item['pid']]);
+                                    $product = $stmt->fetch(PDO::FETCH_ASSOC);
+                                    ?>
+                                @if($product)
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <strong>{{ $product['p_name'] }}</strong>
+                                            <div class="text-muted">Quantity: {{ $item['quantity'] }}</div>
+                                        </div>
+                                        <span class="text-muted">£{{ number_format($product['p_price'], 2) }} per item</span>
+                                    </li>
+                                @endif
+                            @endforeach
 
-                $addresses = [];
-        
-            	$stmt = $db->prepare("SELECT * FROM customer_address WHERE ca_cid = :uid");
-				$stmt->execute([':uid' => $user['id']]);
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);   
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (GBP)</span>
+                                <strong>£{{ number_format($total, 2) }}</strong>
+                            </li>
+                        </ul>
 
-                $count = 0;
+                    </div>
+                </div>
 
-                foreach ($rows as $row) {
+            </div>
+        </div>
+    </div>
 
-                    if ($row != null) {
+    @if($user && count($addresses) > 0)
+        <script>
 
-                        $addresses[$count] = [$row['ca_line1'],$row['ca_line2'], $row['ca_city'], $row['ca_county'], $row['ca_postcode'], $row['ca_country']];
+            var addresses = <?php echo json_encode($addresses)?>;
+
+            var reset_text = true;
+
+            const addressdropdown = document.getElementById("address_drop_down");
+
+            const addressLine1 = document.getElementById("addressLine1");
+            const addressLine2 = document.getElementById("addressLine2");
+            const addressCity = document.getElementById("addressCity");
+            const addressCounty = document.getElementById("addressCounty");
+            const addressPostcode = document.getElementById("addressPostcode");
+            const addressCountry = document.getElementById("addressCountry");
+
+
+            addressdropdown.addEventListener("change", function() {
+
+                var count = 0;
+
+                if (addressdropdown.value == "new" && reset_text == true) {
+
+                        addressLine1.value = "";
+                        addressLine2.value = "";
+                        addressCity.value = "";
+                        addressCounty.value = "";
+                        addressPostcode.value = "";
+                        addressCountry.value = "";
+
+                }
+
+                for (var address of addresses) {
+
+                    if (count == addressdropdown.value) {
+
+                        addressLine1.value = address[0];
+                        addressLine2.value = address[1];
+                        addressCity.value = address[2];
+                        addressCounty.value = address[3];
+                        addressPostcode.value = address[4];
+                        addressCountry.value = address[5];
 
                     }
 
-                    $count++;
+                    count = count + 1;
 
                 }
-                ?> 
-                
-                    <label for="address_drop_down">Choose Your addresss</label>
-                    <select name="addresses" id="address_drop_down">
-                        <option value="new">New Address</option>
-                
-                <?php
-                $count = 0;
-                foreach ($addresses as $address) {
-                    ?>
-                    <option value="{{ $count }}">{{ print_r(implode(', ', $address)) }}</option>
-                    <?php
-                    $count++;
-                }
 
-                echo "</select>";
+                reset_text = true;
 
-                }?>
-                <p name="newline delete once formated"></p>
-                <label for="address_drop_down">Address Line 1</label>
-                <input type="text" class="address_input" id="addressLine1" name="addressLine1" required/>
-                <p name="newline delete once formated"></p>
-                <label for="address_drop_down">Address Line 2</label>
-                <input type="text" class="address_input" id="addressLine2" name="addressLine2" required/>
-                <p name="newline delete once formated"></p>
-                <label for="address_drop_down">City</label>
-                <input type="text" class="address_input" id="addressCity" name="addressCity" required/>
-                <p name="newline delete once formated"></p>
-                <label for="address_drop_down">County</label>
-                <input type="text" class="address_input" id="addressCounty" name="addressCounty" required/>
-                <p name="newline delete once formated"></p>
-                <label for="address_drop_down">Postcode</label>
-                <input type="text" class="address_input" id="addressPostcode" name="addressPostcode" required/>
-                <p name="newline delete once formated"></p>
-                <label for="address_drop_down">Country</label>
-                <input type="text" class="address_input" id="addressCountry" name="addressCountry" required/>
-                <p name="newline delete once formated"></p>
+            });
 
-            </div>
+            var inputs = document.getElementsByClassName("address_input");
 
-            <div name="payment">
+            for (var input of inputs) {
 
-                <h2>Payment Details</h2>
-                
-                <label for="card_number">Name on Card</label>
-                <input name="card_name" value="L M Placeholder">
-                <p name="newline delete once formated"></p>
-                
-                <label for="card_number">Card Number</label>
-                <input name="card_number" value="0000">
-                <input name="card_number" value="0000">
-                <input name="card_number" value="0000">
-                <input name="card_number" value="0000">
-                <p name="newline delete once formated"></p>
-                
-                <label for="card_number">Card Expiry</label>
-                <input name="card_expiry" value="01">
-                <label>/</label>
-                <input name="card_expiry" value="10">
-                <p name="newline delete once formated"></p>
-                
-                <label for="card_number">CCV</label>
-                <input name="card_CCV" value="123">
 
-            </div>
+                input.addEventListener("change", function() {
 
-            <button type="submit">Complete Checkout</button>
+                    reset_text = false;
 
-        </form>
+                    if (addressdropdown.value != "new") {
 
-    </section>
+                        addressdropdown.value = "new";
 
-    <aside style="float: right;">
+                    }
 
-        <h2>Cart</h2>
+                });
 
-        <?php
-
-        foreach($cart as $item) {
-                
-            try {
-        
-                $stmt = $db->prepare("SELECT * FROM products WHERE pid = :id");
-                $stmt->execute([':id' => $item['pid']]);
-                $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); 
-            
-            } catch (PDOException $e) {
-                echo $e->getMessage();
             }
 
-            foreach($rows as $row) {
+        </script>
+    @endif
 
-                ?> <li>{{ $row['p_name']}}</li> <?php
-            
-            }
-        
-        }
+    @include('components/footer')
 
-        ?>
-
-    </aside>
-    
 </body>
-
 </html>
 
-<?php if ($user) { ?>
-
-<script>
-
-    var addresses = <?php echo json_encode($addresses)?>;
-
-    var reset_text = true;
-
-    const addressdropdown = document.getElementById("address_drop_down");
-
-    const addressLine1 = document.getElementById("addressLine1");
-    const addressLine2 = document.getElementById("addressLine2");
-    const addressCity = document.getElementById("addressCity");
-    const addressCounty = document.getElementById("addressCounty");
-    const addressPostcode = document.getElementById("addressPostcode");
-    const addressCountry = document.getElementById("addressCountry");
-    
-
-    addressdropdown.addEventListener("change", function() {
-
-        var count = 0;
-
-        if (addressdropdown.value == "new" && reset_text == true) {
-
-                addressLine1.value = "";
-                addressLine2.value = "";
-                addressCity.value = "";
-                addressCounty.value = "";
-                addressPostcode.value = "";
-                addressCountry.value = "";
-
-        }
-        
-        for (var address of addresses) {
-
-            if (count == addressdropdown.value) {
-
-                addressLine1.value = address[0];
-                addressLine2.value = address[1];
-                addressCity.value = address[2];
-                addressCounty.value = address[3];
-                addressPostcode.value = address[4];
-                addressCountry.value = address[5];
-
-            }
-
-            count = count + 1;
-
-        }
-
-        reset_text = true;
-
-    });
-
-    var inputs = document.getElementsByClassName("address_input");
-
-    for (var input of inputs) {
-    
-
-        input.addEventListener("change", function() {
-
-            reset_text = false;
-
-            if (addressdropdown.value != "new") {
-
-                addressdropdown.value = "new";
-
-            }
-
-        });
-
-    }
-
-</script>
-
-<?php } ?>
