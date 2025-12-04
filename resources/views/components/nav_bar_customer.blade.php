@@ -14,7 +14,7 @@
         if ($user == null) {
             echo '<a href="/login">Login</a>';
         } else {
-            echo '<a href="/dashboard">Dashboard</a>';
+            echo '<a href="/dashboard">My Account</a>';
         }
 
         ?>
