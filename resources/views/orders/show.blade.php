@@ -57,7 +57,7 @@
                                         <tr class="hover:bg-green-300 transition-colors">
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-white ">{{ $item->product->p_name ?? 'Unknown Product' }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-white ">{{ $item->oi_quantity }}</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white ">${{ number_format($item->oi_ind_price, 2) }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white ">£{{ number_format($item->oi_ind_price, 2) }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
