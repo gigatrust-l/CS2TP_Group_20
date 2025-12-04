@@ -74,7 +74,7 @@ try {
         <div class="row">
             <!-- Product Image -->
             <div class="col-md-3 mb-4">
-                    <img class="recipe-img" src="../public/<?php echo $image ?>" />
+            	<img class="recipe-img" src="{{ asset($image) }}" />
             </div>
             <!-- Product Details -->
             <div class="col-md-6">
