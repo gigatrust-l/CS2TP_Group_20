@@ -11,6 +11,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>HealthSpace - Products</title>
+    <meta name="viewport" content ="width=device-width, initial-scale=1" >
     <link rel="stylesheet" href="{{ asset('css/products_style.css')}}" />
 	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
 </head>
