@@ -1,3 +1,11 @@
+:root {
+    --primary: #bbcba8;
+    --secondary: #354024;
+    --lavanderButton: #e2a9f1;
+    --lightGreenButton: #889063;
+    --gray: #d9d9d9;
+  }
+
 li,
 p,
 pre {
@@ -25,14 +33,14 @@ a {
 #main-header {
     padding: 60px;
     text-align: center;
-    background: #27bc1a;
+    background: var(--primary);
     color: white;
     font-size: 30px;
 }
 
 header {
     flex-wrap: wrap;
-    background-color: #4CAF50;
+    background-color:#bbcba8;
     color: white;
     padding: 20px 50px;
     display: flex;
@@ -67,15 +75,15 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #388E3C;
+    background-color: var(--lightGreenButton);
 }
 
 #header-name {
     display: flex;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Inter', 'Work Sans', 'Arial Narrow Bold', sans-serif, Impact, Haettenschweiler, sans-serif;
     padding-top: 10px;
     padding-left: 10px;
-
+  
 }
 
 #title {
@@ -226,4 +234,86 @@ nav a:hover {
 
     margin-bottom: 10px;
 
+
 }
+
+
+
+
+
+/* Mobile View CSS */
+
+
+@media (max-width: 600px) {
+
+
+
+
+
+  header img {
+
+
+    height: 45px;
+
+
+  }
+
+
+
+
+
+  .recipe-img {
+
+
+        width: 100%;
+
+
+        max-width: 250px;
+
+
+        height: auto; 
+
+
+    }
+
+
+  
+
+
+}
+
+
+
+
+
+@media (max-width: 900px) {
+
+
+
+
+
+  header {
+
+
+    padding: 15px 20px;
+
+
+    flex-direction: column;
+
+
+    text-align: center;
+
+
+  }
+
+
+
+
+
+  nav {
+
+
+    justify-content: center;
+
+
+  }
