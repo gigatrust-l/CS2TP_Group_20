@@ -7,6 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<<<<<<< Updated upstream
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -59,3 +60,36 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+Naturale is an e-commerce website designed for haircare brand. \
+The main functions are:
+- Browse natural haircare products through different multiple categories
+- Filter by category
+- Add products to cart
+- Simulate checkout
+- Register, login, update personal details including password (forgot my password), and logout
+
+Naturale is aimed for customers who care about their hair health, are interested in
+high quality natural and environmentally responsible products, and those who look for
+clean, ethical and organic products.
+---
+## Tech Stack
+### Frontend
+- HTML
+- CSS
+- Bootstrap
+- Blade Templates (Laravel)
+### Backend
+- Laravel
+- PHP
+- Database
+  - MySQL
+  - PDO (some queries)
+  - Laravel database config
+### Tools and Workflow
+- Git and GitHub
+- Trello / Notion (task management and documentation)
+- XAMPP / phpMyAdmin
+- VS Code / PhpStorm
+---
+>>>>>>> Stashed changes

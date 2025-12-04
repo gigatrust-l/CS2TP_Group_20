@@ -64,43 +64,86 @@ try {
     <link rel="stylesheet" href="{{ asset('css/product_style.css')}}" />
 	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            object-fit: cover;
+        }
+        .product-section-title {
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     @include('components/nav_bar_customer')
 
     <div class="container py-5">
-        <div class="row">
+        <div class="row g-5">
             <!-- Product Image -->
             <div class="col-md-3 mb-4">
-                    <img class="recipe-img" src="../public/<?php echo $image ?>" />
+                    <img class="product-img shadow-sm" src="../public/<?php echo $image ?>" />
             </div>
             <!-- Product Details -->
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <h1 class="h2 mb-3"><?php echo $name ?></h1>
                 <div class="mb-3">
                     <span class="h4">£<?php echo $price ?> | <?php echo $volume ?>ml</span>
                 </div>
-                <h5 class="my-1">Description</h5>
-                <p class="mb-2"><?php echo $description ?></p>
-                <h5 class="my-1">Ingredients</h5>
-                <p class="mb-2"><?php echo $ingredients ?></p>
-                <h5 class="my-1">How to use</h5>
-                <p class="mb-2"><?php echo $instructions ?></p>
+                <div class="mb-4">
+                    <h5 class="product-section-title">Description</h5>
+                    <p class="mb-2"><?php echo $description ?></p>
+                </div>
+                <div class="mb-4">
+                    <h5 class="product-section-title">Ingredients</h5>
+                    <p class="mb-2"><?php echo $ingredients ?></p>
+                </div>
+                <div class="mb-4">
+                    <h5 class="product-section-title">How to use</h5>
+                    <p class="mb-2"><?php echo $instructions ?></p>
+                </div>
             </div>
 
             <div class="col-md-3">
-                <h1 class="h2 mb-3">Quantity</h1>
-                <form action="{{ route('cart.add') }}" method="post">
-                    @csrf
-                    <input type="hidden" name="pid" value="{{ $prodid }}">
-                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $stock; ?>">
-                    <button class="btn btn-success" type="submit"<?php if ($stock == 0) {echo "disabled";}?>>Add to Cart</button>
-                </form>
+                <div class="p-3 bg-light border rounded shadow-sm">
+                    <h5 class="fw-semibold mb-3">Purchase</h5>
+                    <p class="mb-1">
+                        <strong>Stock:</strong>
+                            <?php if ($stock > 0): ?>
+                        <span class="text-success">In Stock</span>
+                        <?php else: ?>
+                            <span class="text-danger">Out of Stock</span>
+                        <?php endif; ?>
+                    </p>
+
+                    <form action="{{ route('cart.add') }}" method="POST" class="mt-3">
+                        @csrf
+
+                        <input type="hidden" name="pid" value="{{ $prodid }}">
+
+                        <label class="form-label fw-semibold">Quantity</label>
+                        <input type="number"
+                               name="quantity"
+                               class="form-control mb-3"
+                               value="1"
+                               max="<?php echo max(1, $stock); ?>"
+                               <?php if ($stock == 0) echo 'disabled'; ?>>
+                        <button class="btn btn-success w-100" type="submit"
+                            <?php if ($stock == 0) echo 'disabled'; ?>>
+                            <?php echo ($stock > 0) ? "Add to Cart" : "Unavailable"; ?>
+                        </button>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
-@include('components/footer')
+    <footer>
+        @include('components/footer')
+    </footer>
 </body>
 
 </html>

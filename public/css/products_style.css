@@ -72,7 +72,7 @@ nav a:hover {
 
 nav button {
 
-    
+
     color: black;
 
 }
@@ -283,7 +283,7 @@ padding-top:15px;
     font-weight: normal;
 
     width:100%;
-    
+
     display: block;
     font-size: 2em;
     margin-top: 0.67em;
@@ -294,8 +294,8 @@ padding-top:15px;
 }
 
 .search-div {
-	
-	
+
+
     flex-wrap: wrap;
     padding: 20px 50px;
     display: flex;

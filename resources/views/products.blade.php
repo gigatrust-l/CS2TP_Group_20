@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
-    
+<?php
+
 	$name = $_GET['name'] ?? null;
 	$type = $_GET['type'] ?? null;
 
@@ -38,10 +38,10 @@
 
 
         	        try {
-            
+
             		$db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
             	    $rows = $db->query("SELECT * FROM products");
-            
+
                     foreach ($rows as $row) {
                         ?>
             	    <option value="<?= $row["p_category"] ?>" <?php if ($type == $row["p_category"]) echo 'selected'; ?>><?= $row["p_category"] ?></option>
@@ -55,12 +55,12 @@
             }
 
             ?>
-        
+
             </select>
-                
-                
+
+
         </div>
-            
+
         </div>
         <nav>
             <button type="submit" id="searchbutton">Search</button>
@@ -82,35 +82,35 @@
         try {
 
             $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
-        
+
         	if ($name != null && $type != null) {
-        
+
             	$stmt = $db->prepare("SELECT * FROM products WHERE p_name LIKE :name && p_category = :type");
 				$stmt->execute([':name'=>"%$name%", ':type' => $type]);
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);          
-            
+				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
             } else if ($name != null ) {
-        
+
             	$stmt = $db->prepare("SELECT * FROM products WHERE p_name LIKE :name");
 				$stmt->execute([':name'=>"%$name%"]);
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);          
-            
+				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
             } else if ($type != null) {
-        
+
             	$stmt = $db->prepare("SELECT * FROM products WHERE p_category = :type");
 				$stmt->execute([':type' => $type]);
-				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);          
-            
+				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
             } else {
-            
+
             	$rows = $db->query("SELECT * FROM products");
-            
+
             }
             foreach ($rows as $row) {
                 ?>
 
                 <a href="/products/<?=$row["pid"] ?>" id="plain-link">
-                
+
                 <div class="product">
 
                     <h2 class="product-title"><?= $row["p_name"] ?></h2>
@@ -121,7 +121,7 @@
                     <br>
 
                 </div>
-                
+
                 </a>
 
                 <br/>
@@ -138,8 +138,12 @@
 
     </div>
 
-    
+
 
 </body>
 
-</php>
+<footer>
+    @include('components/footer')
+</footer>
+
+</html>

@@ -102,5 +102,7 @@
     </div>
 </section>
 
-@include('components/footer')
+    <footer>
+        @include('components/footer')
+    </footer>
 </body>
