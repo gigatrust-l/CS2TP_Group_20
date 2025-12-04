@@ -80,14 +80,19 @@ try {
             <div class="col-md-6">
                 <h1 class="h2 mb-3"><?php echo $name ?></h1>
                 <div class="mb-3">
-                    <span class="h4">£<?php echo $price ?> | <?php echo $volume ?>ml</span>
+                    <span class="h4">£<?php echo $price ?> <?php if ($volume != null) { ?>| <?php echo $volume ?>ml <?php } ?></span>
                 </div>
                 <h5 class="my-1">Description</h5>
                 <p class="mb-2"><?php echo $description ?></p>
+                <?php if ($ingredients != null) { ?>
                 <h5 class="my-1">Ingredients</h5>
                 <p class="mb-2"><?php echo $ingredients ?></p>
+                <?php } 
+				if ($instructions != null) { 	
+				?>
                 <h5 class="my-1">How to use</h5>
                 <p class="mb-2"><?php echo $instructions ?></p>
+                <?php } ?>
             </div>
 
             <div class="col-md-3">
