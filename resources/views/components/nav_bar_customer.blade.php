@@ -18,9 +18,9 @@
             <?php
                 $user = auth()->user();
                 if ($user == null) {
-                    echo '<a href="/login" title="My Account" aria-label="myAccount"><i class="fa-solid fa-user" style="color: #354024;"></i></a>';
+                    echo '<a href="/login" title="Login/Register" aria-label="Login/Register"><i class="fa-solid fa-user" style="color: #354024;"></i></a>';
                 } else {
-                    echo '<a href="/dashboard">Dashboard</a>';
+                    echo '<a href="/dashboard" title="My Account" aria-label="My Account"><i class="fa-solid fa-user" style="color: #354024;"></i></a>';
                 }
             ?>
             <a href="/cart" title="Cart" aria-label="Cart"><i class="fa-solid fa-cart-shopping" style="color: #354024;"></i></a>
