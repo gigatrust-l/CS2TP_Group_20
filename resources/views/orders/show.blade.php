@@ -17,7 +17,7 @@
                             <span class="font-semibold">Order ID:</span> {{ $order->oid }}
                         </div>
                         <div>
-                            <span class="font-semibold">Price:</span> ${{ number_format($order->o_price, 2) }}
+                            <span class="font-semibold">Price:</span> £{{ number_format($order->o_price, 2) }}
                         </div>
                         <div>
                             <span class="font-semibold">Status:</span> 
