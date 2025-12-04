@@ -107,30 +107,42 @@ foreach ($cart as $item) {
                             <input type="text" class="form-control address_input"
                                    id="addressLine1" name="addressLine1"
                                    value="{{ old('addressLine1') }}" required>
+                            @error('addressLine1') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                         <div class="col-12">
                             <label class="form-label">Address Line 2</label>
                             <input type="text" class="form-control address_input"
                                    id="addressLine2" name="addressLine2"
                                    value="{{ old('addressLine2') }}" required>
+                            @error('addressLine2') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control address_input"
+                                   id="addressCity" name="addressCity"
+                                   value="{{ old('addressCity') }}" required>
+                            @error('addressCity') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="col-md-6">
                             <label class="form-label">County</label>
                             <input type="text" class="form-control address_input"
                                    id="addressCounty" name="addressCounty"
                                    value="{{ old('addressCounty') }}" required>
+                            @error('addressCounty') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label class="form-label">Postcode</label>
                             <input type="text" class="form-control address_input"
                                    id="addressPostcode" name="addressPostcode"
                                    value="{{ old('addressPostcode') }}" required>
+                            @error('addressPostcode') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label class="form-label">Country</label>
                             <input type="text" class="form-control address_input"
                                    id="addressCountry" name="addressCountry"
                                    value="{{ old('addressCountry') }}" required>
+                            @error('addressCountry') <div class="invalid-feedback">{{ $message }}</div> @enderror
                         </div>
                     </div>
 
