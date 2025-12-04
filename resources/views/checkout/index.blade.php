@@ -15,8 +15,8 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 <head>
     <meta charset="UTF-8" />
     <title>Naturale</title>
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
-    
+        <meta name="viewport" content ="width=device-width, initial-scale=1" >
+        <link rel="stylesheet" href="{{ asset('/css/cart_style.css')}}" />
     <link rel="icon" href="{{ asset('/media/favicon.ico')}}" />
 </head>
 
