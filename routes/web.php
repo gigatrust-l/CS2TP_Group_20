@@ -22,6 +22,30 @@ Route::get('/product}', function () {
     return view('products');
 });
 
+Route::get('/ingredients/{ingredient}', function ($ingredient){
+    return view('ingredients.' . $ingredient);
+});
+
+Route::get('/shea-butter', function () {
+    return view('/ingredients/shea-butter');
+});
+
+Route::get('/coconut-oil', function () {
+    return view('/ingredients/coconut-oil');
+});
+
+Route::get('/pomegranate-oil', function () {
+    return view('/ingredients/pomegranate-oil');
+});
+
+Route::get('/avocado-extract', function () {
+    return view('/ingredients/avocado-extract');
+});
+
+Route::get('/tea-tree-oil', function () {
+    return view('/ingredients/tea-tree-oil');
+});
+
 Route::get('/contact', function () {
     return view('contact_form');
 });
