@@ -158,6 +158,35 @@ $accessories = [
         </div>
     </section>
 
+
+    <section class="pt-5 pb-3 px-2" id="OurIngredients">
+            <h2>Our Ingredients</h2></br></br>
+        <div class="container">
+            <div class="ingredientImages">
+                <div class="item">
+                    <img src="{{ asset('media/shea.png') }}" class="static-img mb-2">
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">Shea Butter</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/coconut.png') }}" class="static-img mb-2">
+                    <a href="/coconut-oil" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/pomegranate.png') }}" class="static-img mb-2">
+                    <a href="/pomegranate-oil" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/avocado.png') }}" class="static-img mb-2">
+                    <a href="/avocado-extract" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/teatree.png') }}" class="static-img mb-2">
+                    <a href="/tea-tree-oil" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
     @include('components/footer')
     </footer>

@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/products', function () {
     return view('products');
@@ -19,6 +22,30 @@ Route::get('/product}', function () {
     return view('products');
 });
 
+Route::get('/ingredients/{ingredient}', function ($ingredient){
+    return view('ingredients.' . $ingredient);
+});
+
+Route::get('/shea-butter', function () {
+    return view('/ingredients/shea-butter');
+});
+
+Route::get('/coconut-oil', function () {
+    return view('/ingredients/coconut-oil');
+});
+
+Route::get('/pomegranate-oil', function () {
+    return view('/ingredients/pomegranate-oil');
+});
+
+Route::get('/avocado-extract', function () {
+    return view('/ingredients/avocado-extract');
+});
+
+Route::get('/tea-tree-oil', function () {
+    return view('/ingredients/tea-tree-oil');
+});
+
 Route::get('/contact', function () {
     return view('contact_form');
 });
@@ -28,9 +55,13 @@ Route::get('/about', function () {
     return view('about_us');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/orders', [OrderController::class, 'index'])->middleware(['auth'])->name('orders');
+
+Route::get('/orders/{order}', [OrderController::class, 'show'])
+    ->middleware(['auth'])
+    ->name('orders.show');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -39,3 +70,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.view');
+Route::post('/product', [CartController::class, 'addItem'])->name('cart.add');
+Route::post('/cart/update', [CartController::class, 'updateItemQuantity'])->name('cart.update');
+Route::post('/cart/remove/{any}', [CartController::class, 'removeItem'])->name('cart.remove');
+Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
+
+Route::get('/checkout', [CheckoutController::class, 'viewCheckout'])->name('checkout.view');
+Route::post('/checkout', [CheckoutController::class, 'confirmCheckout'])->name('checkout.confirm');
+Route::get('/checkout/complete', [CheckoutController::class, 'completeCheckout'])->name('checkout.complete');

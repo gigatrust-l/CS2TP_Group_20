@@ -21,21 +21,44 @@
     <hr>
     <form class="search-div" >
         <div style="display: flex; gap:10px;width:auto;">
-        <div class="search-title" style="display: flex; gap:10px;width:auto;">
-            <h1 >Search</h1>
-        	<input id="search-box" placeholder="Product Name..." name="name" value="<?= $name ?>"></input>
-        </div>
-        <div class="search-type" style="display: flex; gap:10px; width:auto;">
-            <h1 style="width:auto;">Type</h1>
-            <select name="type" id="search-box">
-            	<option value="" <?php if ($type == null) echo 'selected'; ?>>Any</option>
-            	<option value="French" <?php if ($type == 'French') echo 'selected'; ?>>French</option>
-            	<option value="Italian" <?php if ($type == 'Italian') echo 'selected'; ?>>Italian</option>
-            	<option value="Chinese" <?php if ($type == 'Chinese') echo 'selected'; ?>>Chinese</option>
-            	<option value="Indian" <?php if ($type == 'Indian') echo 'selected'; ?>>Indian</option>
-            	<option value="Mexican" <?php if ($type == 'Mexican') echo 'selected'; ?>>Mexican</option>
-            	<option value="Others" <?php if ($type == 'Others') echo 'selected'; ?>>Others</option>
+            <div class="search-title" style="display: flex; gap:10px;width:auto;">
+                <h1 >Search</h1>
+        	    <input id="search-box" placeholder="Product Name..." name="name" value="<?= $name ?>"></input>
+            </div>
+            <div class="search-type" style="display: flex; gap:10px; width:auto;">
+                <h1 style="width:auto;">Type</h1>
+                <select name="type" id="search-box">
+            	    <option value="" <?php if ($type == null) echo 'selected'; ?>>Any</option>
+                    <?php
+
+			        $host = config('database.connections.mysql.host');
+			        $database = config('database.connections.mysql.database');
+			        $username = config('database.connections.mysql.username');
+			        $password = config('database.connections.mysql.password');
+
+
+        	        try {
+            
+            		$db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
+            	    $rows = $db->query("SELECT * FROM products");
+            
+                    foreach ($rows as $row) {
+                        ?>
+            	    <option value="<?= $row["p_category"] ?>" <?php if ($type == $row["p_category"]) echo 'selected'; ?>><?= $row["p_category"] ?></option>
+
+                <?php
+
+            }
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+
+            ?>
+        
             </select>
+                
+                
         </div>
             
         </div>
@@ -50,31 +73,31 @@
     <div class="product-container">
         <?php
 
-		$host = config('mysql.DATABASE.MYSQL_HOST');
-		$database = config('mysql.DATABASE.MYSQL_DATABASE');
-		$user = config('mysql.DATABASE.MYSQL_USERNAME');
-		$password = config('mysql.DATABASE.MYSQL_PASSWORD');
+		$host = config('database.connections.mysql.host');
+		$database = config('database.connections.mysql.database');
+		$username = config('database.connections.mysql.username');
+		$password = config('database.connections.mysql.password');
 
 
         try {
 
-            $db = new PDO("mysql:dbname=$database;host=$host", $user, $password);
+            $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
         
         	if ($name != null && $type != null) {
         
-            	$stmt = $db->prepare("SELECT * FROM products WHERE name LIKE :name && type = :type");
+            	$stmt = $db->prepare("SELECT * FROM products WHERE p_name LIKE :name && p_category = :type");
 				$stmt->execute([':name'=>"%$name%", ':type' => $type]);
 				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);          
             
             } else if ($name != null ) {
         
-            	$stmt = $db->prepare("SELECT * FROM products WHERE name LIKE :name");
+            	$stmt = $db->prepare("SELECT * FROM products WHERE p_name LIKE :name");
 				$stmt->execute([':name'=>"%$name%"]);
 				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);          
             
             } else if ($type != null) {
         
-            	$stmt = $db->prepare("SELECT * FROM products WHERE type = :type");
+            	$stmt = $db->prepare("SELECT * FROM products WHERE p_category = :type");
 				$stmt->execute([':type' => $type]);
 				$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);          
             
@@ -86,14 +109,15 @@
             foreach ($rows as $row) {
                 ?>
 
-                <a href="/products/<?=$row["rid"] ?>" id="plain-link">
+                <a href="/products/<?=$row["pid"] ?>" id="plain-link">
                 
                 <div class="product">
 
-                    <h2 class="product-title"><?= $row["name"] ?></h2>
-                    <img class="product-image" src="/public/<?= $row["image"] ?>">
-                    <p class="product-description"><?= $row["description"] ?></p>
-                    <p class="product-type"><?= $row["type"] ?></p>
+                    <h2 class="product-title"><?= $row["p_name"] ?></h2>
+                    <img class="product-image" src="/public/<?= $row["p_image"] ?>">
+                    <p class="product-description"><?= $row["p_description"] ?></p>
+                    <p class="product-type"><?= $row["p_category"] ?></p>
+                    <p class="product-type">£<?= $row["p_price"] ?></p>
                     <br>
 
                 </div>
