@@ -33,3 +33,5 @@ clean, ethical and organic products.
 - XAMPP / phpMyAdmin
 - VS Code / PhpStorm
 ---
+
+Note: some images and products(names, images, descriptions, ingredients, instructions) have been generated with AI (ChatGPT & Gemini)
