@@ -32,9 +32,10 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" href="{{ route('register') }}">                    
-            		{{ __('New Customer? Sign Up') }}
+        <div class="flex items-center justify-end mt-4" style="display:flex; justify-content; space-between;justify-content: space-between;">
+            <a style="display: block;white-space: pre-line;" class="underline text-sm text-gray-600 hover:text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500" href="{{ route('register') }}">                    
+            		{{ __('New Customer? 
+                    Sign Up') }}
             </a>
 
             @if (Route::has('password.request'))

@@ -5,12 +5,12 @@
 <footer class="footer mt-5 py-5 bg-light border-top">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-4">
                 <h5>Naturale</h5>
                 <p class="text-muted">Hair Products Based on Natural Ingredients</p>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-4">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="/" class="text-decoration-none">Home</a></li>
@@ -19,7 +19,18 @@
                 </ul>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-4">
+                <h5>Our Ingredients</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/shea-butter" class="text-decoration-none">Shea Butter</a></li>
+                    <li><a href="/coconut-oil" class="text-decoration-none">Coconut Oil</a></li>
+                    <li><a href="/pomegranate-oil" class="text-decoration-none">Pomegranate Seed Oil</a></li>
+                    <li><a href="/avocado-extract" class="text-decoration-none">Avocado Extract</a></li>
+                    <li><a href="/tea-tree-oil" class="text-decoration-none">Tea Tree Oil </a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-4">
                 <h5>Get In Touch</h5>
                 <ul class="list-unstyled">
                     <li><a href="/contact" class="text-decoration-none">Contact Us</a></li>
@@ -32,3 +43,16 @@
         </div>
     </div>
 </footer>
+            
+
+
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    footer {
+        margin-top: auto;
+    }
+</style>

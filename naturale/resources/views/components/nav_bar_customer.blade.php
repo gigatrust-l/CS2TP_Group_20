@@ -11,9 +11,11 @@
         </a>
     </div>
     <nav>    
+		<form class="search" action="{{ route('/products') }}" method="get">
+            <input type="search" placeholder="Search" title="Search" aria-label="Search" style="color: #354024;" name="name"></input>  
+            <button title="Search" aria-label="Search"><i class="fa-solid fa-magnifying-glass" style="color: #354024;"></i></button>
+		</form>
         <div class="headerIcons">
-            <input type="search" placeholder="Search" title="Search" aria-label="Search" style="color: #354024;"></input>  
-            <a href="" title="Search" aria-label="Search"><i class="fa-solid fa-magnifying-glass" style="color: #354024;"></i></a>
             <a href="/products" title="Shop" aria-label="Products"><i class="fa-solid fa-store" style="color: #354024;"></i></a>
             <?php
                 $user = auth()->user();

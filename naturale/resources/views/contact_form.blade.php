@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
 </head>
 <body>
-    <header class="main-header">
-        <a class="logo" href="/">
-            <img src="{{ asset('media/logo.png')}}" alt="Naturale Logo">
-        </a>
-    </header>
+    @include('components/nav_bar_customer')
 
 <section class="py-5">
     <div class="container">
@@ -105,8 +101,9 @@
         </div>
     </div>
 </section>
-
-@include('components/footer')
+	<footer>
+    	@include('components/footer')
+    </footer>
 </body>
 
 </html>

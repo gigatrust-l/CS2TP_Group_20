@@ -20,56 +20,56 @@
 
 /* Hero carousel images */
 $slides = [
-    'media/coconutOil.png',
-    'media/teaTreeOil.png',
-    'media/pomegranateOil.png',
-    'media/sheaButter.png',
-    'media/avocadoExtract.png',
+    'media/ingredients/coconutOil.png',
+    'media/ingredients/teaTreeOil.png',
+    'media/ingredients/pomegranateOil.png',
+    'media/ingredients/sheaButter.png',
+    'media/ingredients/avocadoExtract.png',
     ];
 
 /* Shampoo images */
 $shampoos = [
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
+    'media/products/product_6.png',
+    'media/products/product_7.png',
+    'media/products/product_8.png',
+    'media/products/product_9.png',
+    'media/products/product_10.png',
     ];
 
 /* Conditioner images */
 $conditioners = [
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
+    'media/products/product_11.png',
+    'media/products/product_12.png',
+    'media/products/product_13.png',
+    'media/products/product_14.png',
+    'media/products/product_15.png',
     ];
 
 /* Leave in conditioner images */
 $leaveins = [
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
+    'media/products/product_16.png',
+    'media/products/product_17.png',
+    'media/products/product_18.png',
+    'media/products/product_19.png',
+    'media/products/product_20.png',
     ];
 
 /* Hair mask images */
 $hairmasks = [
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
+    'media/products/product_1.png',
+    'media/products/product_2.png',
+    'media/products/product_3.png',
+    'media/products/product_4.png',
+    'media/products/product_5.png',
     ];
 
 /* Accesories images */
 $accessories = [
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
-    'media/upload_img.png',
+    'media/products/product_21.png',
+    'media/products/product_22.png',
+    'media/products/product_23.png',
+    'media/products/product_24.png',
+    'media/products/product_25.png',
     ];
 
 @endphp
@@ -119,9 +119,9 @@ $accessories = [
                 $productCategories = [
                     "Shampoo" => $shampoos,
                     "Conditioner" => $conditioners,
-                    "Leave In Conditioner" => $leaveins,
-                    "Hair Mask" => $hairmasks,
-                    "Accesories" => $accessories,
+                    "Leave-In Conditioner" => $leaveins,
+                    "Hair Masks" => $hairmasks,
+                    "Hair Accessory" => $accessories,
                     ];
                 @endphp
 
@@ -151,10 +151,40 @@ $accessories = [
                     </div>
 
                 <!--Product category title below image-->
-                <div class="categoryTitle">{{ $nameCategory }}</div>
+                <div class="categoryTitle">
+                    <a href="/products?type={{ urlencode($nameCategory) }}" class="categoryTitle text-decoration-none pt-2">{{ $nameCategory }}</a>
+                </div>
                 </div>
 
                 @endforeach
+            </div>
+        </div>
+    </section>
+                    
+    <section class="pt-5 pb-3 px-2" id="OurIngredients">
+            <h2>Our Ingredients</h2></br></br>
+        <div class="container">
+            <div class="ingredientImages">
+                <div class="item">
+                    <img src="{{ asset('media/ingredients/shea.png') }}" class="static-img mb-2">
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">Shea Butter</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/ingredients/coconut.png') }}" class="static-img mb-2">
+                    <a href="/coconut-oil" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/ingredients/pomegranate.png') }}" class="static-img mb-2">
+                    <a href="/pomegranate-oil" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/ingredients/avocado.png') }}" class="static-img mb-2">
+                    <a href="/avocado-extract" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a>
+                </div>
+                <div class="item">
+                    <img src="{{ asset('media/ingredients/teatree.png') }}" class="static-img mb-2">
+                    <a href="/tea-tree-oil" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a>
+                </div>
             </div>
         </div>
     </section>

@@ -138,6 +138,10 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
         <?php }} ?>
 
     </section>
+
+    <footer>
+    	@include('components/footer')
+    </footer>
     
 </body>
 

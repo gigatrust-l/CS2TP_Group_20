@@ -7,47 +7,43 @@
 }
 
 
-.hero-img {
-  height: 500px;
-  object-fit: cover;
+* {
+  box-sizing: border-box
 }
 
-.heroText h1{
+.heroImage {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.heroText {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-shadow:2px 2px 4px #354024;
+}
+
+.heroText h1{
   font-size: 6em;
   font-family:'Lora', 'Merriweather' , 'League Spartan', 'Oswald', 'Poppins', sans-serif;
   font-weight: bold;
 }
 
-.categoriesRow {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.categoriesColumn {
-  flex: 0 0 18%;
-  max-width: 18%;
-  text-align: center;
-}
-
-.shopCarousel .carousel-item img{
-  height: 160px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.categoryTitle {
-  margin-top: 12px;
+#ingredientInfo h2{
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  text-align: center;
   color: var(--secondary);
+  margin-bottom: 28px;
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow:2px 2px 4px #d9d9d9;
 }
 
 #Shop h2{
@@ -55,17 +51,9 @@
   text-align: center;
   color: var(--secondary);
   margin-bottom: 28px;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-}
-
-#OurIngredients h2{
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  color: var(--secondary);
-  margin-bottom: 28px;
-  font-size: 3rem;
-  font-weight: 700;
+  text-shadow:2px 2px 4px #d9d9d9;
 }
 
 .categoryTitle {
@@ -75,7 +63,7 @@
   color: var(--secondary);
 }
 
-.ingredientImages {
+.categoryImages {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
@@ -83,70 +71,14 @@
    margin-top: 22px;
 }
 
-.ingredientImages .item{
+.categoryImages .item{
     text-align: center;
     width: 180px;
 }
 
-.ingredientImages img.static-img {
+.categoryImages img.static-img {
     height: 160px;
     width: 100%;
     object-fit: cover;
     border-radius: 6px;
 }
-
-/* Mobile View CSS */
-
-
-@media (max-width: 600px) {
-
-
-
-
-
-  header img {
-
-
-    height: 45px;
-
-
-  }
-
-
-}
-
-
-
-
-
-@media (max-width: 900px) {
-
-
-
-
-
-  header {
-
-
-    padding: 15px 20px;
-
-
-    flex-direction: column;
-
-
-    text-align: center;
-
-
-  }
-
-
-
-
-
-  nav {
-
-
-    justify-content: center;
-
-
-  }
