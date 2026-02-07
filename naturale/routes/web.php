@@ -84,7 +84,3 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.subm
 Route::get('/about', function () {
     return view('about_us');
 });
-
-Route::get('/chatbot_test/06/02/2026', function () {
-    return view('chatbot_test');
-});
