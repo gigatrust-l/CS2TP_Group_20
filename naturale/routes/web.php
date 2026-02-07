@@ -6,6 +6,12 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatController;
+
+Route::get('/chat', [ChatController::class, 'index']);
+Route::post('/chat/send', [ChatController::class, 'sendMessage']);
+Route::post('/chat/start', [ChatController::class, 'startChat']);
+Route::post('/chat/end', [ChatController::class, 'endChat']);
 
 Route::get('/', function () {
     return view('index');
@@ -77,4 +83,8 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.subm
 
 Route::get('/about', function () {
     return view('about_us');
+});
+
+Route::get('/chatbot_test/06/02/2026', function () {
+    return view('chatbot_test');
 });

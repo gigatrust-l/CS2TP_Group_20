@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('/css/ingredients.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/media/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.webp" />
     <!--This is to link google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 
     <section id="hero">
         <!-- This is a hero picture -->
-        <div class="heroImage" style="background-image: url('/media/ingredients/coconutOil.png')">
+        <div class="heroImage" style="background-image: url('/media/media_webp/ingredients/coconutOil.webp')">
             <div class="heroText">
                 <h1>Coconut Oil</h1>
             </div>
@@ -44,19 +44,19 @@
         <div class="container">
             <div class="categoryImages">
                 <div class="item">
-                    <img src="{{ asset('media/products/product_7.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_7.webp') }}" class="static-img">
                     <p class="categoryTitle">Luminous Sleek Shampoo</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_12.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_12.webp') }}" class="static-img">
                     <p class="categoryTitle">Glass Veil Conditioner</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_17.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_17.webp') }}" class="static-img">
                     <p class="categoryTitle">Silk Glide Leave In Conditioner</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_2.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_2.webp') }}" class="static-img">
                     <p class="categoryTitle">Silk Flow Smoothing Mask</p>
                 </div>
             </div>

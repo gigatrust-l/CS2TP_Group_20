@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('/css/ingredients.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/media/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/media/media_webpfavicon.webp" />
     <!--This is to link google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 
     <section id="hero">
         <!-- This is a hero picture -->
-        <div class="heroImage" style="background-image: url('/media/ingredients/teaTreeOil.png')">
+        <div class="heroImage" style="background-image: url('/media/media_webp/ingredients/teaTreeOil.webp')">
             <div class="heroText">
                 <h1>Tea Tree Oil</h1>
             </div>
@@ -45,19 +45,19 @@
         <div class="container">
             <div class="categoryImages">
                 <div class="item">
-                    <img src="{{ asset('media/products/product_8.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_8.webp') }}" class="static-img">
                     <p class="categoryTitle">Green Balance Detox Shampoo</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_13.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_13.webp') }}" class="static-img">
                     <p class="categoryTitle">Calm Scalp Conditioner</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_18.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_18.webp') }}" class="static-img">
                     <p class="categoryTitle">Root Relief Leave In Conditioner</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_3.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_3.webp') }}" class="static-img">
                     <p class="categoryTitle">Pure Roots Scalp Detox Mask</p>
                 </div>
             </div>

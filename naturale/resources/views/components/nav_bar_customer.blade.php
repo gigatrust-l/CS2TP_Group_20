@@ -7,7 +7,7 @@
 <header class="main-header">
     <div class="logo">
         <a href="/" class="logo">
-            <img src="{{ asset('media/logo.png')}}" alt="Naturale Logo">
+            <img src="{{ asset('media/media_webp/logo.webp')}}" alt="Naturale Logo">
         </a>
     </div>
     <nav>    

@@ -14,7 +14,6 @@
     <title>{{ config('app.name', 'Laravel') }} - Product</title>
     <link rel="stylesheet" href="{{ asset('css/products_style.css')}}" />
 	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
-	<link rel="icon" href="{{ asset('media/favicon.ico')}}" />
 </head>
 
 <body>

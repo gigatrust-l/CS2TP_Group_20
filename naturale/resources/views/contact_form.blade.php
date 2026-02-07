@@ -96,7 +96,7 @@
 
             <!-- Right Side of the Grid - Picture -->
             <div class="col-md-6 text-center">
-                <img src="{{ asset('media/mail.png')}}" alt="Mail Icon" class="img-fluid">
+                <img src="{{ asset('media/media_webp/mail.webp')}}" alt="Mail Icon" class="img-fluid">
             </div>
         </div>
     </div>

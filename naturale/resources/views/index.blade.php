@@ -8,7 +8,7 @@
     <meta name="viewport" content ="width=device-width, initial-scale=1" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/media/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
     <!--This is to link google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,56 +20,56 @@
 
 /* Hero carousel images */
 $slides = [
-    'media/ingredients/coconutOil.png',
-    'media/ingredients/teaTreeOil.png',
-    'media/ingredients/pomegranateOil.png',
-    'media/ingredients/sheaButter.png',
-    'media/ingredients/avocadoExtract.png',
+    'media/media_webp/ingredients/coconutOil.webp',
+    'media/media_webp/ingredients/teaTreeOil.webp',
+    'media/media_webp/ingredients/pomegranateOil.webp',
+    'media/media_webp/ingredients/sheaButter.webp',
+    'media/media_webp/ingredients/avocadoExtract.webp',
     ];
 
 /* Shampoo images */
 $shampoos = [
-    'media/products/product_6.png',
-    'media/products/product_7.png',
-    'media/products/product_8.png',
-    'media/products/product_9.png',
-    'media/products/product_10.png',
+    'media/media_webp/products/product_6.webp',
+    'media/media_webp/products/product_7.webp',
+    'media/media_webp/products/product_8.webp',
+    'media/media_webp/products/product_9.webp',
+    'media/media_webp/products/product_10.webp',
     ];
 
 /* Conditioner images */
 $conditioners = [
-    'media/products/product_11.png',
-    'media/products/product_12.png',
-    'media/products/product_13.png',
-    'media/products/product_14.png',
-    'media/products/product_15.png',
+    'media/media_webp/products/product_11.webp',
+    'media/media_webp/products/product_12.webp',
+    'media/media_webp/products/product_13.webp',
+    'media/media_webp/products/product_14.webp',
+    'media/media_webp/products/product_15.webp',
     ];
 
 /* Leave in conditioner images */
 $leaveins = [
-    'media/products/product_16.png',
-    'media/products/product_17.png',
-    'media/products/product_18.png',
-    'media/products/product_19.png',
-    'media/products/product_20.png',
+    'media/media_webp/products/product_16.webp',
+    'media/media_webp/products/product_17.webp',
+    'media/media_webp/products/product_18.webp',
+    'media/media_webp/products/product_19.webp',
+    'media/media_webp/products/product_20.webp',
     ];
 
 /* Hair mask images */
 $hairmasks = [
-    'media/products/product_1.png',
-    'media/products/product_2.png',
-    'media/products/product_3.png',
-    'media/products/product_4.png',
-    'media/products/product_5.png',
+    'media/media_webp/products/product_1.webp',
+    'media/media_webp/products/product_2.webp',
+    'media/media_webp/products/product_3.webp',
+    'media/media_webp/products/product_4.webp',
+    'media/media_webp/products/product_5.webp',
     ];
 
 /* Accesories images */
 $accessories = [
-    'media/products/product_21.png',
-    'media/products/product_22.png',
-    'media/products/product_23.png',
-    'media/products/product_24.png',
-    'media/products/product_25.png',
+    'media/media_webp/products/product_21.webp',
+    'media/media_webp/products/product_22.webp',
+    'media/media_webp/products/product_23.webp',
+    'media/media_webp/products/product_24.webp',
+    'media/media_webp/products/product_25.webp',
     ];
 
 @endphp
@@ -130,6 +130,7 @@ $accessories = [
                     $slug = Str::slug($nameCategory);
                     @endphp
                     <div class="categoriesColumn">
+                    <a href="/products?type={{ urlencode($nameCategory) }}" class="categoryTitle text-decoration-none pt-2">
                         <div id="{{ $slug }}Carousel" class="carousel slide categoryCarousel shopCarousel" id="categoryCarousel">
                             <div class="carousel-inner">
                                 @foreach ($images as $i => $img)
@@ -150,10 +151,11 @@ $accessories = [
                         </button>
                     </div>
 
-                <!--Product category title below image-->
-                <div class="categoryTitle">
-                    <a href="/products?type={{ urlencode($nameCategory) }}" class="categoryTitle text-decoration-none pt-2">{{ $nameCategory }}</a>
-                </div>
+                	<!--Product category title below image-->
+                	<div class="categoryTitle">
+                    	<a href="/products?type={{ urlencode($nameCategory) }}" class="categoryTitle text-decoration-none pt-2">{{ $nameCategory }}</a>
+                	</div>
+                    </a>
                 </div>
 
                 @endforeach
@@ -166,24 +168,29 @@ $accessories = [
         <div class="container">
             <div class="ingredientImages">
                 <div class="item">
-                    <img src="{{ asset('media/ingredients/shea.png') }}" class="static-img mb-2">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">Shea Butter</a>
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" class="static-img mb-2">
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">Shea Butter</a></a>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/ingredients/coconut.png') }}" class="static-img mb-2">
-                    <a href="/coconut-oil" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a>
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" class="static-img mb-2">
+                    <a href="/coconut-oil" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a></a>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/ingredients/pomegranate.png') }}" class="static-img mb-2">
-                    <a href="/pomegranate-oil" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a>
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" class="static-img mb-2">
+                    <a href="/pomegranate-oil" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a></a>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/ingredients/avocado.png') }}" class="static-img mb-2">
-                    <a href="/avocado-extract" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a>
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/avocado.webp') }}" class="static-img mb-2">
+                    <a href="/avocado-extract" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a></a>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/ingredients/teatree.png') }}" class="static-img mb-2">
-                    <a href="/tea-tree-oil" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a>
+                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/teatree.webp') }}" class="static-img mb-2">
+                    <a href="/tea-tree-oil" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a></a>
                 </div>
             </div>
         </div>
@@ -192,7 +199,7 @@ $accessories = [
     <footer>
     @include('components/footer')
     </footer>
-
+             
 </body>
 
 </html>

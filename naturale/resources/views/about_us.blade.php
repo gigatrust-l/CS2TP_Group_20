@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-md-6"><img src="{{ asset('media/our_story.png') }}" style="max-width:300px"alt="Our Story"></div>
+                <div class="col-md-6"><img src="{{ asset('media/media_webp/our_story.webp') }}" style="max-width:300px"alt="Our Story"></div>
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-lg-12 col-lg-10 col-xl-12">
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 order-1 order-md-2">
-                    <div class="col-md-6 py-3" ><img src="{{ asset('media/farmer.png') }}" alt="Sustainability" style="max-width:300px"></div>
+                    <div class="col-md-6 py-3" ><img src="{{ asset('media/media_webp/farmer.webp') }}" alt="Sustainability" style="max-width:300px"></div>
                 </div>
             </div>
         </div>

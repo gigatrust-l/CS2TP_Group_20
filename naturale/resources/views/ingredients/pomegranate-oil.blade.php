@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('/css/ingredients.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/media/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.webp" />
     <!--This is to link google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 
     <section id="hero">
         <!-- This is a hero picture -->
-        <div class="heroImage" style="background-image: url('/media/ingredients/pomegranateOil.png')">
+        <div class="heroImage" style="background-image: url('/media/media_webp/ingredients/pomegranateOil.webp')">
             <div class="heroText">
                 <h1>Pomegranate Seed Oil</h1>
             </div>
@@ -45,19 +45,19 @@
         <div class="container">
             <div class="categoryImages">
                 <div class="item">
-                    <img src="{{ asset('media/products/product_10.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_10.webp') }}" class="static-img">
                     <p class="categoryTitle">Colour Haven Repair Shampoo</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_15.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_15.webp') }}" class="static-img">
                     <p class="categoryTitle">Radiant Restore Conditioner</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_20.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_20.webp') }}" class="static-img">
                     <p class="categoryTitle">Color Shield Leave In Conditioner</p>
                 </div>
                 <div class="item">
-                    <img src="{{ asset('media/products/product_5.png') }}" class="static-img">
+                    <img src="{{ asset('media/media_webp/products/product_5.webp') }}" class="static-img">
                     <p class="categoryTitle">Chromaglow Color Care Mask</p>
                 </div>
             </div>
