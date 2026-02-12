@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
@@ -29,32 +30,9 @@ Route::get('/product', function () {
     return view('products');
 });
 
+Route::get('/ingredients/{slug}', [IngredientController::class, 'show']);
 Route::get('/ingredients', function () {
-    return view('/ingredients/ingredients');
-})->name('/ingredients');
-
-Route::get('/ingredients/{ingredient}', function ($ingredient){
-    return view('ingredients.' . $ingredient);
-});
-
-Route::get('/shea-butter', function () {
-    return view('/ingredients/shea-butter');
-});
-
-Route::get('/coconut-oil', function () {
-    return view('/ingredients/coconut-oil');
-});
-
-Route::get('/pomegranate-oil', function () {
-    return view('/ingredients/pomegranate-oil');
-});
-
-Route::get('/avocado-extract', function () {
-    return view('/ingredients/avocado-extract');
-});
-
-Route::get('/tea-tree-oil', function () {
-    return view('/ingredients/tea-tree-oil');
+    return view('index');
 });
 
 Route::get('/dashboard', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
