@@ -49,10 +49,10 @@ async function sendMessage(fromClick, clickValue) {
     const data = await response.json();
 
     if (Array.isArray(data.response)) {
-        appendManyMessage('bot', data.response, data.help);
+        appendManyMessage('bot', data.response, data.history);
 
     } else {
-        appendMessage('bot', data.response, false);
+        appendMessage('bot', data.response, data.history.at(-1).isButton);
 
     }
 }
@@ -89,21 +89,18 @@ function appendMessage(sender, text, isButton) {
 
 }
 
-function appendManyMessage(sender, textArray, help) {
-    for (let i = 0; i < textArray.length; i++) {
-        if (help === true) {
-            if (i > 0) {
-                appendMessage(sender, textArray[i], true)
+function appendManyMessage(sender, textArray, history) {
+    const newItemsCount = textArray.length;
 
-            } else {
-                appendMessage(sender, textArray[i], false)
+    for (let i = 0; i < newItemsCount; i++) {
+        const historyIndex = -newItemsCount + i;
+        const historyItem = history.at(historyIndex);
 
-            }
-        } else {
-            appendMessage(sender, textArray[i], false)
+        const isButton = historyItem ? historyItem.isButton : false;
 
-        }
+        console.log(isButton)
 
+        appendMessage(sender, textArray[i], isButton);
     }
 
 }
@@ -113,7 +110,7 @@ function renderHistory(history) {
 
     if (!history) return;
 
-    history.forEach(msg => appendMessage(msg.sender, msg.text, true));
+    history.forEach(msg => appendMessage(msg.sender, msg.text, msg.isButton));
 
 }
 
