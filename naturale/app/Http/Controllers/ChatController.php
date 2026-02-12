@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Services\OpenRouterService;
 
 class ChatController extends Controller
 {
-
+    
     private $useAI = false;
 
     private $rules = [
@@ -25,6 +26,14 @@ class ChatController extends Controller
     public function startChat() {
         Session::forget('chat_history');
 
+        if (auth()->check() && auth()->id() === 1 && true) {
+
+            $this->useAI = true;
+
+        }
+
+        
+
         if ($this->useAI) {
             $welcomeMsg = "Welcome to Naturale Support! How may I help you today?";
 
@@ -36,14 +45,7 @@ class ChatController extends Controller
 
             $this->addToHistory('bot', $welcomeMsg, false);
 
-            //$this->helpOptions();
-            $this->addToHistory('bot', "About Naturale", true);
-
-            $this->addToHistory('bot', "Product Recommendations", true);
-
-            $this->addToHistory('bot', "Order information", true);
-
-            $this->addToHistory('bot', "Customer Support", true);
+            $this->helpOptions();
 
 
         }
@@ -78,13 +80,18 @@ class ChatController extends Controller
     }
 
     public function sendMessage(Request $request) {
+
+        if (auth()->check() && auth()->id() === 1 && true) {
+
+            $this->useAI = true;
+
+        }
+
         $message = strtolower(trim($request->input('message')));
 
         $this->addToHistory('user', $request->input('message'), false);
 
         $response = null;
-
-        $help = false;
 
         if ($this->useAI) {
             $response = '';
@@ -101,8 +108,6 @@ class ChatController extends Controller
             $this->addToHistory('bot', "Select from the options below:", false);
 
             $response = array_merge($response, $this->helpOptions());
-
-            $help = true;
 
         } else if ($message === "order information") {
             $response = [];
@@ -124,14 +129,12 @@ class ChatController extends Controller
 
         return response()->json([
             'response' => $response,
-            'history' => Session::get('chat_history', []),
-            'help' => $help
+            'history' => Session::get('chat_history', [])
         ]);
     }
 
-    // potential ai integration
     private function getAiResponse($input) {
-        return "ai saw " . $input;
+        return OpenRouterService::getChatResponse($input, Session::get('chat_history', []));
     }
 
 }

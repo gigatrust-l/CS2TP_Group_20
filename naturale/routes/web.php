@@ -29,6 +29,10 @@ Route::get('/product', function () {
     return view('products');
 });
 
+Route::get('/ingredients', function () {
+    return view('/ingredients/ingredients');
+})->name('/ingredients');
+
 Route::get('/ingredients/{ingredient}', function ($ingredient){
     return view('ingredients.' . $ingredient);
 });
@@ -83,4 +87,8 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.subm
 
 Route::get('/about', function () {
     return view('about_us');
+});
+
+Route::get('/chatbot_test/06/02/2026', function () {
+    return view('chatbot_test');
 });
