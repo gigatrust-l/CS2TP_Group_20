@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
-
-	$name = $_GET['name'] ?? null;
-	$type = $_GET['type'] ?? null;
-
-?>
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content ="width=device-width, initial-scale=1" >
@@ -34,50 +27,18 @@
                            class="form-control"
                            placeholder="Product name..."
                            name="name"
-                           value="<?= htmlspecialchars($name) ?>">
+                           value="{{ request('name') }}">
                 </div>
                 <div class="col-md-4">
                     <label class="form-label fw-semibold">Filter by Category</label>
                     <select name="type" class="form-select">
                         <option value="">Any</option>
-                        <?php
-                        $host = config('database.connections.mysql.host');
-                        $database = config('database.connections.mysql.database');
-                        $username = config('database.connections.mysql.username');
-                        $password = config('database.connections.mysql.password');
-
-                        try {
-            
-            			$db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
-            	    	$rows = $db->query("SELECT * FROM products");
-                    
-                    	$categories = [];
-            
-                    	foreach ($rows as $row) {
-                        
-                        	if (!in_array($row["p_category"],$categories)) {
-                        
-                        		$categories[] = $row["p_category"];                            
-                            
-                            }
-
-            			}
-            
-                    	foreach ($categories as $category) {
-                        	?>
-            	    		<option value="<?= $category ?>" <?php if ($type == $category) echo 'selected'; ?>><?= $category ?></option>
-
-                			<?php
-
-                        }
-
-                        
-
-                        } catch (PDOException $e) {
-                            echo $e->getMessage();
-                        }
-
-                        ?>
+                        @foreach($categories as $category)
+                            <option value="{{ $category }}"
+                            {{ request('type') == $category ? 'selected' : '' }}>
+                            {{ $category }}
+                            </option>
+                        @endforeach
                     </select>
                 </div>
 
@@ -88,58 +49,38 @@
         </form>
 
         <div class="row g-4">
-            <?php
+            @forelse($products as $product)
+                <div class="col-md-4 col-lg-3">
+                    <a href="{{ route('products.show', $product->pid) }}"
+                       class="text-decoration-none">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="{{ asset($product->p_image) }}"
+                                 alt="{{ $product->p_name }}"
+                                 class="card-img-top"
+                                 style="height: 200px; object-fit: cover;"
+                            >
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $product->p_name }}</h5>
 
-            $host = config('database.connections.mysql.host');
-            $database = config('database.connections.mysql.database');
-            $username = config('database.connections.mysql.username');
-            $password = config('database.connections.mysql.password');
+                                <p class="text-muted small mb-1">
+                                    {{ $product->p_category }}
+                                </p>
 
-            try {
-                $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
-                if ($name != null && $type != null) {
-                    $stmt = $db->prepare("SELECT * FROM products WHERE p_name LIKE :name && p_category = :type");
-                    $stmt->execute([':name'=>"%$name%", ':type' => $type]);
-                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                } else if ($name != null ) {
-                    $stmt = $db->prepare("SELECT * FROM products WHERE p_name LIKE :name");
-                    $stmt->execute([':name'=>"%$name%"]);
-                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                } else if ($type != null) {
-                    $stmt = $db->prepare("SELECT * FROM products WHERE p_category = :type");
-                    $stmt->execute([':type' => $type]);
-                    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                } else {
-                    $rows = $db->query("SELECT * FROM products");
-                }
-            foreach ($rows as $row) {
-                ?>
+                                <p class="small text-secondary">
+                                    {{ Str::limit($product->p_descriprion, 60) }}
+                                </p>
+                            </div>
 
-            <div class="col-md-4 col-lg-3">
-                <a href="/products/<?=$row["pid"] ?>" id="plain-link" class="text-decoration-none">
-                    <div class="card h-100 shadow-sm border-0">
-                        <img src="{{ asset($row['p_image']) }}" alt="Product img" class="card-img-top" style="height: 200px; object-fit:cover;">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $row["p_name"] ?></h5>
-                            <p class="text-muted small mb-1"><?= $row["p_category"] ?></p>
-                            <p class="small text-secondary"><?= substr($row["p_description"], 0, 60) ?>...</p>
+                            <div class="card-footer bg-white border-0">
+                                £{{ number_format($product->p_price, 2) }}
+                            </div>
                         </div>
-                        <div class="card-footer bg-white border-0">
-                            <span>£<?= $row["p_price"] ?></span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <?php
-
-        }
-
-        } catch (PDOException $e) {
-            echo $e->getMessage();
-        }
-
-        ?>
-    </div>
+                    </a>
+                </div>
+            @empty
+                <p>No products found.</p>
+            @endforelse
+        </div>
     </div>
 <footer>
     @include('components/footer')

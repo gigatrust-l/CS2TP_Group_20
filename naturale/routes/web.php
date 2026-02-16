@@ -19,11 +19,12 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/products', function () {
-    return view('products');
-})->name('/products');
+Route::get('/products', [ProductController::class, 'index'])
+    ->name('products');
 
-Route::get('/products/{pid}', [ProductController::class, 'show'])->whereNumber('pid');
+Route::get('/products/{pid}', [ProductController::class, 'show'])
+    ->whereNumber('pid')
+    ->name('products.show');
 
 Route::get('/product', function () {
     return view('products');

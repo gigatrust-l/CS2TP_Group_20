@@ -10,9 +10,9 @@
             <img src="{{ asset('media/media_webp/logo.webp')}}" alt="Naturale Logo">
         </a>
     </div>
-    <nav>    
-		<form class="search" action="{{ route('/products') }}" method="get">
-            <input type="search" placeholder="Search" title="Search" aria-label="Search" style="color: #354024;" name="name"></input>  
+    <nav>
+		<form class="search" action="{{ route('products') }}" method="get">
+            <input type="search" placeholder="Search" title="Search" aria-label="Search" style="color: #354024;" name="name"></input>
             <button title="Search" aria-label="Search"><i class="fa-solid fa-magnifying-glass" style="color: #354024;"></i></button>
 		</form>
         <div class="headerIcons">
