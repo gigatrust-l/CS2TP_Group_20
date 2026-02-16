@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IngredientController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
@@ -22,9 +23,7 @@ Route::get('/products', function () {
     return view('products');
 })->name('/products');
 
-Route::get('/products/{any}', function () {
-    return view('product');
-});
+Route::get('/products/{pid}', [ProductController::class, 'show'])->whereNumber('pid');
 
 Route::get('/product', function () {
     return view('products');
