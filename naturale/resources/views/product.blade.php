@@ -28,7 +28,6 @@ try {
     }
 
 	if ($count == 0) {
-        // Redirect to the home page if no results
 
 		header('Location: /products');
     	exit();

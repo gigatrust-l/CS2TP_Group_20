@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 12, 2026 at 02:40 PM
+-- Generation Time: Feb 16, 2026 at 03:11 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -200,6 +200,39 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ingredients`
+--
+
+CREATE TABLE `ingredients` (
+  `id` int NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `slug` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text COLLATE utf8mb4_general_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `product1` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `product2` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `product3` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `product4` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `p1_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `p2_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `p3_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `p4_name` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ingredients`
+--
+
+INSERT INTO `ingredients` (`id`, `name`, `slug`, `description`, `image`, `product1`, `product2`, `product3`, `product4`, `p1_name`, `p2_name`, `p3_name`, `p4_name`) VALUES
+(1, 'Avocado Extract', 'avocado-extract', 'At Naturale, we believe that avocado extract is an excellent ingredient for treating damaged and dry hair. The combination of vitamins, minerals, fatty acids (such as oleic and linolenic acids) provide a deep hydration that repairs dry, broken and damaged hair. Avocado extract nourishes from the roots to the cuticles of the hair, restoring its softness and strength. It works as a natural barrier that protects the hair from heat, chemicals or environmental stress.\r\n\r\nWe offer a range of avocado-extract based products tailored to perfection to help our customers nourish their strands, making them shiny, soft, well-hydrated and easy to style', 'media/media_webp/ingredients/avocadoExtract.webp', 'media/media_webp/products/product_9.webp', 'media/media_webp/products/product_14.webp', 'media/media_webp/products/product_19.webp', 'media/media_webp/products/product_4.webp', 'Desert Dew Hydrating Shampoo', 'Moisture Bloom Conditioner', 'Hydra Repair Leave In Conditioner', 'Oasis Quench Repair Mask'),
+(2, 'Shea Butter', 'shea-butter', 'At Naturale, we choose shea butter as one of our main ingredients because of its many nourishing properties. Shea butter deeply moisturises and defines curls. It seals hydration, provides strength to the hair strands, and reduces frizz. Its hight vitamin A and vitamin E contents helps restore the hair elasticity, making the hair softer, bouncier and more manageable.\r\n\r\nThese characteristics make shea butter the best ingredient for curly hair. At Naturale, we provide the perfect complete routine products for curly hair, crafted to enhance hair definition, hydrate and maintain curl’s health.', 'media/media_webp/ingredients/sheaButter.webp', 'media/media_webp/products/product_6.webp', 'media/media_webp/products/product_11.webp', 'media/media_webp/products/product_16.webp', 'media/media_webp/products/product_1.webp', 'Curl Revival Shampoo', 'Velvet Spiral Conditioner', 'Curl Essence Leave In Conditioner', 'Curl Bloom Nourishing Mask'),
+(3, 'Pomegranate Seed Oil', 'pomegranate-oil', 'At Naturale, we choose pomegranate seed oil as one of our main ingredients because of its antioxidant properties. It strengthens the hair and provides colour-protecting benefits. This oil has a high concentration of polyphenols that prevent colour fading by acting as a hair shield from UV radiation, free-radicals, and environmental stress. It is a lightweight oil that strengthens the hair fibre, enhances the colour vibration, restores shine, and does not leave any greasy feeling.\r\n\r\nAll together, these qualities make pomegranate seed oil ideal for dyed or chemically treated hair. Naturale offers a range of products for the kind of hair that needs protection and luminosity.', 'media/media_webp/ingredients/pomegranateOil.webp', 'media/media_webp/products/product_10.webp', 'media/media_webp/products/product_15.webp', 'media/media_webp/products/product_20.webp', 'media/media_webp/products/product_5.webp', 'Colour Haven Repair Shampoo', 'Radiant Restore Conditioner', 'Color Shield Leave In Conditioner', 'Chromaglow Color Care Mask'),
+(4, 'Tea Tree Oil', 'tea-tree-oil', 'At Naturale, we selected tea tree oil to be one of our main ingredients. A very well known oil for its powerful antibacterial and purifying properties. Tea tree oil makes sure to keep the scalp clean and balanced, reducing the product buildup, fighting dandruff, and soothing irritation. Perfect for those with an itchy scalp who need a refreshing detox to give a healthy environment to their scalp.\r\n\r\nWe offer the best products to keep a healthy clean scalp, a complete routine to deeply cleanse and revitalise our customers scalp.', 'media/media_webp/ingredients/teaTreeOil.webp', 'media/media_webp/products/product_8.webp', 'media/media_webp/products/product_13.webp', 'media/media_webp/products/product_18.webp', 'media/media_webp/products/product_3.webp', 'Green Balance Detox Shampoo', 'Calm Scalp Conditioner', 'Root Relief Leave In Conditioner', 'Pure Roots Scalp Detox Mask'),
+(5, 'Coconut Oil', 'coconut-oil', 'At Naturale, we choose coconut oil as one of our main ingredients because of its ability to penetrate the hair fibre providing it with strength. It is a lightweight oil that smooths the cuticles and reduces frizz which improves the hair texture overall, leaving a smooth and silky hair without making it greasy. Coconut oil also supports the scalp health, protecting the hair against daily damage, breakage and dryness.\r\n\r\nThese benefits make coconut oil a perfect match for those with straight hair, and here we offer a range of products specially suited for those who want to give their hair the softness, smoothness, and long-lasting shine it needs.', 'media/media_webp/ingredients/coconutOil.webp', 'media/media_webp/products/product_7.webp', 'media/media_webp/products/product_12.webp', 'media/media_webp/products/product_17.webp', 'media/media_webp/products/product_2.webp', 'Luminous Sleek Shampoo', 'Glass Veil Conditioner', 'Silk Glide Leave In Conditioner', 'Silk Flow Smoothing Mask');
 
 -- --------------------------------------------------------
 
@@ -497,17 +530,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('34qt8KjtzhJd3JqZJVmKjKzKyrFXagMRBWCG51P4', NULL, '18.209.183.169', 'Iframely/1.3.1 (+https://iframely.com/docs/about) Atlassian', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOFZRdlpoZVZJclJYTm1hQWM5NDBsUlJqcVp5ZlFMaFZuazhLVXFRSCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1770906370),
-('4W2Vuloq6x4n3ZD6U2KuoY7ytFTsmq2YddnIIKoR', NULL, '10.76.190.162', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibEZCUlprQjBuaEhhdllvSENBV1JCQ09wRHEwQzk1ZW9Tc3d3SWJaTSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1770907145),
-('5J1nnhGisrnRfQFbADcLTTyKcC3wykWoG4CrNJH3', NULL, '51.79.137.237', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNzE2Y1lZWEEzYUxYalZxSENjM2VPREkxaElGZEIzbWZYb2ZLZTFCRCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrIjtzOjU6InJvdXRlIjtzOjU6ImluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1770903397),
-('9KL7rJ0rbHZm7IQIFbSZDRM1Evv541xTMwAdA9Ns', NULL, '10.76.187.216', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoia28yMmlDVHNvMEZkeVh4WkZxRmVoWVFMb0QySkJLVENsTWZ6OVk5aiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGF0IjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjEyOiJjaGF0X2hpc3RvcnkiO2E6Nzp7aTowO2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6ODM6IldlbGNvbWUgdG8gTmF0dXJhbGUgU3VwcG9ydCEgVHlwZSBvciBjbGljayBhbiBvcHRpb24gYmVsb3cgdG8gZ2V0IG1vcmUgaW5mb3JtYXRpb24uIjtzOjQ6InRpbWUiO3M6NToiMTQ6MjkiO3M6ODoiaXNCdXR0b24iO2I6MDt9aToxO2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6MTQ6IkFib3V0IE5hdHVyYWxlIjtzOjQ6InRpbWUiO3M6NToiMTQ6MjkiO3M6ODoiaXNCdXR0b24iO2I6MTt9aToyO2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6MjM6IlByb2R1Y3QgUmVjb21tZW5kYXRpb25zIjtzOjQ6InRpbWUiO3M6NToiMTQ6MjkiO3M6ODoiaXNCdXR0b24iO2I6MTt9aTozO2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6MTc6Ik9yZGVyIGluZm9ybWF0aW9uIjtzOjQ6InRpbWUiO3M6NToiMTQ6MjkiO3M6ODoiaXNCdXR0b24iO2I6MTt9aTo0O2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6MTY6IkN1c3RvbWVyIFN1cHBvcnQiO3M6NDoidGltZSI7czo1OiIxNDoyOSI7czo4OiJpc0J1dHRvbiI7YjoxO31pOjU7YTo0OntzOjY6InNlbmRlciI7czo0OiJ1c2VyIjtzOjQ6InRleHQiO3M6MTI6ImhlbGxvIG1yIGJvdCI7czo0OiJ0aW1lIjtzOjU6IjE0OjI5IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6NjthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjUzOiJJIGRpZG4ndCB1bmRlcnN0YW5kIHRoYXQuIFR5cGUgJ2hlbHAnIHRvIHNlZSBvcHRpb25zLiI7czo0OiJ0aW1lIjtzOjU6IjE0OjI5IjtzOjg6ImlzQnV0dG9uIjtiOjA7fX19', 1770906553),
-('bcjNOvQ5T9hH2FnXq01ZPXmQsWX6NUOmCLcdyVWY', NULL, '51.79.137.237', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidG5MTWg1WWxSdGs1S2NwVUFPRFJwckhhaVRJSlRDMGdOd2NrM1pyOCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrIjtzOjU6InJvdXRlIjtzOjU6ImluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1770903397),
-('cQLQ6vHPsErLfAHO7z95AtYuvp6IRI90eZQrtWTr', NULL, '10.76.190.154', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiaFQwaHJmakZFNGVTaWRQbzNMR0lXVVRTd2QwWEc4bzJEVjFVZGE1NiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGF0IjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjEyOiJjaGF0X2hpc3RvcnkiO2E6MTQ6e2k6MDthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjgzOiJXZWxjb21lIHRvIE5hdHVyYWxlIFN1cHBvcnQhIFR5cGUgb3IgY2xpY2sgYW4gb3B0aW9uIGJlbG93IHRvIGdldCBtb3JlIGluZm9ybWF0aW9uLiI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE0OiJBYm91dCBOYXR1cmFsZSI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjE7fWk6MjthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjIzOiJQcm9kdWN0IFJlY29tbWVuZGF0aW9ucyI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjE7fWk6MzthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE3OiJPcmRlciBpbmZvcm1hdGlvbiI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjE7fWk6NDthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE2OiJDdXN0b21lciBTdXBwb3J0IjtzOjQ6InRpbWUiO3M6NToiMTQ6MjMiO3M6ODoiaXNCdXR0b24iO2I6MTt9aTo1O2E6NDp7czo2OiJzZW5kZXIiO3M6NDoidXNlciI7czo0OiJ0ZXh0IjtzOjIzOiJQcm9kdWN0IFJlY29tbWVuZGF0aW9ucyI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6NjthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjc5OiJZb3UgY2FuIHZpZXcgaW5mb3JtYXRpb24gYWJvdXQgb3VyIGluZ3JlZGllbnRzIDxhIGhyZWY9Ii9pbmdyZWRpZW50cyI+aGVyZS48L2E+IjtzOjQ6InRpbWUiO3M6NToiMTQ6MjMiO3M6ODoiaXNCdXR0b24iO2I6MDt9aTo3O2E6NDp7czo2OiJzZW5kZXIiO3M6NDoidXNlciI7czo0OiJ0ZXh0IjtzOjE3OiJPcmRlciBpbmZvcm1hdGlvbiI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6ODthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjc0OiJZb3UgY2FuIHZpZXcgeW91ciBvcmRlcnMgPGEgaHJlZj0iL29yZGVycyI+aGVyZTwvYT4gaWYgeW91IHdlcmUgbG9nZ2VkIGluLiI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6OTthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE2MDoiSWYgbm90LCBZb3UgY2FuIHJlYWNoIG91dCB0byBzdXBwb3J0IDxhIGhyZWY9Ii9jb250YWN0Ij5oZXJlPC9hPiBvciBzZW5kIGFuIGVtYWlsIHRvIDxhIGhyZWY9Im1haWx0bzpOYXR1cmFsZUhlbHBEZXNrQGdtYWlsLmNvbSI+TmF0dXJhbGVIZWxwRGVza0BnbWFpbC5jb20uPC9hPiI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTA7YTo0OntzOjY6InNlbmRlciI7czo0OiJ1c2VyIjtzOjQ6InRleHQiO3M6MTY6IkN1c3RvbWVyIFN1cHBvcnQiO3M6NDoidGltZSI7czo1OiIxNDoyMyI7czo4OiJpc0J1dHRvbiI7YjowO31pOjExO2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6MTUyOiJZb3UgY2FuIHJlYWNoIG91dCB0byBzdXBwb3J0IDxhIGhyZWY9Ii9jb250YWN0Ij5oZXJlPC9hPiBvciBzZW5kIGFuIGVtYWlsIHRvIDxhIGhyZWY9Im1haWx0bzpOYXR1cmFsZUhlbHBEZXNrQGdtYWlsLmNvbSI+TmF0dXJhbGVIZWxwRGVza0BnbWFpbC5jb20uPC9hPiI7czo0OiJ0aW1lIjtzOjU6IjE0OjIzIjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTI7YTo0OntzOjY6InNlbmRlciI7czo0OiJ1c2VyIjtzOjQ6InRleHQiO3M6MTQ6IkFib3V0IE5hdHVyYWxlIjtzOjQ6InRpbWUiO3M6NToiMTQ6MjMiO3M6ODoiaXNCdXR0b24iO2I6MDt9aToxMzthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE2NToiTmF0dXJhbGUgaXMgdGhlIHByZW1pZXIgZGVzdGluYXRpb24gZm9yIGVjb2ZyaWVuZGx5LCBuYXR1cmFsLCBhbmQgb3JnYW5pYyBoYWlyY2FyZSBwcm9kdWN0cy4gVG8gc2VlIG1vcmUgYWJvdXQgdXMsIHZpZXcgb3VyIGFib3V0IHVzIHBhZ2UgPGEgaHJlZj0iL2Fib3V0Ij5oZXJlLjwvYT4gIjtzOjQ6InRpbWUiO3M6NToiMTQ6MjMiO3M6ODoiaXNCdXR0b24iO2I6MDt9fX0=', 1770906209),
-('faQQjTGgV8ZosrCYkkZ4A57au27savoccFfScgxW', NULL, '10.76.188.3', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 OPR/126.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiN2N1anBsVUxnR05HTDVMMDBGQVQybE4ycmVzUFBDcVZLTE5jWEg5RyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jb250YWN0IjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1770906564),
-('FBzdvCL7zsCLqCue4U9kJ4ce294fyvVrrClqsxPt', NULL, '10.76.112.50', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiRkVQOFZDSXFhRXlMZm50bWM3aHozUXNWS2V5TE9sYkVGOWgzdzdTdiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGF0IjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjEyOiJjaGF0X2hpc3RvcnkiO2E6MTY6e2k6MDthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjgzOiJXZWxjb21lIHRvIE5hdHVyYWxlIFN1cHBvcnQhIFR5cGUgb3IgY2xpY2sgYW4gb3B0aW9uIGJlbG93IHRvIGdldCBtb3JlIGluZm9ybWF0aW9uLiI7czo0OiJ0aW1lIjtzOjU6IjExOjU4IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE0OiJBYm91dCBOYXR1cmFsZSI7czo0OiJ0aW1lIjtzOjU6IjExOjU4IjtzOjg6ImlzQnV0dG9uIjtiOjE7fWk6MjthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjIzOiJQcm9kdWN0IFJlY29tbWVuZGF0aW9ucyI7czo0OiJ0aW1lIjtzOjU6IjExOjU4IjtzOjg6ImlzQnV0dG9uIjtiOjE7fWk6MzthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE3OiJPcmRlciBpbmZvcm1hdGlvbiI7czo0OiJ0aW1lIjtzOjU6IjExOjU4IjtzOjg6ImlzQnV0dG9uIjtiOjE7fWk6NDthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE2OiJDdXN0b21lciBTdXBwb3J0IjtzOjQ6InRpbWUiO3M6NToiMTE6NTgiO3M6ODoiaXNCdXR0b24iO2I6MTt9aTo1O2E6NDp7czo2OiJzZW5kZXIiO3M6NDoidXNlciI7czo0OiJ0ZXh0IjtzOjM6IkhlaiI7czo0OiJ0aW1lIjtzOjU6IjExOjU4IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6NjthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjUzOiJJIGRpZG4ndCB1bmRlcnN0YW5kIHRoYXQuIFR5cGUgJ2hlbHAnIHRvIHNlZSBvcHRpb25zLiI7czo0OiJ0aW1lIjtzOjU6IjExOjU4IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6NzthOjQ6e3M6Njoic2VuZGVyIjtzOjQ6InVzZXIiO3M6NDoidGV4dCI7czoxNjoiQ3VzdG9tZXIgU3VwcG9ydCI7czo0OiJ0aW1lIjtzOjU6IjExOjU5IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6ODthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE1MjoiWW91IGNhbiByZWFjaCBvdXQgdG8gc3VwcG9ydCA8YSBocmVmPSIvY29udGFjdCI+aGVyZTwvYT4gb3Igc2VuZCBhbiBlbWFpbCB0byA8YSBocmVmPSJtYWlsdG86TmF0dXJhbGVIZWxwRGVza0BnbWFpbC5jb20iPk5hdHVyYWxlSGVscERlc2tAZ21haWwuY29tLjwvYT4iO3M6NDoidGltZSI7czo1OiIxMTo1OSI7czo4OiJpc0J1dHRvbiI7YjowO31pOjk7YTo0OntzOjY6InNlbmRlciI7czo0OiJ1c2VyIjtzOjQ6InRleHQiO3M6MTc6Ik9yZGVyIGluZm9ybWF0aW9uIjtzOjQ6InRpbWUiO3M6NToiMTE6NTkiO3M6ODoiaXNCdXR0b24iO2I6MDt9aToxMDthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjc0OiJZb3UgY2FuIHZpZXcgeW91ciBvcmRlcnMgPGEgaHJlZj0iL29yZGVycyI+aGVyZTwvYT4gaWYgeW91IHdlcmUgbG9nZ2VkIGluLiI7czo0OiJ0aW1lIjtzOjU6IjExOjU5IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTE7YTo0OntzOjY6InNlbmRlciI7czozOiJib3QiO3M6NDoidGV4dCI7czoxNjA6IklmIG5vdCwgWW91IGNhbiByZWFjaCBvdXQgdG8gc3VwcG9ydCA8YSBocmVmPSIvY29udGFjdCI+aGVyZTwvYT4gb3Igc2VuZCBhbiBlbWFpbCB0byA8YSBocmVmPSJtYWlsdG86TmF0dXJhbGVIZWxwRGVza0BnbWFpbC5jb20iPk5hdHVyYWxlSGVscERlc2tAZ21haWwuY29tLjwvYT4iO3M6NDoidGltZSI7czo1OiIxMTo1OSI7czo4OiJpc0J1dHRvbiI7YjowO31pOjEyO2E6NDp7czo2OiJzZW5kZXIiO3M6NDoidXNlciI7czo0OiJ0ZXh0IjtzOjIzOiJQcm9kdWN0IFJlY29tbWVuZGF0aW9ucyI7czo0OiJ0aW1lIjtzOjU6IjExOjU5IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTM7YTo0OntzOjY6InNlbmRlciI7czozOiJib3QiO3M6NDoidGV4dCI7czo3OToiWW91IGNhbiB2aWV3IGluZm9ybWF0aW9uIGFib3V0IG91ciBpbmdyZWRpZW50cyA8YSBocmVmPSIvaW5ncmVkaWVudHMiPmhlcmUuPC9hPiI7czo0OiJ0aW1lIjtzOjU6IjExOjU5IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTQ7YTo0OntzOjY6InNlbmRlciI7czo0OiJ1c2VyIjtzOjQ6InRleHQiO3M6MTQ6IkFib3V0IE5hdHVyYWxlIjtzOjQ6InRpbWUiO3M6NToiMTE6NTkiO3M6ODoiaXNCdXR0b24iO2I6MDt9aToxNTthOjQ6e3M6Njoic2VuZGVyIjtzOjM6ImJvdCI7czo0OiJ0ZXh0IjtzOjE2NToiTmF0dXJhbGUgaXMgdGhlIHByZW1pZXIgZGVzdGluYXRpb24gZm9yIGVjb2ZyaWVuZGx5LCBuYXR1cmFsLCBhbmQgb3JnYW5pYyBoYWlyY2FyZSBwcm9kdWN0cy4gVG8gc2VlIG1vcmUgYWJvdXQgdXMsIHZpZXcgb3VyIGFib3V0IHVzIHBhZ2UgPGEgaHJlZj0iL2Fib3V0Ij5oZXJlLjwvYT4gIjtzOjQ6InRpbWUiO3M6NToiMTE6NTkiO3M6ODoiaXNCdXR0b24iO2I6MDt9fX0=', 1770897570),
-('O1RxLxQquyDEIMAxyNOo4uDjZBDlaIrCfHttAwt5', NULL, '10.76.112.50', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'YToyOntzOjY6Il90b2tlbiI7czo0MDoibndWTWlpZHhobTVIZVJXR09YWjBaRU5SdUFVZzJYYXlnWnVUdVRMUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1770906706),
-('oazrdlV90Z5wIn3CFfme66jm5ib2De6kXykzITyY', 1, '10.76.249.3', 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOFhNbFZnc3ZLYTlQbnZzME1oYm5la0pNeHBHYXdLVXhYZWlhMU52aiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTc6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmdyZWRpZW50cyI7czo1OiJyb3V0ZSI7czoxMjoiL2luZ3JlZGllbnRzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjEyOiJjaGF0X2hpc3RvcnkiO2E6Mzp7aTowO2E6NDp7czo2OiJzZW5kZXIiO3M6MzoiYm90IjtzOjQ6InRleHQiO3M6NTQ6IldlbGNvbWUgdG8gTmF0dXJhbGUgU3VwcG9ydCEgSG93IG1heSBJIGhlbHAgeW91IHRvZGF5PyI7czo0OiJ0aW1lIjtzOjU6IjE0OjE2IjtzOjg6ImlzQnV0dG9uIjtiOjA7fWk6MTthOjQ6e3M6Njoic2VuZGVyIjtzOjQ6InVzZXIiO3M6NDoidGV4dCI7czoyMzoiaG93IGRvIGkgdmlldyBteSBvcmRlcnMiO3M6NDoidGltZSI7czo1OiIxNDoxNiI7czo4OiJpc0J1dHRvbiI7YjowO31pOjI7YTo0OntzOjY6InNlbmRlciI7czozOiJib3QiO3M6NDoidGV4dCI7czo5MzoiSSBhbSBoYXZpbmcgdHJvdWJsZSBjb25uZWN0aW5nIHJpZ2h0IG5vdy4gUGxlYXNlIGNvbnRhY3Qgc3VwcG9ydCA8YSBocmVmPSIvY29udGFjdCI+aGVyZTwvYT4uIjtzOjQ6InRpbWUiO3M6NToiMTQ6MTYiO3M6ODoiaXNCdXR0b24iO2I6MDt9fX0=', 1770906155),
-('S6ZKIJZywGPIIZ39MoQJqVOo9aCPJwi86MvEj2BT', NULL, '10.76.189.123', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiR3AzY2szMmQybHJGdW5kcG9tMWQ1RlQ1N2oydkMzdXRsNzE2REpIQyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTY6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cy8xIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1770905608);
+('hW4A7rPE3ICPvLKi6bOYVBMdHZD5ILSlvYeR4tbB', NULL, '31.94.71.105', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicnozcDBFMFoyYkJiVW1yM1NraElVTGxkU01RRHUxa00xNm5CdUw3YiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1771253595),
+('IkWeRaw7xO2GflkwHF66V4AON1W6gCzQEDANQbm3', NULL, '78.145.212.234', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 OPR/127.0.0.0 (Edition std-2)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTThoVUxIbzRIQzJ0bmlhWWdHMER6V1JvSnJxZUNlMjVxaWRPb3NPUiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmRleC5waHAiO3M6NToicm91dGUiO3M6NToiaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1771250571),
+('ntgoe4ppx9PPhCDoK087j3S8aG89DJNTv2SVxpbL', NULL, '10.76.249.3', 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidXpFb2pjcDhXc0t2bmJEQXdlcXd4Rm1QY3BXTFQ1dVAxelNnNmtsbSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTE6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9sb2dpbiI7czo1OiJyb3V0ZSI7czo1OiJsb2dpbiI7fX0=', 1771254583);
 
 -- --------------------------------------------------------
 
@@ -518,6 +543,7 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 CREATE TABLE `users` (
   `id` bigint UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `google_id` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -530,13 +556,15 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Test User', 'test@test.com', NULL, '$2y$12$NsHSLGwis02pq1WzT6MZIOKC6qpsGwQuaTuVh7oRaH25opzLfFt/C', 'SMSu7nt3qlfOhaU9tsJtGPe1sW166zpNBbHYU7FI8RmIlaBMyviDji4T10SW', '2025-10-21 18:33:32', '2025-10-21 18:33:32'),
-(2, 'Ethan', '240090270@aston.ac.uk', NULL, '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'OGfdE9sNiK9iG9ApeKwxij7nip3A0vhSOIha4QxzsQTEM108DCu9oSgTTELb', '2025-11-24 18:32:09', '2025-11-24 18:33:50'),
-(3, 'ifza', 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40'),
-(4, 'Hezekiah Calub', '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15'),
-(5, 'Emma Smith', 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46'),
-(6, 'Kanban Default', 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42');
+INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Test User', NULL, 'test@test.com', NULL, '$2y$12$NsHSLGwis02pq1WzT6MZIOKC6qpsGwQuaTuVh7oRaH25opzLfFt/C', 'ihjEyOhDCg795eQmSZSuyYOmtu6WWzTsElQZfp8SorNrbfE4TTADtN3lAWz9', '2025-10-21 18:33:32', '2025-10-21 18:33:32'),
+(2, 'Ethan', NULL, '240090270@aston.ac.uk', NULL, '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'OGfdE9sNiK9iG9ApeKwxij7nip3A0vhSOIha4QxzsQTEM108DCu9oSgTTELb', '2025-11-24 18:32:09', '2025-11-24 18:33:50'),
+(3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40'),
+(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15'),
+(5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46'),
+(6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42'),
+(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02'),
+(8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46');
 
 --
 -- Indexes for dumped tables
@@ -585,6 +613,13 @@ ALTER TABLE `enquiries`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `ingredients`
+--
+ALTER TABLE `ingredients`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`slug`);
 
 --
 -- Indexes for table `jobs`
@@ -691,6 +726,12 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `ingredients`
+--
+ALTER TABLE `ingredients`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
@@ -736,7 +777,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables

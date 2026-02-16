@@ -22,11 +22,11 @@
             <div class="col-md-3 mb-4">
                 <h5>Our Ingredients</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/shea-butter" class="text-decoration-none">Shea Butter</a></li>
-                    <li><a href="/coconut-oil" class="text-decoration-none">Coconut Oil</a></li>
-                    <li><a href="/pomegranate-oil" class="text-decoration-none">Pomegranate Seed Oil</a></li>
-                    <li><a href="/avocado-extract" class="text-decoration-none">Avocado Extract</a></li>
-                    <li><a href="/tea-tree-oil" class="text-decoration-none">Tea Tree Oil </a></li>
+                    <li><a href="{{ url('/ingredients/avocado-extract') }}" class="text-decoration-none">Avocado Extract</a></li>
+                    <li><a href="{{ url('/ingredients/shea-butter') }}" class="text-decoration-none">Shea Butter</a></li>
+                    <li><a href="{{ url('/ingredients/pomegranate-oil') }}" class="text-decoration-none">Pomegranate Seed Oil</a></li>
+                    <li><a href="{{ url('/ingredients/tea-tree-oil') }}" class="text-decoration-none">Tea Tree Oil </a></li>
+                    <li><a href="{{ url('/ingredients/coconut-oil') }}" class="text-decoration-none">Coconut Oil</a></li>
                 </ul>
             </div>
 

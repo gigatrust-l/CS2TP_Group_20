@@ -5,8 +5,10 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\IngredientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\GoogleController;
 
 Route::get('/chat', [ChatController::class, 'index']);
 Route::post('/chat/send', [ChatController::class, 'sendMessage']);
@@ -33,29 +35,7 @@ Route::get('/ingredients', function () {
     return view('/ingredients/ingredients');
 })->name('/ingredients');
 
-Route::get('/ingredients/{ingredient}', function ($ingredient){
-    return view('ingredients.' . $ingredient);
-});
-
-Route::get('/shea-butter', function () {
-    return view('/ingredients/shea-butter');
-});
-
-Route::get('/coconut-oil', function () {
-    return view('/ingredients/coconut-oil');
-});
-
-Route::get('/pomegranate-oil', function () {
-    return view('/ingredients/pomegranate-oil');
-});
-
-Route::get('/avocado-extract', function () {
-    return view('/ingredients/avocado-extract');
-});
-
-Route::get('/tea-tree-oil', function () {
-    return view('/ingredients/tea-tree-oil');
-});
+Route::get('/ingredients/{slug}', [IngredientController::class, 'show']);
 
 Route::get('/dashboard', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -91,4 +71,9 @@ Route::get('/about', function () {
 
 Route::get('/chatbot_test/06/02/2026', function () {
     return view('chatbot_test');
+});
+
+Route::controller(GoogleController::class)->group(function () {
+    Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
+    Route::get('authorised/google/callback', 'handleGoogleCallback');
 });

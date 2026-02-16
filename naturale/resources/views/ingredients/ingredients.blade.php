@@ -113,29 +113,29 @@ $accessories = [
         <div class="container">
             <div class="ingredientImages">
                 <div class="item">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
-                    <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" class="static-img mb-2">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">Shea Butter</a></a>
-                </div>
-                <div class="item">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
-                    <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" class="static-img mb-2">
-                    <a href="/coconut-oil" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a></a>
-                </div>
-                <div class="item">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
-                    <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" class="static-img mb-2">
-                    <a href="/pomegranate-oil" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a></a>
-                </div>
-                <div class="item">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <a href="{{ url('/ingredients/avocado-extract') }}" class="categoryTitle text-decoration-none pt-2">
                     <img src="{{ asset('media/media_webp/ingredients/avocado.webp') }}" class="static-img mb-2">
-                    <a href="/avocado-extract" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a></a>
+                    <a href="{{ url('/ingredients/avocado-extract') }}" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a></a>
                 </div>
                 <div class="item">
-                    <a href="/shea-butter" class="categoryTitle text-decoration-none pt-2">
+                    <a href="{{ url('/ingredients/shea-butter') }}" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" class="static-img mb-2">
+                    <a href="{{ url('/ingredients/shea-butter') }}" class="categoryTitle text-decoration-none pt-2">Shea Butter</a></a>
+                </div>
+                <div class="item">
+                    <a href="{{ url('/ingredients/pomegranate-oil') }}" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" class="static-img mb-2">
+                    <a href="{{ url('/ingredients/pomegranate-oil') }}" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a></a>
+                </div>
+                <div class="item">
+                    <a href="{{ url('/ingredients/tea-tree-oil') }}" class="categoryTitle text-decoration-none pt-2">
                     <img src="{{ asset('media/media_webp/ingredients/teatree.webp') }}" class="static-img mb-2">
-                    <a href="/tea-tree-oil" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a></a>
+                    <a href="{{ url('/ingredients/tea-tree-oil') }}" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a></a>
+                </div>
+                <div class="item">
+                    <a href="{{ url('/ingredients/coconut-oil') }}" class="categoryTitle text-decoration-none pt-2">
+                    <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" class="static-img mb-2">
+                    <a href="{{ url('/ingredients/coconut-oil') }}" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a></a>
                 </div>
             </div>
         </div>
