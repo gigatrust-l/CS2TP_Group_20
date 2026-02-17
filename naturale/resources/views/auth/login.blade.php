@@ -56,7 +56,7 @@
 <!-- -->
         <div class="row mb-0 mt-3">
             <div class="col-md-8 offset-md-4">
-                <a href="{{ route('auth.google') }}" class="btn btn-light border">
+                <a href="{{ route('auth.google') }}" class="">
                     <div button class="gsi-material-button">
                     <div class="gsi-material-button-state"></div>
                     <div class="gsi-material-button-content-wrapper">
