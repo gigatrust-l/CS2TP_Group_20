@@ -9,5 +9,6 @@ class Product extends Model
     protected $table = 'products';
     protected $primaryKey = 'pid';
     public $timestamps = false;
+
 }
 

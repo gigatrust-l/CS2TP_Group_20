@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 16, 2026 at 03:11 PM
+-- Generation Time: Feb 17, 2026 at 10:14 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -40,10 +40,21 @@ CREATE TABLE `cache` (
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-230159329@aston.ac.uk|88.97.161.57', 'i:2;', 1765279650),
 ('naturale-cache-230159329@aston.ac.uk|88.97.161.57:timer', 'i:1765279650;', 1765279650),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1771365108),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1771365108;', 1771365108),
+('naturale-cache-5e10e4151dc939a62a3afea696a8a9b2', 'i:2;', 1771365224),
+('naturale-cache-5e10e4151dc939a62a3afea696a8a9b2:timer', 'i:1771365224;', 1771365224),
+('naturale-cache-d1f845777caebecb843930bd33b99ffb', 'i:1;', 1771365099),
+('naturale-cache-d1f845777caebecb843930bd33b99ffb:timer', 'i:1771365099;', 1771365099),
+('naturale-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0', 'i:1;', 1771268926),
+('naturale-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0:timer', 'i:1771268926;', 1771268926),
 ('naturale-cache-emmasmith@example.com|10.76.177.174', 'i:1;', 1769442866),
 ('naturale-cache-emmasmith@example.com|10.76.177.174:timer', 'i:1769442866;', 1769442866),
 ('naturale-cache-emmasmith@example.com|90.249.106.164', 'i:1;', 1769559576),
 ('naturale-cache-emmasmith@example.com|90.249.106.164:timer', 'i:1769559576;', 1769559576),
+('naturale-cache-fortify.2fa_codes.ca95b36b5b9e3e97c2fa797bf5894fd5', 'i:59045490;', 1771364787),
+('naturale-cache-fortify.2fa_codes.caec56e662530b384d678c8b9e95dfc2', 'i:59044423;', 1771332762),
+('naturale-cache-fortify.2fa_codes.ee58ff68e64e46b31052e25391582f7b', 'i:59045501;', 1771365108),
 ('naturale-cache-ifza1234@icloud.com|90.212.22.35', 'i:1;', 1764854733),
 ('naturale-cache-ifza1234@icloud.com|90.212.22.35:timer', 'i:1764854733;', 1764854733),
 ('naturale-cache-samuel_dsouza@outlook.com|10.76.112.50', 'i:1;', 1770728969),
@@ -83,33 +94,21 @@ CREATE TABLE `chat_steps` (
 CREATE TABLE `customers` (
   `cid` int NOT NULL,
   `c_name` text COLLATE utf8mb4_general_ci NOT NULL,
-  `c_email` text COLLATE utf8mb4_general_ci NOT NULL
+  `c_email` text COLLATE utf8mb4_general_ci NOT NULL,
+  `c_uid` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`cid`, `c_name`, `c_email`) VALUES
-(1, 'Test User', 'test@test.com'),
-(2, 'Ethan', '240090270@aston.ac.uk'),
-(3, 'Steve Tester', 'tester@test.co.uk'),
-(4, 'a', 'a@a.c'),
-(5, 'ifza', 'ifza.1234@icloud.com'),
-(6, 'h w', '240184904@aston.ac.uk'),
-(7, 'asadas', 'sadsadas@gmail.com'),
-(8, 'sadsdadsads', 'sadsadasdad@gmail.com'),
-(9, 'asdasda', 'asdsa@gmail.com'),
-(10, 'asdadasd', 'adsadasd@gmail.com'),
-(11, 'sadasdsa', 'dasdsadas@gmail.com'),
-(12, 'sadsadasd', 'asdasd@gmail.com'),
-(13, 'Hezekiah Calub', '230159329@aston.ac.uk'),
-(14, 'Hasan Waheed', 'hasanw786@outlook.com'),
-(15, 'TestOne', 'testone@gmail.com'),
-(16, 'asdasdas', 'asdasdasdasd@gmail.com'),
-(17, 'Jot', 'Jot@jot.com'),
-(18, 'Emma Smith', 'emmasmith@example.com'),
-(19, 'Kanban Default', 'asd@asd.sad');
+INSERT INTO `customers` (`cid`, `c_name`, `c_email`, `c_uid`) VALUES
+(1, 'Test User', 'test@test.com', 1),
+(2, 'Ethan', '240090270@aston.ac.uk', 2),
+(5, 'ifza', 'ifza.1234@icloud.com', 3),
+(13, 'Hezekiah Calub', '230159329@aston.ac.uk', 4),
+(18, 'Emma Smith', 'emmasmith@example.com', 5),
+(19, 'Kanban Default', 'asd@asd.sad', 6);
 
 -- --------------------------------------------------------
 
@@ -135,26 +134,12 @@ CREATE TABLE `customer_address` (
 INSERT INTO `customer_address` (`caid`, `ca_cid`, `ca_line1`, `ca_line2`, `ca_city`, `ca_county`, `ca_postcode`, `ca_country`) VALUES
 (1, 1, '123 Test Street', 'Testville', 'Testcity', 'West Testlands', 'TE51 1TT', 'Testland'),
 (2, 1, '456 Test Estate', 'Testville', 'Testcity', 'West Testlands', 'TE51 1TE', 'Testland'),
-(3, 3, '123 Baker Street', 'Somewher', 'London', 'Greater London', 'L1 1LL', 'United Kingdon'),
-(4, 4, 'a', 'a', 'a', 'a', 'a', 'a'),
-(5, 4, 'o', 'o', 'o', 'o', 'o', 'o'),
 (6, 5, '123 Baker Street', 'Somewher', 'London', 'Greater London', 'L1 1LL', 'United Kingdon'),
-(7, 6, '123', '123', 'bham', 'eng', 'b11 123', 'dsf'),
-(8, 7, 'sadasdsa', 'sadasda', 'sdasdsa', 'sadasdsa', 'sadsda', 'sadasd'),
-(9, 8, 'sadasdasdsads', 'sadasdsadadsad', 'sdasadsadadsa', 'sdadsadasda', 'sdasdsa', 'sadasdsadas'),
-(10, 9, 'dsadasdsa', 'sadasdas', 'asdadsa', 'sadasd', 'sadsada', 'asdasd'),
-(11, 10, 'sdasdsad', 'sadasdsa', 'asdsadas', 'sadsada', 'sadasdas', 'sadsadsa'),
-(12, 11, 'sadasdsa', 'sadasd', 'sadasd', 'sadsad', 'asdas', 'asdsad'),
-(13, 12, 'asdasdas', 'sadasds', 'asdsad', 'asdasda', 'asdasd', 'asdasdas'),
 (14, 1, '123 test lane', 'test', 'test', 'test', 'test', 'test'),
 (15, 13, 'a', 'a', 'a', 'a', 'a', 'a'),
 (16, 13, '123 test lane', '1', '11', '1', '1', '1'),
 (17, 2, 'test', 'test', 'test', 'test', 'test', 'test'),
 (18, 13, 'o', 'o', 'o', 'o', 'o', 'o'),
-(19, 14, '145 Bromyard Road', 'Gsbs', 'Birmingham', 'Hshd', 'B11 3AY', 'United Kingdomhedh'),
-(20, 15, 'Aston University', 'Cute Main Building', 'Birmingham', 'Example', 'B1 A1', 'Country1'),
-(21, 16, 'asdasdasd', 'asdasdas', 'sadasdas', 'sdasdas', 'sadsadas', 'sdadsa'),
-(22, 17, '69 Jot street', '69 Jot street', 'Jotville', 'jotopia', 'JO60 ORU', 'jotopia'),
 (23, 18, '1', 'Aston St', 'Birmingham', 'West Midlands', 'B4 7ET', 'United Kingdom'),
 (24, 19, '69 Jot street', '69 Jot street', 'Jotville', 'jotopia', 'JO60 ORU', 'jotopia');
 
@@ -324,53 +309,34 @@ CREATE TABLE `orders` (
   `o_cid` int NOT NULL,
   `o_address` int NOT NULL,
   `o_status` text COLLATE utf8mb4_general_ci NOT NULL,
-  `o_price` double NOT NULL
+  `o_price` double NOT NULL,
+  `o_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`) VALUES
-(27, 1, 1, 'Processing', 17.98),
-(28, 5, 6, 'Processing', 8.99),
-(29, 1, 1, 'Processing', 17.98),
-(30, 6, 7, 'Processing', 8.99),
-(31, 5, 6, 'Processing', 17.98),
-(32, 1, 1, 'Processing', 8.99),
-(33, 1, 1, 'Processing', 413.54),
-(34, 1, 1, 'Processing', 26.97),
-(35, 7, 8, 'Processing', 8.99),
-(36, 1, 1, 'Processing', 5.99),
-(37, 8, 9, 'Processing', 17.98),
-(38, 8, 9, 'Processing', 0),
-(39, 8, 9, 'Processing', 0),
-(40, 8, 9, 'Processing', 0),
-(41, 9, 10, 'Processing', 8.99),
-(42, 10, 11, 'Processing', 26.97),
-(43, 10, 11, 'Processing', 0),
-(44, 10, 11, 'Processing', 0),
-(45, 10, 11, 'Processing', 0),
-(46, 11, 12, 'Processing', 8.99),
-(47, 11, 12, 'Processing', 0),
-(48, 11, 12, 'Processing', 0),
-(49, 1, 1, 'Processing', 8.99),
-(50, 1, 1, 'Processing', 11.98),
-(51, 12, 13, 'Processing', 8.99),
-(52, 1, 1, 'Processing', 8.99),
-(53, 13, 15, 'Processing', 8.99),
-(54, 13, 15, 'Processing', 8.99),
-(55, 2, 17, 'Processing', 26.97),
-(56, 13, 15, 'Processing', 8.99),
-(57, 2, 17, 'Processing', 26.97),
-(58, 14, 19, 'Processing', 5.99),
-(59, 15, 20, 'Processing', 12.98),
-(60, 1, 1, 'Processing', 98.89),
-(61, 1, 1, 'Processing', 89.9),
-(62, 16, 21, 'Processing', 6.99),
-(63, 17, 22, 'Processing', 431.52),
-(64, 18, 23, 'Processing', 8.99),
-(65, 19, 24, 'Processing', 5.99);
+INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_timestamp`) VALUES
+(27, 1, 1, 'Processing', 17.98, '2026-02-16 22:42:34'),
+(28, 5, 6, 'Processing', 8.99, '2026-02-16 22:42:34'),
+(29, 1, 1, 'Processing', 17.98, '2026-02-16 22:42:34'),
+(31, 5, 6, 'Processing', 17.98, '2026-02-16 22:42:34'),
+(32, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
+(33, 1, 1, 'Processing', 413.54, '2026-02-16 22:42:34'),
+(34, 1, 1, 'Processing', 26.97, '2026-02-16 22:42:34'),
+(36, 1, 1, 'Processing', 5.99, '2026-02-16 22:42:34'),
+(49, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
+(50, 1, 1, 'Processing', 11.98, '2026-02-16 22:42:34'),
+(52, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
+(55, 2, 17, 'Processing', 26.97, '2026-02-16 22:42:34'),
+(57, 2, 17, 'Processing', 26.97, '2026-02-16 22:42:34'),
+(60, 1, 1, 'Processing', 98.89, '2026-02-16 22:42:34'),
+(61, 1, 1, 'Processing', 89.9, '2026-02-16 22:42:34'),
+(64, 18, 23, 'Processing', 8.99, '2026-02-16 22:42:34'),
+(65, 19, 24, 'Processing', 5.99, '2026-02-16 22:42:34'),
+(66, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
+(67, 1, 14, 'Processing', 8.99, '2026-02-16 22:43:06');
 
 -- --------------------------------------------------------
 
@@ -394,35 +360,22 @@ INSERT INTO `order_item` (`oiid`, `oi_oid`, `oi_pid`, `oi_quantity`, `oi_ind_pri
 (24, 27, 2, 2, 8.99),
 (25, 28, 3, 1, 8.99),
 (26, 29, 3, 2, 8.99),
-(27, 30, 1, 1, 8.99),
 (28, 31, 5, 2, 8.99),
 (29, 32, 1, 1, 8.99),
 (30, 33, 3, 46, 8.99),
 (31, 34, 1, 3, 8.99),
-(32, 35, 1, 1, 8.99),
 (33, 36, 10, 1, 5.99),
-(34, 37, 2, 2, 8.99),
-(35, 41, 2, 1, 8.99),
-(36, 42, 2, 3, 8.99),
-(37, 46, 2, 1, 8.99),
 (38, 49, 4, 1, 8.99),
 (39, 50, 10, 2, 5.99),
-(40, 51, 2, 1, 8.99),
 (41, 52, 1, 1, 8.99),
-(42, 53, 2, 1, 8.99),
-(43, 54, 2, 1, 8.99),
 (44, 55, 17, 3, 8.99),
-(45, 56, 1, 1, 8.99),
 (46, 57, 5, 3, 8.99),
-(47, 58, 8, 1, 5.99),
-(48, 59, 12, 1, 6.99),
-(49, 59, 8, 1, 5.99),
 (50, 60, 2, 11, 8.99),
 (51, 61, 2, 10, 8.99),
-(52, 62, 12, 1, 6.99),
-(53, 63, 4, 48, 8.99),
 (54, 64, 1, 1, 8.99),
-(55, 65, 10, 1, 5.99);
+(55, 65, 10, 1, 5.99),
+(56, 66, 1, 1, 8.99),
+(57, 67, 16, 1, 8.99);
 
 -- --------------------------------------------------------
 
@@ -468,7 +421,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, `p_stock`, `p_category`, `p_feature`, `p_ingredients`, `p_instructions`, `p_volume`) VALUES
-(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 40, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
+(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 39, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
 (2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 16, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
 (3, 'Pure Roots Scalp Detox Mask', 'A purifying mask formulated to cleanse buildup, rebalance the scalp, and help reduce dandruff. It leaves the scalp feeling refreshed, soothed, and invigorated.', '8.99', 'media/media_webp/products/product_3.webp', 0, 'Hair Masks', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Massage into scalp. Leave 5–7 minutes. Rinse well.', 200),
 (4, 'Oasis Quench Repair Mask', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', '8.99', 'media/media_webp/products/product_4.webp', 0, 'Hair Masks', 'Avocado Extract', 'Apply mid-lengths to ends. Leave 10 minutes. Rinse.', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', 200),
@@ -483,7 +436,7 @@ INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, 
 (13, 'Calm Scalp Conditioner', 'Detox conditioner. Refreshes scalp and prevents irritation. Sulfate free. No\r\nparabens.', '6.99', 'media/media_webp/products/product_13.webp', 49, 'Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Aloe Vera, Peppermint Extract, Vitamin C, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water', 550),
 (14, 'Moisture Bloom Conditioner', 'Deep hydration and moisture conditioner. Repairs split and dry ends, prevents\r\nbreakage and restores softness. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_14.webp', 49, 'Conditioner', 'Avocado Extract', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (15, 'Radiant Restore Conditioner', 'Colour protecting conditioner. Restores colour vibration, adds smoothness and\r\nshine to colour damaged hair. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_15.webp', 49, 'Conditioner', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
-(16, 'Curl Essence Leave-In Cream', 'A rich yet lightweight leave-in cream that defines curls, reduces frizz, and adds softness without creating buildup. Perfect for everyday curl styling and nourishment.', '8.99', 'media/media_webp/products/product_16.webp', 49, 'Leave-In Conditioner', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water, Glycerin', 'Apply to damp curls and distribute evenly.', 400),
+(16, 'Curl Essence Leave-In Cream', 'A rich yet lightweight leave-in cream that defines curls, reduces frizz, and adds softness without creating buildup. Perfect for everyday curl styling and nourishment.', '8.99', 'media/media_webp/products/product_16.webp', 48, 'Leave-In Conditioner', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water, Glycerin', 'Apply to damp curls and distribute evenly.', 400),
 (17, 'Silk Glide Leave-In Spray', 'A smoothing leave-in spray that tames frizz, enhances manageability, and leaves hair sleek and shiny. Ideal for quick styling and daily touchups.', '8.99', 'media/media_webp/products/product_17.webp', 46, 'Leave-In Conditioner', 'Coconut Oil', 'Coconut Oil, Aloe Vera, Water, Glycerin, Vitamin E', 'Apply to damp curls and distribute evenly.', 400),
 (18, 'Root Relief Leave-In Tonic', 'A refreshing scalp tonic that cools, soothes, and hydrates the scalp. It promotes a healthy environment for growth while adding lightweight moisture.', '8.99', 'media/media_webp/products/product_18.webp', 49, 'Leave-In Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Spray directly onto scalp. Do not rinse.', 400),
 (19, 'Hydra Repair Leave-In Mist', 'A hydrating mist that strengthens and revitalizes dry hair. It enhances softness, helps prevent breakage, and provides instant moisture throughout the day.', '8.99', 'media/media_webp/products/product_19.webp', 49, 'Leave-In Conditioner', 'Avocado Extract', 'Avocado Extract, Jojoba Oil, Water, Glycerin', 'Spray onto hair and leave in.', 400),
@@ -530,9 +483,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('hW4A7rPE3ICPvLKi6bOYVBMdHZD5ILSlvYeR4tbB', NULL, '31.94.71.105', 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicnozcDBFMFoyYkJiVW1yM1NraElVTGxkU01RRHUxa00xNm5CdUw3YiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1771253595),
-('IkWeRaw7xO2GflkwHF66V4AON1W6gCzQEDANQbm3', NULL, '78.145.212.234', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 OPR/127.0.0.0 (Edition std-2)', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTThoVUxIbzRIQzJ0bmlhWWdHMER6V1JvSnJxZUNlMjVxaWRPb3NPUiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmRleC5waHAiO3M6NToicm91dGUiO3M6NToiaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1771250571),
-('ntgoe4ppx9PPhCDoK087j3S8aG89DJNTv2SVxpbL', NULL, '10.76.249.3', 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidXpFb2pjcDhXc0t2bmJEQXdlcXd4Rm1QY3BXTFQ1dVAxelNnNmtsbSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTE6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9sb2dpbiI7czo1OiJyb3V0ZSI7czo1OiJsb2dpbiI7fX0=', 1771254583);
+('28e3tmS9teIdpFOkeK9vLIhAKQ4my9NkofUaS4iK', NULL, '109.150.227.76', 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRlBXYmhFSDlqc2EzUG4yV0dPT3NpcFlQWDB3ZE1lNVJVMkx3MUxuNSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fX0=', 1771366347);
 
 -- --------------------------------------------------------
 
@@ -547,24 +498,29 @@ CREATE TABLE `users` (
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `two_factor_secret` text COLLATE utf8mb4_unicode_ci,
+  `two_factor_recovery_codes` text COLLATE utf8mb4_unicode_ci,
+  `two_factor_confirmed_at` timestamp NULL DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `isAdmin` enum('customer','admin') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'customer'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Test User', NULL, 'test@test.com', NULL, '$2y$12$NsHSLGwis02pq1WzT6MZIOKC6qpsGwQuaTuVh7oRaH25opzLfFt/C', 'ihjEyOhDCg795eQmSZSuyYOmtu6WWzTsElQZfp8SorNrbfE4TTADtN3lAWz9', '2025-10-21 18:33:32', '2025-10-21 18:33:32'),
-(2, 'Ethan', NULL, '240090270@aston.ac.uk', NULL, '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'OGfdE9sNiK9iG9ApeKwxij7nip3A0vhSOIha4QxzsQTEM108DCu9oSgTTELb', '2025-11-24 18:32:09', '2025-11-24 18:33:50'),
-(3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40'),
-(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15'),
-(5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46'),
-(6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42'),
-(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02'),
-(8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46');
+INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`) VALUES
+(1, 'Test User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$NsHSLGwis02pq1WzT6MZIOKC6qpsGwQuaTuVh7oRaH25opzLfFt/C', NULL, NULL, NULL, 'vYVHQLzdYB6ozugjXGPgxI1UDGNsxmbH4EqBHCsDO0oDha6TwY5tpdttxrCL', '2025-10-21 18:33:32', '2025-10-21 18:33:32', 'customer'),
+(2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6Ik5tSEVFdkJIMEJhS3FOTUt2anFEeWc9PSIsInZhbHVlIjoicExzU2JoeldhUGhndnZXR2t6SHZhd3pwd2dWbnZ0M1Y5dnkxOFBXOVJNOENyUnZPeldDT3hrVFQ0QmFjVzhGcmd0bWxHUlBPdU9jbE1wWnZxL3JzNXY1L2pGRzE0UG52YmVXU2tPbXFTN0VVdW1kaGk5dFc2eGhpSVlFdDFJb0t5WEFTcTRDUmUydFNLVHhxeVdwcDJNUnVyNC9GaEhib3U1Sm1HN3hKV3JscXJPdmZORjJQWEZFeUNVdnk5SGNJdm5jQ3VmdFFQd1FjOU5hVlcyYndSaG1JUUJvOFJ4NVBMRWNQdHNJUURHN0IwdFFrK1ZrcmJ2dGJMRHE3MVN1aGJtRXlTbnNLaCtXRFk4SkNlNDJzY0E9PSIsIm1hYyI6ImEwYTg1YzllMDk1OTg3ZTEyZmVlNmJkYTJjMzAzNzFkMmRhM2VmZjhjMmQ2Y2QyYWU5Y2JlZTRhNWY0ZTAxNGQiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-17 21:45:27', 'customer'),
+(3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer'),
+(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer'),
+(5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, NULL, NULL, NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46', 'customer'),
+(6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, NULL, NULL, NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42', 'customer'),
+(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02', 'customer'),
+(8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, NULL, NULL, NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46', 'customer'),
+(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -592,7 +548,8 @@ ALTER TABLE `chat_steps`
 -- Indexes for table `customers`
 --
 ALTER TABLE `customers`
-  ADD PRIMARY KEY (`cid`);
+  ADD PRIMARY KEY (`cid`),
+  ADD UNIQUE KEY `c_uid` (`c_uid`);
 
 --
 -- Indexes for table `customer_address`
@@ -705,7 +662,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `customer_address`
@@ -753,13 +710,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -777,7 +734,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

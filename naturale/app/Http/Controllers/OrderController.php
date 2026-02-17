@@ -9,6 +9,7 @@ class OrderController extends Controller
 {
     public function index()
     {
+        $cid = 0;
         $orders = auth()->user()->orders()->get();
         return view('orders.index', compact('orders'));
     }

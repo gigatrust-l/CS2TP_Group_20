@@ -8,6 +8,8 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
 
+            @if (!auth()->user()->google_id )
+
             <div class="p-6 sm:p-8 bg-white shadow border border-green-200 rounded-xl">
                 <div class="max-w-xl">
                     @include('profile.partials.update-profile-information-form')
@@ -17,6 +19,22 @@
             <div class="p-6 sm:p-8 bg-white shadow border border-green-200 rounded-xl">
                 <div class="max-w-xl">
                     @include('profile.partials.update-password-form')
+                </div>
+            </div>
+
+            @else
+
+            <div class="p-6 sm:p-8 bg-white shadow border border-green-200 rounded-xl">
+                <div class="max-w-xl">
+                    @include('profile.partials.update-profile-information-form-google')
+                </div>
+            </div>
+
+            @endif
+
+            <div class="p-6 sm:p-8 bg-white shadow border border-green-200 rounded-xl">
+                <div class="max-w-xl">
+                    @include('profile.partials.update-two-factor-authentication-form')
                 </div>
             </div>
 

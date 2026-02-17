@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 5000)"  class="p-6 text-gray-900 dark:text-gray-100 transition-opacity duration-1000">
-                    {{ __("Welcome" ) }}
+                    {{ __("You're logged in! admin") }}
                 </div>
             </div>
         </div>
