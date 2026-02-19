@@ -63,11 +63,11 @@ function appendMessage(sender, text, isButton) {
     div.classList.add('message', sender);
 
     if (sender === 'bot' && isButton === false) {
-        div.innerHTML = sender + ": " + text;
+        div.innerHTML = text;
 
     } else if (sender === 'bot' && isButton === true) {
 
-        div.innerHTML = `${sender}: `;
+        div.innerHTML = '';
 
         const button = document.createElement('button');
         button.textContent = `${text}`;
@@ -79,7 +79,7 @@ function appendMessage(sender, text, isButton) {
         div.appendChild(button);
 
     } else {
-        div.textContent = sender + ": " + text;;
+        div.textContent = text;;
 
     }
 
