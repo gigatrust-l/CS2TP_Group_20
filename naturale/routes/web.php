@@ -38,7 +38,9 @@ Route::get('/ingredients', function () {
 
 Route::get('/ingredients/{slug}', [IngredientController::class, 'show']);
 
-Route::get('/dashboard', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [AdminController::class, 'redirectUser'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::get('/portal', [AdminController::class, 'index'])
     ->middleware(['auth'])
@@ -49,12 +51,8 @@ Route::get('/portal', [AdminController::class, 'index'])
 //})->middleware(['auth'])->name('dashboard');
 
 Route::middleware(['auth', 'IsAdmin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin/admin_dashboard');
-    })->name('dashboard');
-
-    //HEZ PUT ADMININY STUFF HERE
-    //IT IS PROTECTED FROM NORMAL USERS
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::post('/update-stock/{pid}', [AdminController::class, 'updateStock'])->name('stock.update');
 
 });
 
