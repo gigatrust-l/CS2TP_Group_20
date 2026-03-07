@@ -196,6 +196,8 @@ $accessories = [
         </div>
     </section>
 
+    @include('components/chatbot_button')
+
     <footer>
     @include('components/footer')
     </footer>

@@ -52,14 +52,29 @@
             @endif
 
             {{-- Show Recovery Codes --}}
+
+
+
             <div class="mt-4">
                 <p class="mt-1 text-sm text-gray-600">
                     {{ __('Store these recovery codes in a secure password manager. They can be used to recover access to your account if your two factor authentication device is lost.') }}
                 </p>
-                <div class="grid gap-1 max-w-xl mt-4 px-4 py-4 font-mono text-sm bg-gray-100 rounded-lg">
-                    @foreach (json_decode(decrypt(auth()->user()->two_factor_recovery_codes), true) as $code)
-                        <div>{{ $code }}</div>
-                    @endforeach
+
+
+                <div x-data="{ open: false }" class="">
+
+                    <x-green-button @click="open = !open" class="mt-4 bg-green-600 hover:bg-green-700 text-white">
+                        <span x-show="!open">Show Recovery Codes</span>
+                        <span x-show="open">Hide Recovery Codes</span>
+                    </x-green-button>
+
+                    <div x-show="open" x-transition
+                        class="grid gap-1 max-w-xl mt-4 px-4 py-4 font-mono text-sm bg-gray-100 rounded-lg">
+                        @foreach (json_decode(decrypt(auth()->user()->two_factor_recovery_codes), true) as $code)
+                            <div>{{ $code }}</div>
+                        @endforeach
+                    </div>
+
                 </div>
             </div>
 

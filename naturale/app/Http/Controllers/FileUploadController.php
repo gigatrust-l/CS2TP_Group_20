@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -12,7 +14,7 @@ class FileUploadController extends Controller {
 
 	public function uploadFile(Request $request) {
     
-    	$requirest->validate(['file'=> 'requiredrequired|image|mimes:jpeg,png,jpg,gif,pdf,csv,xls|max:2048',]);
+    	$request->validate(['file'=> 'requiredrequired|image|mimes:jpeg,png,jpg,gif,pdf,csv,xls|max:2048',]);
     
     	$filename = time().".".$request->image->extension();
     

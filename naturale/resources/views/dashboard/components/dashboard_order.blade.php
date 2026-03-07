@@ -1,4 +1,4 @@
-<x-app-layout>
+<div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Order Details') }} #{{ $order->oid }}
@@ -67,11 +67,11 @@
                 @endif
 
                 <!-- Back Button -->
-                <a href="/dashboard/order" class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">
+                <a href="/dashboard/orders" class="inline-block mt-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors">
                     Back to Orders
                 </a>
 
             </div>
         </div>
     </div>
-</x-app-layout>
+</div>

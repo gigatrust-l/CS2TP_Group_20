@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 17, 2026 at 10:14 PM
+-- Generation Time: Mar 07, 2026 at 01:20 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -38,27 +38,163 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('naturale-cache-230159329@aston.ac.uk|88.97.161.57', 'i:2;', 1765279650),
-('naturale-cache-230159329@aston.ac.uk|88.97.161.57:timer', 'i:1765279650;', 1765279650),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1771365108),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1771365108;', 1771365108),
-('naturale-cache-5e10e4151dc939a62a3afea696a8a9b2', 'i:2;', 1771365224),
-('naturale-cache-5e10e4151dc939a62a3afea696a8a9b2:timer', 'i:1771365224;', 1771365224),
-('naturale-cache-d1f845777caebecb843930bd33b99ffb', 'i:1;', 1771365099),
-('naturale-cache-d1f845777caebecb843930bd33b99ffb:timer', 'i:1771365099;', 1771365099),
-('naturale-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0', 'i:1;', 1771268926),
-('naturale-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0:timer', 'i:1771268926;', 1771268926),
-('naturale-cache-emmasmith@example.com|10.76.177.174', 'i:1;', 1769442866),
-('naturale-cache-emmasmith@example.com|10.76.177.174:timer', 'i:1769442866;', 1769442866),
-('naturale-cache-emmasmith@example.com|90.249.106.164', 'i:1;', 1769559576),
-('naturale-cache-emmasmith@example.com|90.249.106.164:timer', 'i:1769559576;', 1769559576),
-('naturale-cache-fortify.2fa_codes.ca95b36b5b9e3e97c2fa797bf5894fd5', 'i:59045490;', 1771364787),
-('naturale-cache-fortify.2fa_codes.caec56e662530b384d678c8b9e95dfc2', 'i:59044423;', 1771332762),
-('naturale-cache-fortify.2fa_codes.ee58ff68e64e46b31052e25391582f7b', 'i:59045501;', 1771365108),
-('naturale-cache-ifza1234@icloud.com|90.212.22.35', 'i:1;', 1764854733),
-('naturale-cache-ifza1234@icloud.com|90.212.22.35:timer', 'i:1764854733;', 1764854733),
-('naturale-cache-samuel_dsouza@outlook.com|10.76.112.50', 'i:1;', 1770728969),
-('naturale-cache-samuel_dsouza@outlook.com|10.76.112.50:timer', 'i:1770728969;', 1770728969);
+('naturale-cache-&#039; /*!50000or*/ 1=1 --|88.170.43.205', 'i:1;', 1772127814),
+('naturale-cache-&#039; /*!50000or*/ 1=1 --|88.170.43.205:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-&#039; /*!or*/ 1=1 --|88.170.43.205', 'i:1;', 1772127814),
+('naturale-cache-&#039; /*!or*/ 1=1 --|88.170.43.205:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-&#039; and &#039;1&#039;=&#039;2&#039; --|88.170.43.205', 'i:1;', 1772127810),
+('naturale-cache-&#039; and &#039;1&#039;=&#039;2&#039; --|88.170.43.205:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-&#039; like &#039;1|88.170.43.205', 'i:1;', 1772127815),
+('naturale-cache-&#039; like &#039;1|88.170.43.205:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-&#039; not in (&#039;&#039;) --|88.170.43.205', 'i:1;', 1772127815),
+('naturale-cache-&#039; not in (&#039;&#039;) --|88.170.43.205:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-&#039; or &#039;&#039;=&#039;|88.170.43.205', 'i:1;', 1772127811),
+('naturale-cache-&#039; or &#039;&#039;=&#039;|88.170.43.205:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-&#039; or &#039;1&#039;%3d&#039;1&#039; --|88.170.43.205', 'i:1;', 1772127814),
+('naturale-cache-&#039; or &#039;1&#039;%3d&#039;1&#039; --|88.170.43.205:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-&#039; or &#039;1&#039;=&#039;1&#039; --|88.170.43.205', 'i:2;', 1772127810),
+('naturale-cache-&#039; or &#039;1&#039;=&#039;1&#039; --|88.170.43.205:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-&#039; or &#039;1&#039;=&#039;1&#039; #|88.170.43.205', 'i:1;', 1772127810),
+('naturale-cache-&#039; or &#039;1&#039;=&#039;1&#039; #|88.170.43.205:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-&#039; or &#039;1&#039;=&#039;1&#039;/*|88.170.43.205', 'i:1;', 1772127812),
+('naturale-cache-&#039; or &#039;1&#039;=&#039;1&#039;/*|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-&#039; or 1=1 --%00|88.170.43.205', 'i:1;', 1772127815),
+('naturale-cache-&#039; or 1=1 --%00|88.170.43.205:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-&#039; or 1=1 --|88.170.43.205', 'i:2;', 1772127810),
+('naturale-cache-&#039; or 1=1 --|88.170.43.205:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-&#039; or 1=1 #|88.170.43.205', 'i:1;', 1772127810),
+('naturale-cache-&#039; or 1=1 #|88.170.43.205:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-&#039; or 1=1;--|88.170.43.205', 'i:1;', 1772127812),
+('naturale-cache-&#039; or 1=1;--|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-&#039; union select null --|88.170.43.205', 'i:1;', 1772127815),
+('naturale-cache-&#039; union select null --|88.170.43.205:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-&#039; union select null,null --|88.170.43.205', 'i:1;', 1772127815),
+('naturale-cache-&#039; union select null,null --|88.170.43.205:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-&#039; union select null,null,null --|88.170.43.205', 'i:1;', 1772127816),
+('naturale-cache-&#039; union select null,null,null --|88.170.43.205:timer', 'i:1772127816;', 1772127816),
+('naturale-cache-&#039;) or (&#039;1&#039;=&#039;1&#039; --|88.170.43.205', 'i:1;', 1772127811),
+('naturale-cache-&#039;) or (&#039;1&#039;=&#039;1&#039; --|88.170.43.205:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-&#039;) or (&#039;1&#039;=&#039;1&#039; #|88.170.43.205', 'i:1;', 1772127811),
+('naturale-cache-&#039;) or (&#039;1&#039;=&#039;1&#039; #|88.170.43.205:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-&#039;) or 1=1;--|88.170.43.205', 'i:1;', 1772127813),
+('naturale-cache-&#039;) or 1=1;--|88.170.43.205:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-&#039;/**/or/**/&#039;1&#039;=&#039;1&#039;/**/--|88.170.43.205', 'i:1;', 1772127813),
+('naturale-cache-&#039;/**/or/**/&#039;1&#039;=&#039;1&#039;/**/--|88.170.43.205:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-&#039;/**/or/**/1=1--|88.170.43.205', 'i:1;', 1772127813),
+('naturale-cache-&#039;/**/or/**/1=1--|88.170.43.205:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-02746bcc823e64268a390baa4a075bee', 'i:1;', 1772116096),
+('naturale-cache-02746bcc823e64268a390baa4a075bee:timer', 'i:1772116096;', 1772116096),
+('naturale-cache-065b1bad47a7c5cce5ff8c04e6a980d4', 'i:1;', 1772127812),
+('naturale-cache-065b1bad47a7c5cce5ff8c04e6a980d4:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-06dce4a51750cf5340976c1aae17d9b9', 'i:1;', 1772127815),
+('naturale-cache-06dce4a51750cf5340976c1aae17d9b9:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-0b0664be36adcf546dbef85b721bda18', 'i:1;', 1772725041),
+('naturale-cache-0b0664be36adcf546dbef85b721bda18:timer', 'i:1772725041;', 1772725041),
+('naturale-cache-240190961@aston.ac.uk|90.211.242.203', 'i:1;', 1772121128),
+('naturale-cache-240190961@aston.ac.uk|90.211.242.203:timer', 'i:1772121128;', 1772121128),
+('naturale-cache-3040589a5e88afa4ac510778b16bd1e6', 'i:1;', 1772127813),
+('naturale-cache-3040589a5e88afa4ac510778b16bd1e6:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-3183c7fde7643f2a00112bdbc85ca495', 'i:1;', 1772127813),
+('naturale-cache-3183c7fde7643f2a00112bdbc85ca495:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-32d31b796d5f92068d5d8dc218be4f53', 'i:1;', 1772127813),
+('naturale-cache-32d31b796d5f92068d5d8dc218be4f53:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-3dae031a529e3124b44bfd269990b95d', 'i:2;', 1772127810),
+('naturale-cache-3dae031a529e3124b44bfd269990b95d:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843', 'i:1;', 1772127814),
+('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1772797943),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1772797943;', 1772797943),
+('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb', 'i:1;', 1772127810),
+('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4', 'i:1;', 1772836527),
+('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4:timer', 'i:1772836527;', 1772836527),
+('naturale-cache-5c532bc79d018dc9ac38283758c80d6f', 'i:1;', 1772127815),
+('naturale-cache-5c532bc79d018dc9ac38283758c80d6f:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-5f0448203d901cad8fe0a10c4d09a204', 'i:1;', 1772127814),
+('naturale-cache-5f0448203d901cad8fe0a10c4d09a204:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-5f27bf5f16b4ac417e73523f5e1b9088', 'i:1;', 1772127811),
+('naturale-cache-5f27bf5f16b4ac417e73523f5e1b9088:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-62b0d96531422c2cbc2065104a8eaeef', 'i:1;', 1772127815),
+('naturale-cache-62b0d96531422c2cbc2065104a8eaeef:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0', 'i:1;', 1772807859),
+('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0:timer', 'i:1772807859;', 1772807859),
+('naturale-cache-7e40d15013de21fac558fa8c6115d6e2', 'i:1;', 1772127811),
+('naturale-cache-7e40d15013de21fac558fa8c6115d6e2:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-8bad034f06425eb724f717c4c98cac56', 'i:1;', 1772127811),
+('naturale-cache-8bad034f06425eb724f717c4c98cac56:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-985fbafc6095b8dfe53beb317b6b4a24', 'i:1;', 1772722849),
+('naturale-cache-985fbafc6095b8dfe53beb317b6b4a24:timer', 'i:1772722849;', 1772722849),
+('naturale-cache-9c3618e143cea32a9ce70f64b1989311', 'i:1;', 1772127811),
+('naturale-cache-9c3618e143cea32a9ce70f64b1989311:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-a3d49062a9297f7d76b523e7fe166f5e', 'i:1;', 1772127812),
+('naturale-cache-a3d49062a9297f7d76b523e7fe166f5e:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-abc34c66b29010570f43bc352d8d7297', 'i:1;', 1772797927),
+('naturale-cache-abc34c66b29010570f43bc352d8d7297:timer', 'i:1772797927;', 1772797927),
+('naturale-cache-admin&#039; --|88.170.43.205', 'i:1;', 1772127811),
+('naturale-cache-admin&#039; --|88.170.43.205:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-admin&#039; #|88.170.43.205', 'i:1;', 1772127811),
+('naturale-cache-admin&#039; #|88.170.43.205:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-admin&#039;;--|88.170.43.205', 'i:1;', 1772127813),
+('naturale-cache-admin&#039;;--|88.170.43.205:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-admin&#039;/**/--|88.170.43.205', 'i:1;', 1772127813),
+('naturale-cache-admin&#039;/**/--|88.170.43.205:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-admin&#039;/*|88.170.43.205', 'i:1;', 1772127812),
+('naturale-cache-admin&#039;/*|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-admin&#039;%20--|88.170.43.205', 'i:1;', 1772127814),
+('naturale-cache-admin&#039;%20--|88.170.43.205:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-afbac64d347a075e80dcd0cf328b81cf', 'i:1;', 1772127811),
+('naturale-cache-afbac64d347a075e80dcd0cf328b81cf:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-aff0fa2525f7f73292d70f2c05cf71e6', 'i:1;', 1772127813),
+('naturale-cache-aff0fa2525f7f73292d70f2c05cf71e6:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-asdkjh3kj4h|88.170.43.205', 'i:5;', 1772127809),
+('naturale-cache-asdkjh3kj4h|88.170.43.205:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-b7fcad0e77ec4b8ff1568c4fc8735e3b', 'i:1;', 1772127815),
+('naturale-cache-b7fcad0e77ec4b8ff1568c4fc8735e3b:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-bbf013bfc5312c2a96499bd5db0a996c', 'i:1;', 1772127812),
+('naturale-cache-bbf013bfc5312c2a96499bd5db0a996c:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-bc17ef6596ac87cce9b2174e2deb03e8', 'i:2;', 1772127810),
+('naturale-cache-bc17ef6596ac87cce9b2174e2deb03e8:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-bd0c712c1269deefa51ae8ab54c0b22f', 'i:1;', 1772107841),
+('naturale-cache-bd0c712c1269deefa51ae8ab54c0b22f:timer', 'i:1772107841;', 1772107841),
+('naturale-cache-c1738ad4ec778e88bcaf249c6175d644', 'i:1;', 1772127815),
+('naturale-cache-c1738ad4ec778e88bcaf249c6175d644:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-c2b33abe1eb96735b8e2921476168241', 'i:1;', 1772127812),
+('naturale-cache-c2b33abe1eb96735b8e2921476168241:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-c3eccf41effbbce9bcec9621d1757d95', 'i:1;', 1772127812),
+('naturale-cache-c3eccf41effbbce9bcec9621d1757d95:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1772886687),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1772886687;', 1772886687),
+('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b', 'i:1;', 1772127811),
+('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-d23fe656a557d0d7ddc1c3e76ce58c30', 'i:1;', 1772127814),
+('naturale-cache-d23fe656a557d0d7ddc1c3e76ce58c30:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-d45916610686087a20905da22e8336f2', 'i:5;', 1772127809),
+('naturale-cache-d45916610686087a20905da22e8336f2:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-df9aa23a08d93bf8f4b7b164ced84d60', 'i:1;', 1772127810),
+('naturale-cache-df9aa23a08d93bf8f4b7b164ced84d60:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-e0176b6c56b91a38b95d8a88d4847e94', 'i:1;', 1772127810),
+('naturale-cache-e0176b6c56b91a38b95d8a88d4847e94:timer', 'i:1772127810;', 1772127810),
+('naturale-cache-e47b4bba6be4799e2d4c2a10e9c8d4b5', 'i:1;', 1772127814),
+('naturale-cache-e47b4bba6be4799e2d4c2a10e9c8d4b5:timer', 'i:1772127814;', 1772127814),
+('naturale-cache-eaa9501ae7545aec93f541088d11289e', 'i:1;', 1772127816),
+('naturale-cache-eaa9501ae7545aec93f541088d11289e:timer', 'i:1772127816;', 1772127816),
+('naturale-cache-eb8a742efb64447d5b7675ca3532d0c8', 'i:1;', 1772127813),
+('naturale-cache-eb8a742efb64447d5b7675ca3532d0c8:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-eee10111ab16f9093b0b5b69fb8a171d', 'i:1;', 1772127809),
+('naturale-cache-eee10111ab16f9093b0b5b69fb8a171d:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-fb96c52aef7191114632fb50691f421c', 'i:1;', 1772121128),
+('naturale-cache-fb96c52aef7191114632fb50691f421c:timer', 'i:1772121128;', 1772121128),
+('naturale-cache-fortify.2fa_codes.049b2e43779dda39459f88efe97be3cc', 'i:59093262;', 1772797943),
+('naturale-cache-fortify.2fa_codes.37781357e4707153478f32df56f12668', 'i:59094546;', 1772836449),
+('naturale-cache-fortify.2fa_codes.e54d7eb5bb5245aa112fb1a74f7b513d', 'i:59094548;', 1772836527),
+('naturale-cache-q or 1=1 --|88.170.43.205', 'i:1;', 1772127812),
+('naturale-cache-q or 1=1 --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-q or q1q=q1q --|88.170.43.205', 'i:1;', 1772127812),
+('naturale-cache-q or q1q=q1q --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-q or qq=q|88.170.43.205', 'i:1;', 1772127812),
+('naturale-cache-q or qq=q|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-testuser999|88.170.43.205', 'i:1;', 1772127809),
+('naturale-cache-testuser999|88.170.43.205:timer', 'i:1772127809;', 1772127809);
 
 -- --------------------------------------------------------
 
@@ -275,7 +411,8 @@ INSERT INTO `knowledge_base` (`kbid`, `kb_keyword`, `kb_content`) VALUES
 (2, 'return, refund, money back, exchange, cancel order, broken bottle', 'Strict Rule: Do not process refunds here. Tell the user to email NaturaleHelpDesk@gmail.com with their order number. Note: We only accept returns for unopened products within 30 days.'),
 (3, 'vegan, sulfate, paraben, natural, chemicals, organic, ingredient, ingredients', 'Naturale is 100% vegan and sulfate-free. We use cold-pressed oils. See our full ingredient list here: <a href=\"/ingredients\" class=\"text-decoration-none\">Ingredients</a>.'),
 (4, 'password, login, change email, delete account, dashboard', 'You can manage your personal details and order history in your Naturale Account Dashboard. If you forgot your password, use the \'Forgot Password\' link on the login page. The link to the account section is https://cs2team20.cs2410-web01pvm.aston.ac.uk/dashboard'),
-(5, 'orders, order, view order', 'You can view your order if logged in https://cs2team20.cs2410-web01pvm.aston.ac.uk/orders. If not logged in at time of order contact support https://cs2team20.cs2410-web01pvm.aston.ac.uk/contact');
+(5, 'orders, order, view order', 'You can view your order if logged in https://cs2team20.cs2410-web01pvm.aston.ac.uk/orders. If not logged in at time of order contact support https://cs2team20.cs2410-web01pvm.aston.ac.uk/contact'),
+(6, 'basket, cart', 'You can view your cart https://cs2team20.cs2410-web01pvm.aston.ac.uk/cart. ');
 
 -- --------------------------------------------------------
 
@@ -483,7 +620,10 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('28e3tmS9teIdpFOkeK9vLIhAKQ4my9NkofUaS4iK', NULL, '109.150.227.76', 'Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRlBXYmhFSDlqc2EzUG4yV0dPT3NpcFlQWDB3ZE1lNVJVMkx3MUxuNSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fX0=', 1771366347);
+('0msCWYN5zjiydqfC5zlqMg6KBVhHQRnv11M44667', 9, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiR21DQjNTT1dsR3RGc2RWd2RtNHhGNkJTR2ZNMTVTN0c4Vkg1UUFiRyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTg6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wb3J0YWwvb3JkZXIiO3M6NToicm91dGUiO047fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjk7fQ==', 1772889429),
+('2SGFeLA6jQzpVjo8oXLqESeQfxgKahutyduCQnU3', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV2pDelRwaEd2a1NnZjlyS1dsSGRlSGhqblNIakUzY0o2QkE3MjNHNSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTE6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9sb2dpbiI7czo1OiJyb3V0ZSI7czo1OiJsb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1772884779),
+('FvHuNZC7dlMGUKnBzuXsmsAljWfsGRM4vXt5KL8N', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiVWZwOUxCTTFwMEdlcjVkdmR1RUFtRnRwcE1UZXU1b1JraTVnTlVDTyI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo2NzoiaHR0cHM6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrL2Rhc2hib2FyZC9hZGRyZXNzZXMvMSI7fXM6OToiX3ByZXZpb3VzIjthOjI6e3M6MzoidXJsIjtzOjY3OiJodHRwczovL2NzMnRlYW0yMC5jczI0MTAtd2ViMDFwdm0uYXN0b24uYWMudWsvZGFzaGJvYXJkL2FkZHJlc3Nlcy8xIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1772884779),
+('zRclA51ZZAhf2e1UsQgqW4H6sgZiyO3imIBTqg46', NULL, '15.204.13.234', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoienpaNWR0bXNFWHZ6azN0VFpjYjhyOGk2UnNHZ3IzclZwODk3WWdhTSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay8/Y2hlY2tfcGx1Z2luPSI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1772881675);
 
 -- --------------------------------------------------------
 
@@ -512,15 +652,16 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`) VALUES
-(1, 'Test User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$NsHSLGwis02pq1WzT6MZIOKC6qpsGwQuaTuVh7oRaH25opzLfFt/C', NULL, NULL, NULL, 'vYVHQLzdYB6ozugjXGPgxI1UDGNsxmbH4EqBHCsDO0oDha6TwY5tpdttxrCL', '2025-10-21 18:33:32', '2025-10-21 18:33:32', 'customer'),
-(2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6Ik5tSEVFdkJIMEJhS3FOTUt2anFEeWc9PSIsInZhbHVlIjoicExzU2JoeldhUGhndnZXR2t6SHZhd3pwd2dWbnZ0M1Y5dnkxOFBXOVJNOENyUnZPeldDT3hrVFQ0QmFjVzhGcmd0bWxHUlBPdU9jbE1wWnZxL3JzNXY1L2pGRzE0UG52YmVXU2tPbXFTN0VVdW1kaGk5dFc2eGhpSVlFdDFJb0t5WEFTcTRDUmUydFNLVHhxeVdwcDJNUnVyNC9GaEhib3U1Sm1HN3hKV3JscXJPdmZORjJQWEZFeUNVdnk5SGNJdm5jQ3VmdFFQd1FjOU5hVlcyYndSaG1JUUJvOFJ4NVBMRWNQdHNJUURHN0IwdFFrK1ZrcmJ2dGJMRHE3MVN1aGJtRXlTbnNLaCtXRFk4SkNlNDJzY0E9PSIsIm1hYyI6ImEwYTg1YzllMDk1OTg3ZTEyZmVlNmJkYTJjMzAzNzFkMmRhM2VmZjhjMmQ2Y2QyYWU5Y2JlZTRhNWY0ZTAxNGQiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-17 21:45:27', 'customer'),
+(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'OnPTYiih0HwrqCWlAHZXwwxkxcNKK2MmyhTiFSVrO9r36BgdfOFyImyFVvi0', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer'),
+(2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6ImkwRUtMY2t3VzVCdUIzUHB6SnJLRGc9PSIsInZhbHVlIjoiNW5UT29KWjQxRktXbXVGdkRXUGdDZ3JkUkgwVVordzNFTE5odWhmODRMUGd0ME5QS3VYM0xNOXhuVFNTcjB6QmJBM2NjK2ZhVzNJUXBVdVE5SjZ5VXRBZ2hrb3M5bDZoa3hJYTYwMkxyaUhHa3lWbFFHZHh4L0lQOVpvYmtwMGZLN2VVK0UzZ21hcElnT25xSzlJZTgzRWw0alZFaW9DdWtSMzExaG5qc0NLblkvTlVTMzVyVTRjWDd4STlkUW53QUNMSW5kYVZOR3lTRXJUTXh1eDVmS3AyNzF3SEU1b0srN1lBVnp1dzhudm5zSHJNVFYrdnQwUEN3NEd6eGdGd1EzOGJBQVJHQjYwSUo5cVNiZWZiMXc9PSIsIm1hYyI6ImNiZGI2YzVlN2EwOWM1MGVhOTA4MGFjNGI4YWUwOTUxNWZmOTM5Nzg4ZjQzNDQ2MTU4NGQ3M2I1YTUzODgxZDIiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-19 14:58:25', 'customer'),
 (3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer'),
 (4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer'),
 (5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, NULL, NULL, NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46', 'customer'),
 (6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, NULL, NULL, NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42', 'customer'),
 (7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02', 'customer'),
 (8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, NULL, NULL, NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46', 'customer'),
-(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin');
+(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin'),
+(10, 'HW786LEGEND', '112451828911674993144', 'hw786legend@gmail.com', NULL, '$2y$12$K9RqvNJrQhBRpQcFDNWzI.hsc1xG1fKyXtrhv7.XW2zix.8K8QMZ6', NULL, NULL, NULL, NULL, '2026-02-19 15:22:36', '2026-02-19 15:22:36', 'customer');
 
 --
 -- Indexes for dumped tables
@@ -698,7 +839,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `knowledge_base`
 --
 ALTER TABLE `knowledge_base`
-  MODIFY `kbid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `kbid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -734,7 +875,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

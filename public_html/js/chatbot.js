@@ -20,7 +20,7 @@ async function startChat() {
 async function endChat() {
     await fetch('/chat/end', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': getCsrfToken() } });
 
-    chatBox.innerHTML = '<div class="message bot">Chat ended.</div>';
+    chatBox.innerHTML = '<div class="message assistant">Chat ended.</div>';
 
     toggleChatActive(false);
 
@@ -40,34 +40,68 @@ async function sendMessage(fromClick, clickValue) {
 
     if (!message.trim()) return; //dont send message if no input
 
-    appendMessage('user', message);
+    appendMessage('user', message, false);
+
+    const loadingDiv = loadingMessage();
 
     messageBox.value = '';
 
-    const response = await fetch('/chat/send', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': getCsrfToken() }, body: JSON.stringify({ message: message }) });
+    let href_array = (window.location.href).split("/")
+
+    let pid = null
+
+    if (Number.isInteger(href_array.at(-1))) {
+
+        pid = parseInt(href_array.at(-1));
+
+    }
+
+    const response = await fetch('/chat/send', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': getCsrfToken() }, body: JSON.stringify({ message: message, pid: pid }) });
 
     const data = await response.json();
 
+    loadingDiv.remove();
+
     if (Array.isArray(data.response)) {
-        appendManyMessage('bot', data.response, data.history);
+        appendManyMessage('assistant', data.response, data.history);
 
     } else {
-        appendMessage('bot', data.response, data.history.at(-1).isButton);
+        appendMessage('assistant', data.response, data.history.at(-1).isButton);
 
     }
 }
+
+function loadingMessage() {
+
+    const div = document.createElement('div');
+
+    div.classList.add('message', 'assistant', 'flex', 'space-x-1');
+
+    div.innerHTML = `
+    <span class="typing-dot"></span>
+    <span class="typing-dot"></span>
+    <span class="typing-dot"></span>
+    `;
+
+    chatBox.appendChild(div);
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    return div
+}
+
 
 function appendMessage(sender, text, isButton) {
     const div = document.createElement('div');
 
     div.classList.add('message', sender);
 
-    if (sender === 'bot' && isButton === false) {
-        div.innerHTML = sender + ": " + text;
+    if (sender === 'assistant' && isButton === false) {
+        div.innerHTML = text;
 
-    } else if (sender === 'bot' && isButton === true) {
+    } else if (sender === 'assistant' && isButton === true) {
 
-        div.innerHTML = `${sender}: `;
+        div.innerHTML = ``;
 
         const button = document.createElement('button');
         button.textContent = `${text}`;
@@ -79,7 +113,7 @@ function appendMessage(sender, text, isButton) {
         div.appendChild(button);
 
     } else {
-        div.textContent = sender + ": " + text;;
+        div.textContent = text;;
 
     }
 
@@ -144,6 +178,26 @@ function toggleChatActive(isActive) {
 
 }
 
+async function setupChat() {
+
+    const response = await fetch('/chat/status', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-CSRF-TOKEN': getCsrfToken() } });
+
+    const data = await response.json();
+
+    if (data.started === true) {
+
+        renderHistory(data.history);
+
+        toggleChatActive(true);
+
+    } else {
+    
+        toggleChatActive(false);
+
+    }
+
+}
+
 function handleEnter(e) {
     if (e.key === 'Enter') sendMessage(false, '');
 }
@@ -154,5 +208,4 @@ function messageClick(text) {
 
 }
 
-
-toggleChatActive(false);
+setupChat();

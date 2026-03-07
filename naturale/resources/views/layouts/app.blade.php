@@ -34,5 +34,9 @@
                 {{ $slot }}
             </main>
         </div>
+
+    	@include('components/footer_tailwind')
+    
     </body>
+    
 </html>

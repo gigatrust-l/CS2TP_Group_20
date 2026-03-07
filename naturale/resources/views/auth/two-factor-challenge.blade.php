@@ -41,7 +41,7 @@
                 </button>
 
                 <x-green-button class="ms-4">
-                    {{ __('Save') }}
+                    {{ __('Log In') }}
                 </x-green-button>
             </div>
         </form>

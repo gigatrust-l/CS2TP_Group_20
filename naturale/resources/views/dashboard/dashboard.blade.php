@@ -30,17 +30,34 @@
 
             {{-- Display STOCK if 'products' is passed --}}
             @if(isset($products))
-            @include('admin/components/admin_dashboard_products')
+            @include('dashboard/components/dashboard_products')
 
             {{-- Display ORDERS if 'orders' is passed --}}
             @elseif(isset($orders))
-            @include('admin/components/admin_dashboard_orders')
+            @include('dashboard/components/dashboard_orders')
+
+            @elseif(isset($user))
+
+            @include('dashboard/components/dashboard_profile')
+
+            @elseif(isset($addresses))
+
+            @include('dashboard/components/dashboard_addresses')
+
+            @elseif(isset($order))
+
+            @include('dashboard/components/dashboard_order')
+
+            @elseif(isset($address))
+
+            @include('dashboard/components/dashboard_address')
 
             {{-- Display HOME if no data is passed --}}
-            @else 
-            @include('admin/components/admin_dashboard_home')
+            @else
+            @include('dashboard/components/dashboard_home')
             @endif
 
         </div>
     </div>
+
 </x-app-layout>

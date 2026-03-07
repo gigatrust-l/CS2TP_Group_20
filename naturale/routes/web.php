@@ -10,12 +10,15 @@ use App\Http\Controllers\IngredientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AddressController;
 use App\Http\Controllers\GoogleController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
 Route::get('/chat', [ChatController::class, 'index']);
 Route::post('/chat/send', [ChatController::class, 'sendMessage']);
+Route::post('/chat/status', [ChatController::class, 'chatStatus']);
 Route::post('/chat/start', [ChatController::class, 'startChat']);
 Route::post('/chat/end', [ChatController::class, 'endChat']);
 
@@ -38,33 +41,39 @@ Route::get('/ingredients', function () {
 
 Route::get('/ingredients/{slug}', [IngredientController::class, 'show']);
 
-Route::get('/dashboard', [ProfileController::class, 'edit'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth'])
+    ->name('dashboard');
 
 Route::get('/portal', [AdminController::class, 'index'])
     ->middleware(['auth'])
     ->name('portal');
 
+Route::get('/portal/{slug}', [AdminController::class, 'show'])
+    ->middleware(['auth']);
+
+Route::get('/dashboard/{slug}', [DashboardController::class, 'show'])
+    ->middleware(['auth']);
+
+Route::post('/update-stock/{pid}', [AdminController::class, 'updateStock'])->name('admin.stock.update');
+
 //Route::get('/dashboard', function () {
 //    return view('dashboard');
 //})->middleware(['auth'])->name('dashboard');
 
-Route::middleware(['auth', 'IsAdmin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin/admin_dashboard');
-    })->name('dashboard');
+Route::get('/dashboard/{slug}/{id}', [DashboardController::class, 'modify'])
+    ->middleware(['auth']);
 
-    //HEZ PUT ADMININY STUFF HERE
-    //IT IS PROTECTED FROM NORMAL USERS
 
-});
-
-Route::get('/orders', [OrderController::class, 'index'])->middleware(['auth'])->name('orders');
-Route::get('/orders/{order}', [OrderController::class, 'show'])->middleware(['auth'])->name('orders.show');
+//Route::get('/orders', [OrderController::class, 'index'])->middleware(['auth'])->name('orders');
+//Route::get('/orders/{order}', [OrderController::class, 'show'])->middleware(['auth'])->name('orders.show');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    //Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::patch('/dashboard/addresses/{id}', [AddressController::class, 'update'])->name('address.update');
+    Route::delete('/dashboard/addresses', [AddressController::class, 'destroy'])->name('address.destroy');
 });
 
 require __DIR__.'/auth.php';
@@ -100,7 +109,7 @@ Route::get('/email/verify', function () {
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
  
-    return redirect('/home');
+    return redirect('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {
