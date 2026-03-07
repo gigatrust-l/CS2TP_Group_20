@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="overscroll-none">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="overscroll-none" >
     <head>
     	<link rel="icon" type="image/x-icon" href="/media/favicon.png" />
         <meta charset="utf-8">
