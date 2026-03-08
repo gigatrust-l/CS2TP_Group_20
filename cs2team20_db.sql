@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 07, 2026 at 01:20 PM
+-- Generation Time: Mar 08, 2026 at 03:02 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -98,12 +98,14 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-3183c7fde7643f2a00112bdbc85ca495:timer', 'i:1772127813;', 1772127813),
 ('naturale-cache-32d31b796d5f92068d5d8dc218be4f53', 'i:1;', 1772127813),
 ('naturale-cache-32d31b796d5f92068d5d8dc218be4f53:timer', 'i:1772127813;', 1772127813),
+('naturale-cache-3909d2e422a2ee97477bce01c499b9f5', 'i:1;', 1772979181),
+('naturale-cache-3909d2e422a2ee97477bce01c499b9f5:timer', 'i:1772979181;', 1772979181),
 ('naturale-cache-3dae031a529e3124b44bfd269990b95d', 'i:2;', 1772127810),
 ('naturale-cache-3dae031a529e3124b44bfd269990b95d:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843', 'i:1;', 1772127814),
 ('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843:timer', 'i:1772127814;', 1772127814),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1772797943),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1772797943;', 1772797943),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1772979196),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1772979196;', 1772979196),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb', 'i:1;', 1772127810),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4', 'i:1;', 1772836527),
@@ -162,8 +164,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-c2b33abe1eb96735b8e2921476168241:timer', 'i:1772127812;', 1772127812),
 ('naturale-cache-c3eccf41effbbce9bcec9621d1757d95', 'i:1;', 1772127812),
 ('naturale-cache-c3eccf41effbbce9bcec9621d1757d95:timer', 'i:1772127812;', 1772127812),
-('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1772886687),
-('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1772886687;', 1772886687),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1772979154),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1772979154;', 1772979154),
 ('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b', 'i:1;', 1772127811),
 ('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-d23fe656a557d0d7ddc1c3e76ce58c30', 'i:1;', 1772127814),
@@ -185,7 +187,9 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-fb96c52aef7191114632fb50691f421c', 'i:1;', 1772121128),
 ('naturale-cache-fb96c52aef7191114632fb50691f421c:timer', 'i:1772121128;', 1772121128),
 ('naturale-cache-fortify.2fa_codes.049b2e43779dda39459f88efe97be3cc', 'i:59093262;', 1772797943),
+('naturale-cache-fortify.2fa_codes.2e998ed7fb1e7736c17c570b9a314a68', 'i:59099304;', 1772979196),
 ('naturale-cache-fortify.2fa_codes.37781357e4707153478f32df56f12668', 'i:59094546;', 1772836449),
+('naturale-cache-fortify.2fa_codes.746a93f94a4288a7328933e9249b0383', 'i:59099090;', 1772972778),
 ('naturale-cache-fortify.2fa_codes.e54d7eb5bb5245aa112fb1a74f7b513d', 'i:59094548;', 1772836527),
 ('naturale-cache-q or 1=1 --|88.170.43.205', 'i:1;', 1772127812),
 ('naturale-cache-q or 1=1 --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
@@ -473,7 +477,16 @@ INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_tim
 (64, 18, 23, 'Processing', 8.99, '2026-02-16 22:42:34'),
 (65, 19, 24, 'Processing', 5.99, '2026-02-16 22:42:34'),
 (66, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
-(67, 1, 14, 'Processing', 8.99, '2026-02-16 22:43:06');
+(67, 1, 14, 'Processing', 8.99, '2026-02-16 22:43:06'),
+(68, 1, 1, 'completed', 23.97, '2026-03-07 16:54:59'),
+(69, 2, 17, 'Processing', 8.99, '2026-03-08 12:25:33'),
+(70, 2, 17, 'Processing', 13.98, '2026-03-08 12:27:03'),
+(71, 2, 17, 'Processing', 4.99, '2026-03-08 12:33:25'),
+(72, 2, 17, 'Processing', 4.99, '2026-03-08 13:14:48'),
+(73, 2, 17, 'Processing', 4.99, '2026-03-08 13:16:59'),
+(74, 2, 17, 'Processing', 4.99, '2026-03-08 13:22:02'),
+(75, 1, 1, 'Processing', 6.99, '2026-03-08 14:11:43'),
+(76, 2, 17, 'Processing', 13.98, '2026-03-08 14:12:28');
 
 -- --------------------------------------------------------
 
@@ -512,7 +525,19 @@ INSERT INTO `order_item` (`oiid`, `oi_oid`, `oi_pid`, `oi_quantity`, `oi_ind_pri
 (54, 64, 1, 1, 8.99),
 (55, 65, 10, 1, 5.99),
 (56, 66, 1, 1, 8.99),
-(57, 67, 16, 1, 8.99);
+(57, 67, 16, 1, 8.99),
+(58, 68, 2, 2, 8.99),
+(59, 68, 10, 1, 5.99),
+(60, 69, 1, 1, 8.99),
+(61, 70, 0, 1, 4.99),
+(62, 70, 0, 1, 4.99),
+(63, 71, 0, 1, 4.99),
+(64, 72, 0, 1, 4.99),
+(65, 73, 0, 1, 4.99),
+(66, 74, 0, 1, 4.99),
+(67, 75, 15, 1, 6.99),
+(68, 76, 16, 1, 8.99),
+(69, 76, 0, 1, 4.99);
 
 -- --------------------------------------------------------
 
@@ -558,8 +583,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, `p_stock`, `p_category`, `p_feature`, `p_ingredients`, `p_instructions`, `p_volume`) VALUES
-(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 39, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
-(2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 16, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
+(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483640, 'shipping', 'shipping', NULL, NULL, NULL),
+(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 38, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
+(2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 14, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
 (3, 'Pure Roots Scalp Detox Mask', 'A purifying mask formulated to cleanse buildup, rebalance the scalp, and help reduce dandruff. It leaves the scalp feeling refreshed, soothed, and invigorated.', '8.99', 'media/media_webp/products/product_3.webp', 0, 'Hair Masks', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Massage into scalp. Leave 5–7 minutes. Rinse well.', 200),
 (4, 'Oasis Quench Repair Mask', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', '8.99', 'media/media_webp/products/product_4.webp', 0, 'Hair Masks', 'Avocado Extract', 'Apply mid-lengths to ends. Leave 10 minutes. Rinse.', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', 200),
 (5, 'Chromaglow Color Care Mask', 'A protective antioxidant-rich mask that nourishes color-treated hair, helping maintain vibrancy and shine. It shields strands from fading while restoring softness and smoothness.', '8.99', 'media/media_webp/products/product_5.webp', 44, 'Hair Masks', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Antioxidants, Water, Glycerin', 'Apply evenly after shampoo. Leave 5–8 minutes. Rinse.', 200),
@@ -567,13 +593,13 @@ INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, 
 (7, 'Luminous Sleek Shampoo', 'Parfum and sulfate free shampoo. Softens straight hair and smooths cuticles\r\nleaving a shiny glossy hair. No parabens.', '5.99', 'media/media_webp/products/product_7.webp', 49, 'Shampoo', 'Coconut Oil', 'Coconut Oil, Vitamin K and B, Castor Oil, Water, and Glycerin', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (8, 'Green Balance Detox Shampoo', 'Detoxification and purifying shampoo. Restores scalp balance by cleansing product\r\nbuildup and dandruff. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_8.webp', 47, 'Shampoo', 'Tea Tree Oil', 'Tea Tree Oil, Aloe Vera, Water, Peppermint Extract, Vitamin E, Glycerin', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (9, 'Desert Dew Hydrating Shampoo', 'entle hydrating shampoo. Provides deep moisture for silky shinny hair. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_9.webp', 49, 'Shampoo', 'Avocado Extract ', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
-(10, 'Color Haven Repair Shampoo', 'Colour protecting shampoo, enhances colour vibration, restores shine and\r\nstrengthens hair fibres. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_10.webp', 45, 'Shampoo', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
+(10, 'Color Haven Repair Shampoo', 'Colour protecting shampoo, enhances colour vibration, restores shine and\r\nstrengthens hair fibres. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_10.webp', 44, 'Shampoo', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (11, 'Velvet Spiral Conditioner', 'Softens, adds bounce, hydrates, and defines curls. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_11.webp', 49, 'Conditioner', 'Shea Butter', 'Shea butter, Aloe Vera, Glycerin, Hibiscus Extract, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (12, 'Glass Veil Conditioner', 'Light conditioner. Provides mirror like shine to straight hair. Smooths the cuticles\r\nand reduces frizz. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_12.webp', 47, 'Conditioner', 'Coconut Oil', 'Coconut Oil, Vitamin E, Vitamin A, Water, Glycerin, Aloe Vera', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (13, 'Calm Scalp Conditioner', 'Detox conditioner. Refreshes scalp and prevents irritation. Sulfate free. No\r\nparabens.', '6.99', 'media/media_webp/products/product_13.webp', 49, 'Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Aloe Vera, Peppermint Extract, Vitamin C, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water', 550),
 (14, 'Moisture Bloom Conditioner', 'Deep hydration and moisture conditioner. Repairs split and dry ends, prevents\r\nbreakage and restores softness. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_14.webp', 49, 'Conditioner', 'Avocado Extract', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
-(15, 'Radiant Restore Conditioner', 'Colour protecting conditioner. Restores colour vibration, adds smoothness and\r\nshine to colour damaged hair. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_15.webp', 49, 'Conditioner', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
-(16, 'Curl Essence Leave-In Cream', 'A rich yet lightweight leave-in cream that defines curls, reduces frizz, and adds softness without creating buildup. Perfect for everyday curl styling and nourishment.', '8.99', 'media/media_webp/products/product_16.webp', 48, 'Leave-In Conditioner', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water, Glycerin', 'Apply to damp curls and distribute evenly.', 400),
+(15, 'Radiant Restore Conditioner', 'Colour protecting conditioner. Restores colour vibration, adds smoothness and\r\nshine to colour damaged hair. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_15.webp', 48, 'Conditioner', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
+(16, 'Curl Essence Leave-In Cream', 'A rich yet lightweight leave-in cream that defines curls, reduces frizz, and adds softness without creating buildup. Perfect for everyday curl styling and nourishment.', '8.99', 'media/media_webp/products/product_16.webp', 47, 'Leave-In Conditioner', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water, Glycerin', 'Apply to damp curls and distribute evenly.', 400),
 (17, 'Silk Glide Leave-In Spray', 'A smoothing leave-in spray that tames frizz, enhances manageability, and leaves hair sleek and shiny. Ideal for quick styling and daily touchups.', '8.99', 'media/media_webp/products/product_17.webp', 46, 'Leave-In Conditioner', 'Coconut Oil', 'Coconut Oil, Aloe Vera, Water, Glycerin, Vitamin E', 'Apply to damp curls and distribute evenly.', 400),
 (18, 'Root Relief Leave-In Tonic', 'A refreshing scalp tonic that cools, soothes, and hydrates the scalp. It promotes a healthy environment for growth while adding lightweight moisture.', '8.99', 'media/media_webp/products/product_18.webp', 49, 'Leave-In Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Spray directly onto scalp. Do not rinse.', 400),
 (19, 'Hydra Repair Leave-In Mist', 'A hydrating mist that strengthens and revitalizes dry hair. It enhances softness, helps prevent breakage, and provides instant moisture throughout the day.', '8.99', 'media/media_webp/products/product_19.webp', 49, 'Leave-In Conditioner', 'Avocado Extract', 'Avocado Extract, Jojoba Oil, Water, Glycerin', 'Spray onto hair and leave in.', 400),
@@ -620,10 +646,10 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('0msCWYN5zjiydqfC5zlqMg6KBVhHQRnv11M44667', 9, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiR21DQjNTT1dsR3RGc2RWd2RtNHhGNkJTR2ZNMTVTN0c4Vkg1UUFiRyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTg6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wb3J0YWwvb3JkZXIiO3M6NToicm91dGUiO047fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjk7fQ==', 1772889429),
-('2SGFeLA6jQzpVjo8oXLqESeQfxgKahutyduCQnU3', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV2pDelRwaEd2a1NnZjlyS1dsSGRlSGhqblNIakUzY0o2QkE3MjNHNSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTE6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9sb2dpbiI7czo1OiJyb3V0ZSI7czo1OiJsb2dpbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1772884779),
-('FvHuNZC7dlMGUKnBzuXsmsAljWfsGRM4vXt5KL8N', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiVWZwOUxCTTFwMEdlcjVkdmR1RUFtRnRwcE1UZXU1b1JraTVnTlVDTyI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czo2NzoiaHR0cHM6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrL2Rhc2hib2FyZC9hZGRyZXNzZXMvMSI7fXM6OToiX3ByZXZpb3VzIjthOjI6e3M6MzoidXJsIjtzOjY3OiJodHRwczovL2NzMnRlYW0yMC5jczI0MTAtd2ViMDFwdm0uYXN0b24uYWMudWsvZGFzaGJvYXJkL2FkZHJlc3Nlcy8xIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1772884779),
-('zRclA51ZZAhf2e1UsQgqW4H6sgZiyO3imIBTqg46', NULL, '15.204.13.234', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoienpaNWR0bXNFWHZ6azN0VFpjYjhyOGk2UnNHZ3IzclZwODk3WWdhTSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay8/Y2hlY2tfcGx1Z2luPSI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1772881675);
+('3U50unRbUM4xoZhy8weeKM2A4BryDJLWY66ugq7T', 2, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiSGpQemdkWWg0ZkJyMTN5QTZYT1RPVHlINTJOWGI2ZUtJUk9UV3UxZiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jYXJ0IjtzOjU6InJvdXRlIjtzOjk6ImNhcnQudmlldyI7fXM6NToibG9naW4iO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxMjoiY2hlY2tvdXRDYXJ0IjthOjE6e2k6MDthOjI6e3M6MzoicGlkIjtpOjA7czo4OiJxdWFudGl0eSI7aToxO319czo0OiJjYXJ0IjthOjE6e2k6MDthOjI6e3M6MzoicGlkIjtpOjA7czo4OiJxdWFudGl0eSI7aToxO319fQ==', 1772978784),
+('coA1Lpjk3Ms86Wnq03jEiccatpaLueydsVnQFImz', NULL, '94.11.226.180', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiS0pUdExlbllPS0NEVlRyVTBNUEZyUk5FU1BRcFl3M1V0M1IydzZocyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NDoiY2FydCI7YToxOntpOjA7YToyOntzOjM6InBpZCI7czoxOiIxIjtzOjg6InF1YW50aXR5IjtpOjI7fX19', 1772980913),
+('fPEozWl17DmSzZkQm9NJZVd4iC7S6vElhR4DND5u', NULL, '86.30.64.123', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNmZqZXoxN25nWmUzZ2pFT3Z3enVuNlBEYnZ6cFJqRDN6dGFHVlJTRyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrIjtzOjU6InJvdXRlIjtzOjU6ImluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1772981259),
+('sbbtjj0LSNra5HmXwVs5IoqpW9rLY1PsNTYGhfQM', 2, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiREczSHdoVlJTbzVZSDBHejhTZHRWWTVxTlBaZ0pJbGFra1IyV0VTUCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTc6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cy8yMSI7czo1OiJyb3V0ZSI7czoxMzoicHJvZHVjdHMuc2hvdyI7fXM6NToibG9naW4iO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoxMjoiY2hlY2tvdXRDYXJ0IjthOjI6e2k6MDthOjI6e3M6MzoicGlkIjtzOjI6IjE2IjtzOjg6InF1YW50aXR5IjtzOjE6IjEiO31pOjE7YToyOntzOjM6InBpZCI7czoxOiIwIjtzOjg6InF1YW50aXR5IjtzOjE6IjEiO319fQ==', 1772980359);
 
 -- --------------------------------------------------------
 
@@ -644,24 +670,25 @@ CREATE TABLE `users` (
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `isAdmin` enum('customer','admin') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'customer'
+  `isAdmin` enum('customer','admin') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'customer',
+  `subscribed` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`) VALUES
-(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'OnPTYiih0HwrqCWlAHZXwwxkxcNKK2MmyhTiFSVrO9r36BgdfOFyImyFVvi0', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer'),
-(2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6ImkwRUtMY2t3VzVCdUIzUHB6SnJLRGc9PSIsInZhbHVlIjoiNW5UT29KWjQxRktXbXVGdkRXUGdDZ3JkUkgwVVordzNFTE5odWhmODRMUGd0ME5QS3VYM0xNOXhuVFNTcjB6QmJBM2NjK2ZhVzNJUXBVdVE5SjZ5VXRBZ2hrb3M5bDZoa3hJYTYwMkxyaUhHa3lWbFFHZHh4L0lQOVpvYmtwMGZLN2VVK0UzZ21hcElnT25xSzlJZTgzRWw0alZFaW9DdWtSMzExaG5qc0NLblkvTlVTMzVyVTRjWDd4STlkUW53QUNMSW5kYVZOR3lTRXJUTXh1eDVmS3AyNzF3SEU1b0srN1lBVnp1dzhudm5zSHJNVFYrdnQwUEN3NEd6eGdGd1EzOGJBQVJHQjYwSUo5cVNiZWZiMXc9PSIsIm1hYyI6ImNiZGI2YzVlN2EwOWM1MGVhOTA4MGFjNGI4YWUwOTUxNWZmOTM5Nzg4ZjQzNDQ2MTU4NGQ3M2I1YTUzODgxZDIiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-19 14:58:25', 'customer'),
-(3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer'),
-(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer'),
-(5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, NULL, NULL, NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46', 'customer'),
-(6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, NULL, NULL, NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42', 'customer'),
-(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02', 'customer'),
-(8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, NULL, NULL, NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46', 'customer'),
-(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin'),
-(10, 'HW786LEGEND', '112451828911674993144', 'hw786legend@gmail.com', NULL, '$2y$12$K9RqvNJrQhBRpQcFDNWzI.hsc1xG1fKyXtrhv7.XW2zix.8K8QMZ6', NULL, NULL, NULL, NULL, '2026-02-19 15:22:36', '2026-02-19 15:22:36', 'customer');
+INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`, `subscribed`) VALUES
+(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'xjMpqSKnfGiws3YvSyKTH15OWnIx0JDpmShi4ktHHeeERuvYL101ctzbLGCe', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer', 1),
+(2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6ImkwRUtMY2t3VzVCdUIzUHB6SnJLRGc9PSIsInZhbHVlIjoiNW5UT29KWjQxRktXbXVGdkRXUGdDZ3JkUkgwVVordzNFTE5odWhmODRMUGd0ME5QS3VYM0xNOXhuVFNTcjB6QmJBM2NjK2ZhVzNJUXBVdVE5SjZ5VXRBZ2hrb3M5bDZoa3hJYTYwMkxyaUhHa3lWbFFHZHh4L0lQOVpvYmtwMGZLN2VVK0UzZ21hcElnT25xSzlJZTgzRWw0alZFaW9DdWtSMzExaG5qc0NLblkvTlVTMzVyVTRjWDd4STlkUW53QUNMSW5kYVZOR3lTRXJUTXh1eDVmS3AyNzF3SEU1b0srN1lBVnp1dzhudm5zSHJNVFYrdnQwUEN3NEd6eGdGd1EzOGJBQVJHQjYwSUo5cVNiZWZiMXc9PSIsIm1hYyI6ImNiZGI2YzVlN2EwOWM1MGVhOTA4MGFjNGI4YWUwOTUxNWZmOTM5Nzg4ZjQzNDQ2MTU4NGQ3M2I1YTUzODgxZDIiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-19 14:58:25', 'customer', 0),
+(3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer', 0),
+(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer', 0),
+(5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, NULL, NULL, NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46', 'customer', 0),
+(6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, NULL, NULL, NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42', 'customer', 0),
+(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02', 'customer', 0),
+(8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, NULL, NULL, NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46', 'customer', 0),
+(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin', 0),
+(10, 'HW786LEGEND', '112451828911674993144', 'hw786legend@gmail.com', NULL, '$2y$12$K9RqvNJrQhBRpQcFDNWzI.hsc1xG1fKyXtrhv7.XW2zix.8K8QMZ6', NULL, NULL, NULL, NULL, '2026-02-19 15:22:36', '2026-02-19 15:22:36', 'customer', 0);
 
 --
 -- Indexes for dumped tables
@@ -851,19 +878,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `pid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=551;
+  MODIFY `pid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=553;
 
 --
 -- AUTO_INCREMENT for table `reviews`

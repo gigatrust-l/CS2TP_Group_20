@@ -11,9 +11,10 @@
             <div class="mb-4">
                 <h5 class="text-lg font-bold text-gray-900 mb-3">Quick Links</h5>
                 <ul class="space-y-2">
-                    <li><a href="/" class="text-gray-600 hover:text-green-600 transition-colors">Home</a></li>
-                    <li><a href="/about" class="text-gray-600 hover:text-green-600 transition-colors">About Us</a></li>
-                    <li><a href="/login" class="text-gray-600 hover:text-green-600 transition-colors">Login</a></li>
+                    <li><a href="/" class="text-green-600 hover:text-gray-600 transition-colors">Home</a></li>
+                    <li><a href="/about" class="text-green-600 hover:text-gray-600 transition-colors">About Us</a></li>
+                    <li><a href="/shipping" class="text-green-600 hover:text-gray-600 transition-colors">Shipping and Refunds</a></li>
+                    <li><a href="/login" class="text-green-600 hover:text-gray-600 transition-colors">Login</a></li>
                 </ul>
             </div>
 
@@ -21,24 +22,24 @@
                 <h5 class="text-lg font-bold text-gray-900 mb-3">Our Ingredients</h5>
                 <ul class="space-y-2">
                     <li><a href="{{ url('/ingredients/avocado-extract') }}"
-                            class="text-gray-600 hover:text-green-600 transition-colors">Avocado Extract</a></li>
+                            class="text-green-600 hover:text-gray-600 transition-colors">Avocado Extract</a></li>
                     <li><a href="{{ url('/ingredients/shea-butter') }}"
-                            class="text-gray-600 hover:text-green-600 transition-colors">Shea Butter</a></li>
+                            class="text-green-600 hover:text-gray-600 transition-colors">Shea Butter</a></li>
                     <li><a href="{{ url('/ingredients/pomegranate-oil') }}"
-                            class="text-gray-600 hover:text-green-600 transition-colors">Pomegranate Seed Oil</a></li>
+                            class="text-green-600 hover:text-gray-600 transition-colors">Pomegranate Seed Oil</a></li>
                     <li><a href="{{ url('/ingredients/tea-tree-oil') }}"
-                            class="text-gray-600 hover:text-green-600 transition-colors">Tea Tree Oil</a></li>
+                            class="text-green-600 hover:text-gray-600 transition-colors">Tea Tree Oil</a></li>
                     <li><a href="{{ url('/ingredients/coconut-oil') }}"
-                            class="text-gray-600 hover:text-green-600 transition-colors">Coconut Oil</a></li>
+                            class="text-green-600 hover:text-gray-600 transition-colors">Coconut Oil</a></li>
                 </ul>
             </div>
 
             <div class="mb-4">
                 <h5 class="text-lg font-bold text-gray-900 mb-3">Get In Touch</h5>
-                <ul class="space-y-2 text-gray-600">
-                    <li><a href="/contact" class="hover:text-green-600 transition-colors">Contact Us</a></li>
+                <ul class="space-y-2 text-grey-600">
+                    <li><a href="/contact" class="text-green-600 hover:text-gray-600 transition-colors">Contact Us</a></li>
                     <li>Email: <a href="mailto:NaturaleHelpDesk@gmail.com"
-                            class="hover:text-green-600 transition-colors">NaturaleHelpDesk@gmail.com</a></li>
+                            class="text-green-600 hover:text-gray-600 transition-colors">NaturaleHelpDesk@gmail.com</a></li>
                 </ul>
             </div>
 

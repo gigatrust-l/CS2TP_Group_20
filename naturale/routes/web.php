@@ -97,6 +97,10 @@ Route::get('/about', function () {
     return view('about_us');
 });
 
+Route::get('/shipping', function () {
+    return view('shipping&returns');
+});
+
 Route::controller(GoogleController::class)->group(function () {
     Route::get('auth/google', 'redirectToGoogle')->name('auth.google');
     Route::get('authorised/google/callback', 'handleGoogleCallback');

@@ -6,6 +6,7 @@
     <title>{{ config('app.name', 'Laravel') }} - Contact Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
+    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
 </head>
 <body>
     @include('components/nav_bar_customer')

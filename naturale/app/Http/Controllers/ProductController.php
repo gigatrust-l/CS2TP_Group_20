@@ -18,7 +18,15 @@ class ProductController extends Controller
         try {
             $product = Product::where('pid', $pid)->firstOrFail();
 
-            return view('product', compact('product'));
+            if ($product->p_category == "shipping"){
+
+                return redirect('/products');
+
+            } else {
+
+                return view('product', compact('product'));
+
+            }
 
         } catch (ModelNotFoundException $e) {
 

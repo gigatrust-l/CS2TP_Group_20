@@ -10,6 +10,7 @@ use App\Models\Customer;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Address;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\DB;
 
 
@@ -22,8 +23,51 @@ class CheckoutController extends Controller
      */
     public function viewCheckout()
     {
-        $cart = session()->get('cart', []); //retrieve cart from session or empty cart if none exists
-        return view('checkout.checkout', compact('cart')); //returns view page for basket
+
+        $tempcart = session()->get('cart', []); //retrieve cart from session or empty cart if none exists
+
+        $cart = [];
+
+        $runningTotal = 0;
+
+        $totalQuantity = 0;
+
+        foreach ($tempcart as $item) {
+
+            $product = Product::findOrFail($item['pid']);
+
+            if ($product) {
+
+                $cartItem = [$product, $item['quantity']];
+
+                $runningTotal += ($product->p_price * $item['quantity']);
+
+                $totalQuantity += $item['quantity'];
+
+                array_push($cart, $cartItem);
+
+            }
+
+        }
+
+        if (auth()->user()) {
+
+            $addresses = auth()->user()->addresses()->get()->map(fn($a) => [
+                $a->ca_line1,
+                $a->ca_line2,
+                $a->ca_city,
+                $a->ca_county,
+                $a->ca_postcode,
+                $a->ca_country,
+            ])->toArray();
+
+        } else {
+
+            $addresses = null;
+
+        }
+
+        return view('checkout.checkout', compact('cart', 'runningTotal', 'totalQuantity', 'addresses')); //returns view page for basket
     }
 
     public function confirmCheckout(Request $request)
@@ -41,6 +85,17 @@ class CheckoutController extends Controller
             'addressCountry' => 'required|string|max:255'
 
         ]);
+
+        if (!(auth()->user() && auth()->user()->isSubscriber())) {
+
+            $shippingrequest = new Request();
+
+            $shippingrequest->replace(['pid' => '0', 'quantity' => '1']);
+            
+            $apiUserController = new CartController();
+            $apiUserController->addItem($shippingrequest);
+
+        }
 
         $cart = session()->get('cart', []);
 

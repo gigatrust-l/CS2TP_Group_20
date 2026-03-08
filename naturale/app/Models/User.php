@@ -24,6 +24,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'google_id',
         'isAdmin',
+        'subscribed',
     ];
 
     /**
@@ -72,5 +73,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function isAdmin()
     {
         return $this->isAdmin === 'admin';
+    }
+
+    public function isSubscriber()
+    {
+        return $this->subscribed == '1';
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Order;
+use App\Models\Address;
 
 use Illuminate\Http\Request;
 
@@ -51,8 +52,9 @@ class DashboardController extends Controller
 
         } else if ($slug == "orders") {
             $order = auth()->user()->orders()->where('oid', $id)->firstOrFail();
+            $address = Address::findOrFail($order['o_address']);
 
-            return view('dashboard.dashboard', compact('order'));
+            return view('dashboard.dashboard', compact('order','address'));
 
         } else {
 

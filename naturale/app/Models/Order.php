@@ -29,4 +29,9 @@ class Order extends Model
         return $this->hasMany(OrderItem::class, 'oi_oid', 'oid');
     }
 
+    public function address()
+    {
+        return $this->belongsTo(Address::class, 'o_address', 'caid');
+    }
+
 }

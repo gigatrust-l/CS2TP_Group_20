@@ -13,28 +13,35 @@
             <div class="col-md-3 mb-4">
                 <h5>Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/" class="text-decoration-none">Home</a></li>
-                    <li><a href="/about" class="text-decoration-none">About Us</a></li>
-                    <li><a href="/login" class="text-decoration-none">Login</a></li>
+                    <li class="nav-item"><a href="/" class="nav-link text-secondary">Home</a></li>
+                    <li class="nav-item"><a href="/about" class="nav-link text-secondary">About Us</a></li>
+                    <li class="nav-item"><a href="/shipping" class="nav-link text-secondary">Shipping and Refunds</a>
+                    </li>
+                    <li class="nav-item"><a href="/login" class="nav-link text-secondary">Login</a></li>
                 </ul>
             </div>
 
             <div class="col-md-3 mb-4">
                 <h5>Our Ingredients</h5>
                 <ul class="list-unstyled">
-                    <li><a href="{{ url('/ingredients/avocado-extract') }}" class="text-decoration-none">Avocado Extract</a></li>
-                    <li><a href="{{ url('/ingredients/shea-butter') }}" class="text-decoration-none">Shea Butter</a></li>
-                    <li><a href="{{ url('/ingredients/pomegranate-oil') }}" class="text-decoration-none">Pomegranate Seed Oil</a></li>
-                    <li><a href="{{ url('/ingredients/tea-tree-oil') }}" class="text-decoration-none">Tea Tree Oil </a></li>
-                    <li><a href="{{ url('/ingredients/coconut-oil') }}" class="text-decoration-none">Coconut Oil</a></li>
+                    <li><a href="{{ url('/ingredients/avocado-extract') }}" class="nav-link text-secondary">Avocado
+                            Extract</a></li>
+                    <li><a href="{{ url('/ingredients/shea-butter') }}" class="nav-link text-secondary">Shea Butter</a>
+                    </li>
+                    <li><a href="{{ url('/ingredients/pomegranate-oil') }}" class="nav-link text-secondary">Pomegranate
+                            Seed Oil</a></li>
+                    <li><a href="{{ url('/ingredients/tea-tree-oil') }}" class="nav-link text-secondary">Tea Tree Oil </a>
+                    </li>
+                    <li><a href="{{ url('/ingredients/coconut-oil') }}" class="nav-link text-secondary">Coconut Oil</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="col-md-3 mb-4">
                 <h5>Get In Touch</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/contact" class="text-decoration-none">Contact Us</a></li>
-                    <li>Email: <a class="text-decoration-none" href="mailto:NaturaleHelpDesk@gmail.com">NaturaleHelpDesk@gmail.com</a></li>
+                    <li><a href="/contact" class="nav-link text-secondary">Contact Us</a></li>
+                    <li>Email: <a class="nav-link text-secondary" href="mailto:NaturaleHelpDesk@gmail.com">NaturaleHelpDesk@Gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +50,7 @@
         </div>
     </div>
 </footer>
-            
+
 
 
 <style>
@@ -52,7 +59,20 @@
         flex-direction: column;
         min-height: 100vh;
     }
+
     footer {
         margin-top: auto;
+    }
+
+    .nav-link {
+
+        color: #16a34a !important; /* green-600 equivalent */
+
+    }
+
+    .nav-link:hover {
+
+        color: #11813a !important; /* green-600 equivalent */
+
     }
 </style>

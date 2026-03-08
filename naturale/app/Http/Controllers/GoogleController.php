@@ -23,7 +23,13 @@ class GoogleController extends Controller
 
             if ($findUser) {
                 Auth::login($findUser);
-                return redirect()->intended('/');
+
+
+                $home = match (true) {
+                    $findUser->user()->isAdmin() => '/portal',
+                    default => '/',
+                };
+                return redirect()->intended($home);
             }
 
             $newUser = User::updateOrCreate(
