@@ -172,7 +172,7 @@ class CheckoutController extends Controller
             session()->put('checkoutCart', $cart);
             session()->forget('cart');
 
-            return view('checkout.checkout_complete', ['checkoutCart' => $cart]);
+            return redirect()->route('checkout.complete');
         });
     }
 
@@ -182,8 +182,33 @@ class CheckoutController extends Controller
      */
     public function completeCheckout()
     {
-        $checkoutCart = session()->get('checkoutCart', []); //retrieve cart from session or empty cart if none exists
-        return view('checkout.index', compact('checkoutCart')); //returns view page for basket
+
+        $tempcart = session()->get('checkoutCart', []); //retrieve cart from session or empty cart if none exists
+
+        $cart = [];
+
+        $runningTotal = 0;
+
+        foreach ($tempcart as $item) {
+
+            $product = Product::findOrFail($item['pid']);
+
+            if ($product) {
+
+                $cartItem = [$product, $item['quantity']];
+
+                $runningTotal += ($product->p_price * $item['quantity']);
+
+                array_push($cart, $cartItem);
+
+            }
+
+        }
+
+
+        session()->forget('checkoutCart');
+
+        return view('checkout.checkout_complete', compact('cart','runningTotal')); //returns view page for basket
 
     }
 

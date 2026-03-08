@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Laravel') }} - Products</title>
-    <!--    <link rel="stylesheet" href="{{ asset('css/products_style.css')}}" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('css/products_style.css') }}" />
     <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--This is to link google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap"
         rel="stylesheet">
@@ -20,70 +21,109 @@
 <body>
     @include('components/nav_bar_customer')
 
-    <div class="container mt-5">
-
-        <div class="text-center mb-4">
-            <h1>Browse our Products</h1>
-            <p class="text-muted">Find the perfect natural haircare product for your routine.</p>
+    <div class="container mt-5 pb-5">
+        <div class="text-center mb-5">
+            <h1>Store</h1>
         </div>
-        <!-- Search and Filter Bar -->
-        <form class="p-4 bg-white shadow-sm rounded mb-5" method="GET">
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label fw-semibold">Search by Name</label>
-                    <input type="text" class="form-control" placeholder="Product name..." name="name"
-                        value="{{ request('name') }}">
-                </div>
-                <div class="col-md-4">
-                    <label class="form-label fw-semibold">Filter by Category</label>
-                    <select name="type" class="form-select">
-                        <option value="">Any</option>
-                        @foreach($categories as $category)
-                            @if (!($category == "shipping"))
-                                <option value="{{ $category }}" {{ request('type') == $category ? 'selected' : '' }}>
-                                    {{ $category }}
-                                </option>
-                            @endif
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="col-md-2 d-flex align-items-end">
-                    <button type="submit" class="btn btn-success w-100">Search</button>
-                </div>
-            </div>
-        </form>
 
         <div class="row g-4">
-            @forelse($products as $product)
-                @if (!($product->p_category == "shipping"))
-                    <div class="col-md-4 col-lg-3">
-                        <a href="{{ route('products.show', $product->pid) }}" class="text-decoration-none">
-                            <div class="card h-100 shadow-sm border-0">
-                                <img src="{{ asset($product->p_image) }}" alt="{{ $product->p_name }}" class="card-img-top"
-                                    style="height: 200px; object-fit: cover;">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ $product->p_name }}</h5>
 
-                                    <p class="text-muted small mb-1">
-                                        {{ $product->p_category }}
-                                    </p>
+            @include('components/sidebar')
 
-                                    <p class="small text-secondary">
-                                        {{ Str::limit($product->p_description, 60) }}
-                                    </p>
-                                </div>
-
-                                <div class="card-footer bg-white border-0">
-                                    £{{ number_format($product->p_price, 2) }}
-                                </div>
-                            </div>
-                        </a>
+            <div class="col-lg-9 col-md-8">
+                <div
+                    class="d-flex align-items-center justify-content-between bg-white border rounded-3 px-3 py-2 mb-3 shadow-sm">
+                    <span class="text-muted small">
+                        <strong class="text-dark">{{ $products->total() -1 }}</strong> products found
+                    </span>
+                    <div class="d-flex align-items-center gap-2">
+                        <label class="text-muted small mb-0">Sort:</label>
+                        <select class="form-select form-select-sm w-auto border-0 fw-semibold text-success"
+                            onchange="document.querySelector('[name=sort]').value=this.value; document.getElementById('filterForm').submit()">
+                            <option value="" {{ request('sort') == '' ? 'selected' : '' }}>Default</option>
+                            <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>Price ↑
+                            </option>
+                            <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>Price ↓
+                            </option>
+                            <option value="rating" {{ request('sort') == 'rating' ? 'selected' : '' }}>Top Rated
+                            </option>
+                            <option value="name_asc" {{ request('sort') == 'name_asc' ? 'selected' : '' }}>A → Z
+                            </option>
+                            <option value="name_desc" {{ request('sort') == 'name_desc' ? 'selected' : '' }}>Z → A
+                            </option>
+                        </select>
                     </div>
+                </div>
+
+                <div class="row g-3">
+                    @forelse($products as $product)
+                        @if (!($product->p_category == 'shipping'))
+                            <div class="col-sm-6 col-xl-4">
+                                <a href="{{ route('products.show', $product->pid) }}"
+                                    class="text-decoration-none text-dark">
+                                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                                        <img src="{{ asset($product->p_image) }}" alt="{{ $product->p_name }}"
+                                            class="card-img-top p-3 bg-light" style="height:180px; object-fit:contain;">
+                                        <div class="card-body pb-1">
+                                            <span
+                                                class="badge bg-success bg-opacity-10 text-success small mb-1">{{ $product->p_category }}</span>
+                                            <h6 class="card-title fw-semibold mt-1 mb-1">{{ $product->p_name }}</h6>
+                                            <p class="card-text text-muted small">
+                                                {{ Str::limit($product->p_description, 65) }}
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="card-footer bg-white border-top d-flex justify-content-between align-items-center py-2">
+                                            <span class="small">
+                                                @if ($product->reviews_avg_r_rating)
+                                                    @for ($i = 1; $i <= 5; $i++)
+                                                        @if ($product->reviews_avg_r_rating >= $i)
+                                                            <span style="color: #f5a623;">★</span>
+                                                        @elseif ($product->reviews_avg_r_rating >= $i - 0.5)
+                                                            <span style="position: relative; display: inline-block;">
+                                                                <span style="color: #ccc;">★</span>
+                                                                <span
+                                                                    style="position: absolute; left: 0; width: 50%; overflow: hidden; color: #f5a623;">★</span>
+                                                            </span>
+                                                        @else
+                                                            <span style="color: #ccc;">★</span>
+                                                        @endif
+                                                    @endfor
+                                                    <span
+                                                        class="fw-semibold">{{ number_format($product->reviews_avg_r_rating, 1) }}</span>
+                                                    <span class="text-muted">/5</span>
+                                                @else
+                                                    <span class="text-muted fst-italic" style="font-size:.75rem">No
+                                                        reviews</span>
+                                                @endif
+                                            </span>
+                                            @if ($product->p_stock > 0)
+                                                <span class="fw-bold text-success">
+                                                    £{{ number_format($product->p_price, 2) }}
+                                                </span>
+                                            @else
+                                                <span class="fw-bold text-danger">
+                                                    Out Of Stock
+                                                </span>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        @endif
+                    @empty
+                        <div class="col-12 text-center py-5 text-muted">
+                            <p class="fs-1">🌿</p>
+                            <p>No products found. Try adjusting your filters.</p>
+                        </div>
+                    @endforelse
+                </div>
+
+                @if (method_exists($products, 'links'))
+                    <div class="mt-4">{{ $products->appends(request()->query())->links() }}</div>
                 @endif
-            @empty
-                <p>No products found.</p>
-            @endforelse
+
+            </div>
         </div>
     </div>
 

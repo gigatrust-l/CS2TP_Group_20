@@ -66,13 +66,13 @@
 
     .nav-link {
 
-        color: #16a34a !important; /* green-600 equivalent */
+        color: #16a34a !important;
 
     }
 
     .nav-link:hover {
 
-        color: #11813a !important; /* green-600 equivalent */
+        color: #718096 !important; 
 
     }
 </style>

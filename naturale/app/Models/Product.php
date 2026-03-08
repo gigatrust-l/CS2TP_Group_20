@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Review;
 
 class Product extends Model
 {
@@ -17,6 +18,11 @@ class Product extends Model
         'p_stock',
         'p_category',
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'r_pid');
+    }
 
 }
 

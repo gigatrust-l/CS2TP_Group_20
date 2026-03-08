@@ -5,8 +5,12 @@
     <meta charset="UTF-8" />
     <title>Naturale - Checkout</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
-    <link rel="icon" href="{{ asset('/media/favicon.ico')}}" />
+    <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}" />
+    <link rel="icon" href="{{ asset('/media/favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
 </head>
 
 
@@ -29,27 +33,31 @@
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
-                                name="name" value="{{ old('name', auth()->user() ? auth()->user()->name : '') }}"
-                                required>
-                            @error('name') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                id="name" name="name"
+                                value="{{ old('name', auth()->user() ? auth()->user()->name : '') }}" required>
+                            @error('name')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"
-                                name="email" value="{{ old('email', auth()->user() ? auth()->user()->email : '') }}"
-                                required>
-                            @error('email') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                id="email" name="email"
+                                value="{{ old('email', auth()->user() ? auth()->user()->email : '') }}" required>
+                            @error('email')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <!-- Saved addresses -->
-                    @if(auth()->user() && count($addresses) > 0)
+                    @if (auth()->user() && count($addresses) > 0)
                         <div class="mt-4 mb-3">
                             <label class="form-label">Saved Addresses</label>
                             <select class="form-select" id="address_drop_down">
                                 <option value="new">Use New Address</option>
-                                @foreach($addresses as $index => $a)
+                                @foreach ($addresses as $index => $a)
                                     <option value="{{ $index }}">{{ implode(', ', $a) }}</option>
                                 @endforeach
                             </select>
@@ -59,39 +67,51 @@
                     <div class="row g-3">
                         <div class="col-12">
                             <label class="form-label">Address Line 1</label>
-                            <input type="text" class="form-control address_input" id="addressLine1" name="addressLine1"
-                                value="{{ old('addressLine1') }}" required>
-                            @error('addressLine1') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            <input type="text" class="form-control address_input" id="addressLine1"
+                                name="addressLine1" value="{{ old('addressLine1') }}" required>
+                            @error('addressLine1')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-12">
                             <label class="form-label">Address Line 2</label>
-                            <input type="text" class="form-control address_input" id="addressLine2" name="addressLine2"
-                                value="{{ old('addressLine2') }}" required>
-                            @error('addressLine2') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            <input type="text" class="form-control address_input" id="addressLine2"
+                                name="addressLine2" value="{{ old('addressLine2') }}" required>
+                            @error('addressLine2')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">City</label>
                             <input type="text" class="form-control address_input" id="addressCity" name="addressCity"
                                 value="{{ old('addressCity') }}" required>
-                            @error('addressCity') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('addressCity')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">County</label>
                             <input type="text" class="form-control address_input" id="addressCounty"
                                 name="addressCounty" value="{{ old('addressCounty') }}" required>
-                            @error('addressCounty') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('addressCounty')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Postcode</label>
                             <input type="text" class="form-control address_input" id="addressPostcode"
                                 name="addressPostcode" value="{{ old('addressPostcode') }}" required>
-                            @error('addressPostcode') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('addressPostcode')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Country</label>
                             <input type="text" class="form-control address_input" id="addressCountry"
                                 name="addressCountry" value="{{ old('addressCountry') }}" required>
-                            @error('addressCountry') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('addressCountry')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -104,25 +124,33 @@
                             <label class="form-label">Name on card</label>
                             <input type="text" class="form-control @error('card_name') is-invalid @enderror"
                                 id="cardName" name="card_name" required>
-                            @error('card_name') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('card_name')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Card number</label>
                             <input type="text" class="form-control @error('card_number') is-invalid @enderror"
                                 id="cardNumber" name="card_number" required>
-                            @error('card_number') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('card_number')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Expiry</label>
                             <input type="text" class="form-control @error('card_expiry') is-invalid @enderror"
                                 id="cardExpiry" name="card_expiry" placeholder="MM/YY" required>
-                            @error('card_expiry') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            @error('card_expiry')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">CVV</label>
-                            <input type="text" class="form-control @error('card_CVV') is-invalid @enderror" id="cardCVV"
-                                name="card_CVV" required>
-                            @error('card_CVV') <div class="invalid-feedback">{{ $message }}</div> @enderror
+                            <input type="text" class="form-control @error('card_CVV') is-invalid @enderror"
+                                id="cardCVV" name="card_CVV" required>
+                            @error('card_CVV')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -140,22 +168,22 @@
                             <span class="badge rounded-pill text-bg-secondary">{{ $totalQuantity }}</span>
                         </h4>
                         <ul class="list-group mb-3">
-                            @foreach($cart as [$product, $quantity])
-                                        <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                            <div>
-                                                <strong>{{ $product->p_name }}</strong>
-                                                @if (!($product->p_category == "shipping"))
-                                                        <div class="text-muted">Quantity: {{ $quantity }}</div>
-                                                    </div>
-                                                    <span class="text-muted">£{{ number_format($product->p_price * $quantity, 2) }} </span>
-                                                @else
-                                                </div>
-                                                <span class="text-muted">£{{ number_format($product->p_price, 2) }}</span>
-                                            @endif
-                                </li>
-                            @endforeach
+                            @foreach ($cart as [$product, $quantity])
+                                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <div>
+                                        <strong>{{ $product->p_name }}</strong>
+                                        @if (!($product->p_category == 'shipping'))
+                                            <div class="text-muted">Quantity: {{ $quantity }}</div>
+                                    </div>
+                                    <span class="text-muted">£{{ number_format($product->p_price * $quantity, 2) }}
+                                    </span>
+                                @else
+                    </div>
+                    <span class="text-muted">£{{ number_format($product->p_price, 2) }}</span>
+                    @endif
+                    </li>
+                    @endforeach
                     @if (!(auth()->user() && auth()->user()->isSubscriber()))
-
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
                                 <strong>Shipping</strong>
@@ -171,16 +199,12 @@
                             <strong>£{{ number_format($runningTotal + 4.99, 2) }}</strong>
                         </li>
                         </ul>
-
                     @else
-
-
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Total (GBP)</span>
                             <strong>£{{ number_format($runningTotal, 2) }}</strong>
                         </li>
                         </ul>
-
                     @endif
 
                 </div>
@@ -190,10 +214,9 @@
     </div>
     </div>
 
-    @if(auth()->user() && count($addresses) > 0)
+    @if (auth()->user() && count($addresses) > 0)
         <script>
-
-            var addresses = <?php    echo json_encode($addresses)?>;
+            var addresses = <?php echo json_encode($addresses); ?>;
 
             var reset_text = true;
 
@@ -207,7 +230,7 @@
             const addressCountry = document.getElementById("addressCountry");
 
 
-            addressdropdown.addEventListener("change", function () {
+            addressdropdown.addEventListener("change", function() {
 
                 var count = 0;
 
@@ -248,7 +271,7 @@
             for (var input of inputs) {
 
 
-                input.addEventListener("change", function () {
+                input.addEventListener("change", function() {
 
                     reset_text = false;
 
@@ -261,7 +284,6 @@
                 });
 
             }
-
         </script>
     @endif
 
