@@ -64,3 +64,24 @@ nav a {
 nav a:hover {
   background-color: var(--lightGreenButton);
 }
+
+/*DARK MODE BUTTON*/
+#theme-toggle {
+  padding: 8px 15px;
+}
+#theme-toggle svg {
+  fill: var(--secondary);
+}
+#theme-toggle:hover {
+  background-color: var(--lightGreenButton);
+  border-radius: 5px;
+}
+#theme-toggle svg:last-child{
+  display: none;
+}
+.darkmode #theme-toggle svg:first-child{
+  display: none;
+}
+.darkmode #theme-toggle svg:last-child{
+  display: block;
+}
