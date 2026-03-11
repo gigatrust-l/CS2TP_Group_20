@@ -26,6 +26,8 @@
                                 bg-green-100 text-green-700
                             @elseif($order->o_status == 'cancelled')
                                 bg-red-100 text-red-700
+                            @elseif(strtolower($order->o_status) == 'refund requested')
+                                bg-orange-100 text-orange-700
                             @else 
                                 bg-blue-100 text-blue-700
                             @endif
@@ -96,16 +98,26 @@
 
             <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-700 mb-2">Actions</h3>
-                @if(!($order->o_status == 'completed' or $order->o_status == 'out for delivery'))
-                <x-danger-button type="button" class="bg-green-600 hover:bg-green-700 text-white"
-                    onclick="" id="cancelBtn">
-                    {{ __('Cancel Order') }}
-                </x-danger-button>
-                @elseif(!($order->o_status == 'refunding' or $order->o_status == 'refunded'))
-                <x-danger-button type="button" class="bg-green-600 hover:bg-green-700 text-white"
-                    onclick="" id="cancelBtn">
-                    {{ __('Request Refund') }}
-                </x-danger-button>
+                
+                {{-- Button for Processing orders --}}
+                @if(strtolower($order->o_status) == 'processing')
+                    <form action="{{ route('orders.updateStatus', $order->oid) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="status" value="cancelled">
+                        <x-danger-button type="submit" class="bg-red-600 hover:bg-red-700 text-white">
+                            {{ __('Cancel Order') }}
+                        </x-danger-button>
+                    </form>
+
+                {{-- Button for Completed orders --}}
+                @elseif(strtolower($order->o_status) == 'completed')
+                    <form action="{{ route('orders.updateStatus', $order->oid) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="status" value="refund requested">
+                        <x-danger-button type="submit" class="bg-green-600 hover:bg-green-700 text-white">
+                            {{ __('Request Refund') }}
+                        </x-danger-button>
+                    </form>
                 @endif
             </div>
 

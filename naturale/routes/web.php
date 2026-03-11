@@ -68,6 +68,15 @@ Route::get('/dashboard/{slug}/{id}', [DashboardController::class, 'modify'])
 //Route::get('/orders', [OrderController::class, 'index'])->middleware(['auth'])->name('orders');
 //Route::get('/orders/{order}', [OrderController::class, 'show'])->middleware(['auth'])->name('orders.show');
 
+// Order Routes
+Route::middleware('auth')->group(function () {
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('/orders/{oid}', [OrderController::class, 'show'])->name('orders.show');
+    
+    // This is the new one for the buttons!
+    Route::post('/orders/{oid}/update-status', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
+});
+
 Route::middleware('auth')->group(function () {
     //Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -121,3 +130,4 @@ Route::post('/email/verification-notification', function (Request $request) {
  
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
