@@ -5,6 +5,7 @@
     <meta charset="UTF-8"/>
     <title>Naturale</title>
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('/css/ingredient_slider.css') }}" />
     <meta name="viewport" content ="width=device-width, initial-scale=1" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -163,29 +164,62 @@ $accessories = [
         </div>
     </section>
 
-    <section class="pt-5 pb-3 px-2" id="OurIngredients">
-            <h2>Our Ingredients</h2></br></br>
+    <section class="ingredients-section">
         <div class="container">
-            <div class="ingredientImages">
-                <div class="item">
-                    <img src="{{ asset('media/media_webp/ingredients/avocado.webp') }}" class="static-img mb-2">
-                    <a href="{{ url('/ingredients/avocado-extract') }}" class="categoryTitle text-decoration-none pt-2">Avocado Extract</a>
+            <h2 class="section-title text-center">Our Ingredients</h2>
+            <p class="section-sub text-center">
+                Nature provides the most powerful solutions for healthy hair.
+            </p>
+            <div class="container-fluid py-2 ingredient-slider overflow-auto">
+                <div class="ingredient-card">
+                    <a href="{{ url('/ingredients/avocado-extract') }}">
+                        <img src="{{ asset('media/media_webp/ingredients/avocado.webp') }}" alt="avodacoExtract">
+                        <div class="card-overlay">
+                            <small class="latin">Persea Gratissima</small>
+                            <h3>Avocado Extract</h3>
+                            <p>Deep moisture and restoration</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="item">
-                    <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" class="static-img mb-2">
-                    <a href="{{ url('/ingredients/shea-butter') }}" class="categoryTitle text-decoration-none pt-2">Shea Butter</a>
+                <div class="ingredient-card">
+                    <a href="{{ url('/ingredients/shea-butter') }}">
+                        <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" alt="shea">
+                        <div class="card-overlay">
+                            <small class="latin">Vitellaria Paradoxa</small>
+                            <h3>Shea Butter</h3>
+                            <p>Intense hydration and frizz control</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="item">
-                    <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" class="static-img mb-2">
-                    <a href="{{ url('/ingredients/pomegranate-oil') }}" class="categoryTitle text-decoration-none pt-2">Pomegranate Seed Oil</a>
+                <div class="ingredient-card">
+                    <a href="{{ url('/ingredients/pomegranate-oil') }}">
+                        <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" alt="pomegranate">
+                        <div class="card-overlay">
+                            <small class="latin">Punica Granatum</small>
+                            <h3>Pomegranate Seed Oil</h3>
+                            <p>Hair strengthening and shine enhancement</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="item">
-                    <img src="{{ asset('media/media_webp/ingredients/teatree.webp') }}" class="static-img mb-2">
-                    <a href="{{ url('/ingredients/tea-tree-oil') }}" class="categoryTitle text-decoration-none pt-2">Tea Tree Oil</a>
+                <div class="ingredient-card">
+                    <a href="{{ url('/ingredients/tea-tree-oil') }}">
+                        <img src="{{ asset('media/media_webp/ingredients/teatree.webp') }}" alt="teatree">
+                        <div class="card-overlay">
+                            <small class="latin">Melaleuca Alternifolia</small>
+                            <h3>Tea Tree Oil</h3>
+                            <p>Scalp soothing and dandruff reduction</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="item">
-                    <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" class="static-img mb-2">
-                    <a href="{{ url('/ingredients/coconut-oil') }}" class="categoryTitle text-decoration-none pt-2">Coconut Oil</a>
+                <div class="ingredient-card">
+                    <a href="{{ url('/ingredients/coconut-oil') }}">
+                        <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" alt="coconut">
+                        <div class="card-overlay">
+                            <small class="latin">Cocos Nucifera</small>
+                            <h3>Coconut Oil</h3>
+                            <p>Hair nourishment and hair breakage prevention</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
