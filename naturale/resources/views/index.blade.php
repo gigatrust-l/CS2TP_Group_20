@@ -6,6 +6,7 @@
     <title>Naturale</title>
     <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
     <link rel="stylesheet" href="{{ asset('/css/ingredient_slider.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/hero_style.css') }}" />
     <meta name="viewport" content ="width=device-width, initial-scale=1" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -74,41 +75,12 @@ $accessories = [
     ];
 
 @endphp
-
 <body>
     <!-- This is to include the nav bar -->
     @include('components/nav_bar_customer')
 
-    <section id="Hero Carousel">
-    <!-- This is a hero carousel, picture with text for the home page) -->
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators"> <!-- Automatic indicators using foreach -->
-            @foreach ($slides as $i => $img)
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="{{ $i }}" class="{{ $i == 0 ? 'active' : '' }}">
-                </button>
-            @endforeach
-        </div>
-        <!--This to show the different pictures as slides-->
-        <div class="carousel-inner">
-        @foreach ($slides as $i => $img)
-             <div class="carousel-item {{ $i == 0 ? 'active' : '' }}">
-                <img src="{{ asset($img) }}" class="d-block w-100 hero-img">
-                <div class="heroText">
-                    <h1>Naturale</h1>
-                </div>
-            </div>
-        @endforeach
-        </div>
-        <!--Previous and Next arrows-->
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-    </div>
-    </section></br>
-
+    @include('components/hero')
+    <script src="{{ asset('js/hero.js') }}"></script>
 
     <!--This is the Shop section-->
     <section class="py-5 px-3" id="Shop">
@@ -171,7 +143,7 @@ $accessories = [
                 Nature provides the most powerful solutions for healthy hair.
             </p>
             <div class="container-fluid py-2 ingredient-slider overflow-auto">
-                <div class="ingredient-card">
+                <div class="ingredient-card expand-left">
                     <a href="{{ url('/ingredients/avocado-extract') }}">
                         <img src="{{ asset('media/media_webp/ingredients/avocado.webp') }}" alt="avodacoExtract">
                         <div class="card-overlay">
@@ -181,7 +153,7 @@ $accessories = [
                         </div>
                     </a>
                 </div>
-                <div class="ingredient-card">
+                <div class="ingredient-card expand-left">
                     <a href="{{ url('/ingredients/shea-butter') }}">
                         <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" alt="shea">
                         <div class="card-overlay">
@@ -191,7 +163,7 @@ $accessories = [
                         </div>
                     </a>
                 </div>
-                <div class="ingredient-card">
+                <div class="ingredient-card expand-center">
                     <a href="{{ url('/ingredients/pomegranate-oil') }}">
                         <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" alt="pomegranate">
                         <div class="card-overlay">
@@ -201,7 +173,7 @@ $accessories = [
                         </div>
                     </a>
                 </div>
-                <div class="ingredient-card">
+                <div class="ingredient-card expand-right">
                     <a href="{{ url('/ingredients/tea-tree-oil') }}">
                         <img src="{{ asset('media/media_webp/ingredients/teatree.webp') }}" alt="teatree">
                         <div class="card-overlay">
@@ -211,7 +183,7 @@ $accessories = [
                         </div>
                     </a>
                 </div>
-                <div class="ingredient-card">
+                <div class="ingredient-card expand-right">
                     <a href="{{ url('/ingredients/coconut-oil') }}">
                         <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" alt="coconut">
                         <div class="card-overlay">

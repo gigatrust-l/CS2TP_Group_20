@@ -1,18 +1,23 @@
 /* INGREDIENTS */
-
 .ingredients-section {
+    /* background: #0F2412 or #0F1412 for dark mode */
     background: #fafafa;
-    padding: 20px;
+    padding: 80px 0;
 }
 
 .section-title {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: clamp(2rem, 5vw, 4rem);
+    /* color: #d9e0d7; for dark mode */
+    color: #354024;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .section-sub {
+    /* color: #8b9c93; for dark mode */
     color: #777;
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 /* SLIDER */
@@ -22,21 +27,23 @@
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
+    padding: 20px 10px;
 }
 
 /* CARD */
 
 .ingredient-card {
-    flex: 1;
+    flex-shrink: 0;
+    width: 240px;
     height: 420px;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
-    transition:flex 0.4s ease;
+    transition:width 0.45s cubic-bezier(.23,1,.32,1);
 }
 
 .ingredient-card:hover {
-    flex: 2;
+    width: 420px;
 }
 
 .ingredient-card a {
@@ -98,6 +105,7 @@
 
 .card-overlay p{
     opacity: 0;
+    color: #bdbdbd;
     transform:translateY(10px);
     transition:all 0.3s ease;
 }
@@ -113,7 +121,7 @@
 
 .latin {
     color: #74d10a;
+    font-size: 13px;
     text-transform: uppercase;
-    transition: color 0.3s ease;
 }
 
