@@ -15,11 +15,11 @@ return [
     */
 
     'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
+        'key' => env('POSTMARK_API_KEY'),
     ],
 
     'resend' => [
-        'key' => env('RESEND_KEY'),
+        'key' => env('RESEND_API_KEY'),
     ],
 
     'ses' => [
@@ -34,21 +34,5 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
-    
-    'openrouter' => [
-        'key' => env('OPENROUTER_API_KEY'),
-        'base_url' => 'https://openrouter.ai/api/v1',
-    ],
 
-    'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => env('GOOGLE_REDIRECT'),
-    ],
-
-    'deepseek' => [
-        'key' => env('DEEPSEEK_API_KEY'),
-        'base_url' => 'https://api.deepseek.com/chat/completions',
-
-    ],
 ];

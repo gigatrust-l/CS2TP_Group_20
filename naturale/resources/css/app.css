@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    :root {
+        --primary:           black;
+        --secondary:         #354024;
+        --lavander-button:   #e2a9f1;
+        --light-green-button:#889063;
+        --gray:              #d9d9d9;
+        --page:     #f3f4f6;
+
+        --bg:       #3cc24c;
+        --border:   #354024;
+        --input-bg: #3cc24c;
+        --text:     #354024;
+        --muted:    #5a6e3f;
+
+        --footer-main:       #07220d;
+        --footer-sub:        #4b5563;
+        --footer-link:       #16a34a;
+        --footer-link-hover: #4b5563;
+        --shadow: white;
+    }
+
+    html.dark {
+        --page:     #07220d;
+        --bg:       #146326;
+        --border:   #2f3d1e;
+        --input-bg: #146326;
+        --text:     #d4e4c4;
+        --muted:    #7a8f60;
+        --primary:           white;
+
+        --footer-main:       #f3f4f6;
+        --footer-sub:        #9ca3af;
+        --footer-link:       #4ade80;
+        --footer-link-hover: #9ca3af;
+        --shadow: #04160870;
+
+    }
+
+    body {
+        background-color: var(--primary);
+        color: var(--text);
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+
+    input {
+        /* background-color: var(--primary); */
+        /* border: 1px solid var(--secondary); */
+        outline: none;
+    }
+
+    a {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+@font-face {
+  font-family: "Lemon Jelly Personal Use";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("http://127.0.0.1:8000/media/lemon_jelly.ttf") format("truetype");
+}

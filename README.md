@@ -1,5 +1,7 @@
 <p align="center"><a href="" target="_blank"><img src="https://github.com/gigatrust-l/CS2TP_Group_20/blob/main/public_html/media/media_webp/logo.webp" width="400" alt="Laravel Logo"></a></p>
 
+## TAILWIND EDITION
+
 ## About Naturale
 
 Naturale is an e-commerce website designed for haircare brand. \

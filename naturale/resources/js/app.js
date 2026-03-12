@@ -1,9 +1,3 @@
-import './bootstrap';
-
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
-
-
+import Theme from './theme.js';
+window.Theme = Theme;
+Theme.set();
