@@ -46,7 +46,7 @@
                     class="text-[var(--primary)] hover:shadow-2xl transition-shadow shadow-white"
                     wire:key="product--{{ $product->pid }}">
                     <div
-                        class="h-full border-2 shadow-sm 0px 2px 4px 0px] rounded-lg overflow-hidden relative flex flex-col border-[var(--shadow)] bg-white dark:bg-[var(--page)] dark:shadow-lg  shadow-white">
+                        class="h-full border shadow-sm rounded-lg overflow-hidden relative flex flex-col bg-white dark:bg-[var(--page)] dark:shadow-lg  shadow-white">
                         <img class="h-[180px] object-contain p-4" src="{{ asset($product->p_image) }}"
                             alt="{{ $product->p_name }}">
                         <div class="flex-auto p-4">

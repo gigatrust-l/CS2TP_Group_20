@@ -5,7 +5,7 @@ namespace App\Livewire\Naturale\Storefront;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
-use App\Models\Product;
+use App\Models\ProductModel;
 use Livewire\WithPagination;
 
 #[Title('Products')]
@@ -36,7 +36,7 @@ class Products extends Component
 
     public function render()
     {
-        $query = Product::query()
+        $query = ProductModel::query()
             ->withAvg('reviews', 'r_rating')
             ->where('p_category', '!=', 'shipping');
 
@@ -64,7 +64,7 @@ class Products extends Component
 
         $products = $query->paginate(12);
 
-        $categories = Product::select('p_category')
+        $categories = ProductModel::select('p_category')
             ->distinct()
             ->pluck('p_category')
             ->filter(fn($c) => $c !== 'shipping');

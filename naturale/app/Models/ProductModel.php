@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Review;
 
-class Product extends Model
+class ProductModel extends Model
 {
     protected $table = 'products';
     protected $primaryKey = 'pid';

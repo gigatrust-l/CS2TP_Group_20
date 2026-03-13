@@ -1,6 +1,6 @@
 <div class="max-w-full px-6 mt-6 ">
     <div
-        class="flex flex-col shadow-sm border-2 p-4 rounded-2xl sticky top-[100px] border-[var(--shadow)] bg-white dark:bg-[var(--page)] dark:shadow-lg hover:scale-100">
+        class="flex flex-col shadow-sm border p-4 rounded-2xl sticky top-[100px] bg-white dark:bg-[var(--page)] dark:shadow-lg hover:scale-100">
         <h6 class="font-bold text-[var(--footer-link)]  mb-4 pb-2 border-b ">Filter & Sort</h6>
 
         <div class="mb-4">
@@ -70,7 +70,7 @@
             </div>
         </div>
         
-            <button class="inline-flex items-center justify-center px-4 py-2 border-2 text-base font-medium rounded-md shadow-sm w-full mt-2 border-gray-100 dark:border-[var(--shadow)] bg-gray-100 dark:bg-[var(--page)] dark:shadow-lg hover:scale-100" wire:click="resetFilters" @if (!$this->isFiltered) disabled @endif>✕
+            <button class="inline-flex items-center justify-center px-4 py-2 border-2 text-base font-medium rounded-md shadow-sm w-full mt-2 border-[#e5e7eb] bg-gray-100 dark:bg-[var(--page)] dark:shadow-lg hover:scale-100" wire:click="resetFilters" @if (!$this->isFiltered) disabled @endif>✕
                 Reset Filters
             </button>
     </div>

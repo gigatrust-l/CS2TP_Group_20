@@ -5,6 +5,7 @@ export default new class Theme {
         theme === 'light'
             ? document.documentElement.classList.remove('dark')
             : document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', theme);
     }
     get() {
         return localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
