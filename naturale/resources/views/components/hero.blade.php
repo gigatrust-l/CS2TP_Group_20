@@ -13,7 +13,6 @@
         <h1>Naturale</h1>
 
         <p>
-            Rooted in Nature <br>
             Pure botanical ingredients designed to hydrate, restore, and celebrate natural hair.
         </p>
 

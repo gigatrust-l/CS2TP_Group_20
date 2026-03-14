@@ -21,6 +21,40 @@
     @include('components/hero')
     <script src="{{ asset('js/hero.js') }}"></script>
 
+    <section class="brand-section">
+        <div class="brand-container">
+            <p class="brand-label">Our Philosophy</p>
+            <h2>Rooted in Nature, Crafted for Healthy Hair</h2>
+            <p class="brand-description">
+                Naturale combines botanical ingredients to create haircare that restores, protects, and enhances your natural beauty.
+            </p>
+
+            <div class="brand-features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-leaf" style="color: rgb(76, 175, 114);"></i>
+                    </div>
+                    <h3>100% Natural</h3>
+                    <p>Botanical ingredients sourced responsibly.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-recycle" style="color: rgb(76, 175, 114);"></i>
+                    </div>
+                    <h3>Sustainable & Eco-Friendly</h3>
+                    <p>Crafted with care for both your hair and the environment.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-regular fa-heart" style="color: rgb(76, 175, 114);"></i>
+                    </div>
+                    <h3>Cruelty-Free</h3>
+                    <p>Never tested on animals, always ethically sourced.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--This is the Shop section-->
     <section class="category-section">
         <div class="category-container">
