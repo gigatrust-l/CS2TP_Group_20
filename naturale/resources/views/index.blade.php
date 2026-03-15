@@ -113,16 +113,18 @@
                 Nature provides the most powerful solutions for healthy hair.
             </p>
             <div class="container-fluid py-2 ingredient-slider overflow-auto">
+                @foreach($ingredients as $ingredient)
                 <div class="ingredient-card">
-                    <a href="{{ url('/ingredients/avocado-extract') }}">
-                        <img src="{{ asset('media/media_webp/ingredients/avocado.webp') }}" alt="avodacoExtract">
+                    <a href="{{ url('/ingredients/'.$ingredient->slug) }}">
+                        <img src="{{ asset($ingredient->ingred_img) }}" alt="{{ $ingredient->name }}">
                         <div class="card-overlay">
-                            <small class="latin">Persea Gratissima</small>
-                            <h3>Avocado Extract</h3>
-                            <p>Deep moisture and restoration</p>
+                            <small class="latin">{{ $ingredient->latin }}</small>
+                            <h3>{{ $ingredient->name }}</h3>
+                            <p>{{ $ingredient->ingred_comment }}</p>
                         </div>
                     </a>
                 </div>
+                @endforeach
                 <div class="ingredient-card">
                     <a href="{{ url('/ingredients/shea-butter') }}">
                         <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" alt="shea">

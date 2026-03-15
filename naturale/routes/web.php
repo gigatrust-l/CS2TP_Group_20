@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IngredientController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -15,9 +16,7 @@ Route::post('/chat/send', [ChatController::class, 'sendMessage']);
 Route::post('/chat/start', [ChatController::class, 'startChat']);
 Route::post('/chat/end', [ChatController::class, 'endChat']);
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products');

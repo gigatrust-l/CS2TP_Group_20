@@ -42,22 +42,14 @@
     <!--Products categories-->
     <div class="container">
         <div class="categoryImages">
+            @foreach($ingredient->products as $product)
             <div class="item">
-                <img src="{{ asset($ingredient->product1) }}" class="static-img">
-                <p class="categoryTitle">{{ $ingredient->p1_name }}</p>
+                <a href="{{ url('/products/'.$product->pid) }}">
+                    <img src="{{ asset($product->p_image) }}" class="static-img">
+                    <p class="categoryTitle">{{ $product->p_name }}</p>
+                </a>
             </div>
-            <div class="item">
-                <img src="{{ asset($ingredient->product2) }}" class="static-img">
-                <p class="categoryTitle">{{ $ingredient->p2_name }}</p>
-            </div>
-            <div class="item">
-                <img src="{{ asset($ingredient->product3) }}" class="static-img">
-                <p class="categoryTitle">{{ $ingredient->p3_name }}</p>
-            </div>
-            <div class="item">
-                <img src="{{ asset($ingredient->product4) }}" class="static-img">
-                <p class="categoryTitle">{{ $ingredient->p4_name }}</p>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

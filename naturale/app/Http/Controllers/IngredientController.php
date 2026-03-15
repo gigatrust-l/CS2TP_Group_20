@@ -8,7 +8,9 @@ class IngredientController extends Controller
 {
     public function show($slug)
     {
-        $ingredient = Ingredient::where('slug', $slug)->firstOrFail();
+        $ingredient = Ingredient::where('slug', $slug)
+            ->with('products')
+            ->firstOrFail();
 
         return view('ingredient', compact('ingredient'));
     }
