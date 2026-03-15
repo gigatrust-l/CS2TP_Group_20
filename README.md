@@ -20,15 +20,14 @@ clean, ethical and organic products.
 ### Frontend
 - HTML
 - CSS
-- Bootstrap
+- Tailwind
 - Blade Templates (Laravel)
 ### Backend
 - Laravel
 - PHP
 - Database
   - MySQL
-  - PDO (some queries)
-  - Laravel database config
+  - Eloquent
 ### Tools and Workflow
 - Git and GitHub
 - Trello / Notion (task management and documentation)
@@ -36,4 +35,4 @@ clean, ethical and organic products.
 - VS Code / PhpStorm
 ---
 
-Note: some images and products(names, images, descriptions, ingredients, instructions) have been generated with AI (ChatGPT & Gemini)
+Note: some images and products(names, images, descriptions, ingredients, instructions) have been generated with AI
