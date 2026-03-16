@@ -1,9 +1,9 @@
-<div class="mt-12 px-[300px] ">
+<div class="mt-12 px-[300px] pb-10">
     <div class="text-center mb-12">
         <h1 class="mb-2 font-medium text-5xl">Store</h1>
     </div>
 
-    <div class="flex  ">
+    <div class="flex  max-w-[1320px] mx-auto">
 
         @include('livewire.naturale.components.sidebar')
 
@@ -51,8 +51,17 @@
                             alt="{{ $product->p_name }}">
                         <div class="flex-auto p-4">
                             <span
-                                class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset bg-green-50 text-green-700 ring-green-600/20">
-                                {{ $product->p_category }}
+                                class="inline-flex items-center gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-md px-2 py-1 text-[10px] font-medium ring-1 ring-inset bg-green-50 text-green-700 ring-green-600/20">
+                                    {{ $product->p_category }}
+                                </span>
+                                @if ($product->p_category != "Hair Accessory")
+                                <span
+                                    class="inline-flex items-center rounded-md px-2 py-1 text-[10px] font-medium ring-1 ring-inset bg-green-50 text-green-700 ring-green-600/20">
+                                    {{ $product->p_feature }}
+                                </span>
+                                @endif
                             </span>
                             <h6 class="text-sm font-semibold my-1">{{ $product->p_name }}</h6>
                             <p class="text-[var(--footer-link-hover)] mb-0 text-sm">

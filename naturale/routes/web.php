@@ -14,8 +14,10 @@ Route::view('profile', 'profile')
 
 Route::get('/', \App\Livewire\Naturale\Storefront\Index::class);
 
-Route::get('/products', \App\Livewire\Naturale\Storefront\Products::class);
+Route::get('/products', \App\Livewire\Naturale\Storefront\Products::class)->name('products');
 
 Route::get('/products/{slug}', \App\Livewire\Naturale\Storefront\Product::class);
 
-require __DIR__.'/auth.php';
+Route::get('/cart', \App\Livewire\Naturale\Storefront\CartIndex::class)->name('cart.index');
+
+Route::get('/checkout', \App\Livewire\Naturale\Storefront\CheckoutPage::class)->name('checkout');

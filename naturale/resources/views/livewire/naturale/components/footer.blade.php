@@ -1,4 +1,4 @@
-<footer class="sticky mt-20 py-12 bg-[var(--page)] border-t border-[var(--primary)] ">
+<footer class="sticky py-12 bg-[var(--page)] border-t border-[var(--primary)] ">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 

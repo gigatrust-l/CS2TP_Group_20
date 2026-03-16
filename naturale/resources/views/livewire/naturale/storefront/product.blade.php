@@ -14,9 +14,9 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="/products"
+                    <button wire:click="return('all')"
                         class="text-[var(--footer-link)] hover:text-[var(--footer-link-hover)]  transition-colors"
-                        style="">All products</a>
+                        style="">All products</button>
                     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         class="w-4 h-4 mx-3 fill-black dark:fill-white">
                         <path id="Shape 1" class="s0"
@@ -24,9 +24,9 @@
                     </svg>
                 </li>
                 <li class="flex items-center">
-                    <a href="/products?type={{ $product->p_category }}"
+                    <button wire:click="return('category')"
                         class="text-[var(--footer-link)] hover:text-[var(--footer-link-hover)]  transition-colors "
-                        style="">{{ $product->p_category }}</a>
+                        style="">{{ $product->p_category }}<button>
                 </li>
             </ol>
         </div>
@@ -43,11 +43,11 @@
                 <h1 class="text-3xl font-semibold mb-4">{{ $product->p_name }}</h1>
                 <div class="mb-3">
                     <span>
-                        @if ($product->reviews_avg_r_rating)
+                        @if ($reviews_avg_r_rating)
                             @for ($i = 1; $i <= 5; $i++)
-                                @if ($product->reviews_avg_r_rating >= $i)
+                                @if ($reviews_avg_r_rating >= $i)
                                     <span style="color: #f5a623;">★</span>
-                                @elseif ($product->reviews_avg_r_rating >= $i - 0.5)
+                                @elseif ($reviews_avg_r_rating >= $i - 0.5)
                                     <span style="position: relative; display: inline-block;">
                                         <span style="color: #ccc;">★</span>
                                         <span
@@ -57,7 +57,7 @@
                                     <span style="color: #ccc;">★</span>
                                 @endif
                             @endfor
-                            <span class="font-semibold">{{ number_format($product->reviews_avg_r_rating, 1) }}</span>
+                            <span class="font-semibold">{{ number_format($reviews_avg_r_rating, 1) }}</span>
                             <span class="text-[var(--footer-link-hover)]">/5</span>
                         @else
                             <span class="text-[var(--footer-link-hover)] italic text-xs">No reviews</span>
@@ -93,35 +93,8 @@
 
             </div>
 
-            <!-- Purchase Box -->
-            <div class="col-span-12 md:col-span-3">
-                <div class="p-4 bg-white dark:bg-[var(--page)] border border-gray-200 rounded-lg shadow-sm">
-                    <h5 class="font-semibold mb-4 text-lg">Purchase</h5>
-                    <p class="mb-2 ">
-                        <strong class="mr-1">Stock:</strong>
-                        @if ($product->p_stock > 0)
-                            <span class="text-green-600"> In Stock</span>
-                        @else
-                            <span class="text-red-600"> Out of Stock</span>
-                        @endif
-                    </p>
-                    <form action=""class="mt-4">
-                        @csrf
-                        <input type="hidden" name="pid" value="{{ $product->pid }}">
-                        <label class="block text-sm font-semibold mb-2">Quantity</label>
-                        <input type="number" name="quantity"
-                            class="w-full px-3 py-2 border border-gray-300 bg-white dark:bg-[var(--page)] rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent mb-4 disabled:bg-gray-100 disabled:cursor-not-allowed"
-                            value="1" max="{{ max(1, $product->p_stock) }}" min="1"
-                            @disabled($product->p_stock == 0)>
-                        <button
-                            class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
-                            type="submit" @disabled($product->p_stock == 0)>
-                            {{ $product->p_stock > 0 ? 'Add to Cart' : 'Unavailable' }}
-                        </button>
-                    </form>
-
-                </div>
-            </div>
+            <livewire:Naturale.Components.addToCart :product="$product" />
+            
         </div>
     </div>
     <div id="reviews"

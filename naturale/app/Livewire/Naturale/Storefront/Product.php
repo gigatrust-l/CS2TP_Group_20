@@ -14,7 +14,11 @@ use Livewire\WithPagination;
 class Product extends Component
 {
     use WithPagination;
-    public $product;
+    public ProductModel $product;
+
+    public $reviews_avg_r_rating;
+
+    public string $backUrl = '';
 
     public string $sort = 'rid';
     public string $direction = 'asc';
@@ -31,6 +35,32 @@ class Product extends Component
         }
 
         $this->product = $product;
+        $this->backUrl = route('products');
+        $this->reviews_avg_r_rating = $this->product->reviews_avg_r_rating;
+
+    }
+
+    public function return($method): void
+    {
+        if ($method == 'category') {
+            
+            session([
+                'products_filters' => [
+                    'name' => '',
+                    'type' => $this->product->p_category,
+                    'max_price' => 25,
+                    'min_rating' => '',
+                    'sort' => '',
+                ]
+            ]);
+
+        } else if ($method == 'all') {
+
+            session()->forget('products_filters');
+
+        }
+
+        redirect('products');
 
     }
 
