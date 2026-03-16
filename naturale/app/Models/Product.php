@@ -18,5 +18,12 @@ class Product extends Model
             'ingredient_id'
         );
     }
+
+    public function category(){
+        return $this->belongsTo(
+            Category::class,
+            'category_id',
+            'id');
+    }
 }
 

@@ -55,52 +55,24 @@
         </div>
     </section>
 
-    <!--This is the Shop section-->
+    <!--This is the category section-->
     <section class="category-section">
         <div class="category-container">
             <h2 class="category-label">Shop by Category</h2>
             <p class="category-title">Find the perfect natural products for every step of your hair care routine.</p>
             <div class="category-grid">
-                <a href="{{ url('/products?type=Shampoo') }}" class="category-card">
-                <img src="{{ asset('media/media_webp/categories/shampoo.webp') }}" alt="Shampoos">
-                <div class="category-overlay"></div>
-                <div class="category-text">
-                    <h3>Shampoo</h3>
-                    <p>5 PRODUCTS</p>
-                </div>
-            </a>
-                <a href="{{ url('/products?type=Conditioner') }}" class="category-card">
-                <img src="{{ asset('media/media_webp/categories/conditioner.webp') }}" alt="Conditioners">
-                <div class="category-overlay"></div>
-                <div class="category-text">
-                    <h3>Conditioner</h3>
-                    <p>5 PRODUCTS</p>
-                </div>
-            </a>
-                <a href="{{ url('/products?type=Leave-In+Conditioner') }}" class="category-card">
-                <img src="{{ asset('media/media_webp/categories/leavein_conditioner.webp') }}" alt="Leave-In Conditioners">
-                <div class="category-overlay"></div>
-                <div class="category-text">
-                    <h3>Leave-In Conditioner</h3>
-                    <p>5 PRODUCTS</p>
-                </div>
-            </a>
-                <a href="{{ url('/products?type=Hair+Masks') }}" class="category-card">
-                <img src="{{ asset('media/media_webp/categories/hair_mask.webp') }}" alt="Hair Masks">
-                <div class="category-overlay"></div>
-                <div class="category-text">
-                    <h3>Hair Masks</h3>
-                    <p>5 PRODUCTS</p>
-                </div>
-            </a>
-                <a href="{{ url('/products?type=Hair+Accessory') }}" class="category-card">
-                <img src="{{ asset('media/media_webp/categories/accessory.webp') }}" alt="Accessories">
-                <div class="category-overlay"></div>
-                <div class="category-text">
-                    <h3>Hair Accessory</h3>
-                    <p>5 PRODUCTS</p>
-                </div>
-            </a>
+                @foreach($categories as $category)
+                    <a href="{{ url('/products?type='.$category->name) }}" class="category-card">
+                        <img src="{{ asset($category->image) }}" alt="{{ $category->name }}">
+
+                        <div class="category-overlay"></div>
+
+                        <div class="category-text">
+                            <h3>{{ $category->name }}</h3>
+                            <p>{{ $category->products_count }} PRODUCTS</p>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </div>
     </section>
