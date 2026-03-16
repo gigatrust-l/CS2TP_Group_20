@@ -33,8 +33,13 @@
                             <span class="inline-flex px-3 py-1 rounded-full text-xs font-bold uppercase 
                             @if($order->o_status == 'completed')
                             bg-green-100 text-green-700
+                            @elseif($order->o_status == 'refund accepted')
+                            bg-green-100 text-green-700
                             @elseif($order->o_status == 'cancelled')
                             bg-red-100 text-red-700
+                            @elseif($order->o_status == 'refund declined')
+                            bg-red-100 text-red-700
+                            @elseif(strtolower($order->o_status) == 'refund requested') bg-orange-100 text-orange-700
                             @else 
                             bg-blue-100 text-blue-700
                             @endif

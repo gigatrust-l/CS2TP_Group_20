@@ -45,14 +45,23 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth'])
     ->name('dashboard');
 
-Route::get('/portal', [AdminController::class, 'index'])
-    ->middleware(['auth'])
-    ->name('portal');
+// Your existing general portal routes
+Route::get('/portal', [AdminController::class, 'index'])->middleware(['auth'])->name('portal');
 
-Route::get('/portal/{slug}', [AdminController::class, 'show'])
-    ->middleware(['auth']);
+// 1. Keep this for the 'order', 'stock', 'customers' pages
+Route::get('/portal/{slug}', [AdminController::class, 'show'])->middleware(['auth']);
+
+// 2. ADD THIS for specific order details
+// This makes the URL: /portal/order/81
+Route::get('/portal/order/{id}', [AdminController::class, 'showOrder'])
+    ->middleware(['auth'])
+    ->name('admin.orders.show');
 
 Route::get('/dashboard/{slug}', [DashboardController::class, 'show'])
+    ->middleware(['auth']);
+
+Route::patch('/portal/order/{id}/status', [AdminController::class, 'updateOrderStatus'])
+    ->name('admin.orders.updateStatus')
     ->middleware(['auth']);
 
 Route::post('/update-stock/{pid}', [AdminController::class, 'updateStock'])->name('admin.stock.update');
