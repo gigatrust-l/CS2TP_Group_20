@@ -18,37 +18,48 @@
 <!-- This is to include the nav bar -->
 @include('components/nav_bar_customer')
 
-<section id="hero">
-    <!-- This is a hero picture -->
-    <div class="heroImage" style="background-image: url({{ asset($ingredient->image) }})">
-        <div class="heroText">
-            <h1>{{ $ingredient->name }}</h1>
-        </div>
+<!-- This is a hero picture -->
+<section class="hero">
+    <div class="hero-bg">
+        <div class="hero-image active" style="background-image: url('{{ asset($ingredient->image_hero) }}');"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>{{ $ingredient->name }}</h1>
+        <p class="latin">{{ $ingredient->latin }} - {{ $ingredient->ingred_comment }}</p>
     </div>
 </section>
 
-<section id="ingredientInfo" class="pt-5 pb-3 px-2" id="ingredientInfo">
-    <div class="row justify-content-center mb-4 mb-md-5">
-        <div class="col-xl-9 col-xxl-8">
-            <h2 class="text-center py-3">Why {{ $ingredient->name }}?</h2>
-            <p>{!! nl2br(e($ingredient->description)) !!}</p>
-        </div>
+
+<!-- Ingredient information -->
+<section class="ingredient-info">
+    <div class="ingredient-container">
+        <p class="section-label">About the Ingredient</p>
+        <h2 class="section-title">Why {{ $ingredient->name }}?</h2>
+        <p class="ingredient-description">{!! nl2br(e($ingredient->description)) !!}</p>
     </div>
 </section>
 
 <!--This is the Shop section-->
-<section class="pb-5 px-3" id="Shop">
-    <h2>Shop Our {{ $ingredient->name }} Products</h2></br></br>
-    <!--Products categories-->
-    <div class="container">
-        <div class="categoryImages">
+<section class="ingredient-products">
+    <div class="products-container">
+        <p class="section-label">Shop Products</p>
+        <h2 class="section-title">Shop Our {{ $ingredient->name }} Products</h2>
+        <div class="products-grid">
             @foreach($ingredient->products as $product)
-            <div class="item">
-                <a href="{{ url('/products/'.$product->pid) }}">
-                    <img src="{{ asset($product->p_image) }}" class="static-img">
-                    <p class="categoryTitle">{{ $product->p_name }}</p>
+                <a href="{{ url('/products/'.$product->pid) }}" class="product-card">
+                    <div class="product-image">
+                        <img src="{{ asset($product->p_image) }}" alt="{{ $product->p_name }}">
+                    </div>
+
+                    <div class="product-info">
+                        <p class="product-category">{{ $product->p_category }}</p>
+                        <p class="product-name">{{ $product->p_name }}</p>
+                        <p class="product-price">£{{ $product->p_price }}</p>
+                    </div>
                 </a>
-            </div>
             @endforeach
         </div>
     </div>

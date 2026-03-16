@@ -125,46 +125,6 @@
                     </a>
                 </div>
                 @endforeach
-                <div class="ingredient-card">
-                    <a href="{{ url('/ingredients/shea-butter') }}">
-                        <img src="{{ asset('media/media_webp/ingredients/shea.webp') }}" alt="shea">
-                        <div class="card-overlay">
-                            <small class="latin">Vitellaria Paradoxa</small>
-                            <h3>Shea Butter</h3>
-                            <p>Intense hydration and frizz control</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="ingredient-card">
-                    <a href="{{ url('/ingredients/pomegranate-oil') }}">
-                        <img src="{{ asset('media/media_webp/ingredients/pomegranate.webp') }}" alt="pomegranate">
-                        <div class="card-overlay">
-                            <small class="latin">Punica Granatum</small>
-                            <h3>Pomegranate Seed Oil</h3>
-                            <p>Hair strengthening and shine enhancement</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="ingredient-card">
-                    <a href="{{ url('/ingredients/tea-tree-oil') }}">
-                        <img src="{{ asset('media/media_webp/ingredients/teatree.webp') }}" alt="teatree">
-                        <div class="card-overlay">
-                            <small class="latin">Melaleuca Alternifolia</small>
-                            <h3>Tea Tree Oil</h3>
-                            <p>Scalp soothing and dandruff reduction</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="ingredient-card">
-                    <a href="{{ url('/ingredients/coconut-oil') }}">
-                        <img src="{{ asset('media/media_webp/ingredients/coconut.webp') }}" alt="coconut">
-                        <div class="card-overlay">
-                            <small class="latin">Cocos Nucifera</small>
-                            <h3>Coconut Oil</h3>
-                            <p>Hair nourishment and hair breakage prevention</p>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
     </section>

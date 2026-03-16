@@ -2,7 +2,7 @@ li,
 p,
 pre {
 
-    font-size: 12;
+    font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -72,7 +72,7 @@ nav a:hover {
 
 nav button {
 
-    
+
     color: black;
 
 }
@@ -285,7 +285,7 @@ nav button {
     font-weight: normal;
 
     width:100%;
-    
+
     display: block;
     font-size: 2em;
     margin-top: 0.67em;
@@ -296,8 +296,8 @@ nav button {
 }
 
 .search-div {
-	
-	
+
+
     flex-wrap: wrap;
     padding: 20px 50px;
     display: flex;
@@ -376,7 +376,7 @@ nav button {
         margin: 10px 0;
 
 
-        float: none; 
+        float: none;
 
 
         text-align: center;
@@ -391,79 +391,13 @@ nav button {
     #product-selector {
 
 
-        width: 100%; 
+        width: 100%;
 
 
         margin: 10px 0;
 
 
-        font-size: 1em; 
-
-
-    }
-
-
-    
-
-
-    .product-container {
-
-
-        justify-content: center; 
-
-
-    }
-
-
-
-
-
-    .product {
-
-
-        width: 90%; 
-
-
-        max-width: 350px; 
-
-
-        height: auto; 
-
-
-        margin-bottom: 15px; 
-
-
-    }
-
-
-
-
-
-    header {
-
-
-        padding: 15px 20px;
-
-
-        flex-direction: column;
-
-
-        text-align: center;
-
-
-    }
-
-
-
-
-
-    nav {
-
-
-        justify-content: center;
-
-
-        margin-top: 10px; 
+        font-size: 1em;
 
 
     }
@@ -490,25 +424,16 @@ nav button {
         width: 90%;
 
 
-        max-width: 350px; 
+        max-width: 350px;
 
 
-        height: auto; 
+        height: auto;
 
 
         margin-bottom: 15px;
 
 
     }
-
-
-}
-
-
-
-
-
-@media (max-width: 900px) {
 
 
 
@@ -538,4 +463,74 @@ nav button {
         justify-content: center;
 
 
+        margin-top: 10px;
+
+
     }
+
+
+
+
+
+    .product-container {
+
+
+        justify-content: center;
+
+
+    }
+
+
+
+
+
+    .product {
+
+
+        width: 90%;
+
+
+        max-width: 350px;
+
+
+        height: auto;
+
+
+        margin-bottom: 15px;
+
+
+    }
+
+
+}
+
+
+
+
+
+@media (max-width: 900px) {
+
+
+    header {
+
+
+        padding: 15px 20px;
+
+
+        flex-direction: column;
+
+
+        text-align: center;
+
+
+    }
+
+
+    nav {
+
+
+        justify-content: center;
+
+
+    }
+}

@@ -23,6 +23,7 @@ body{
 }
 
 /* HERO SECTION */
+/*----------------------------------------------------------------------------------- */
 .hero{
     position: relative;
     height: 70vh;
@@ -56,7 +57,7 @@ body{
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(1, 27, 10, 0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0.17), rgba(2, 46, 17, 0.62));
     z-index: 1;
 }
 
@@ -227,6 +228,7 @@ body{
 }
 
 /* CATEGORY SECTION */
+/*----------------------------------------------------------------------------------- */
 
 .category-section{
     padding: 100px 0;
@@ -299,6 +301,14 @@ body{
     );
 }
 
+.category-overlay:hover{
+    background: linear-gradient(
+        to top,
+        rgba(21, 62, 36, 0.29) 0%,
+        transparent 80%
+    );
+}
+
 .category-text{
     position: absolute;
     bottom: 14px;
@@ -335,6 +345,8 @@ body{
 
 
 /* INGREDIENTS SECTION */
+/*----------------------------------------------------------------------------------- */
+
 .ingredients-section {
     /* background: #0F2412 or #0F1412 for dark mode */
     background: #fafafa;
