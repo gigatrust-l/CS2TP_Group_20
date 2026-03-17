@@ -133,7 +133,12 @@ $db = new PDO("mysql:dbname=$database;host=$host", $username, $password);
 
         <?php } else { ?>
 
-            <p>Your cart is empty.</p>
+        <div class="empty-cart-container">
+            <img src="{{ asset('/media/empty_cart.png') }}" alt="Empty Cart" class="empty-cart-image">
+            <h2>Your cart is empty</h2>
+            <p>Looks like you haven’t added anything yet.</p>
+            <a href="/products" class="empty-cart-button">Start Shopping</a>
+        </div>
 
         <?php }} ?>
 
