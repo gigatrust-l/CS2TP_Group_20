@@ -10,7 +10,9 @@ class IngredientController extends Controller
     public function show($slug)
     {
         try {
-            $ingredient = Ingredient::where('slug', $slug)->firstOrFail();
+            $ingredient = Ingredient::where('slug', $slug)
+            ->with('products')
+            ->firstOrFail();
 
             return view('ingredients.ingredient', compact('ingredient'));
 

@@ -17,27 +17,29 @@
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-50">
-                @foreach($orders as $order)
+                @foreach ($orders as $order)
                     <tr>
                         <td class="py-4 px-4 font-mono text-sm">#{{ $order->oid }}</td> {{-- --}}
                         <td class="py-4 px-4 font-medium">{{ $order->user->name ?? 'Guest' }}</td> {{-- --}}
                         <td class="py-4 px-4 text-green-600 font-bold">£{{ number_format($order->o_price, 2) }}
                         </td>
                         <td class="py-4 px-4 font-medium">
-                            <a href="/dashboard/orders/{{$order->oid }}"
+                            <a href="/dashboard/orders/{{ $order->oid }}"
                                 class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors">
                                 View Details
                             </a>
                         </td>
                         <td class="py-4 px-4 text-right">
-                            <span class="inline-flex px-3 py-1 rounded-full text-xs font-bold uppercase 
-                            @if($order->o_status == 'completed')
+                            <span
+                                class="inline-flex px-3 py-1 rounded-full text-xs font-bold uppercase 
+                            @if ($order->o_status == 'completed') 
                             bg-green-100 text-green-700
                             @elseif($order->o_status == 'cancelled')
                             bg-red-100 text-red-700
+                            @elseif(strtolower($order->o_status) == 'refund requested')
+                            bg-amber-100 text-amber-700
                             @else 
-                            bg-blue-100 text-blue-700
-                            @endif
+                            bg-blue-100 text-blue-700 @endif
                             ">
                                 {{ $order->o_status }}
                             </span>

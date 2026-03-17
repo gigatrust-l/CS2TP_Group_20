@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
 
@@ -22,9 +24,11 @@ Route::post('/chat/status', [ChatController::class, 'chatStatus']);
 Route::post('/chat/start', [ChatController::class, 'startChat']);
 Route::post('/chat/end', [ChatController::class, 'endChat']);
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+//Route::get('/', function () {
+//    return view('index');
+//})->name('index');
+
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::get('/products', [ProductController::class, 'index'])
     ->name('products');
@@ -64,9 +68,18 @@ Route::post('/update-stock/{pid}', [AdminController::class, 'updateStock'])->nam
 Route::get('/dashboard/{slug}/{id}', [DashboardController::class, 'modify'])
     ->middleware(['auth']);
 
-
 //Route::get('/orders', [OrderController::class, 'index'])->middleware(['auth'])->name('orders');
 //Route::get('/orders/{order}', [OrderController::class, 'show'])->middleware(['auth'])->name('orders.show');
+
+// Order Routes
+Route::middleware('auth')->group(function () {
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::get('/orders/{oid}', [OrderController::class, 'show'])->name('orders.show');
+    
+    // This is the new one for the buttons!
+    Route::post('/orders/{oid}/update-status', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
+});
+
 
 Route::middleware('auth')->group(function () {
     //Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

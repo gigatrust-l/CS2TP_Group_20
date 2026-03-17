@@ -24,5 +24,14 @@ class Product extends Model
         return $this->hasMany(Review::class, 'r_pid');
     }
 
+    public function ingredients(){
+        return $this->belongsToMany(
+            Ingredient::class,
+            'ingredient_product',
+            'product_id',
+            'ingredient_id'
+        );
+    }
+
 }
 
