@@ -20,14 +20,14 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-[var(--page)] text-[var(--text)] transition-colors">
     <!-- This is to include the nav bar -->
     @include('components/nav_bar_customer')
 
     @include('components/hero')
     <script src="{{ asset('js/hero.js') }}"></script>
 
-    <section class="brand-section">
+    <section class="brand-section bg-[var(--page)]">
         <div class="brand-container">
             <p class="brand-label">Our Philosophy</p>
             <h2>Rooted in Nature, Crafted for Healthy Hair</h2>
@@ -39,24 +39,24 @@
             <div class="brand-features">
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fa-solid fa-leaf" style="color: rgb(76, 175, 114);"></i>
+                        <i class="fa-solid fa-leaf" style="color: var(--accent);"></i>
                     </div>
-                    <h3>100% Natural</h3>
-                    <p>Botanical ingredients sourced responsibly.</p>
+                    <h3 class="text-[var(--text)]">100% Natural</h3>
+                    <p class="text-[var(--muted)]">Botanical ingredients sourced responsibly.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fa-solid fa-recycle" style="color: rgb(76, 175, 114);"></i>
+                        <i class="fa-solid fa-recycle" style="color: var(--accent);"></i>
                     </div>
-                    <h3>Sustainable & Eco-Friendly</h3>
-                    <p>Crafted with care for both your hair and the environment.</p>
+                    <h3 class="text-[var(--text)]">Sustainable & Eco-Friendly</h3>
+                    <p class="text-[var(--muted)]">Crafted with care for both your hair and the environment.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fa-regular fa-heart" style="color: rgb(76, 175, 114);"></i>
+                        <i class="fa-regular fa-heart" style="color: var(--accent);"></i>
                     </div>
-                    <h3>Cruelty-Free</h3>
-                    <p>Never tested on animals, always ethically sourced.</p>
+                    <h3 class="text-[var(--text)]">Cruelty-Free</h3>
+                    <p class="text-[var(--muted)]">Never tested on animals, always ethically sourced.</p>
                 </div>
             </div>
         </div>
@@ -71,7 +71,7 @@
                 <a href="{{ url('/products?type=Shampoo') }}" class="category-card">
                     <img src="{{ asset('media/media_webp/categories/shampoo.webp') }}" alt="Shampoos">
                     <div class="category-overlay"></div>
-                    <div class="category-text">
+                    <div class="category-text text-white">
                         <h3>Shampoo</h3>
                         <p>5 PRODUCTS</p>
                     </div>
@@ -79,7 +79,7 @@
                 <a href="{{ url('/products?type=Conditioner') }}" class="category-card">
                     <img src="{{ asset('media/media_webp/categories/conditioner.webp') }}" alt="Conditioners">
                     <div class="category-overlay"></div>
-                    <div class="category-text">
+                    <div class="category-text text-white">
                         <h3>Conditioner</h3>
                         <p>5 PRODUCTS</p>
                     </div>
@@ -88,7 +88,7 @@
                     <img src="{{ asset('media/media_webp/categories/leavein_conditioner.webp') }}"
                         alt="Leave-In Conditioners">
                     <div class="category-overlay"></div>
-                    <div class="category-text">
+                    <div class="category-text text-white">
                         <h3>Leave-In Conditioner</h3>
                         <p>5 PRODUCTS</p>
                     </div>
@@ -96,7 +96,7 @@
                 <a href="{{ url('/products?type=Hair+Masks') }}" class="category-card">
                     <img src="{{ asset('media/media_webp/categories/hair_mask.webp') }}" alt="Hair Masks">
                     <div class="category-overlay"></div>
-                    <div class="category-text">
+                    <div class="category-text text-white">
                         <h3>Hair Masks</h3>
                         <p>5 PRODUCTS</p>
                     </div>
@@ -104,7 +104,7 @@
                 <a href="{{ url('/products?type=Hair+Accessory') }}" class="category-card">
                     <img src="{{ asset('media/media_webp/categories/accessory.webp') }}" alt="Accessories">
                     <div class="category-overlay"></div>
-                    <div class="category-text">
+                    <div class="category-text text-white">
                         <h3>Hair Accessory</h3>
                         <p>5 PRODUCTS</p>
                     </div>
@@ -116,19 +116,19 @@
     <!--This is the Ingredients section-->
     <section class="ingredients-section">
         <div class="container">
-            <h2 class="section-title text-center">Our Ingredients</h2>
-            <p class="section-sub text-center">
+            <h2 class="section-title text-[var(--text)]text-center">Our Ingredients</h2>
+            <p class="section-sub text-[var(--muted)] text-center">
                 Nature provides the most powerful solutions for healthy hair.
             </p>
             <div class="container-fluid py-2 ingredient-slider overflow-auto">
                 @foreach($ingredients as $ingredient)
-                <div class="ingredient-card">
+                <div class="ingredient-card bg-[var(--input-bg)] border border-[var(--border)] rounded-lg overflow-hidden shadow-[var(--shadow)]">
                     <a href="{{ url('/ingredients/'.$ingredient->slug) }}">
                         <img src="{{ asset($ingredient->ingred_img) }}" alt="{{ $ingredient->name }}">
-                        <div class="card-overlay">
-                            <small class="latin">{{ $ingredient->latin }}</small>
-                            <h3>{{ $ingredient->name }}</h3>
-                            <p>{{ $ingredient->ingred_comment }}</p>
+                        <div class="card-overlay p-4">
+                            <small class="latin text-[var(--accent)]">{{ $ingredient->latin }}</small>
+                            <h3 class="text-[var(--text)]">{{ $ingredient->name }}</h3>
+                            <p class="text-[var(--muted)]">{{ $ingredient->ingred_comment }}</p>
                         </div>
                     </a>
                 </div>

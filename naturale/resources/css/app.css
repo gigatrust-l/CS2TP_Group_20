@@ -19,6 +19,8 @@
         --footer-link: #3ab84e;
         --footer-link-hover: #4b5563;
         --shadow: white;
+
+        --primary: #3ab84e;
     }
 
     html.dark {
@@ -37,7 +39,6 @@
         --shadow: #04160870;
 
     }
-
 
     [data-theme="light"] #icon-moon {
         transform: translateY(40px);

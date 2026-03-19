@@ -20,7 +20,7 @@
         <div class="row align-items-center">
             <!-- Left Side of the Grid - Contact Form -->
             <div class="col-md-6">
-                <h2 class="display-6 fw-bold mb-4">Contact Us</h2>
+                <h2 class="text-3xl font-bold text-[var(--text)] mb-4">Contact Us</h2>
                 <!-- Session Status -->
                 @if(session('status'))
                     <div class="alert alert-success text-center">
@@ -36,11 +36,11 @@
                     <div class="row mb-3">
                         <!-- Name -->
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <label for="name" class="form-label">Name</label>
+                            <label for="name" class="form-label text-[var(--text)]">Name</label>
                             <input type="text"
                                    id="name"
                                    name="name"
-                                   class="form-control @error('name') is-invalid @enderror"
+                                   class="form-control bg-[var(--input-bg)] text-[var(--text)] border-[var(--border)] @error('name') is-invalid @enderror"
                                    value="{{ old('name') }}"
                                    required
                                    autofocus>
@@ -50,11 +50,11 @@
                         </div>
                         <!-- Email Address -->
                         <div class="col-sm-6">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label text-[var(--text)]">Email</label>
                             <input type="email"
                                    id="email"
                                    name="email"
-                                   class="form-control @error('email') is-invalid @enderror"
+                                   class="form-control bg-[var(--input-bg)] text-[var(--text)] border-[var(--border)] @error('email') is-invalid @enderror"
                                    value="{{ old('email') }}"
                                    required
                                    autofocus>
@@ -65,10 +65,10 @@
                     </div>
                     <!-- "Row" 2 for Subject -->
                     <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
+                        <label for="subject" class="form-label text-[var(--text)]">Subject</label>
                         <select id="subject"
                                 name="subject"
-                                class="form-select @error('subject') is-invalid @enderror">
+                                class="form-select bg-[var(--input-bg)] text-[var(--text)] border-[var(--border)] @error('subject') is-invalid @enderror">
                             <option value="Order Enquiry">Order Enquiry</option>
                             <option value="Product Question">Product Question</option>
                             <option value="Website Feedback">Website Feedback</option>
@@ -82,11 +82,11 @@
 
                     <!-- "Row" 3 for Message -->
                     <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
+                        <label for="message" class="form-label text-[var(--text)]">Message</label>
                         <textarea id="message"
                                   name="message"
                                   rows="5"
-                                  class="form-control @error('message') is-invalid @enderror"
+                                  class="form-control bg-[var(--input-bg)] text-[var(--text)] border-[var(--border)] @error('message') is-invalid @enderror"
                                   required>{{ old('message') }}</textarea>
                         @error('message')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -94,7 +94,7 @@
                     </div>
                     <!-- Submit Button -->
                     <div>
-                        <button type="submit" class="btn btn-success px-4">Send</button>
+                        <button type="submit" class="btn bg-[var(--accent)] hover:opacity-90 border-0 text-white px-4">Send</button>
                     </div>
                 </form>
             </div>

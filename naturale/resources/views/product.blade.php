@@ -18,7 +18,7 @@
 <body class="d-flex flex-column min-vh-100">
     @include('components/nav_bar_customer')
 
-    <div class="container my-5 py-4 max bg-white shadow-sm sm:rounded-lg border border-gray-100">
+    <div class="container my-5 py-4 max bg-[var(--input-bg)] shadow-sm sm:rounded-lg border border-[var(--border)] text-[var(--text)]">
         <div class="flex items-center text-sm">
             <ol class="flex items-center">
                 <li class="flex items-center">
@@ -26,7 +26,7 @@
                     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mx-3">
                         <style>
                             .s0 {
-                                fill: #000000
+                                fill: var(--text) !important;
                             }
                         </style>
                         <path id="Shape 1" class="s0"
@@ -38,7 +38,7 @@
                     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 mx-3">
                         <style>
                             .s0 {
-                                fill: #000000
+                                fill: var(--text)
                             }
                         </style>
                         <path id="Shape 1" class="s0"
@@ -77,9 +77,9 @@
                                 @endif
                             @endfor
                             <span class="fw-semibold">{{ number_format($product->reviews_avg_r_rating, 1) }}</span>
-                            <span class="text-muted">/5</span>
+                            <span class="text-[var(--muted)]">/5</span>
                         @else
-                            <span class="text-muted fst-italic" style="font-size:.75rem">No
+                            <span class="text-[var(--muted)] fst-italic" style="font-size:.75rem">No
                                 reviews</span>
                         @endif
                     </span>
@@ -114,7 +114,7 @@
             </div>
 
             <div class="col-md-3">
-                <div class="p-3 bg-light border rounded shadow-sm">
+                <div class="p-3 bg-[var(--page)] border border-[var(--border)] rounded shadow-[var(--shadow)]">
                     <h5 class="fw-semibold mb-3">Purchase</h5>
                     <p class="mb-1">
                         <strong>Stock:</strong>
@@ -127,10 +127,10 @@
                     <form action="{{ route('cart.add') }}" method="POST" class="mt-3">
                         @csrf
                         <input type="hidden" name="pid" value="{{ $product->pid }}">
-                        <label class="form-label fw-semibold">Quantity</label>
-                        <input type="number" name="quantity" class="form-control mb-3" value="1"
+                        <label class="form-label fw-semibold text-[var(--text)]">Quantity</label>
+                        <input type="number" name="quantity" class="form-control mb-3 bg-[var(--input-bg)] text-[var(--text)] border-[var(--border)]" value="1"
                             max="{{ max(1, $product->p_stock) }}" min="1" @disabled($product->p_stock == 0)>
-                        <button class="btn btn-success w-100" type="submit" @disabled($product->p_stock == 0)>
+                        <button class="btn bg-[var(--accent)] hover:opacity-90 border-0 text-white w-100" type="submit" @disabled($product->p_stock == 0)>
                             {{ $product->p_stock > 0 ? 'Add to Cart' : 'Unavailable' }}
                         </button>
                     </form>
@@ -139,13 +139,13 @@
             </div>
         </div>
     </div>
-    <div id="reviews" class="container mb-5 py-5 max bg-white shadow-sm sm:rounded-lg border border-gray-100">
+    <div id="reviews" class="container mb-5 py-5 max bg-[var(--input-bg)] shadow-[var(--shadow)] sm:rounded-lg border border-[var(--border)]">
         <div class="row g-5">
 
             <div name="header" class="ml-2 flex items-center justify-between flex-wrap gap-3">
-                <h2 class="font-semibold text-xl text-gray-900 leading-tight">
+                <h2 class="font-semibold text-xl text-[var(--text)] leading-tight">
                     {{ __('Reviews') }}
-                    <span class="ml-2 text-sm font-normal text-gray-400">({{ $reviews->total() }})</span>
+                    <span class="ml-2 text-sm font-normal text-[var(--muted)]">({{ $reviews->total() }})</span>
                 </h2>
 
                 <div class="flex items-center gap-2">
@@ -153,7 +153,7 @@
 
                     <a href="{{ request()->fullUrlWithQuery(['sort' => 'rid', 'direction' => 'asc']) }}#reviews"
                         class="inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium border transition-colors
-                          {{ $sort === 'rid' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900' }}">
+                          {{ $sort === 'rid' ? 'bg-gray-900 text-white border-gray-900' : 'bg-[var(--input-bg)] text-gray-600 border-gray-200 hover:border-gray-400 hover:text-[var(--text)]' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -164,7 +164,7 @@
 
                     <a href="{{ request()->fullUrlWithQuery(['sort' => 'r_rating', 'direction' => $sort === 'r_rating' && $direction === 'desc' ? 'asc' : 'desc']) }}#reviews"
                         class="inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium border transition-colors
-                          {{ $sort === 'r_rating' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900' }}">
+                          {{ $sort === 'r_rating' ? 'bg-gray-900 text-white border-gray-900' : 'bg-[var(--input-bg)] text-gray-600 border-gray-200 hover:border-gray-400 hover:text-[var(--text)]' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path
@@ -188,16 +188,16 @@
             <div class=" mt-4 space-y-4">
                 @forelse ($reviews as $review)
                     <div
-                        class="p-4 border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:shadow-sm transition-all duration-150">
+                        class="p-4 border border-[var(--border)] rounded-lg bg-gray-50 hover:bg-[var(--input-bg)] hover:shadow-sm transition-all duration-150">
                         <div class="flex items-start justify-between gap-4">
 
                             <div class="flex items-center gap-3 min-w-0">
                                 
                                 <div class="min-w-0">
-                                    <p class="text-sm font-semibold text-gray-900 truncate">
+                                    <p class="text-sm font-semibold text-[var(--text)]">
                                         {{ $review->r_title ?? __('Untitled Review') }}
                                     </p>
-                                    <p class="text-xs text-gray-400">
+                                    <p class="text-xs text-[var(--muted)]">
                                         {{ $review->customer->c_name }}: #{{ $review->rid }}
                                     </p>
                                 </div>
@@ -217,7 +217,7 @@
                         </div>
 
                         @if (!empty($review->r_description))
-                            <p class="mt-3 text-sm text-gray-700 leading-relaxed">
+                            <p class="mt-3 text-sm text-[var(--text)] leading-relaxed opacity-90">
                                 {{ $review->r_description }}
                             </p>
                         @endif
@@ -229,7 +229,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M8 10h.01M12 10h.01M16 10h.01M21 16c0 1.1-.9 2-2 2H7l-4 4V6a2 2 0 012-2h14a2 2 0 012 2v10z" />
                         </svg>
-                        <p class="text-sm text-gray-400">{{ __('No reviews yet.') }}</p>
+                        <p class="text-sm text-[var(--muted)]">{{ __('No reviews yet.') }}</p>
                     </div>
                 @endforelse
             </div>
