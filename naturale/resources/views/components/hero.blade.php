@@ -17,7 +17,11 @@
         </p>
 
         <div class="hero-buttons">
-            <a href="{{ url('/products') }}" class="btn-primary">Shop Now</a>
+            <a href="{{ url('/products') }}" 
+            class="btn-primary" 
+            style="background-color: var(--primary) !important; color: var(--page) !important; border-color: var(--primary) !important;">
+            Shop Now
+            </a>
         </div>
     </div>
 

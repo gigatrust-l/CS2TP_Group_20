@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
     <meta charset="UTF-8">
+    @include('components/head-theme-script')
     <title>{{ config('app.name', 'Laravel') }} - About Us</title>
     <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}">
     <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
@@ -14,7 +14,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body style="background-color: var(--page); color: var(--text);">
     @include('components/nav_bar_customer')
 
     <div class="py-12 min-h-screen">
@@ -41,7 +41,7 @@
                                     <div class="card-body px-4 py-4">
                                         <div class="row align-items-start">
                                             <div class="col-md-9">
-                                                <p class="text-[var(--muted)] mb-0">
+                                                <p class="text-[var(--text)] mb-0">
                                                     Welcome to Naturale, your premier destination for ecofriendly,
                                                     natural, and organic
                                                     haircare products. Our mission is to bring the natural benefits of
@@ -86,7 +86,7 @@
                                                     style="max-width: 200px; object-fit: cover;" alt="Our Story">
                                             </div>
                                             <div class="col-md-9">
-                                                <p class="text-[var(--muted)] mb-3">
+                                                <p class="text-[var(--text)] mb-3">
                                                     Naturale was founded by a group of students who really care about
                                                     the environment and know
                                                     the power of natural remedies. We firmly believe in preserving the
@@ -94,7 +94,7 @@
                                                     around the world that, for centuries, have shown how nature brings
                                                     out the best in us.
                                                 </p>
-                                                <p class="text-[var(--muted)] mb-0">
+                                                <p class="text-[var(--text)] mb-0">
                                                     At Naturale, we work to inspire self love through simple sustainable
                                                     sourced ingredients.
                                                     Every product is crafted with love and respect for both the
@@ -120,7 +120,7 @@
                                     <div class="card-body px-4 py-4">
                                         <div class="row align-items-center g-4">
                                             <div class="col-md-9">
-                                                <p class="text-[var(--muted)] mb-0">
+                                                <p class="text-[var(--text)] mb-0">
                                                     Naturale is firmly committed to sustainability and ethical trade
                                                     practices. Our materials
                                                     are sourced from local artisans and suppliers, who dedicate their

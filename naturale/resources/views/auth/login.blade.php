@@ -1,198 +1,145 @@
 <x-guest-layout>
-    <!-- Session Status -->
+    <button type="button" 
+        class="theme-toggle-btn group flex items-center justify-center w-12 h-12 rounded-full shadow-lg border transition-all cursor-pointer"
+        style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 100; border-color: var(--border); background-color: var(--bg);">
+        
+        <div class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" 
+             style="background-color: var(--lightGreenButton);"></div>
+
+        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-xl relative z-10" style="color: white;"></i>
+        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl relative z-10" style="color: white;"></i>
+    </button>
+
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <!-- Email Address -->
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
-                autofocus autocomplete="username" />
+            <x-input-label for="email" :value="__('Email')" style="color: var(--text);" />
+            <x-text-input id="email" 
+                class="block mt-1 w-full border-[var(--border)] focus:ring-[var(--bg)] dark:bg-[var(--page)] dark:text-[var(--text)] dark:border-[var(--border)]" 
+                type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                autocomplete="current-password" />
-
+            <x-input-label for="password" :value="__('Password')" style="color: var(--text);" />
+            <x-text-input id="password" 
+                class="block mt-1 w-full border-[var(--border)] focus:ring-[var(--bg)] dark:bg-[var(--page)] dark:text-[var(--text)] dark:border-[var(--border)]" 
+                type="password" name="password" required autocomplete="current-password" />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
-        <!-- Remember Me -->
         <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox"
-                    class="rounded border-gray-300 text-green-600 shadow-sm focus:ring-green-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <input id="remember_me" type="checkbox" 
+                    class="rounded border-[var(--border)] text-[var(--bg)] shadow-sm focus:ring-[var(--bg)] dark:bg-[var(--page)] dark:border-[var(--border)]" 
+                    name="remember">
+                <span class="ms-2 text-sm text-[var(--muted)]">{{ __('Remember me') }}</span>
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4"
-            style="display:flex; justify-content; space-between;justify-content: space-between;">
-            <a style="display: block;white-space: pre-line;"
-                class="underline text-sm text-gray-600 hover:text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-                href="{{ route('register') }}">
-                {{ __('New Customer? 
-                    Sign Up') }}
-            </a>
-
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-green-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
-                    href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+        <div class="mt-6 space-y-4">
+            <div class="flex items-center justify-between">
+                <a class="underline text-sm text-[var(--text)] hover:text-[var(--page)] transition-colors" href="{{ route('register') }}">
+                    {!! __("New Customer? <br> Sign Up") !!}
                 </a>
-            @endif
 
-            <x-green-button class="ms-3">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-[var(--text)] hover:text-[var(--page)]" href="{{ route('password.request') }}">
+                        {{ __('Forgot password?') }}
+                    </a>
+                @endif
+            </div>
+
+            <button type="submit" 
+                class="w-full inline-flex items-center justify-center px-4 py-2 bg-[var(--primary)] hover:opacity-90 text-[var(--page)] text-xs font-semibold uppercase tracking-widest rounded-md transition-all">
                 {{ __('Log in') }}
-            </x-green-button>
-
+            </button>
         </div>
-<!-- -->
-        <div class="row mb-0 mt-3">
-            <div class="col-md-8 offset-md-4">
-                <a href="{{ route('auth.google') }}" class="">
-                    <div button class="gsi-material-button">
+
+        <div class="relative my-8">
+            <div class="absolute inset-0 flex items-center">
+                <span class="w-full border-t border-[var(--border)] opacity-30"></span>
+            </div>
+            <div class="relative flex justify-center text-xs uppercase">
+                <span class="bg-[var(--page)] px-2 text-[var(--muted)]">Or continue with</span>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <a href="{{ route('auth.google') }}" class="w-full">
+                <div class="gsi-material-button">
                     <div class="gsi-material-button-state"></div>
                     <div class="gsi-material-button-content-wrapper">
                         <div class="gsi-material-button-icon">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" style="display: block;">
-                                <path fill="#EA4335"
-                                    d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
-                                </path>
-                                <path fill="#4285F4"
-                                    d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
-                                </path>
-                                <path fill="#FBBC05"
-                                    d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
-                                </path>
-                                <path fill="#34A853"
-                                    d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
-                                </path>
-                                <path fill="none" d="M0 0h48v48H0z"></path>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="width: 20px; height: 20px; display: block;">
+                                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path>
+                                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path>
+                                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path>
+                                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path>
                             </svg>
                         </div>
                         <span class="gsi-material-button-contents">Sign in with Google</span>
-                        <span style="display: none;">Sign in with Google</span>
                     </div>
-                    </div>
-                </a>
-            </div>
+                </div>
+            </a>
         </div>
     </form>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', function() {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('color-theme', 'light');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('color-theme', 'dark');
+                    }
+                });
+            }
+        });
+    </script>
+
     <style>
         .gsi-material-button {
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            -webkit-appearance: none;
             background-color: #f2f2f2;
-            background-image: none;
-            border: none;
-            -webkit-border-radius: 20px;
+            border: 1px solid var(--border);
             border-radius: 20px;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
             color: #1f1f1f;
             cursor: pointer;
             font-family: 'Roboto', arial, sans-serif;
             font-size: 14px;
             height: 40px;
-            letter-spacing: 0.25px;
-            outline: none;
-            overflow: hidden;
             padding: 0 12px;
             position: relative;
             text-align: center;
-            -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
-            transition: background-color .218s, border-color .218s, box-shadow .218s;
-            vertical-align: middle;
-            white-space: nowrap;
-            width: auto;
-            max-width: 400px;
-            min-width: min-content;
+            transition: background-color .218s;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        .gsi-material-button .gsi-material-button-icon {
+        .dark .gsi-material-button {
+            background-color: #131314 !important;
+            color: #e3e3e3 !important;
+            border-color: var(--border) !important;
+        }
+        .gsi-material-button-icon {
+            width: 20px;
             height: 20px;
             margin-right: 10px;
-            min-width: 20px;
-            width: 20px;
         }
-
-        .gsi-material-button .gsi-material-button-content-wrapper {
-            -webkit-align-items: center;
-            align-items: center;
+        .gsi-material-button-content-wrapper {
             display: flex;
-            -webkit-flex-direction: row;
-            flex-direction: row;
-            -webkit-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-            height: 100%;
-            justify-content: space-between;
-            position: relative;
+            align-items: center;
+            justify-content: center;
             width: 100%;
         }
-
-        .gsi-material-button .gsi-material-button-contents {
-            -webkit-flex-grow: 1;
-            flex-grow: 1;
-            font-family: 'Roboto', arial, sans-serif;
-            font-weight: 500;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            vertical-align: top;
-        }
-
-        .gsi-material-button .gsi-material-button-state {
-            -webkit-transition: opacity .218s;
-            transition: opacity .218s;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        .gsi-material-button:disabled {
-            cursor: default;
-            background-color: #ffffff61;
-        }
-
-        .gsi-material-button:disabled .gsi-material-button-state {
-            background-color: #1f1f1f1f;
-        }
-
-        .gsi-material-button:disabled .gsi-material-button-contents {
-            opacity: 38%;
-        }
-
-        .gsi-material-button:disabled .gsi-material-button-icon {
-            opacity: 38%;
-        }
-
-        .gsi-material-button:not(:disabled):active .gsi-material-button-state,
-        .gsi-material-button:not(:disabled):focus .gsi-material-button-state {
-            background-color: #001d35;
-            opacity: 12%;
-        }
-
-        .gsi-material-button:not(:disabled):hover {
-            -webkit-box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
-            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
-        }
-
-        .gsi-material-button:not(:disabled):hover .gsi-material-button-state {
-            background-color: #001d35;
-            opacity: 8%;
-        }
+        .gsi-material-button-contents { font-weight: 500; }
     </style>
 </x-guest-layout>

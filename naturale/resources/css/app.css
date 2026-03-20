@@ -3,48 +3,110 @@
 @tailwind utilities;
 
 @layer base {
+    /* --- Global Smooth Transition --- */
+    .theme-transition *, 
+    .theme-transition *::before, 
+    .theme-transition *::after {
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+    }
+
     :root {
         --gray: #d9d9d9;
-        --page: #f3f4f6;
-
-        /* mainly headder */
+        --page: #e2f3e5;
         --bg: #3ab84e;
-        --border: #354024;
-        --input-bg: #3ab84e;
+        --border: #bbcba8;
         --text: #354024;
         --muted: #5a6e3f;
-
         --footer-main: #07220d;
         --footer-sub: #4b5563;
         --footer-link: #3ab84e;
         --footer-link-hover: #4b5563;
         --shadow: white;
-
-        --primary: #3ab84e;
+        --primary: #2d8a3a;
     }
 
     html.dark {
-        --page: #07220d;
+        --page: #051b11;
         --bg: #146326;
-        --border: #2f3d1e;
-        --input-bg: #146326;
+        --border: #1a3d2c;
         --text: #d4e4c4;
         --muted: #7a8f60;
         --primary: white;
-
         --footer-main: #f3f4f6;
         --footer-sub: #9ca3af;
         --footer-link: #16a34a;
-        --footer-link-hover: #9ca3af;
+        --footer-link-hover: #6fd98a;
         --shadow: #04160870;
-
     }
 
-    [data-theme="light"] #icon-moon {
-        transform: translateY(40px);
+    /* --- Theme Toggle Icon Positioning & Animation --- */
+    #theme-toggle {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
     }
 
-    [data-theme="dark"] #icon-sun {
-        transform: translateY(40px);
+    #theme-toggle:hover {
+        /* Match nav a:hover */
+        background-color: var(--lightGreenButton);
+    }
+
+    /* Ensure icons inside take the parent's color */
+    #theme-toggle i {
+        color: inherit;
+    }
+
+    #theme-toggle-dark-icon, 
+    #theme-toggle-light-icon {
+        position: absolute;
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease;
+        pointer-events: none;
+        line-height: 1;
+        font-size: 1.25rem;
+    }
+
+    /* Animation Logic */
+    .hidden { display: none !important; }
+
+    /* Light Theme State */
+    html:not(.dark) #theme-toggle-dark-icon { transform: rotate(0deg) scale(1); opacity: 1; }
+    html:not(.dark) #theme-toggle-light-icon { transform: rotate(90deg) scale(0); opacity: 0; }
+
+    /* Dark Theme State */
+    html.dark #theme-toggle-light-icon { transform: rotate(0deg) scale(1); opacity: 1; }
+    html.dark #theme-toggle-dark-icon { transform: rotate(-90deg) scale(0); opacity: 0; }
+
+    /* --- Universal Header Icon Visibility Fix --- */
+    /* This ensures icons pop against the dark green header in dark mode */
+    .main-header i, 
+    .main-header .fa-solid {
+        transition: color 0.3s ease;
+        filter: drop-shadow(0 1px 1px rgba(0,0,0,0.1));
+    }
+
+    html.dark .main-header i, 
+    html.dark .main-header .fa-solid {
+        color: var(--text);
+    }
+
+    html:not(.dark) .main-header i, 
+    html:not(.dark) .main-header .fa-solid {
+        color: var(--text);
+    }
+
+    /* Keep Search Input Text Readable */
+    .main-header input.form-control {
+        color: #1a1a1a;
+        background-color: #ffffff;
     }
 }

@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8"/>
+    @include('components/head-theme-script')
     <title>Naturale</title>
     <link rel="stylesheet" href="{{ asset('/css/ingredients.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">

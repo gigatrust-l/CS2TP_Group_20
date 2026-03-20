@@ -1,5 +1,16 @@
 <x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
+    <button type="button" 
+        class="theme-toggle-btn group flex items-center justify-center w-12 h-12 rounded-full shadow-lg border transition-all cursor-pointer"
+        style="position: fixed; top: 1.5rem; right: 1.5rem; z-index: 100; border-color: var(--border); background-color: var(--bg);">
+        
+        <div class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" 
+             style="background-color: var(--lightGreenButton);"></div>
+
+        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-xl relative z-10" style="color: white;"></i>
+        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl relative z-10" style="color: white;"></i>
+    </button>
+
+    <div class="mb-4 text-sm text-[var(--text)] dark:text-gray-400">
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
     </div>
 
