@@ -39,11 +39,10 @@ Route::get('/products/{pid}', [ProductController::class, 'show'])
 
 Route::get('/products/{any}', function () {return redirect('/products');});
 
-Route::get('/ingredients', function () {
-    return view('/ingredients/ingredients');
-})->name('/ingredients');
-
 Route::get('/ingredients/{slug}', [IngredientController::class, 'show']);
+Route::get('/ingredients', function () {
+    return view('index');
+});
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth'])
@@ -75,7 +74,7 @@ Route::get('/dashboard/{slug}/{id}', [DashboardController::class, 'modify'])
 Route::middleware('auth')->group(function () {
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::get('/orders/{oid}', [OrderController::class, 'show'])->name('orders.show');
-    
+
     // This is the new one for the buttons!
     Route::post('/orders/{oid}/update-status', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
 });
@@ -125,12 +124,12 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
- 
+
     return redirect('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
- 
+
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');

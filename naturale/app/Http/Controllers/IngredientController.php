@@ -14,7 +14,7 @@ class IngredientController extends Controller
             ->with('products')
             ->firstOrFail();
 
-            return view('ingredients.ingredient', compact('ingredient'));
+            return view('ingredient', compact('ingredient'));
 
         } catch (ModelNotFoundException $e) {
             return redirect()->route('/ingredients');
