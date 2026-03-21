@@ -10,8 +10,12 @@ use App\Models\Customer;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Address;
+use App\Models\User;
 use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\DB;
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderCompleted;
 
 
 class CheckoutController extends Controller
@@ -23,6 +27,11 @@ class CheckoutController extends Controller
      */
     public function viewCheckout()
     {
+        $cart = session()->get('cart', []);
+
+        $cart = array_filter($cart, fn($item) => $item['pid'] != 0); //removes selected item from array
+
+        session()->put('cart', $cart); //store cart in session
 
         $tempcart = session()->get('cart', []); //retrieve cart from session or empty cart if none exists
 
@@ -50,6 +59,10 @@ class CheckoutController extends Controller
 
         }
 
+        if ($totalQuantity == 0) {
+            return redirect()->route('cart.view');
+        }
+
         if (auth()->user()) {
 
             $addresses = auth()->user()->addresses()->get()->map(fn($a) => [
@@ -67,7 +80,7 @@ class CheckoutController extends Controller
 
         }
 
-        return view('checkout.checkout', compact('cart', 'runningTotal', 'totalQuantity', 'addresses')); //returns view page for basket
+        return view('checkout.checkout_details', compact('cart', 'runningTotal', 'totalQuantity', 'addresses')); //returns view page for basket
     }
 
     public function confirmCheckout(Request $request)
@@ -86,12 +99,26 @@ class CheckoutController extends Controller
 
         ]);
 
+        $cart = session()->get('cart', []);
+
+        foreach ($cart as $item) {
+
+            if ($item['pid'] == 0) {
+
+                $cart = array_filter($cart, fn($item) => $item['pid'] != $item['pid']); //removes selected item from array
+
+            }
+
+        }
+
+        session()->put('cart', $cart); //store cart in session
+
         if (!(auth()->user() && auth()->user()->isSubscriber())) {
 
             $shippingrequest = new Request();
 
             $shippingrequest->replace(['pid' => '0', 'quantity' => '1']);
-            
+
             $apiUserController = new CartController();
             $apiUserController->addItem($shippingrequest);
 
@@ -114,7 +141,7 @@ class CheckoutController extends Controller
         }
 
         return DB::transaction(function () use ($validated, $cart, $runningTotal) {
-            $userId = \Auth::user()->id;
+            $userId = \Auth::user()?->id;
 
             $customer = null;
 
@@ -172,6 +199,15 @@ class CheckoutController extends Controller
             session()->put('checkoutCart', $cart);
             session()->forget('cart');
 
+            $subscribed = false;
+            if ($userId) {
+                if (auth()->user()->isSubscriber()) {
+                    $subscribed = true;
+                }
+            }
+
+            Mail::to($validated['email'])->send(new OrderCompleted($order, "processing", $validated['name'], $subscribed));
+
             return redirect()->route('checkout.complete');
         });
     }
@@ -208,7 +244,7 @@ class CheckoutController extends Controller
 
         session()->forget('checkoutCart');
 
-        return view('checkout.checkout_complete', compact('cart','runningTotal')); //returns view page for basket
+        return view('checkout.checkout_complete', compact('cart', 'runningTotal')); //returns view page for basket
 
     }
 

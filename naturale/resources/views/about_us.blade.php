@@ -1,21 +1,8 @@
-<!DOCTYPE html>
+<x-layouts.storefront title="{{ config('app.name', 'Laravel') }} - About Us">
 
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <title>{{ config('app.name', 'Laravel') }} - About Us</title>
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}">
-    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-
-<body>
-    @include('components/nav_bar_customer')
+    <x-slot:styles>
+        <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}">
+    </x-slot:styles>
 
     <div class="py-12 min-h-screen">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -149,9 +136,9 @@
                 </div>
             </div>
         </div>
-        <footer>
-            @include('components/footer')
-        </footer>
-</body>
+    </div>
 
-</html>
+    <x-slot:scripts>
+    </x-slot:scripts>
+
+</x-layouts.storefront>

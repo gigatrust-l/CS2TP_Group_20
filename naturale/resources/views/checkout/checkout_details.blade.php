@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layouts.storefront title="{{ config('app.name', 'Laravel') }} - Checkout">
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Naturale - Checkout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}" />
-    <link rel="icon" href="{{ asset('/media/favicon.ico') }}" />
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-</head>
-
-
-<body>
-    @include('components/nav_bar_customer')
+    <x-slot:styles>
+        <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}" />
+    </x-slot:styles>
 
     <div class="container py-5">
         <div class="text-center mb-5">
@@ -214,83 +201,79 @@
     </div>
     </div>
 
-    @if (auth()->user() && count($addresses) > 0)
-        <script>
-            var addresses = <?php echo json_encode($addresses); ?>;
+    <x-slot:scripts>
+        @if (auth()->user() && count($addresses) > 0)
+            <script>
+                var addresses = {!! json_encode($addresses) !!};
 
-            var reset_text = true;
+                var reset_text = true;
 
-            const addressdropdown = document.getElementById("address_drop_down");
+                const addressdropdown = document.getElementById("address_drop_down");
 
-            const addressLine1 = document.getElementById("addressLine1");
-            const addressLine2 = document.getElementById("addressLine2");
-            const addressCity = document.getElementById("addressCity");
-            const addressCounty = document.getElementById("addressCounty");
-            const addressPostcode = document.getElementById("addressPostcode");
-            const addressCountry = document.getElementById("addressCountry");
+                const addressLine1 = document.getElementById("addressLine1");
+                const addressLine2 = document.getElementById("addressLine2");
+                const addressCity = document.getElementById("addressCity");
+                const addressCounty = document.getElementById("addressCounty");
+                const addressPostcode = document.getElementById("addressPostcode");
+                const addressCountry = document.getElementById("addressCountry");
 
 
-            addressdropdown.addEventListener("change", function() {
+                addressdropdown.addEventListener("change", function() {
 
-                var count = 0;
+                    var count = 0;
 
-                if (addressdropdown.value == "new" && reset_text == true) {
+                    if (addressdropdown.value == "new" && reset_text == true) {
 
-                    addressLine1.value = "";
-                    addressLine2.value = "";
-                    addressCity.value = "";
-                    addressCounty.value = "";
-                    addressPostcode.value = "";
-                    addressCountry.value = "";
-
-                }
-
-                for (var address of addresses) {
-
-                    if (count == addressdropdown.value) {
-
-                        addressLine1.value = address[0];
-                        addressLine2.value = address[1];
-                        addressCity.value = address[2];
-                        addressCounty.value = address[3];
-                        addressPostcode.value = address[4];
-                        addressCountry.value = address[5];
+                        addressLine1.value = "";
+                        addressLine2.value = "";
+                        addressCity.value = "";
+                        addressCounty.value = "";
+                        addressPostcode.value = "";
+                        addressCountry.value = "";
 
                     }
 
-                    count = count + 1;
+                    for (var address of addresses) {
 
-                }
+                        if (count == addressdropdown.value) {
 
-                reset_text = true;
+                            addressLine1.value = address[0];
+                            addressLine2.value = address[1];
+                            addressCity.value = address[2];
+                            addressCounty.value = address[3];
+                            addressPostcode.value = address[4];
+                            addressCountry.value = address[5];
 
-            });
+                        }
 
-            var inputs = document.getElementsByClassName("address_input");
-
-            for (var input of inputs) {
-
-
-                input.addEventListener("change", function() {
-
-                    reset_text = false;
-
-                    if (addressdropdown.value != "new") {
-
-                        addressdropdown.value = "new";
+                        count = count + 1;
 
                     }
+
+                    reset_text = true;
 
                 });
 
-            }
-        </script>
-    @endif
+                var inputs = document.getElementsByClassName("address_input");
 
-    <footer>
-        @include('components/footer')
-    </footer>
+                for (var input of inputs) {
 
-</body>
 
-</html>
+                    input.addEventListener("change", function() {
+
+                        reset_text = false;
+
+                        if (addressdropdown.value != "new") {
+
+                            addressdropdown.value = "new";
+
+                        }
+
+                    });
+
+                }
+            </script>
+        @endif
+    </x-slot:scripts>
+
+</x-layouts.storefront>

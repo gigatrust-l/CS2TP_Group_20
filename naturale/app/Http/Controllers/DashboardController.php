@@ -9,8 +9,13 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        if (auth()->user()->isAdmin()) {
+
+            return redirect()->route('portal');
+        }
+
         return view('dashboard.dashboard');
     }
 
@@ -54,7 +59,7 @@ class DashboardController extends Controller
             $order = auth()->user()->orders()->where('oid', $id)->firstOrFail();
             $address = Address::findOrFail($order['o_address']);
 
-            return view('dashboard.dashboard', compact('order','address'));
+            return view('dashboard.dashboard', compact('order', 'address'));
 
         } else {
 

@@ -39,24 +39,32 @@ Route::get('/products/{pid}', [ProductController::class, 'show'])
 
 Route::get('/products/{any}', function () {return redirect('/products');});
 
-Route::get('/ingredients', function () {
-    return view('/ingredients/ingredients');
-})->name('/ingredients');
+
+Route::post('/product', [ProductController::class, 'addItem'])->name('product.cart.add');
 
 Route::get('/ingredients/{slug}', [IngredientController::class, 'show']);
+
+Route::get('/ingredients', function () {
+    return redirect()->route('index');
+});
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware(['auth'])
     ->name('dashboard');
 
-Route::get('/portal', [AdminController::class, 'index'])
-    ->middleware(['auth'])
-    ->name('portal');
+Route::get('/portal', [AdminController::class, 'index'])->middleware(['auth'])->name('portal');
 
-Route::get('/portal/{slug}', [AdminController::class, 'show'])
-    ->middleware(['auth']);
+Route::get('/portal/{slug}', [AdminController::class, 'show'])->middleware(['auth']);
+
+Route::get('/portal/order/{id}', [AdminController::class, 'showOrder'])
+    ->middleware(['auth'])
+    ->name('admin.orders.show');
 
 Route::get('/dashboard/{slug}', [DashboardController::class, 'show'])
+    ->middleware(['auth']);
+
+Route::patch('/portal/order/{id}/status', [AdminController::class, 'updateOrderStatus'])
+    ->name('admin.orders.updateStatus')
     ->middleware(['auth']);
 
 Route::post('/update-stock/{pid}', [AdminController::class, 'updateStock'])->name('admin.stock.update');
@@ -92,7 +100,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/cart', [CartController::class, 'viewCart'])->name('cart.view');
-Route::post('/product', [CartController::class, 'addItem'])->name('cart.add');
+Route::post('/cart/add', [CartController::class, 'addItem'])->name('cart.add');
 Route::post('/cart/update', [CartController::class, 'updateItemQuantity'])->name('cart.update');
 Route::post('/cart/remove/{any}', [CartController::class, 'removeItem'])->name('cart.remove');
 Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');

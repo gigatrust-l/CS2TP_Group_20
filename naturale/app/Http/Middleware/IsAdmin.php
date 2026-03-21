@@ -20,6 +20,6 @@ class IsAdmin
         }
 
         // If not admin, redirect to customer dashboard or home
-        return redirect('/dashboard')->with('error', 'You do not have admin access.');
+        return redirect('/')->with('error', 'You do not have admin access.');
     }
 }

@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layouts.storefront title="{{ config('app.name', 'Laravel') }} - Products">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config('app.name', 'Laravel') }} - Products</title>
-    <link rel="stylesheet" href="{{ asset('css/products_style.css') }}" />
-    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!--This is to link google fonts-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    @include('components/nav_bar_customer')
+    <x-slot:styles>
+        <link rel="stylesheet" href="{{ asset('css/products_style.css') }}" />
+    </x-slot:styles>
 
     <div class="container mt-5 pb-5">
         <div class="text-center mb-5">
@@ -34,7 +17,7 @@
                 <div
                     class="d-flex align-items-center justify-content-between bg-white border rounded-3 px-3 py-2 mb-3 shadow-sm">
                     <span class="text-muted small">
-                        <strong class="text-dark">{{ $products->total() -1 }}</strong> products found
+                        <strong class="text-dark">{{ $products->total()}}</strong> products found
                     </span>
                     <div class="d-flex align-items-center gap-2">
                         <label class="text-muted small mb-0">Sort:</label>
@@ -127,10 +110,8 @@
         </div>
     </div>
 
-    @include('components/chatbot_button')
+    <x-slot:scripts>
+        {{-- JS Scripts --}}
+    </x-slot:scripts>
 
-    @include('components/footer')
-
-</body>
-
-</html>
+</x-layouts.storefront>

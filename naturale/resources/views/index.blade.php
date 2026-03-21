@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layouts.storefront title="{{ config('app.name', 'Laravel') }}">
 
-<head>
-    <meta charset="UTF-8" />
-    <title>Naturale</title>
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
-    <!--This is to link google fonts-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css')}}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-    <!-- This is to include the nav bar -->
-    @include('components/nav_bar_customer')
+    {{-- Optional extra styles for this page only --}}
+    <x-slot:styles>
+        <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}" />
+    </x-slot:styles>
 
     @include('components/hero')
     <script src="{{ asset('js/hero.js') }}"></script>
@@ -114,16 +95,18 @@
     </section>
 
     <!--This is the Ingredients section-->
-    <section class="ingredients-section">
+    <section id="ingredients" class="ingredients-section">
         <div class="container">
             <h2 class="section-title text-center">Our Ingredients</h2>
             <p class="section-sub text-center">
                 Nature provides the most powerful solutions for healthy hair.
             </p>
-            <div class="container-fluid py-2 ingredient-slider overflow-auto">
-                @foreach($ingredients as $ingredient)
+        </div>
+
+        <div class="ingredient-slider py-2 justify-center">
+            @foreach ($ingredients as $ingredient)
                 <div class="ingredient-card">
-                    <a href="{{ url('/ingredients/'.$ingredient->slug) }}">
+                    <a href="{{ url('/ingredients/' . $ingredient->slug) }}">
                         <img src="{{ asset($ingredient->ingred_img) }}" alt="{{ $ingredient->name }}">
                         <div class="card-overlay">
                             <small class="latin">{{ $ingredient->latin }}</small>
@@ -132,15 +115,13 @@
                         </div>
                     </a>
                 </div>
-                @endforeach
-            </div>
+            @endforeach
         </div>
     </section>
 
-    <footer>
-        @include('components/footer')
-    </footer>
+    {{-- Optional extra scripts for this page only --}}
+    <x-slot:scripts>
+        <script src="{{ asset('js/hero.js') }}"></script>
+    </x-slot:scripts>
 
-</body>
-
-</html>
+</x-layouts.storefront>

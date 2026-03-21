@@ -12,7 +12,6 @@
 
         <div>
 
-            <!-- Order Basic Info -->
             <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-700 mb-2">Order Information</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -49,7 +48,6 @@
                 </div>
             </div>
 
-            <!-- Order Items (if you have them) -->
             @if (isset($order->items) && $order->items->count())
                 <div class="mb-6">
                     <h3 class="text-lg font-semibold text-gray-700 mb-2">Items</h3>
@@ -69,9 +67,8 @@
                                     <tr>
                                         <td class="py-4 px-4 font-medium text-sm">
                                             {{ $item->product->p_name ?? 'Unknown Product' }}
-                                        </td> {{-- --}}
+                                        </td>
                                         <td class="py-4 px-4 font-medium">{{ $item->oi_quantity }}</td>
-                                        {{-- --}}
                                         <td class="py-4 px-4 text-green-600 font-bold text-right">
                                             £{{ number_format($item->oi_ind_price, 2) }}</td>
                                         <td class="py-4 px-4 text-green-600 font-bold text-right">
@@ -84,8 +81,8 @@
                         <table class="w-full text-left">
                             <thead>
                                 <tr class="font-semibold text-gray-400  border-t">
-                                    <th class="py-3 px-4 "></th> {{-- --}}
-                                    <th class="py-3 px-4 "></th> {{-- --}}
+                                    <th class="py-3 px-4 "></th>
+                                    <th class="py-3 px-4 "></th>
                                     <th class="py-3 px-4 text-right"></th>
                                     <th class="py-4 px-4 text-green-600 font-bold text-right">
                                         £{{ number_format($order->o_price, 2) }}</th>
@@ -98,7 +95,6 @@
 
             <div class="mb-6">
                 <h3 class="text-lg font-semibold text-gray-700 mb-2">Actions</h3>
-                {{-- Button for Processing orders --}}
                 @if (strtolower($order->o_status) == 'processing')
                     <form action="{{ route('orders.updateStatus', $order->oid) }}" method="POST">
                         @csrf
@@ -108,7 +104,6 @@
                         </x-danger-button>
                     </form>
 
-                    {{-- Button for Completed orders --}}
                 @elseif(strtolower($order->o_status) == 'completed')
                     <form action="{{ route('orders.updateStatus', $order->oid) }}" method="POST">
                         @csrf

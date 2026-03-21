@@ -75,7 +75,7 @@ class CartController extends Controller
 
         }
 
-        return view('checkout.index', compact('cart', 'runningTotal')); //returns view page for basket
+        return view('checkout.checkout_cart', compact('cart', 'runningTotal')); //returns view page for basket
 
     }
 
@@ -90,7 +90,12 @@ class CartController extends Controller
 
         foreach ($cart as &$item) {
             if ($item['pid'] == $request->pid) { //find item in cart matching request
-                $item['quantity'] = max(1, $request->quantity); // update quantity to request value or 1 if less than 1   
+                $product = Product::findOrFail($item['pid']);
+                if ($request->quantity > $product->p_stock) {
+                    return back()->with('notify', 'You already have the maximum stock in your cart.');
+                } else {
+                    $item['quantity'] = max(1, $request->quantity); // update quantity to request value or 1 if less than 1   
+                }
 
             }
 
@@ -98,7 +103,9 @@ class CartController extends Controller
 
         session()->put('cart', $cart); //store cart in session
 
-        return Redirect::to('cart'); //returns view page for basket
+        $product = Product::findOrFail($request->pid);
+
+        return back()->with('success', 'Quantity updated: ' . $product->p_name . ', ' . $request['quantity'] . ' in cart.');
     }
 
 
@@ -116,7 +123,9 @@ class CartController extends Controller
 
         session()->put('cart', $cart); //store cart in session
 
-        return Redirect::to('cart'); //returns view page for basket
+        $product = Product::findOrFail($pid);
+
+        return back()->with('success', 'Item removed from cart: ' . $product->p_name . '.');
 
     }
 
@@ -129,7 +138,7 @@ class CartController extends Controller
     {
         session()->forget('cart'); //deletes cart from session
 
-        return Redirect::to('cart'); //returns view page for basket
+        return back(); //returns view page for basket
 
     }
 

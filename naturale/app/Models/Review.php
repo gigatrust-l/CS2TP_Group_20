@@ -25,4 +25,9 @@ class Review extends Model
         return $this->belongsTo(Customer::class, 'r_cid','cid');
     }
 
+    public function isVerified()
+    {
+        return $this->r_approved == true;
+    }
+
 }

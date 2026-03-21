@@ -22,3 +22,8 @@
 .pagination .page-item .page-link:focus {
     box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
+
+/* Style the label when its radio is checked */
+.form-check-input:checked {
+  background-color: green !important;
+}

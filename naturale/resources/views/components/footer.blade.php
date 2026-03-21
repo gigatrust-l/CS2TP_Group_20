@@ -1,8 +1,4 @@
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<footer class="footer mt-5 py-5 bg-light border-top">
+<footer class="footer py-5 bg-light border-top">
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-4">

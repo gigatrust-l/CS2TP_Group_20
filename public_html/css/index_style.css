@@ -1,6 +1,6 @@
 :root{
     /* colors for buttons etc */
-    --green-main: #4caf72;
+    --green-main: rgba(76, 175, 114, 0.39);
     --green-accent: #6fd98a;
     --green-soft: #a6e3b8;
 
@@ -367,6 +367,7 @@ body{
     overflow-x: auto;
     scroll-behavior: smooth;
     padding: 20px 10px;
+    
 }
 
 .ingredient-card {

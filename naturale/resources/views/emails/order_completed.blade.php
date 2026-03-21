@@ -4,22 +4,13 @@
         <img src="{{ asset('media/media_webp/logo.webp') }}" alt="Naturale Logo" style="width: 180px; height: auto;">
     </div>
 
-    <h2 style="color: #2d3748; text-align: center;">Order Status Update</h2>
+    <h2 style="color: #2d3748; text-align: center;">Order Completed</h2>
     
-    <p>Hi {{ auth()->user()->name }},</p>
+    <p>Hi {{ $name }},</p>
     
     <p>
-        @if(strtolower($statusText) == 'refund requested')
-            A refund has been requested for order number <strong>#{{ $order->oid }}</strong>.
-            We will contact you soon for further details and to arrange the return.
-        @elseif(strtolower($statusText) == 'cancelled')
-            Your order number <strong>#{{ $order->oid }}</strong> has been cancelled.
-            A Refund has been issued to your account.
-            You may hear further corespondence from us regarding this change.
-        @else
-            The status of your order <strong>#{{ $order->oid }}</strong> has been updated to: <strong>{{ strtoupper($statusText) }}</strong>.
-            You may hear further corespondence from us regarding this change.
-        @endif
+        Thank you for your order.
+        Your order number is <strong>#{{ $order->oid }}</strong>.
     </p>
 
     <h3 style="border-bottom: 2px solid #edf2f7; padding-bottom: 10px;">Items in your order:</h3>
@@ -48,6 +39,12 @@
             </tr>
         </tfoot>
     </table>
+
+    @if (!$subscribed)
+    <p>Did you know you could have saved £4.99 on shipping if you join our subscription service!.</p>
+    @else
+    <P>You saved £4.99 on this order by being subscribed!</P>
+    @endif
 
     <div style="margin-top: 30px; font-size: 12px; color: #a0aec0; text-align: center;">
         <p>Naturale | Sustainable Beauty</p>

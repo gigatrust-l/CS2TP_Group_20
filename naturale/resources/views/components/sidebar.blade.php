@@ -15,18 +15,41 @@
                     style="letter-spacing:.05em">Category</label>
                 <div class="d-flex flex-column gap-1">
                     <div class="form-check">
-                        <input class="form-check-input " style="{{ request('type', '') == '' ? 'background-color: green;' : 'background-color: white;' }}"  type="radio" name="type" id="cat_all" value=""
+                        <input class="form-check-input " type="radio" name="type" id="cat_all" value=""
                             {{ request('type', '') == '' ? 'checked' : '' }}></input>
                         <label class="form-check-label small" for="cat_all">All categories</label>
                     </div>
                     @foreach ($categories as $category)
                         @if (!($category == 'shipping'))
                             <div class="form-check">
-                                <input class="form-check-input " style="{{ request('type') == $category ? 'background-color: green;' : 'background-color: white;' }}"  type="radio" name="type"
+                                <input class="form-check-input" type="radio" name="type"
                                     id="cat_{{ Str::slug($category) }}" value="{{ $category }}"
                                     {{ request('type') == $category ? 'checked' : '' }}></input>
                                 <label class="form-check-label small"
                                     for="cat_{{ Str::slug($category) }}">{{ $category }}</label>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-semibold small text-muted text-uppercase"
+                    style="letter-spacing:.05em">Ingredients</label>
+                <div class="d-flex flex-column gap-1">
+                    <div class="form-check">
+                        <input class="form-check-input " type="radio" name="ingredient" id="ing_all" value=""
+                            {{ request('ingredient', '') == '' ? 'checked' : '' }}></input>
+                        <label class="form-check-label small" for="ing_all">All ingredients</label>
+                    </div>
+                    @foreach ($ingredients as $ingredient)
+                        @if (!($ingredient == ''))
+                            <div class="form-check">
+                                <input class="form-check-input " type="radio" name="ingredient"
+                                    id="ing_{{ Str::slug($ingredient) }}" value="{{ $ingredient }}"
+                                    {{ request('ingredient') == $ingredient ? 'checked' : '' }}></input>
+                                <label class="form-check-label small"
+                                    for="ing_{{ Str::slug($ingredient) }}">{{ $ingredient }}</label>
                             </div>
                         @endif
                     @endforeach
@@ -51,7 +74,7 @@
                 <div class="d-flex flex-column gap-1">
                     @foreach ([['', 'Any rating', ''], ['4', '4★★★★☆', '4 stars & above'], ['3', '3★★★☆☆', '3 stars & above'], ['2', '2★★☆☆☆', '2 stars & above']] as [$val, $stars, $label])
                         <div class="form-check">
-                            <input class="form-check-input " style="{{ request('min_rating', '') == $val ? 'background-color: green;' : 'background-color: white;' }}" type="radio" name="min_rating"
+                            <input class="form-check-input " type="radio" name="min_rating"
                                 id="rating_{{ $val ?: 'any' }}" value="{{ $val }}"
                                 {{ request('min_rating', '') == $val ? 'checked' : '' }}></input>
                             <label class="form-check-label small" for="rating_{{ $val ?: 'any' }}">

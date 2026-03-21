@@ -1,16 +1,4 @@
-<head>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
-    <!--This is to link google fonts-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css')}}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
-
-<header class="main-header bg-[var(--page)]">
+<header class="main-header">
     <div class="logo">
         <a href="/" class="logo">
             <img src="{{ asset('media/media_webp/logo.webp')}}" alt="Naturale Logo">

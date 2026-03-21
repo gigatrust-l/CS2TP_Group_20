@@ -29,7 +29,7 @@ class GoogleController extends Controller
                     $findUser->user()->isAdmin() => '/portal',
                     default => '/',
                 };
-                return redirect()->intended($home);
+                return redirect($home);
             }
 
             $newUser = User::updateOrCreate(

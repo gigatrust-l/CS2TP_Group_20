@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 17, 2026 at 10:48 PM
+-- Generation Time: Mar 21, 2026 at 09:30 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -100,14 +100,18 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-3183c7fde7643f2a00112bdbc85ca495:timer', 'i:1772127813;', 1772127813),
 ('naturale-cache-32d31b796d5f92068d5d8dc218be4f53', 'i:1;', 1772127813),
 ('naturale-cache-32d31b796d5f92068d5d8dc218be4f53:timer', 'i:1772127813;', 1772127813),
-('naturale-cache-3909d2e422a2ee97477bce01c499b9f5', 'i:1;', 1772979181),
-('naturale-cache-3909d2e422a2ee97477bce01c499b9f5:timer', 'i:1772979181;', 1772979181),
+('naturale-cache-3909d2e422a2ee97477bce01c499b9f5', 'i:1;', 1773870130),
+('naturale-cache-3909d2e422a2ee97477bce01c499b9f5:timer', 'i:1773870130;', 1773870130),
 ('naturale-cache-3dae031a529e3124b44bfd269990b95d', 'i:2;', 1772127810),
 ('naturale-cache-3dae031a529e3124b44bfd269990b95d:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843', 'i:1;', 1772127814),
 ('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843:timer', 'i:1772127814;', 1772127814),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1773316281),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1773316281;', 1773316281),
+('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b', 'i:1;', 1773872189),
+('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b:timer', 'i:1773872189;', 1773872189),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:3;', 1773932099),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1773932099;', 1773932099),
+('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3', 'i:1;', 1773858233),
+('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3:timer', 'i:1773858233;', 1773858233),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb', 'i:1;', 1772127810),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4', 'i:1;', 1772836527),
@@ -120,8 +124,10 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-5f27bf5f16b4ac417e73523f5e1b9088:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-62b0d96531422c2cbc2065104a8eaeef', 'i:1;', 1772127815),
 ('naturale-cache-62b0d96531422c2cbc2065104a8eaeef:timer', 'i:1772127815;', 1772127815),
-('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0', 'i:1;', 1773326560),
-('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0:timer', 'i:1773326560;', 1773326560),
+('naturale-cache-670985cfc002fc4a9df5477c8e7a3509', 'i:1;', 1773858163),
+('naturale-cache-670985cfc002fc4a9df5477c8e7a3509:timer', 'i:1773858163;', 1773858163),
+('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0', 'i:1;', 1773931967),
+('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0:timer', 'i:1773931967;', 1773931967),
 ('naturale-cache-7e40d15013de21fac558fa8c6115d6e2', 'i:1;', 1772127811),
 ('naturale-cache-7e40d15013de21fac558fa8c6115d6e2:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-8bad034f06425eb724f717c4c98cac56', 'i:1;', 1772127811),
@@ -132,8 +138,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-9c3618e143cea32a9ce70f64b1989311:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-a3d49062a9297f7d76b523e7fe166f5e', 'i:1;', 1772127812),
 ('naturale-cache-a3d49062a9297f7d76b523e7fe166f5e:timer', 'i:1772127812;', 1772127812),
-('naturale-cache-abc34c66b29010570f43bc352d8d7297', 'i:1;', 1773316269),
-('naturale-cache-abc34c66b29010570f43bc352d8d7297:timer', 'i:1773316269;', 1773316269),
+('naturale-cache-abc34c66b29010570f43bc352d8d7297', 'i:1;', 1773932094),
+('naturale-cache-abc34c66b29010570f43bc352d8d7297:timer', 'i:1773932094;', 1773932094),
 ('naturale-cache-admin&#039; --|88.170.43.205', 'i:1;', 1772127811),
 ('naturale-cache-admin&#039; --|88.170.43.205:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-admin&#039; #|88.170.43.205', 'i:1;', 1772127811),
@@ -152,6 +158,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-aff0fa2525f7f73292d70f2c05cf71e6:timer', 'i:1772127813;', 1772127813),
 ('naturale-cache-asdkjh3kj4h|88.170.43.205', 'i:5;', 1772127809),
 ('naturale-cache-asdkjh3kj4h|88.170.43.205:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-b4b58a5afe3278dabd7637013ccb7f59', 'i:1;', 1773932183),
+('naturale-cache-b4b58a5afe3278dabd7637013ccb7f59:timer', 'i:1773932183;', 1773932183),
 ('naturale-cache-b7fcad0e77ec4b8ff1568c4fc8735e3b', 'i:1;', 1772127815),
 ('naturale-cache-b7fcad0e77ec4b8ff1568c4fc8735e3b:timer', 'i:1772127815;', 1772127815),
 ('naturale-cache-bbf013bfc5312c2a96499bd5db0a996c', 'i:1;', 1772127812),
@@ -166,12 +174,14 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-c2b33abe1eb96735b8e2921476168241:timer', 'i:1772127812;', 1772127812),
 ('naturale-cache-c3eccf41effbbce9bcec9621d1757d95', 'i:1;', 1772127812),
 ('naturale-cache-c3eccf41effbbce9bcec9621d1757d95:timer', 'i:1772127812;', 1772127812),
-('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1773786973),
-('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1773786973;', 1773786973),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1774128625),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1774128625;', 1774128625),
 ('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b', 'i:1;', 1772127811),
 ('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-cd050624f40871bd6be65bb124e6b3df', 'i:1;', 1773326662),
 ('naturale-cache-cd050624f40871bd6be65bb124e6b3df:timer', 'i:1773326662;', 1773326662),
+('naturale-cache-ce11618f74d4748d3b92b912c5d43fa0', 'i:1;', 1773931939),
+('naturale-cache-ce11618f74d4748d3b92b912c5d43fa0:timer', 'i:1773931939;', 1773931939),
 ('naturale-cache-d23fe656a557d0d7ddc1c3e76ce58c30', 'i:1;', 1772127814),
 ('naturale-cache-d23fe656a557d0d7ddc1c3e76ce58c30:timer', 'i:1772127814;', 1772127814),
 ('naturale-cache-d45916610686087a20905da22e8336f2', 'i:5;', 1772127809),
@@ -192,9 +202,12 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-fb96c52aef7191114632fb50691f421c:timer', 'i:1772121128;', 1772121128),
 ('naturale-cache-fortify.2fa_codes.049b2e43779dda39459f88efe97be3cc', 'i:59093262;', 1772797943),
 ('naturale-cache-fortify.2fa_codes.2b69c3c5ef2733289540522571ce3eca', 'i:59110540;', 1773316281),
+('naturale-cache-fortify.2fa_codes.2bdddc09d9c92d31b55d89fcef221720', 'i:59129002;', 1773870138),
 ('naturale-cache-fortify.2fa_codes.2e998ed7fb1e7736c17c570b9a314a68', 'i:59099304;', 1772979196),
 ('naturale-cache-fortify.2fa_codes.37781357e4707153478f32df56f12668', 'i:59094546;', 1772836449),
+('naturale-cache-fortify.2fa_codes.4cc4f2e9c0633976cc0b42ee0af06813', 'i:59128977;', 1773869381),
 ('naturale-cache-fortify.2fa_codes.746a93f94a4288a7328933e9249b0383', 'i:59099090;', 1772972778),
+('naturale-cache-fortify.2fa_codes.76ca953f369762cf49d8e64f0886aef8', 'i:59131069;', 1773932146),
 ('naturale-cache-fortify.2fa_codes.e54d7eb5bb5245aa112fb1a74f7b513d', 'i:59094548;', 1772836527),
 ('naturale-cache-q or 1=1 --|88.170.43.205', 'i:1;', 1772127812),
 ('naturale-cache-q or 1=1 --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
@@ -202,6 +215,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-q or q1q=q1q --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
 ('naturale-cache-q or qq=q|88.170.43.205', 'i:1;', 1772127812),
 ('naturale-cache-q or qq=q|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-test@example.com|86.166.253.99', 'i:1;', 1773858163),
+('naturale-cache-test@example.com|86.166.253.99:timer', 'i:1773858163;', 1773858163),
 ('naturale-cache-testuser999|88.170.43.205', 'i:1;', 1772127809),
 ('naturale-cache-testuser999|88.170.43.205:timer', 'i:1772127809;', 1772127809);
 
@@ -254,7 +269,9 @@ INSERT INTO `customers` (`cid`, `c_name`, `c_email`, `c_uid`) VALUES
 (13, 'Hezekiah Calub', '230159329@aston.ac.uk', 4),
 (18, 'Emma Smith', 'emmasmith@example.com', 5),
 (19, 'Kanban Default', 'asd@asd.sad', 6),
-(22, 'Headunit', 'headunitvan666@gmail.com', 7);
+(22, 'Headunit', 'headunitvan666@gmail.com', 7),
+(23, 'Naturale Support', 'naturalehelpdesk@gmail.com', 9),
+(27, 'a', 'aa@aa.co', NULL);
 
 -- --------------------------------------------------------
 
@@ -289,7 +306,9 @@ INSERT INTO `customer_address` (`caid`, `ca_cid`, `ca_line1`, `ca_line2`, `ca_ci
 (23, 18, '1', 'Aston St', 'Birmingham', 'West Midlands', 'B4 7ET', 'United Kingdom'),
 (24, 19, '69 Jot street', '69 Jot street', 'Jotville', 'jotopia', 'JO60 ORU', 'jotopia'),
 (25, 1, 'sadsfsaf', 'safsasafsaddddddd', 'afsfsafsaf', 'safsafsafsaf', 'afsfsafasf', 'safsafsaf'),
-(26, 22, 'a', 'a', 'a', 'a', 'a', 'a');
+(26, 22, 'a', 'a', 'a', 'a', 'a', 'a'),
+(27, 23, 'Line1', 'Line2', 'City', 'County', 'Postcode', 'Country'),
+(31, 27, 'a', 'a', 'a', 'a', 'a', 'a');
 
 -- --------------------------------------------------------
 
@@ -361,6 +380,44 @@ INSERT INTO `ingredients` (`id`, `name`, `slug`, `latin`, `description`, `image_
 (3, 'Pomegranate Seed Oil', 'pomegranate-oil', 'punica granatum', 'At Naturale, we choose pomegranate seed oil as one of our main ingredients because of its antioxidant properties. It strengthens the hair and provides colour-protecting benefits. This oil has a high concentration of polyphenols that prevent colour fading by acting as a hair shield from UV radiation, free-radicals, and environmental stress. It is a lightweight oil that strengthens the hair fibre, enhances the colour vibration, restores shine, and does not leave any greasy feeling.\r\n\r\nAll together, these qualities make pomegranate seed oil ideal for dyed or chemically treated hair. Naturale offers a range of products for the kind of hair that needs protection and luminosity.', 'media/media_webp/ingredients/pomegranateOil.webp', 'media/media_webp/ingredients/pomegranate.webp', 'Hair strengthening and shine enhancement'),
 (4, 'Tea Tree Oil', 'tea-tree-oil', 'melaleuca alternifolia', 'At Naturale, we selected tea tree oil to be one of our main ingredients. A very well known oil for its powerful antibacterial and purifying properties. Tea tree oil makes sure to keep the scalp clean and balanced, reducing the product buildup, fighting dandruff, and soothing irritation. Perfect for those with an itchy scalp who need a refreshing detox to give a healthy environment to their scalp.\r\n\r\nWe offer the best products to keep a healthy clean scalp, a complete routine to deeply cleanse and revitalise our customers scalp.', 'media/media_webp/ingredients/teaTreeOil.webp', 'media/media_webp/ingredients/teatree.webp', 'Scalp soothing and dandruff reduction'),
 (5, 'Coconut Oil', 'coconut-oil', 'cocos nucifera', 'At Naturale, we choose coconut oil as one of our main ingredients because of its ability to penetrate the hair fibre providing it with strength. It is a lightweight oil that smooths the cuticles and reduces frizz which improves the hair texture overall, leaving a smooth and silky hair without making it greasy. Coconut oil also supports the scalp health, protecting the hair against daily damage, breakage and dryness.\r\n\r\nThese benefits make coconut oil a perfect match for those with straight hair, and here we offer a range of products specially suited for those who want to give their hair the softness, smoothness, and long-lasting shine it needs.', 'media/media_webp/ingredients/coconutOil.webp', 'media/media_webp/ingredients/coconut.webp', 'Hair nourishment and hair breakage prevention');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ingredient_product`
+--
+
+CREATE TABLE `ingredient_product` (
+  `id` int NOT NULL,
+  `ingredient_id` int NOT NULL,
+  `product_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ingredient_product`
+--
+
+INSERT INTO `ingredient_product` (`id`, `ingredient_id`, `product_id`) VALUES
+(1, 1, 9),
+(2, 1, 14),
+(3, 1, 19),
+(4, 1, 4),
+(5, 2, 6),
+(6, 2, 11),
+(7, 2, 16),
+(8, 2, 1),
+(9, 3, 10),
+(10, 3, 15),
+(11, 3, 20),
+(12, 3, 5),
+(13, 4, 8),
+(14, 4, 13),
+(15, 4, 18),
+(16, 4, 3),
+(17, 5, 7),
+(18, 5, 12),
+(19, 5, 17),
+(20, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -473,7 +530,7 @@ INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_tim
 (49, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
 (50, 1, 1, 'Processing', 11.98, '2026-02-16 22:42:34'),
 (52, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
-(55, 2, 17, 'Processing', 26.97, '2026-02-16 22:42:34'),
+(55, 2, 17, 'refund requested', 26.97, '2026-02-16 22:42:34'),
 (57, 2, 17, 'Processing', 26.97, '2026-02-16 22:42:34'),
 (60, 1, 1, 'Processing', 98.89, '2026-02-16 22:42:34'),
 (61, 1, 1, 'Processing', 89.9, '2026-02-16 22:42:34'),
@@ -481,7 +538,7 @@ INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_tim
 (65, 19, 24, 'Processing', 5.99, '2026-02-16 22:42:34'),
 (66, 1, 1, 'Processing', 8.99, '2026-02-16 22:42:34'),
 (67, 1, 14, 'Processing', 8.99, '2026-02-16 22:43:06'),
-(68, 1, 1, 'completed', 23.97, '2026-03-07 16:54:59'),
+(68, 1, 1, 'refund requested', 23.97, '2026-03-07 16:54:59'),
 (69, 2, 17, 'Processing', 8.99, '2026-03-08 12:25:33'),
 (70, 2, 17, 'Processing', 13.98, '2026-03-08 12:27:03'),
 (71, 2, 17, 'Processing', 4.99, '2026-03-08 12:33:25'),
@@ -489,12 +546,19 @@ INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_tim
 (73, 2, 17, 'Processing', 4.99, '2026-03-08 13:16:59'),
 (74, 2, 17, 'Processing', 4.99, '2026-03-08 13:22:02'),
 (75, 1, 1, 'Processing', 6.99, '2026-03-08 14:11:43'),
-(76, 2, 17, 'Processing', 13.98, '2026-03-08 14:12:28'),
-(77, 2, 17, 'Processing', 13.98, '2026-03-08 18:49:32'),
-(78, 2, 17, 'Processing', 11.98, '2026-03-08 19:00:45'),
-(79, 2, 17, 'Processing', 13.98, '2026-03-08 19:03:08'),
+(76, 2, 17, 'cancelled', 13.98, '2026-03-08 14:12:28'),
+(77, 2, 17, 'cancelled', 13.98, '2026-03-08 18:49:32'),
+(78, 2, 17, 'cancelled', 11.98, '2026-03-08 19:00:45'),
+(79, 2, 17, 'cancelled', 13.98, '2026-03-08 19:03:08'),
 (80, 1, 25, 'Processing', 5.99, '2026-03-12 14:42:05'),
-(81, 22, 26, 'Processing', 13.98, '2026-03-17 22:38:01');
+(81, 22, 26, 'cancelled', 13.98, '2026-03-17 22:38:01'),
+(82, 2, 17, 'cancelled', 13.98, '2026-03-18 21:28:54'),
+(83, 2, 17, 'Processing', 13.98, '2026-03-19 15:08:10'),
+(85, 2, 17, 'Processing', 4.99, '2026-03-19 15:28:31'),
+(86, 23, 27, 'Processing', 8.99, '2026-03-19 15:31:15'),
+(87, 23, 27, 'Processing', 6.99, '2026-03-19 15:32:36'),
+(91, 27, 31, 'Processing', 13.98, '2026-03-21 21:27:09'),
+(92, 1, 2, 'Processing', 8.99, '2026-03-21 21:29:35');
 
 -- --------------------------------------------------------
 
@@ -554,7 +618,17 @@ INSERT INTO `order_item` (`oiid`, `oi_oid`, `oi_pid`, `oi_quantity`, `oi_ind_pri
 (75, 79, 0, 1, 4.99),
 (76, 80, 9, 1, 5.99),
 (77, 81, 1, 1, 8.99),
-(78, 81, 0, 1, 4.99);
+(78, 81, 0, 1, 4.99),
+(79, 82, 1, 1, 8.99),
+(80, 82, 0, 1, 4.99),
+(81, 83, 1, 1, 8.99),
+(82, 83, 0, 1, 4.99),
+(85, 85, 0, 1, 4.99),
+(86, 86, 1, 1, 8.99),
+(87, 87, 12, 1, 6.99),
+(93, 91, 1, 1, 8.99),
+(94, 91, 0, 1, 4.99),
+(95, 92, 1, 1, 8.99);
 
 -- --------------------------------------------------------
 
@@ -589,7 +663,7 @@ CREATE TABLE `products` (
   `p_image` text COLLATE utf8mb4_general_ci NOT NULL,
   `p_stock` int NOT NULL,
   `p_category` text COLLATE utf8mb4_general_ci NOT NULL,
-  `p_feature` text COLLATE utf8mb4_general_ci NOT NULL,
+  `p_feature` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `p_ingredients` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `p_instructions` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `p_volume` int DEFAULT NULL
@@ -600,9 +674,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, `p_stock`, `p_category`, `p_feature`, `p_ingredients`, `p_instructions`, `p_volume`) VALUES
-(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483636, 'shipping', 'shipping', NULL, NULL, NULL),
-(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 35, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
-(2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 14, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
+(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483632, 'shipping', '', NULL, NULL, NULL),
+(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 30, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
+(2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 4, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
 (3, 'Pure Roots Scalp Detox Mask', 'A purifying mask formulated to cleanse buildup, rebalance the scalp, and help reduce dandruff. It leaves the scalp feeling refreshed, soothed, and invigorated.', '8.99', 'media/media_webp/products/product_3.webp', 0, 'Hair Masks', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Massage into scalp. Leave 5–7 minutes. Rinse well.', 200),
 (4, 'Oasis Quench Repair Mask', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', '8.99', 'media/media_webp/products/product_4.webp', 0, 'Hair Masks', 'Avocado Extract', 'Apply mid-lengths to ends. Leave 10 minutes. Rinse.', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', 200),
 (5, 'Chromaglow Color Care Mask', 'A protective antioxidant-rich mask that nourishes color-treated hair, helping maintain vibrancy and shine. It shields strands from fading while restoring softness and smoothness.', '8.99', 'media/media_webp/products/product_5.webp', 44, 'Hair Masks', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Antioxidants, Water, Glycerin', 'Apply evenly after shampoo. Leave 5–8 minutes. Rinse.', 200),
@@ -612,7 +686,7 @@ INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, 
 (9, 'Desert Dew Hydrating Shampoo', 'entle hydrating shampoo. Provides deep moisture for silky shinny hair. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_9.webp', 48, 'Shampoo', 'Avocado Extract ', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (10, 'Color Haven Repair Shampoo', 'Colour protecting shampoo, enhances colour vibration, restores shine and\r\nstrengthens hair fibres. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_10.webp', 44, 'Shampoo', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (11, 'Velvet Spiral Conditioner', 'Softens, adds bounce, hydrates, and defines curls. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_11.webp', 49, 'Conditioner', 'Shea Butter', 'Shea butter, Aloe Vera, Glycerin, Hibiscus Extract, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
-(12, 'Glass Veil Conditioner', 'Light conditioner. Provides mirror like shine to straight hair. Smooths the cuticles\r\nand reduces frizz. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_12.webp', 47, 'Conditioner', 'Coconut Oil', 'Coconut Oil, Vitamin E, Vitamin A, Water, Glycerin, Aloe Vera', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
+(12, 'Glass Veil Conditioner', 'Light conditioner. Provides mirror like shine to straight hair. Smooths the cuticles\r\nand reduces frizz. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_12.webp', 46, 'Conditioner', 'Coconut Oil', 'Coconut Oil, Vitamin E, Vitamin A, Water, Glycerin, Aloe Vera', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (13, 'Calm Scalp Conditioner', 'Detox conditioner. Refreshes scalp and prevents irritation. Sulfate free. No\r\nparabens.', '6.99', 'media/media_webp/products/product_13.webp', 49, 'Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Aloe Vera, Peppermint Extract, Vitamin C, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water', 550),
 (14, 'Moisture Bloom Conditioner', 'Deep hydration and moisture conditioner. Repairs split and dry ends, prevents\r\nbreakage and restores softness. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_14.webp', 49, 'Conditioner', 'Avocado Extract', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (15, 'Radiant Restore Conditioner', 'Colour protecting conditioner. Restores colour vibration, adds smoothness and\r\nshine to colour damaged hair. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_15.webp', 47, 'Conditioner', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
@@ -621,11 +695,11 @@ INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, 
 (18, 'Root Relief Leave-In Tonic', 'A refreshing scalp tonic that cools, soothes, and hydrates the scalp. It promotes a healthy environment for growth while adding lightweight moisture.', '8.99', 'media/media_webp/products/product_18.webp', 49, 'Leave-In Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Spray directly onto scalp. Do not rinse.', 400),
 (19, 'Hydra Repair Leave-In Mist', 'A hydrating mist that strengthens and revitalizes dry hair. It enhances softness, helps prevent breakage, and provides instant moisture throughout the day.', '8.99', 'media/media_webp/products/product_19.webp', 49, 'Leave-In Conditioner', 'Avocado Extract', 'Avocado Extract, Jojoba Oil, Water, Glycerin', 'Spray onto hair and leave in.', 400),
 (20, 'Color Shield Leave-In Spray', 'A protective leave-in formula designed to maintain color vibrancy, defend against fading, and add a radiant glossy finish to color-treated hair.', '8.99', 'media/media_webp/products/product_20.webp', 49, 'Leave-In Conditioner', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Vitamin E, Water, Glycerin', 'Mist evenly over hair. Leave in.', 400),
-(21, 'Soft Curl Diffuser', 'A flexible diffuser that enhances natural curls, reduces frizz, and minimizes heat damage. It distributes airflow evenly for defined, voluminous curl results.', '4.99', 'media/media_webp/products/product_21.webp', 49, 'Hair Accessory', 'Silicone', NULL, NULL, NULL),
-(22, 'Gloss Paddle Brush', 'A smoothing paddle brush crafted to detangle, reduce breakage, and create sleek, polished styles. Ideal for medium to long straight or wavy hair.', '4.50', 'media/media_webp/products/product_22.webp', 49, 'Hair Accessory', 'Bamboo', NULL, NULL, NULL),
-(23, 'Scalp Therapy Massager', 'A comfortable handheld massager that boosts scalp circulation, reduces tension, and helps support healthier hair growth when used regularly.', '4.99', 'media/media_webp/products/product_23.webp', 49, 'Hair Accessory', 'Silicone', NULL, NULL, NULL),
-(24, 'Silk Pillow Scrunchies', 'Ultra-soft silk scrunchies designed to prevent breakage, reduce frizz, and help hair retain moisture overnight. Gentle on all hair types.', '6.99', 'media/media_webp/products/product_24.webp', 49, 'Hair Accessory', 'Mulberry Silk', NULL, NULL, NULL),
-(25, 'Heat Shield Comb Set', 'A durable heat-resistant comb set ideal for styling with hot tools. Helps protect hair from damage while ensuring smooth, controlled styling.', '5.00', 'media/media_webp/products/product_25.webp', 49, 'Hair Accessory', 'Carbon Fiber', NULL, NULL, NULL);
+(21, 'Soft Curl Diffuser', 'A flexible diffuser that enhances natural curls, reduces frizz, and minimizes heat damage. It distributes airflow evenly for defined, voluminous curl results.', '4.99', 'media/media_webp/products/product_21.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
+(22, 'Gloss Paddle Brush', 'A smoothing paddle brush crafted to detangle, reduce breakage, and create sleek, polished styles. Ideal for medium to long straight or wavy hair.', '4.50', 'media/media_webp/products/product_22.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
+(23, 'Scalp Therapy Massager', 'A comfortable handheld massager that boosts scalp circulation, reduces tension, and helps support healthier hair growth when used regularly.', '4.99', 'media/media_webp/products/product_23.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
+(24, 'Silk Pillow Scrunchies', 'Ultra-soft silk scrunchies designed to prevent breakage, reduce frizz, and help hair retain moisture overnight. Gentle on all hair types.', '6.99', 'media/media_webp/products/product_24.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
+(25, 'Heat Shield Comb Set', 'A durable heat-resistant comb set ideal for styling with hot tools. Helps protect hair from damage while ensuring smooth, controlled styling.', '5.00', 'media/media_webp/products/product_25.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -638,18 +712,77 @@ CREATE TABLE `reviews` (
   `r_cid` int NOT NULL,
   `r_pid` int NOT NULL,
   `r_rating` int NOT NULL,
+  `r_anonymous` tinyint(1) NOT NULL DEFAULT '0',
   `r_title` text COLLATE utf8mb4_general_ci NOT NULL,
   `r_description` text COLLATE utf8mb4_general_ci NOT NULL,
-  `r_image` text COLLATE utf8mb4_general_ci NOT NULL
+  `r_image` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `r_approved` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `reviews`
 --
 
-INSERT INTO `reviews` (`rid`, `r_cid`, `r_pid`, `r_rating`, `r_title`, `r_description`, `r_image`) VALUES
-(1, 1, 1, 5, 'Best Product Ever', 'Yeah uh so I think this is great, like the greatest product ever, I never though I would find something this good but I did.', ''),
-(2, 13, 1, 2, 'Its ok i guess', 'I dont get all the hype, i am still bald.', '');
+INSERT INTO `reviews` (`rid`, `r_cid`, `r_pid`, `r_rating`, `r_anonymous`, `r_title`, `r_description`, `r_image`, `r_approved`) VALUES
+(1, 1, 1, 5, 0, 'Best Product Ever', 'Yeah uh so I think this is great, like the greatest product ever, I never though I would find something this good but I did.', NULL, 1),
+(2, 13, 1, 2, 1, 'Its ok i guess', 'I dont get all the hype, i am still bald.', NULL, 1),
+(5, 22, 1, 4, 1, 'Really happy with this', 'Took a little while to see results but overall I am pleased with my purchase. Would buy again.', NULL, 1),
+(6, 22, 1, 3, 1, 'Decent, not amazing', 'Does what it says on the tin. Nothing extraordinary but it gets the job done.', NULL, 1),
+(7, 22, 1, 1, 1, 'Not for me', 'Tried it for two weeks and saw no difference whatsoever. Very disappointed.', NULL, 1),
+(8, 22, 2, 5, 1, 'Absolutely love it', 'I was skeptical at first but this completely won me over. Cannot imagine going without it now.', NULL, 1),
+(9, 22, 2, 4, 1, 'Great value', 'Really good quality for the price. Fast delivery too which was a nice bonus.', NULL, 1),
+(10, 22, 3, 2, 1, 'A bit underwhelming', 'Expected more based on the description. It works but barely meets expectations.', NULL, 1),
+(11, 22, 4, 5, 1, 'Exceeded expectations', 'I bought this on a whim and it turned out to be one of the best purchases I have made this year.', NULL, 1),
+(12, 22, 4, 5, 1, 'Outstanding quality', 'The quality is top notch. You can really tell a lot of care went into making this. Highly recommend.', NULL, 1),
+(13, 22, 4, 4, 1, 'Very satisfied', 'Works exactly as described. Arrived quickly and well packaged. Will definitely order again.', NULL, 1),
+(14, 22, 4, 3, 1, 'It is alright', 'Not bad, not great. Does the job but I am not sure I would rush to repurchase.', NULL, 1),
+(15, 22, 5, 1, 1, 'Waste of money', 'Genuinely cannot believe I spent money on this. Returned it immediately. Save your cash.', NULL, 1),
+(16, 22, 5, 2, 1, 'Not impressed', 'I had high hopes but this fell short. The quality is not great and it feels a bit cheap.', NULL, 1),
+(17, 22, 6, 5, 1, 'Perfect in every way', 'From the packaging to the product itself, everything about this is excellent. Five stars without hesitation.', NULL, 1),
+(18, 22, 6, 4, 1, 'Really good', 'Solid product, does exactly what it promises. I have already recommended it to a few friends.', NULL, 1),
+(19, 22, 6, 3, 1, 'Average experience', 'Nothing special but nothing terrible either. Middle of the road for me.', NULL, 1),
+(20, 22, 7, 5, 1, 'Could not ask for more', 'Genuinely impressed. Does everything I needed and more. Delivery was fast and it arrived in great condition.', NULL, 1),
+(21, 22, 8, 2, 1, 'Needs improvement', 'There are some good ideas here but the execution is lacking. Hopefully they improve it in future.', NULL, 1),
+(22, 22, 8, 3, 1, 'Okay for the price', 'You get what you pay for I suppose. It is functional but do not expect miracles.', NULL, 1),
+(23, 22, 8, 4, 1, 'Pleasantly surprised', 'Was not sure what to expect but this turned out to be a solid buy. Happy with it overall.', NULL, 1),
+(24, 22, 9, 5, 1, 'Brilliant, simple as that', 'I rarely leave reviews but this deserved one. Just brilliant. Will be buying more from this brand.', NULL, 1),
+(25, 22, 9, 4, 1, 'Really solid', 'Good all round. Nothing to complain about and plenty to be happy with. Recommended.', NULL, 1),
+(26, 22, 10, 1, 1, 'Terrible experience', 'This did nothing for me. I followed all the instructions and got zero results. Very frustrating.', NULL, 1),
+(27, 22, 11, 3, 1, 'Middle of the road', 'It does what it claims but I would not say it blew me away. Fine for the price.', NULL, 1),
+(28, 22, 11, 4, 1, 'Good purchase', 'Happy with this overall. It arrived promptly and works as expected. Would recommend.', NULL, 1),
+(29, 22, 11, 5, 1, 'Genuinely great', 'This is exactly what I was looking for. Works perfectly and the quality is excellent.', NULL, 1),
+(30, 22, 11, 2, 1, 'Not what I hoped for', 'A little underwhelming honestly. I expected better based on the reviews but it let me down.', NULL, 1),
+(31, 22, 12, 4, 1, 'Very happy', 'Does the job and does it well. Good quality and arrived in great condition. No complaints.', NULL, 1),
+(32, 22, 12, 5, 1, 'Love it', 'This is fantastic. I use it all the time now. Best thing I have bought in a while.', NULL, 1),
+(33, 22, 13, 3, 1, 'It is fine', 'Not exceptional but perfectly usable. I would consider buying it again if I needed to.', NULL, 1),
+(34, 22, 14, 1, 1, 'Avoid this', 'Stopped working very quickly and customer service was unhelpful. Would not recommend to anyone.', NULL, 1),
+(35, 22, 14, 2, 1, 'Disappointing', 'Looked promising but did not live up to the hype at all. Would not buy again.', NULL, 1),
+(36, 22, 14, 3, 1, 'Serviceable', 'It works well enough but there are probably better options out there. Reasonable for the cost though.', NULL, 1),
+(37, 22, 15, 5, 1, 'Highly recommend', 'Absolutely worth every penny. I have tried similar things before and this is by far the best.', NULL, 1),
+(38, 22, 15, 4, 1, 'Very good indeed', 'Impressed with the quality. Everything about it feels well made. Delivery was quick too.', NULL, 1),
+(39, 22, 16, 2, 1, 'Left me wanting more', 'I wanted to love this but it just did not perform the way I hoped. A bit of a letdown.', NULL, 1),
+(40, 22, 17, 5, 1, 'Simply the best', 'I have bought a lot of products like this and this one stands head and shoulders above the rest.', NULL, 1),
+(41, 22, 17, 5, 1, 'Cannot fault it', 'Every aspect of this is excellent. Would give six stars if I could. Genuinely delighted with it.', NULL, 1),
+(42, 22, 17, 4, 1, 'Really good stuff', 'Solid quality, great value. I will definitely be purchasing again. Would recommend to friends and family.', NULL, 1),
+(43, 22, 17, 3, 1, 'Decent enough', 'Does what it says. Nothing groundbreaking but it is reliable and I have no major complaints.', NULL, 1),
+(44, 22, 17, 1, 1, 'Not worth it', 'Really did not work for me at all. Would not purchase again. Disappointed given the price.', NULL, 1),
+(45, 22, 18, 4, 1, 'Good buy', 'Happy with this purchase. It works well and feels like good quality. Fast shipping too.', NULL, 1),
+(46, 22, 18, 3, 1, 'Okay overall', 'It is a reasonable product. Not life-changing but does what it needs to. Fair value I think.', NULL, 1),
+(47, 22, 19, 5, 1, 'Absolutely fantastic', 'I cannot speak highly enough of this. It works brilliantly and I noticed a difference straight away.', NULL, 1),
+(48, 22, 20, 2, 1, 'Would not buy again', 'Just did not do it for me. Felt a bit gimmicky to be honest. Others might like it but I did not.', NULL, 1),
+(49, 22, 20, 4, 1, 'Impressed', 'Really pleased with this. Works well and feels like a quality product. Will be back for more.', NULL, 1),
+(50, 22, 20, 5, 1, 'Wow, just wow', 'Did not expect to be this happy with a purchase. Brilliant product, fast delivery, great all round.', NULL, 1),
+(51, 22, 21, 3, 1, 'It does the job', 'Nothing special to report. It works as advertised and that is about all I can say. Fair enough.', NULL, 1),
+(52, 22, 22, 5, 1, 'Phenomenal', 'This exceeded every expectation I had. Cannot believe how good it is. Absolute must-buy.', NULL, 1),
+(53, 22, 22, 4, 1, 'Really pleased', 'Great product at a fair price. Arrived well packaged and works exactly as described. Thumbs up.', NULL, 1),
+(54, 22, 22, 2, 1, 'Not great', 'I wanted this to work but it just did not. Might suit others but it was not right for me.', NULL, 1),
+(55, 22, 22, 1, 1, 'Very poor', 'Stopped working after just a few days. Really low quality. Save your money and look elsewhere.', NULL, 1),
+(56, 22, 23, 4, 1, 'Solid choice', 'Good quality product that does what it claims. Happy to recommend to anyone considering it.', NULL, 1),
+(57, 22, 23, 5, 1, 'Loved everything about it', 'From start to finish a great experience. The product is brilliant and I will definitely reorder.', NULL, 1),
+(58, 22, 24, 3, 1, 'Take it or leave it', 'It is an okay product. Not something I would rave about but not something I would warn against either.', NULL, 1),
+(59, 22, 25, 5, 1, 'Top quality', 'Really impressed with this. Exactly what I needed and it works perfectly. Great purchase overall.', NULL, 1),
+(60, 22, 25, 3, 1, 'Fairly average', 'It is okay. Does the job but nothing that makes it stand out from similar products I have used.', NULL, 1),
+(61, 22, 25, 1, 1, 'Really disappointed', 'Had high hopes but this let me down. Does not perform as advertised at all. Would not recommend.', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -671,9 +804,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('038wT2KQT8aoxkcmQ5NUhE336Uda0DwVIWiaOzHb', NULL, '5.151.181.27', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 OPR/127.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaGZSZE9PVDJ1MnNOOUV2enVJSFBwUE02ZFkxUXZrSU04cEo4S3hRZCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTY6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cy8xIjtzOjU6InJvdXRlIjtzOjEzOiJwcm9kdWN0cy5zaG93Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1773780082),
-('4HY9ERVte0jXHlGymW01gQZ6ekqjqFxc8IK6U3ly', 7, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiZ2xPeUk0QkFKUFVzVElqMkZtUjNMa01xb00zSmphU1JQSXBQRGljRSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9jb21wbGV0ZSI7czo1OiJyb3V0ZSI7czoxNzoiY2hlY2tvdXQuY29tcGxldGUiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo3O30=', 1773787081),
-('nbYWwYtjVTtZ5LvftYGq808Rjwx6KsmJJ7PRSwbR', NULL, '86.166.253.99', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Mobile Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiS1c1cU16WVF0REYyOHZFVEs4bmtlVUFkY2p0Mk1hcDdNYk9jMXczZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NzM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmdyZWRpZW50cy9hdm9jYWRvLWV4dHJhY3QiO3M6NToicm91dGUiO047fX0=', 1773787424);
+('43a2goohSNDHIX8W8kqUCTtHYQLvLzt2KXBNKCen', NULL, '80.7.230.119', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/6.10.2 Chrome/134.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaE9Mb0Z0RUhBU3lBMVpZVENQWkhBSUdqSDlMR0pzT3VVQ2RXemtjQSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774121567),
+('CTmRqWzww7dHT3Rnyc79UdnV6HIJttW0heDPulc7', 1, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoia0tSNHozR1Y1d0RXRWQ1TUFSNTJucWFRemhJOGZaR1dCbmw3VWxONSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjI6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9kYXNoYm9hcmQvb3JkZXJzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1774128607),
+('YHnv2AtYoXw0hlhIf9abwcvnmuSRZsOsCNhtB0p2', NULL, '113.163.54.248', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicWNaVWVqNktuejBEZENuY2hmWVN6d1h5TnJPUGJVMUxKNFZnZXg0TCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6ODA6Imh0dHBzOi8vd3d3LmNzMnRlYW0yMC5jczI0MTAtd2ViMDFwdm0uYXN0b24uYWMudWsvcHJvZHVjdHM/dHlwZT1IYWlyJTIwQWNjZXNzb3J5IjtzOjU6InJvdXRlIjtzOjg6InByb2R1Y3RzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774127990);
 
 -- --------------------------------------------------------
 
@@ -703,7 +836,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`, `subscribed`) VALUES
-(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, '0RE2gbVwcBMgxRJ3ffH19QF5qBqs02bAL5J4knNh7MKg5xcsg4Fx5klRKpnK', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer', 1),
+(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'xSdMDDBP0cvHqbBb3oQ8Q3xgloR97mlbuTduMb9PZ98pvJXl4viuv22p26T0', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer', 1),
 (2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6ImkwRUtMY2t3VzVCdUIzUHB6SnJLRGc9PSIsInZhbHVlIjoiNW5UT29KWjQxRktXbXVGdkRXUGdDZ3JkUkgwVVordzNFTE5odWhmODRMUGd0ME5QS3VYM0xNOXhuVFNTcjB6QmJBM2NjK2ZhVzNJUXBVdVE5SjZ5VXRBZ2hrb3M5bDZoa3hJYTYwMkxyaUhHa3lWbFFHZHh4L0lQOVpvYmtwMGZLN2VVK0UzZ21hcElnT25xSzlJZTgzRWw0alZFaW9DdWtSMzExaG5qc0NLblkvTlVTMzVyVTRjWDd4STlkUW53QUNMSW5kYVZOR3lTRXJUTXh1eDVmS3AyNzF3SEU1b0srN1lBVnp1dzhudm5zSHJNVFYrdnQwUEN3NEd6eGdGd1EzOGJBQVJHQjYwSUo5cVNiZWZiMXc9PSIsIm1hYyI6ImNiZGI2YzVlN2EwOWM1MGVhOTA4MGFjNGI4YWUwOTUxNWZmOTM5Nzg4ZjQzNDQ2MTU4NGQ3M2I1YTUzODgxZDIiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-19 14:58:25', 'customer', 0),
 (3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer', 0),
 (4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer', 0),
@@ -711,9 +844,11 @@ INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `p
 (6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, NULL, NULL, NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42', 'customer', 0),
 (7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02', 'customer', 0),
 (8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, NULL, NULL, NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46', 'customer', 0),
-(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin', 0),
+(9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin', 1),
 (10, 'HW786LEGEND', '112451828911674993144', 'hw786legend@gmail.com', NULL, '$2y$12$K9RqvNJrQhBRpQcFDNWzI.hsc1xG1fKyXtrhv7.XW2zix.8K8QMZ6', NULL, NULL, NULL, NULL, '2026-02-19 15:22:36', '2026-02-19 15:22:36', 'customer', 0),
-(11, 'Samuel D\'souza', '101710726500306880169', 'samuel_dsouza@outlook.com', NULL, '$2y$12$r5pNN2wD223JDvUsznOyHu4y.7K7TkriTLmFWhVWTYUcrBfNB0.Ri', NULL, NULL, NULL, NULL, '2026-03-13 13:17:16', '2026-03-13 13:17:16', 'customer', 0);
+(11, 'Samuel D\'souza', '101710726500306880169', 'samuel_dsouza@outlook.com', NULL, '$2y$12$r5pNN2wD223JDvUsznOyHu4y.7K7TkriTLmFWhVWTYUcrBfNB0.Ri', NULL, NULL, NULL, NULL, '2026-03-13 13:17:16', '2026-03-13 13:17:16', 'customer', 0),
+(12, 'testroute', NULL, 'testroute@test.com', '2026-03-18 22:13:07', '$2y$12$vXWzecrbvLQZRoUmINtwWuyGsz/qkyYo.c6p1i001kAzpuzaVrkG6', NULL, NULL, NULL, NULL, '2026-03-18 22:12:54', '2026-03-18 22:12:54', 'admin', 0),
+(13, 'wet', NULL, 'wq@outlook.com', NULL, '$2y$12$Xjmc2og3l7rRs/e4vd8LLeDcXh0dr2NqT3oIxwQLZtRb75X5Lcn6u', NULL, NULL, NULL, NULL, '2026-03-19 15:33:56', '2026-03-19 15:33:56', 'customer', 0);
 
 --
 -- Indexes for dumped tables
@@ -763,6 +898,13 @@ ALTER TABLE `enquiries`
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `ingredients`
+--
+ALTER TABLE `ingredients`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indexes for table `jobs`
@@ -815,7 +957,8 @@ ALTER TABLE `password_reset_tokens`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`pid`);
+  ADD PRIMARY KEY (`pid`),
+  ADD KEY `p_feature` (`p_feature`);
 
 --
 -- Indexes for table `reviews`
@@ -848,13 +991,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `cid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `customer_address`
 --
 ALTER TABLE `customer_address`
-  MODIFY `caid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `caid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `enquiries`
@@ -867,6 +1010,12 @@ ALTER TABLE `enquiries`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ingredients`
+--
+ALTER TABLE `ingredients`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -890,13 +1039,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -908,13 +1057,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `rid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `rid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
