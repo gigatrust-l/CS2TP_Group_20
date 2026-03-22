@@ -12,14 +12,14 @@ button {
   outline: none;
 }
 
-input {
+header input {
   background-color: #bbcba8;
   border: 1px solid var(--secondary);
   outline: none;
 }
 
 
-a {
+nav a {
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -62,5 +62,5 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--lightGreenButton);
+  background-color: #a2b2aa;
 }

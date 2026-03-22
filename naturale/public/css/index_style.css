@@ -455,3 +455,34 @@ body{
     font-size: 13px;
     text-transform: uppercase;
 }
+
+/* SHIPPING AND RETURNS PAGE */
+/*----------------------------------------------------------------------------------- */
+
+.shipping-page .brand-container{
+    text-align: left;
+}
+
+.brand-container ul{
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.brand-container li{
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.alt-section{
+    background: white;
+}
+
+.shipping-page .brand-description{
+    max-width: 1200px;
+}
+
+.shipping-page .brand-section{
+    padding: 50px 20px;
+}

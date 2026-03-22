@@ -3,24 +3,39 @@
 <html>
 
 <head>
-    <title>{{ config('app.name', 'Laravel') }} - Contact Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css')}}" />
-    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css')}}" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/aboutus_style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/css/contactus_style.css') }}" />
+
+    <!--Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.css" rel="stylesheet">
+
+    <!--Icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+
+    <!--Fonts same as home page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
 </head>
-<body>
+
+
+<body class="contact-page">
     @include('components/nav_bar_customer')
 
 <section class="py-5">
     <div class="container">
         <div class="row align-items-center">
-            <!-- Left Side of the Grid - Contact Form -->
-            <div class="col-md-6">
-                <h2 class="display-6 fw-bold mb-4">Contact Us</h2>
+            <div class="aboutus-title-content">
+                <h2 class="display-6 fw-bold mb-4 text-center">Contact Us</h2>
                 <!-- Session Status -->
                 @if(session('status'))
                     <div class="alert alert-success text-center">
@@ -97,11 +112,6 @@
                         <button type="submit" class="btn btn-success px-4">Send</button>
                     </div>
                 </form>
-            </div>
-
-            <!-- Right Side of the Grid - Picture -->
-            <div class="col-md-6 text-center">
-                <img src="{{ asset('media/media_webp/mail.webp')}}" alt="Mail Icon" class="img-fluid">
             </div>
         </div>
     </div>
