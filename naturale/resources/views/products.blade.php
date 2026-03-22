@@ -15,9 +15,9 @@
 
             <div class="col-lg-9 col-md-8">
                 <div
-                    class="d-flex align-items-center justify-content-between bg-white border rounded-3 px-3 py-2 mb-3 shadow-sm">
+                    class="div-bg d-flex align-items-center justify-content-between border rounded-3 px-3 py-2 mb-3 shadow-sm">
                     <span class="text-muted small">
-                        <strong class="text-dark">{{ $products->total()}}</strong> products found
+                        <strong class="">{{ $products->total()}}</strong> products found
                     </span>
                     <div class="d-flex align-items-center gap-2">
                         <label class="text-muted small mb-0">Sort:</label>
@@ -41,12 +41,12 @@
                 <div class="row g-3">
                     @forelse($products as $product)
                         @if (!($product->p_category == 'shipping'))
-                            <div class="col-sm-6 col-xl-4">
+                            <div class="col-sm-6 col-xl-4 ">
                                 <a href="{{ route('products.show', $product->pid) }}"
                                     class="text-decoration-none text-dark">
-                                    <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                                    <div class="card h-100 shadow-sm rounded-3 overflow-hidden div-bg border rounded-3">
                                         <img src="{{ asset($product->p_image) }}" alt="{{ $product->p_name }}"
-                                            class="card-img-top p-3 bg-light" style="height:180px; object-fit:contain;">
+                                            class="card-img-top p-3" style="height:180px; object-fit:contain;">
                                         <div class="card-body pb-1">
                                             <span
                                                 class="badge bg-success bg-opacity-10 text-success small mb-1">{{ $product->p_category }}</span>
@@ -56,7 +56,7 @@
                                             </p>
                                         </div>
                                         <div
-                                            class="card-footer bg-white border-top d-flex justify-content-between align-items-center py-2">
+                                            class="card-footer border-top d-flex justify-content-between align-items-center py-2">
                                             <span class="small">
                                                 @if ($product->reviews_avg_r_rating)
                                                     @for ($i = 1; $i <= 5; $i++)

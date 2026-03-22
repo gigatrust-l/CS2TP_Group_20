@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 21, 2026 at 09:30 PM
+-- Generation Time: Mar 22, 2026 at 11:06 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -100,24 +100,26 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-3183c7fde7643f2a00112bdbc85ca495:timer', 'i:1772127813;', 1772127813),
 ('naturale-cache-32d31b796d5f92068d5d8dc218be4f53', 'i:1;', 1772127813),
 ('naturale-cache-32d31b796d5f92068d5d8dc218be4f53:timer', 'i:1772127813;', 1772127813),
-('naturale-cache-3909d2e422a2ee97477bce01c499b9f5', 'i:1;', 1773870130),
-('naturale-cache-3909d2e422a2ee97477bce01c499b9f5:timer', 'i:1773870130;', 1773870130),
+('naturale-cache-3909d2e422a2ee97477bce01c499b9f5', 'i:1;', 1774215970),
+('naturale-cache-3909d2e422a2ee97477bce01c499b9f5:timer', 'i:1774215970;', 1774215970),
 ('naturale-cache-3dae031a529e3124b44bfd269990b95d', 'i:2;', 1772127810),
 ('naturale-cache-3dae031a529e3124b44bfd269990b95d:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843', 'i:1;', 1772127814),
 ('naturale-cache-441c8ed1c8c850c57ecbc511b8ae9843:timer', 'i:1772127814;', 1772127814),
-('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b', 'i:1;', 1773872189),
-('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b:timer', 'i:1773872189;', 1773872189),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:3;', 1773932099),
-('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1773932099;', 1773932099),
-('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3', 'i:1;', 1773858233),
-('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3:timer', 'i:1773858233;', 1773858233),
+('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b', 'i:1;', 1774209681),
+('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b:timer', 'i:1774209681;', 1774209681),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1774215994),
+('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1774215994;', 1774215994),
+('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3', 'i:1;', 1774218613),
+('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3:timer', 'i:1774218613;', 1774218613),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb', 'i:1;', 1772127810),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4', 'i:1;', 1772836527),
 ('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4:timer', 'i:1772836527;', 1772836527),
 ('naturale-cache-5c532bc79d018dc9ac38283758c80d6f', 'i:1;', 1772127815),
 ('naturale-cache-5c532bc79d018dc9ac38283758c80d6f:timer', 'i:1772127815;', 1772127815),
+('naturale-cache-5cb73e9308b7942fcb2bed29668c9e8e', 'i:1;', 1774209589),
+('naturale-cache-5cb73e9308b7942fcb2bed29668c9e8e:timer', 'i:1774209589;', 1774209589),
 ('naturale-cache-5f0448203d901cad8fe0a10c4d09a204', 'i:1;', 1772127814),
 ('naturale-cache-5f0448203d901cad8fe0a10c4d09a204:timer', 'i:1772127814;', 1772127814),
 ('naturale-cache-5f27bf5f16b4ac417e73523f5e1b9088', 'i:1;', 1772127811),
@@ -138,6 +140,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-9c3618e143cea32a9ce70f64b1989311:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-a3d49062a9297f7d76b523e7fe166f5e', 'i:1;', 1772127812),
 ('naturale-cache-a3d49062a9297f7d76b523e7fe166f5e:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-aa@aa.co|86.164.209.175', 'i:1;', 1774209849),
+('naturale-cache-aa@aa.co|86.164.209.175:timer', 'i:1774209849;', 1774209849),
 ('naturale-cache-abc34c66b29010570f43bc352d8d7297', 'i:1;', 1773932094),
 ('naturale-cache-abc34c66b29010570f43bc352d8d7297:timer', 'i:1773932094;', 1773932094),
 ('naturale-cache-admin&#039; --|88.170.43.205', 'i:1;', 1772127811),
@@ -158,6 +162,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-aff0fa2525f7f73292d70f2c05cf71e6:timer', 'i:1772127813;', 1772127813),
 ('naturale-cache-asdkjh3kj4h|88.170.43.205', 'i:5;', 1772127809),
 ('naturale-cache-asdkjh3kj4h|88.170.43.205:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-b007992607fdec9093d6052651557bbf', 'i:1;', 1774209849),
+('naturale-cache-b007992607fdec9093d6052651557bbf:timer', 'i:1774209849;', 1774209849),
 ('naturale-cache-b4b58a5afe3278dabd7637013ccb7f59', 'i:1;', 1773932183),
 ('naturale-cache-b4b58a5afe3278dabd7637013ccb7f59:timer', 'i:1773932183;', 1773932183),
 ('naturale-cache-b7fcad0e77ec4b8ff1568c4fc8735e3b', 'i:1;', 1772127815),
@@ -174,8 +180,10 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-c2b33abe1eb96735b8e2921476168241:timer', 'i:1772127812;', 1772127812),
 ('naturale-cache-c3eccf41effbbce9bcec9621d1757d95', 'i:1;', 1772127812),
 ('naturale-cache-c3eccf41effbbce9bcec9621d1757d95:timer', 'i:1772127812;', 1772127812),
-('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1774128625),
-('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1774128625;', 1774128625),
+('naturale-cache-c56bb9ed00e5604c72738f6c7014f399', 'i:1;', 1774211907),
+('naturale-cache-c56bb9ed00e5604c72738f6c7014f399:timer', 'i:1774211907;', 1774211907),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4', 'i:1;', 1774216527),
+('naturale-cache-c7fbd9f613a97a30a7c964f4d7218de4:timer', 'i:1774216527;', 1774216527),
 ('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b', 'i:1;', 1772127811),
 ('naturale-cache-ca302ac5aaba04d431e8857e9d1b840b:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-cd050624f40871bd6be65bb124e6b3df', 'i:1;', 1773326662),
@@ -208,6 +216,7 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-fortify.2fa_codes.4cc4f2e9c0633976cc0b42ee0af06813', 'i:59128977;', 1773869381),
 ('naturale-cache-fortify.2fa_codes.746a93f94a4288a7328933e9249b0383', 'i:59099090;', 1772972778),
 ('naturale-cache-fortify.2fa_codes.76ca953f369762cf49d8e64f0886aef8', 'i:59131069;', 1773932146),
+('naturale-cache-fortify.2fa_codes.7970bd58ca39dd27820635d4a8c9b82f', 'i:59140531;', 1774215994),
 ('naturale-cache-fortify.2fa_codes.e54d7eb5bb5245aa112fb1a74f7b513d', 'i:59094548;', 1772836527),
 ('naturale-cache-q or 1=1 --|88.170.43.205', 'i:1;', 1772127812),
 ('naturale-cache-q or 1=1 --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
@@ -215,8 +224,12 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-q or q1q=q1q --|88.170.43.205:timer', 'i:1772127812;', 1772127812),
 ('naturale-cache-q or qq=q|88.170.43.205', 'i:1;', 1772127812),
 ('naturale-cache-q or qq=q|88.170.43.205:timer', 'i:1772127812;', 1772127812),
+('naturale-cache-samuel_dsouza@outlook.com|86.164.209.175', 'i:1;', 1774209589),
+('naturale-cache-samuel_dsouza@outlook.com|86.164.209.175:timer', 'i:1774209589;', 1774209589),
 ('naturale-cache-test@example.com|86.166.253.99', 'i:1;', 1773858163),
 ('naturale-cache-test@example.com|86.166.253.99:timer', 'i:1773858163;', 1773858163),
+('naturale-cache-test@test.commm|86.164.209.175', 'i:1;', 1774211907),
+('naturale-cache-test@test.commm|86.164.209.175:timer', 'i:1774211907;', 1774211907),
 ('naturale-cache-testuser999|88.170.43.205', 'i:1;', 1772127809),
 ('naturale-cache-testuser999|88.170.43.205:timer', 'i:1772127809;', 1772127809);
 
@@ -308,7 +321,8 @@ INSERT INTO `customer_address` (`caid`, `ca_cid`, `ca_line1`, `ca_line2`, `ca_ci
 (25, 1, 'sadsfsaf', 'safsasafsaddddddd', 'afsfsafsaf', 'safsafsafsaf', 'afsfsafasf', 'safsafsaf'),
 (26, 22, 'a', 'a', 'a', 'a', 'a', 'a'),
 (27, 23, 'Line1', 'Line2', 'City', 'County', 'Postcode', 'Country'),
-(31, 27, 'a', 'a', 'a', 'a', 'a', 'a');
+(31, 27, 'a', 'a', 'a', 'a', 'a', 'a'),
+(32, 27, '1', '1', '1', '1', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -335,7 +349,8 @@ INSERT INTO `enquiries` (`e_id`, `e_name`, `e_email`, `e_subject`, `e_message`, 
 (2, 'changedName of table to enquiries', 'test@test.com', 'Order Enquiry', 'testing', '2025-11-25 19:28:56', '2025-11-25 19:28:56'),
 (3, 'Steve Tester', 'tester@test.co.uk', 'Website Feedback', 'This is a test', '2025-11-29 18:42:45', '2025-11-29 18:42:45'),
 (4, 'sAMUEL', 'SAMUEL@GMAIL.COM', 'Technical Issue', 'I DONT LIKE YOUR WEBSITE', '2025-12-05 11:12:21', '2025-12-05 11:12:21'),
-(5, 'Kanban Default', 'asd@asd.sad', 'Order Enquiry', 'Where is my order?', '2026-02-03 12:20:23', '2026-02-03 12:20:23');
+(5, 'Kanban Default', 'asd@asd.sad', 'Order Enquiry', 'Where is my order?', '2026-02-03 12:20:23', '2026-02-03 12:20:23'),
+(6, 'test', 'test@test.com', 'Order Enquiry', 'adsafa', '2026-03-22 22:39:12', '2026-03-22 22:39:12');
 
 -- --------------------------------------------------------
 
@@ -367,19 +382,21 @@ CREATE TABLE `ingredients` (
   `description` text COLLATE utf8mb4_general_ci NOT NULL,
   `image_hero` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `ingred_img` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `ingred_comment` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `ingred_comment` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `before_image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `after_image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ingredients`
 --
 
-INSERT INTO `ingredients` (`id`, `name`, `slug`, `latin`, `description`, `image_hero`, `ingred_img`, `ingred_comment`) VALUES
-(1, 'Avocado Extract', 'avocado-extract', 'persea gratissima', 'At Naturale, we believe that avocado extract is an excellent ingredient for treating damaged and dry hair. The combination of vitamins, minerals, fatty acids (such as oleic and linolenic acids) provide a deep hydration that repairs dry, broken and damaged hair. Avocado extract nourishes from the roots to the cuticles of the hair, restoring its softness and strength. It works as a natural barrier that protects the hair from heat, chemicals or environmental stress.\r\n\r\nWe offer a range of avocado-extract based products tailored to perfection to help our customers nourish their strands, making them shiny, soft, well-hydrated and easy to style', 'media/media_webp/ingredients/avocadoExtract.webp', 'media/media_webp/ingredients/avocado.webp', 'Deep moisture and restoration'),
-(2, 'Shea Butter', 'shea-butter', 'vitellaria paradoxa', 'At Naturale, we choose shea butter as one of our main ingredients because of its many nourishing properties. Shea butter deeply moisturises and defines curls. It seals hydration, provides strength to the hair strands, and reduces frizz. Its hight vitamin A and vitamin E contents helps restore the hair elasticity, making the hair softer, bouncier and more manageable.\r\n\r\nThese characteristics make shea butter the best ingredient for curly hair. At Naturale, we provide the perfect complete routine products for curly hair, crafted to enhance hair definition, hydrate and maintain curl’s health.', 'media/media_webp/ingredients/sheaButter.webp', 'media/media_webp/ingredients/shea.webp', 'Intense hydration and frizz control'),
-(3, 'Pomegranate Seed Oil', 'pomegranate-oil', 'punica granatum', 'At Naturale, we choose pomegranate seed oil as one of our main ingredients because of its antioxidant properties. It strengthens the hair and provides colour-protecting benefits. This oil has a high concentration of polyphenols that prevent colour fading by acting as a hair shield from UV radiation, free-radicals, and environmental stress. It is a lightweight oil that strengthens the hair fibre, enhances the colour vibration, restores shine, and does not leave any greasy feeling.\r\n\r\nAll together, these qualities make pomegranate seed oil ideal for dyed or chemically treated hair. Naturale offers a range of products for the kind of hair that needs protection and luminosity.', 'media/media_webp/ingredients/pomegranateOil.webp', 'media/media_webp/ingredients/pomegranate.webp', 'Hair strengthening and shine enhancement'),
-(4, 'Tea Tree Oil', 'tea-tree-oil', 'melaleuca alternifolia', 'At Naturale, we selected tea tree oil to be one of our main ingredients. A very well known oil for its powerful antibacterial and purifying properties. Tea tree oil makes sure to keep the scalp clean and balanced, reducing the product buildup, fighting dandruff, and soothing irritation. Perfect for those with an itchy scalp who need a refreshing detox to give a healthy environment to their scalp.\r\n\r\nWe offer the best products to keep a healthy clean scalp, a complete routine to deeply cleanse and revitalise our customers scalp.', 'media/media_webp/ingredients/teaTreeOil.webp', 'media/media_webp/ingredients/teatree.webp', 'Scalp soothing and dandruff reduction'),
-(5, 'Coconut Oil', 'coconut-oil', 'cocos nucifera', 'At Naturale, we choose coconut oil as one of our main ingredients because of its ability to penetrate the hair fibre providing it with strength. It is a lightweight oil that smooths the cuticles and reduces frizz which improves the hair texture overall, leaving a smooth and silky hair without making it greasy. Coconut oil also supports the scalp health, protecting the hair against daily damage, breakage and dryness.\r\n\r\nThese benefits make coconut oil a perfect match for those with straight hair, and here we offer a range of products specially suited for those who want to give their hair the softness, smoothness, and long-lasting shine it needs.', 'media/media_webp/ingredients/coconutOil.webp', 'media/media_webp/ingredients/coconut.webp', 'Hair nourishment and hair breakage prevention');
+INSERT INTO `ingredients` (`id`, `name`, `slug`, `latin`, `description`, `image_hero`, `ingred_img`, `ingred_comment`, `before_image`, `after_image`) VALUES
+(1, 'Avocado Extract', 'avocado-extract', 'persea gratissima', 'At Naturale, we believe that avocado extract is an excellent ingredient for treating damaged and dry hair. The combination of vitamins, minerals, fatty acids (such as oleic and linolenic acids) provide a deep hydration that repairs dry, broken and damaged hair. Avocado extract nourishes from the roots to the cuticles of the hair, restoring its softness and strength. It works as a natural barrier that protects the hair from heat, chemicals or environmental stress.\r\n\r\nWe offer a range of avocado-extract based products tailored to perfection to help our customers nourish their strands, making them shiny, soft, well-hydrated and easy to style', 'media/media_webp/ingredients/avocadoExtract.webp', 'media/media_webp/ingredients/avocado.webp', 'Deep moisture and restoration', 'before-avocado', 'after-avocado'),
+(2, 'Shea Butter', 'shea-butter', 'vitellaria paradoxa', 'At Naturale, we choose shea butter as one of our main ingredients because of its many nourishing properties. Shea butter deeply moisturises and defines curls. It seals hydration, provides strength to the hair strands, and reduces frizz. Its hight vitamin A and vitamin E contents helps restore the hair elasticity, making the hair softer, bouncier and more manageable.\r\n\r\nThese characteristics make shea butter the best ingredient for curly hair. At Naturale, we provide the perfect complete routine products for curly hair, crafted to enhance hair definition, hydrate and maintain curl’s health.', 'media/media_webp/ingredients/sheaButter.webp', 'media/media_webp/ingredients/shea.webp', 'Intense hydration and frizz control', 'before-shea', 'after-shea'),
+(3, 'Pomegranate Seed Oil', 'pomegranate-oil', 'punica granatum', 'At Naturale, we choose pomegranate seed oil as one of our main ingredients because of its antioxidant properties. It strengthens the hair and provides colour-protecting benefits. This oil has a high concentration of polyphenols that prevent colour fading by acting as a hair shield from UV radiation, free-radicals, and environmental stress. It is a lightweight oil that strengthens the hair fibre, enhances the colour vibration, restores shine, and does not leave any greasy feeling.\r\n\r\nAll together, these qualities make pomegranate seed oil ideal for dyed or chemically treated hair. Naturale offers a range of products for the kind of hair that needs protection and luminosity.', 'media/media_webp/ingredients/pomegranateOil.webp', 'media/media_webp/ingredients/pomegranate.webp', 'Hair strengthening and shine enhancement', 'before-pomegranate', 'after-pomegranate'),
+(4, 'Tea Tree Oil', 'tea-tree-oil', 'melaleuca alternifolia', 'At Naturale, we selected tea tree oil to be one of our main ingredients. A very well known oil for its powerful antibacterial and purifying properties. Tea tree oil makes sure to keep the scalp clean and balanced, reducing the product buildup, fighting dandruff, and soothing irritation. Perfect for those with an itchy scalp who need a refreshing detox to give a healthy environment to their scalp.\r\n\r\nWe offer the best products to keep a healthy clean scalp, a complete routine to deeply cleanse and revitalise our customers scalp.', 'media/media_webp/ingredients/teaTreeOil.webp', 'media/media_webp/ingredients/teatree.webp', 'Scalp soothing and dandruff reduction', 'before-tea-tree', 'after-tea-tree'),
+(5, 'Coconut Oil', 'coconut-oil', 'cocos nucifera', 'At Naturale, we choose coconut oil as one of our main ingredients because of its ability to penetrate the hair fibre providing it with strength. It is a lightweight oil that smooths the cuticles and reduces frizz which improves the hair texture overall, leaving a smooth and silky hair without making it greasy. Coconut oil also supports the scalp health, protecting the hair against daily damage, breakage and dryness.\r\n\r\nThese benefits make coconut oil a perfect match for those with straight hair, and here we offer a range of products specially suited for those who want to give their hair the softness, smoothness, and long-lasting shine it needs.', 'media/media_webp/ingredients/coconutOil.webp', 'media/media_webp/ingredients/coconut.webp', 'Hair nourishment and hair breakage prevention', 'before-coconut', 'after-coconut');
 
 -- --------------------------------------------------------
 
@@ -558,7 +575,11 @@ INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_tim
 (86, 23, 27, 'Processing', 8.99, '2026-03-19 15:31:15'),
 (87, 23, 27, 'Processing', 6.99, '2026-03-19 15:32:36'),
 (91, 27, 31, 'Processing', 13.98, '2026-03-21 21:27:09'),
-(92, 1, 2, 'Processing', 8.99, '2026-03-21 21:29:35');
+(92, 1, 2, 'Processing', 8.99, '2026-03-21 21:29:35'),
+(93, 27, 31, 'Processing', 13.98, '2026-03-22 21:26:18'),
+(94, 27, 32, 'Processing', 13.98, '2026-03-22 21:32:48'),
+(95, 27, 32, 'Processing', 13.98, '2026-03-22 21:33:47'),
+(96, 2, 17, 'Processing', 11.98, '2026-03-22 21:45:57');
 
 -- --------------------------------------------------------
 
@@ -628,7 +649,15 @@ INSERT INTO `order_item` (`oiid`, `oi_oid`, `oi_pid`, `oi_quantity`, `oi_ind_pri
 (87, 87, 12, 1, 6.99),
 (93, 91, 1, 1, 8.99),
 (94, 91, 0, 1, 4.99),
-(95, 92, 1, 1, 8.99);
+(95, 92, 1, 1, 8.99),
+(96, 93, 1, 1, 8.99),
+(97, 93, 0, 1, 4.99),
+(98, 94, 1, 1, 8.99),
+(99, 94, 0, 1, 4.99),
+(100, 95, 1, 1, 8.99),
+(101, 95, 0, 1, 4.99),
+(102, 96, 12, 1, 6.99),
+(103, 96, 0, 1, 4.99);
 
 -- --------------------------------------------------------
 
@@ -674,8 +703,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, `p_stock`, `p_category`, `p_feature`, `p_ingredients`, `p_instructions`, `p_volume`) VALUES
-(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483632, 'shipping', '', NULL, NULL, NULL),
-(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 30, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
+(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483628, 'shipping', '', NULL, NULL, NULL),
+(1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 27, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
 (2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 4, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
 (3, 'Pure Roots Scalp Detox Mask', 'A purifying mask formulated to cleanse buildup, rebalance the scalp, and help reduce dandruff. It leaves the scalp feeling refreshed, soothed, and invigorated.', '8.99', 'media/media_webp/products/product_3.webp', 0, 'Hair Masks', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Massage into scalp. Leave 5–7 minutes. Rinse well.', 200),
 (4, 'Oasis Quench Repair Mask', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', '8.99', 'media/media_webp/products/product_4.webp', 0, 'Hair Masks', 'Avocado Extract', 'Apply mid-lengths to ends. Leave 10 minutes. Rinse.', 'An intensive moisture-restoring mask designed to treat dry, brittle hair. It helps repair visible damage, improve softness, and restore elasticity for healthier-looking strands.', 200),
@@ -686,7 +715,7 @@ INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, 
 (9, 'Desert Dew Hydrating Shampoo', 'entle hydrating shampoo. Provides deep moisture for silky shinny hair. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_9.webp', 48, 'Shampoo', 'Avocado Extract ', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (10, 'Color Haven Repair Shampoo', 'Colour protecting shampoo, enhances colour vibration, restores shine and\r\nstrengthens hair fibres. Sulfate free. No parabens.', '5.99', 'media/media_webp/products/product_10.webp', 44, 'Shampoo', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Wet the hair and scalp with water. Apply the desired amount of shampoo into the\r\nscalp, massage it evenly and let it sit for 3-4 minutes. Then rinse thoroughly with water. Repeat if\r\nnecessary.', 550),
 (11, 'Velvet Spiral Conditioner', 'Softens, adds bounce, hydrates, and defines curls. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_11.webp', 49, 'Conditioner', 'Shea Butter', 'Shea butter, Aloe Vera, Glycerin, Hibiscus Extract, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
-(12, 'Glass Veil Conditioner', 'Light conditioner. Provides mirror like shine to straight hair. Smooths the cuticles\r\nand reduces frizz. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_12.webp', 46, 'Conditioner', 'Coconut Oil', 'Coconut Oil, Vitamin E, Vitamin A, Water, Glycerin, Aloe Vera', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
+(12, 'Glass Veil Conditioner', 'Light conditioner. Provides mirror like shine to straight hair. Smooths the cuticles\r\nand reduces frizz. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_12.webp', 45, 'Conditioner', 'Coconut Oil', 'Coconut Oil, Vitamin E, Vitamin A, Water, Glycerin, Aloe Vera', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (13, 'Calm Scalp Conditioner', 'Detox conditioner. Refreshes scalp and prevents irritation. Sulfate free. No\r\nparabens.', '6.99', 'media/media_webp/products/product_13.webp', 49, 'Conditioner', 'Tea Tree Oil', 'Tea Tree Oil, Aloe Vera, Peppermint Extract, Vitamin C, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water', 550),
 (14, 'Moisture Bloom Conditioner', 'Deep hydration and moisture conditioner. Repairs split and dry ends, prevents\r\nbreakage and restores softness. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_14.webp', 49, 'Conditioner', 'Avocado Extract', 'Avocado Extract, Water, Black Seed Oil, Jojoba Oil, Glycerin', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
 (15, 'Radiant Restore Conditioner', 'Colour protecting conditioner. Restores colour vibration, adds smoothness and\r\nshine to colour damaged hair. Sulfate free. No parabens.', '6.99', 'media/media_webp/products/product_15.webp', 47, 'Conditioner', 'Pomegranate Seed Oil', 'Pomegranate Seed Oil, Polyphenols, Vitamin C, Vitamin E, Glycerin, Water', 'Take the desired amount of product and apply to wet hair after shampooing. Leave for 5\r\nminutes. Rinse thoroughly with water.', 550),
@@ -804,9 +833,19 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('43a2goohSNDHIX8W8kqUCTtHYQLvLzt2KXBNKCen', NULL, '80.7.230.119', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) QtWebEngine/6.10.2 Chrome/134.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaE9Mb0Z0RUhBU3lBMVpZVENQWkhBSUdqSDlMR0pzT3VVQ2RXemtjQSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774121567),
-('CTmRqWzww7dHT3Rnyc79UdnV6HIJttW0heDPulc7', 1, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoia0tSNHozR1Y1d0RXRWQ1TUFSNTJucWFRemhJOGZaR1dCbmw3VWxONSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjI6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9kYXNoYm9hcmQvb3JkZXJzIjtzOjU6InJvdXRlIjtOO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1774128607),
-('YHnv2AtYoXw0hlhIf9abwcvnmuSRZsOsCNhtB0p2', NULL, '113.163.54.248', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicWNaVWVqNktuejBEZENuY2hmWVN6d1h5TnJPUGJVMUxKNFZnZXg0TCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6ODA6Imh0dHBzOi8vd3d3LmNzMnRlYW0yMC5jczI0MTAtd2ViMDFwdm0uYXN0b24uYWMudWsvcHJvZHVjdHM/dHlwZT1IYWlyJTIwQWNjZXNzb3J5IjtzOjU6InJvdXRlIjtzOjg6InByb2R1Y3RzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774127990);
+('5aiopvaDCAvGbwfFga6zLIH7JUKwLQ0LAzxRhheO', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUVhQdzdLbE5TWEgwU2J1U0xSYnltNTM3cG1TdEVmUkJnQndCWlBhYiI7czo0OiJjYXJ0IjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToyOntzOjM6InVybCI7czo2MjoiaHR0cHM6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrL2NoZWNrb3V0L2RldGFpbHMiO3M6NToicm91dGUiO3M6MTM6ImNoZWNrb3V0LnZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774217512),
+('5o4exYlrUAEpmR6z3AMQrQgGpLgRmQpgZjIfLket', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUkp3WjJGcXVLWkNvNXhmajVrdFdSY2Rod0VpbHBKUmU0UGRLRjFCMiI7czoxNzoiY2hlY2tvdXQtcmVkaXJlY3QiO3M6NDoidHJ1ZSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9sb2dpbiI7czo1OiJyb3V0ZSI7czoxNDoiY2hlY2tvdXQubG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774213679),
+('67tlFiQP0w9Z1tRIhTukDEFclwtnFCMiKfh4S1n6', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMlVNMFg4WFZBSjB3b0hBcWdzNzdFUkZPMEVyQ3pFODM3Yk91QUtQVCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NzM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmdyZWRpZW50cy9hdm9jYWRvLWV4dHJhY3QiO3M6NToicm91dGUiO047fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774220103),
+('78YpUIoMCDdvcKh053VLuMigs1Y4oKge07hjvJYr', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieEUwaG1UN3h3WGhYSUFWc0NMUW9hSFR0T0t1Tjd5WTVFV0pSS3hzZCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9jb21wbGV0ZSI7czo1OiJyb3V0ZSI7czoxNzoiY2hlY2tvdXQuY29tcGxldGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774214859),
+('bFVDQbxzRtx6HxoUGNbCYUlhMVXUgDtP1WJRf8pp', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSTdBUHR3VlBTTjBnd2hsbUF2QkRwNUx3M0JYUDB0UXpnOXd5NHlXRiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9jb21wbGV0ZSI7czo1OiJyb3V0ZSI7czoxNzoiY2hlY2tvdXQuY29tcGxldGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774215470),
+('E31korBtjA3JuV0qAJqHJ4ciudXRdYkFeddT2r14', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUk16MU9KWWFmRDE2OEhwMDBkVjFnUk45cWNTR0k4TXVxRmtHYVByMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cz9uYW1lPXRlc3QiO3M6NToicm91dGUiO3M6ODoicHJvZHVjdHMiO319', 1774220641),
+('G0eQCLuBZY4fHPU2jYbeS0LoK9dV08d9KqwHzn67', NULL, '138.186.117.57', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZkxnaDhKVE1SRG5sd1ZLblQyTDRDRnltaTh5V1laYjdxQ29NVzJYUCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6ODA6Imh0dHBzOi8vd3d3LmNzMnRlYW0yMC5jczI0MTAtd2ViMDFwdm0uYXN0b24uYWMudWsvcHJvZHVjdHM/dHlwZT1IYWlyJTIwQWNjZXNzb3J5IjtzOjU6InJvdXRlIjtzOjg6InByb2R1Y3RzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774214595),
+('ICi60oIZfAtcmUd9RVmC72K0ZfU44oEPgBUE6uac', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicmhpdmZKcUlYQlpuSkQyTnhXa3NpUnFsQzBSYTRIQTZ4cEszTmVsNiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9zaGlwcGluZyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774218705),
+('Juy4lobqclnmWRpu5huKDxG3cWlxkiYZEVxuOVAf', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWDFVZ1JxM09EdU40RDllRndkRjFUUTU5YklqODU3R0tXU0s2QllVcyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9zaGlwcGluZyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774218643),
+('Syp6fzpYraD2sMFosxU2tqsF0iNsfdJQEIzhzf2e', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoib2k1WDNwRjRMTmhCb29PblA3dGxhUkE4QnpWUEhFU0FHbWE3VTIyQiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jYXJ0IjtzOjU6InJvdXRlIjtzOjk6ImNhcnQudmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774217513),
+('tZfS7elt6SN3BPtPjwU2867WabjnpENCtG8pZV2Q', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiamt4VHV5RU1PSFdXSlBiOUJ3WWtuS2s5bkczVkx3NVZ2ZGlDb3VIYiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Njk6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmdyZWRpZW50cy9zaGVhLWJ1dHRlciI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774219456),
+('w1OB0NqftxJMcTAJjJGNaj76mNBLZzkBkX33110Y', NULL, '94.10.6.45', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUHlvNmdyaVFjVFdIV2VzOUJ4a25DampHZG9TVk8xNEp1M21LUUNuRyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774217192),
+('x94v8ClhVlaWz7sW0arH6CyzSyASLlO37tcQis8H', 1, '86.166.253.99', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMU0ySEhOd29sakpkZGZuc2ZGNmNnZUladHJWSTBTY2h4YnQ2Q0s1QyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo4OiJ0YWItcGFnZSI7TjtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1774218559);
 
 -- --------------------------------------------------------
 
@@ -836,7 +875,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`, `subscribed`) VALUES
-(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'xSdMDDBP0cvHqbBb3oQ8Q3xgloR97mlbuTduMb9PZ98pvJXl4viuv22p26T0', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer', 1),
+(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'jkaZANrAsJZ431Lgcq0smEryL2QSEzCPWQrpcQb6Qs36Uzrav9x84fl4A3VT', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer', 1),
 (2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6ImkwRUtMY2t3VzVCdUIzUHB6SnJLRGc9PSIsInZhbHVlIjoiNW5UT29KWjQxRktXbXVGdkRXUGdDZ3JkUkgwVVordzNFTE5odWhmODRMUGd0ME5QS3VYM0xNOXhuVFNTcjB6QmJBM2NjK2ZhVzNJUXBVdVE5SjZ5VXRBZ2hrb3M5bDZoa3hJYTYwMkxyaUhHa3lWbFFHZHh4L0lQOVpvYmtwMGZLN2VVK0UzZ21hcElnT25xSzlJZTgzRWw0alZFaW9DdWtSMzExaG5qc0NLblkvTlVTMzVyVTRjWDd4STlkUW53QUNMSW5kYVZOR3lTRXJUTXh1eDVmS3AyNzF3SEU1b0srN1lBVnp1dzhudm5zSHJNVFYrdnQwUEN3NEd6eGdGd1EzOGJBQVJHQjYwSUo5cVNiZWZiMXc9PSIsIm1hYyI6ImNiZGI2YzVlN2EwOWM1MGVhOTA4MGFjNGI4YWUwOTUxNWZmOTM5Nzg4ZjQzNDQ2MTU4NGQ3M2I1YTUzODgxZDIiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-19 14:58:25', 'customer', 0),
 (3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer', 0),
 (4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer', 0),
@@ -848,7 +887,7 @@ INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `p
 (10, 'HW786LEGEND', '112451828911674993144', 'hw786legend@gmail.com', NULL, '$2y$12$K9RqvNJrQhBRpQcFDNWzI.hsc1xG1fKyXtrhv7.XW2zix.8K8QMZ6', NULL, NULL, NULL, NULL, '2026-02-19 15:22:36', '2026-02-19 15:22:36', 'customer', 0),
 (11, 'Samuel D\'souza', '101710726500306880169', 'samuel_dsouza@outlook.com', NULL, '$2y$12$r5pNN2wD223JDvUsznOyHu4y.7K7TkriTLmFWhVWTYUcrBfNB0.Ri', NULL, NULL, NULL, NULL, '2026-03-13 13:17:16', '2026-03-13 13:17:16', 'customer', 0),
 (12, 'testroute', NULL, 'testroute@test.com', '2026-03-18 22:13:07', '$2y$12$vXWzecrbvLQZRoUmINtwWuyGsz/qkyYo.c6p1i001kAzpuzaVrkG6', NULL, NULL, NULL, NULL, '2026-03-18 22:12:54', '2026-03-18 22:12:54', 'admin', 0),
-(13, 'wet', NULL, 'wq@outlook.com', NULL, '$2y$12$Xjmc2og3l7rRs/e4vd8LLeDcXh0dr2NqT3oIxwQLZtRb75X5Lcn6u', NULL, NULL, NULL, NULL, '2026-03-19 15:33:56', '2026-03-19 15:33:56', 'customer', 0);
+(19, 'te', NULL, 'aa@aa.co', NULL, '$2y$12$JVwWlUrAqa2TQ.4kEuLiS.CoIdjteKXPDQ8IvG6Rk3iM7VPkujqDK', NULL, NULL, NULL, NULL, '2026-03-22 21:24:13', '2026-03-22 21:24:13', 'customer', 0);
 
 --
 -- Indexes for dumped tables
@@ -903,8 +942,7 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `ingredients`
 --
 ALTER TABLE `ingredients`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `name` (`name`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `jobs`
@@ -997,13 +1035,13 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `customer_address`
 --
 ALTER TABLE `customer_address`
-  MODIFY `caid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `caid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `enquiries`
 --
 ALTER TABLE `enquiries`
-  MODIFY `e_id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `e_id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1015,7 +1053,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `ingredients`
 --
 ALTER TABLE `ingredients`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -1039,13 +1077,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
+  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -1063,7 +1101,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables

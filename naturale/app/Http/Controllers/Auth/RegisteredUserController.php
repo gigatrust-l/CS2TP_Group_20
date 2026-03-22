@@ -19,6 +19,9 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
+
+        session()->forget('checkout-redirect');
+        
         return view('auth.register');
     }
 
@@ -29,6 +32,9 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+
+        session()->put(['tab-page' => $request->tab_page]);
+
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
@@ -45,6 +51,14 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('portal', absolute: false));
+        $home = 'portal';
+
+        if (session()->has('checkout-redirect') ) {
+            $home='/checkout/details';
+        }
+
+        session()->forget('checkout-redirect');
+
+        return redirect()->intended($home);
     }
 }

@@ -26,4 +26,16 @@
 /* Style the label when its radio is checked */
 .form-check-input:checked {
   background-color: green !important;
+  border-color: green !important;
+  color: green !important;
+}
+
+.card {
+    background-color: var(--div-bg) !important;
+    --bs-card-border-color: #f3f4f6 !important;
+}
+
+ .div-bg {
+    background-color: var(--div-bg) !important;
+    border-color: #f3f4f6 !important;
 }

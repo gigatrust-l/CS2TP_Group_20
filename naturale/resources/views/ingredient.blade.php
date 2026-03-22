@@ -22,10 +22,35 @@
 
     <!-- Ingredient information -->
     <section class="ingredient-info">
-        <div class="ingredient-container">
-            <p class="section-label">About the Ingredient</p>
-            <h2 class="section-title">Why {{ $ingredient->name }}?</h2>
-            <p class="ingredient-description">{!! nl2br(e($ingredient->description)) !!}</p>
+        <div class="ingredient-container split-layout">
+            <div class="ingredient-text">
+                <p class="section-label">About the Ingredient</p>
+                <h2 class="section-title">Why {{ $ingredient->name }}?</h2>
+                <p class="ingredient-description">{!! nl2br(e($ingredient->description)) !!}</p>
+            </div>
+
+            <!-- Before and After -->
+            <div class="ingredient-visual">
+                <p class="slider-hint">Drag to reveal results</p>
+
+                <div class="img-comp-container">
+                    <!-- After img -->
+                    <div class="img-comp-img">
+                        <img src="{{ asset('media/media_webp/beforeafter/' . $ingredient->after_image) }}.webp"
+                            alt="">
+                    </div>
+                    <!-- Before img -->
+                    <div class="img-comp-img img-comp-overlay" style="clip-path: inset(0px 192px 0px 0px);">
+                        <img src="{{ asset('media/media_webp/beforeafter/' . $ingredient->before_image) }}.webp"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="slider-labels">
+                    <span>Before</span>
+                    <span>After</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -36,7 +61,7 @@
             <h2 class="section-title">Shop Our {{ $ingredient->name }} Products</h2>
             <div class="products-grid">
                 @foreach ($ingredient->products as $product)
-                    <a href="{{ url('/products/' . $product->pid) }}" class="product-card">
+                    <a href="{{ url('/products/' . $product->pid) }}" class="product-card div-bg border rounded-3">
                         <div class="product-image">
                             <img src="{{ asset($product->p_image) }}" alt="{{ $product->p_name }}">
                         </div>
@@ -54,7 +79,7 @@
 
 
     <x-slot:scripts>
-        {{-- JS Scripts --}}
+        <script src="{{ asset('js/before-after.js') }}"></script>
     </x-slot:scripts>
 
 </x-layouts.storefront>

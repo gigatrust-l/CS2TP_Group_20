@@ -2,17 +2,21 @@
 
     <x-slot:styles>
         <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('/css/checkout_login.css') }}" />
+
     </x-slot:styles>
 
     <section class="checkout-confirmation container my-5">
         <div class="card shadow-sm">
-            <div class="card-body">
-                <h1 class="mb-4 text-success">Checkout Complete!</h1>
+            <div class="card-body div-bg border rounded-3">
+                <h1 class="mb-4 " style="color: var(--footer-link)">Thank you for your Naturale Order!</h1>
+                <h2 class="h5 text-muted">Order #{{ $oid }}</h2>
+                <p>You should recieve a confirmation email shortly!</p>
 
                 <h2 class="h5 text-muted">Your Cart</h2>
-                <ul class="list-group mb-3">
+                <ul class="list-group mb-3  border rounded div-bg">
                     @foreach ($cart as [$product, $quantity])
-                        <li class='list-group-item d-flex justify-content-between align-items-center'>
+                        <li class='list-group-item d-flex justify-content-between align-items-center border div-bg'>
                             <div>
                                 <strong>{{ $product->p_name }}</strong>
                                 @if (!($product->p_category == 'shipping'))
@@ -26,7 +30,7 @@
                                 @endif
                         </li>
                     @endforeach
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li class="list-group-item d-flex justify-content-between border div-bg">
                         <span>Total (GBP)</span>
                         <strong>£ {{ $runningTotal }}</strong>
                     </li>

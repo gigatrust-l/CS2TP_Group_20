@@ -14,6 +14,9 @@
         --text: #354024;
         --muted: #5a6e3f;
 
+        --div-bg: white;
+        --div-bg-hover: var(--gray);
+
         --footer-main: #07220d;
         --footer-sub: #4b5563;
         --footer-link: #3ab84e;
@@ -31,6 +34,9 @@
         --text: #d4e4c4;
         --muted: #7a8f60;
         --primary: white;
+
+        --div-bg: var(--page);
+        --div-bg-hover: #0d3e19;
 
         --footer-main: #f3f4f6;
         --footer-sub: #9ca3af;

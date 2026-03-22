@@ -13,6 +13,12 @@ class LoginResponse implements LoginResponseContract
             default                    => '/',
         };
 
+        if (session()->has('checkout-redirect') ) {
+            $home='/checkout/details';
+        }
+
+        session()->forget('checkout-redirect');
+
         return redirect()->intended($home);
     }
 }

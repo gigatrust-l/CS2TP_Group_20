@@ -83,6 +83,17 @@ class CheckoutController extends Controller
         return view('checkout.checkout_details', compact('cart', 'runningTotal', 'totalQuantity', 'addresses')); //returns view page for basket
     }
 
+    public function viewLogin() {
+
+        if (auth()->user()) {
+            return redirect()->route('checkout.view');
+        } else {
+            session()->put('checkout-redirect','true');
+            return view('checkout.checkout_login');
+        }
+
+    }
+
     public function confirmCheckout(Request $request)
     {
         //validates input from form
@@ -197,6 +208,7 @@ class CheckoutController extends Controller
             }
 
             session()->put('checkoutCart', $cart);
+            session()->put('orderNum', $order->oid);
             session()->forget('cart');
 
             $subscribed = false;
@@ -241,10 +253,12 @@ class CheckoutController extends Controller
 
         }
 
+        $oid = session()->get('orderNum');
+
 
         session()->forget('checkoutCart');
 
-        return view('checkout.checkout_complete', compact('cart', 'runningTotal')); //returns view page for basket
+        return view('checkout.checkout_complete', compact('cart', 'runningTotal', 'oid')); //returns view page for basket
 
     }
 

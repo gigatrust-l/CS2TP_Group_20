@@ -105,8 +105,10 @@ Route::post('/cart/update', [CartController::class, 'updateItemQuantity'])->name
 Route::post('/cart/remove/{any}', [CartController::class, 'removeItem'])->name('cart.remove');
 Route::post('/cart/clear', [CartController::class, 'clearCart'])->name('cart.clear');
 
-Route::get('/checkout', [CheckoutController::class, 'viewCheckout'])->name('checkout.view');
-Route::post('/checkout', [CheckoutController::class, 'confirmCheckout'])->name('checkout.confirm');
+Route::get('/checkout', function () {return redirect()->route('cart.view');});
+Route::get('/checkout/login', [CheckoutController::class, 'viewLogin'])->name('checkout.login');
+Route::get('/checkout/details', [CheckoutController::class, 'viewCheckout'])->name('checkout.view');
+Route::post('/checkout/details', [CheckoutController::class, 'confirmCheckout'])->name('checkout.confirm');
 Route::get('/checkout/complete', [CheckoutController::class, 'completeCheckout'])->name('checkout.complete');
 
 Route::get('/contact', function () {
@@ -133,12 +135,10 @@ Route::get('/email/verify', function () {
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
- 
     return redirect('/');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
- 
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');

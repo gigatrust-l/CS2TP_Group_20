@@ -1,6 +1,6 @@
 <div class="col-lg-3 col-md-4">
     <form method="GET" id="filterForm">
-        <div class="card border-0 shadow-sm rounded-3 p-3" style="position: sticky; top: 1.5rem;">
+        <div class="card shadow-sm rounded-3 p-3" style="position: sticky; top: 1.5rem;">
             <h6 class="fw-bold text-success mb-3 pb-2 border-bottom">Filter & Sort</h6>
 
             <div class="mb-3">

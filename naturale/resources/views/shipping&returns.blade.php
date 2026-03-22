@@ -1,279 +1,104 @@
-<!DOCTYPE html>
+<x-layouts.storefront title="{{ config('app.name', 'Laravel') }} - Shipping & Returns">
 
-<html>
+    <x-slot:styles>
+        <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/shipping_returns.css') }}">
+    </x-slot:styles>
 
-<head>
-    <meta charset="UTF-8">
-    <title>{{ config('app.name', 'Laravel') }} - Shipping & Returns</title>
-    <link rel="stylesheet" href="{{ asset('/css/index_style.css') }}">
-    <link rel="icon" type="image/x-icon" href="/media/media_webp/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('/css/navbar_style.css') }}" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+    <div class="shipping-page">
 
-
-
-
-<body class="font-sans text-gray-900 antialiased">
-    @include('components/nav_bar_customer')
-
-
-    <style>
-        body {}
-
-        .page-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .policy-card {
-            margin-bottom: 25px;
-        }
-
-        .min-h-screen {}
-
-        body,
-        h3,
-        th,
-        td {
-            color: #111827 !important;
-        }
-    </style>
-
-
-    <div class="py-12 min-h-screen">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-            <div class="bg-white shadow-sm sm:rounded-lg border border-gray-100">
-                <div class="p-8">
-
-                    <div name="header">
-                        <h2 class="font-semibold text-xl text-gray-900 leading-tight">
-                            {{ __('Shipping & Returns') }}
-                        </h2>
-                    </div>
-
-                    <div class="py-4 min-h-screen">
-                        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
-
-                            <div class="bg-white shadow-sm sm:rounded-lg border border-gray-100 mb-8">
-                                <div class="p-8">
-                                    <div class="card-header bg-white border-bottom py-3 px-4">
-                                        <h5 class="fw-semibold mb-0 fs-6 text-dark">Shipping Information</h5>
-                                    </div>
-                                    <div class="card-body px-4 py-4">
-                                        <div class="">
-                                            <p class="text-secondary mb-0">
-                                                We aim to process and dispatch all orders as quickly as possible
-                                                to
-                                                ensure a
-                                                smooth
-                                                and reliable delivery experience.
-                                            </p>
-
-                                            <br>
-
-                                            <p class="text-secondary mb-0">
-                                                Orders placed before 12:00 PM (midday) on a working day are
-                                                eligible for
-                                                next working day delivery. Orders placed after this time, or
-                                                during
-                                                weekends and public holidays, will be processed on the next
-                                                available
-                                                working
-                                                day.
-                                            </p>
-
-                                            <br>
-
-                                            <p class="text-secondary mb-0">
-                                                Once your order has been dispatched, you may receive a
-                                                confirmation
-                                                email with
-                                                delivery information. Delivery times may occasionally vary due
-                                                to
-                                                factors
-                                                outside
-                                                our control, such as courier delays, weather conditions, or peak
-                                                periods.
-                                            </p>
-
-                                            <br>
-
-                                            <p class="text-secondary mb-0">
-                                                Please ensure that your shipping address and contact details are
-                                                entered
-                                                correctly
-                                                at checkout, as we cannot guarantee changes once an order has
-                                                been
-                                                processed.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white shadow-sm sm:rounded-lg border border-gray-100 mb-8">
-                                <div class="p-8">
-                                    <div class="card-header bg-white border-bottom py-3 px-4">
-                                        <h5 class="fw-semibold mb-0 fs-6 text-dark">Delivery Pricing</h5>
-                                    </div>
-                                    <div class="card-body px-4 py-4">
-                                        <div class="">
-
-                                            <p class="text-secondary mb-0">
-                                                We offer the following delivery options to suit your needs:
-                                            </p>
-
-                                            <br>
-                                            <ul class="mb-0" style="list-style-type: circle;">
-                                                <li>Standard next working day delivery: £4.99 </li>
-                                                <li>Optional shipping subscription: £12.99 per month</li>
-                                            </ul>
-
-                                            <br>
-                                            <p class="text-secondary mb-0">
-                                                Subscribers benefit from free delivery on all orders from Naturale.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white shadow-sm sm:rounded-lg border border-gray-100 mb-8">
-                                <div class="p-8">
-                                    <div class="card-header bg-white border-bottom py-3 px-4">
-                                        <h5 class="fw-semibold mb-0 fs-6 text-dark">Returns & Refunds</h5>
-                                    </div>
-                                    <div class="card-body px-4 py-4">
-                                        <div class="">
-                                            <p class="text-secondary mb-0">
-                                                We want you to be satisfied with your purchase. If you
-                                                experience any
-                                                issues
-                                                with
-                                                your order, our support team is here to help.
-                                            </p>
-                                            <br>
-
-                                            <p class="text-secondary mb-0"> To start a return, you can:</p>
-
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">Contact our support team with your
-                                                    order number and details about the issue.
-                                                </li>
-                                                <li class="list-group-item">Visit the Orders page in your
-                                                    account
-                                                    and select the Return option for the relevant order.</li>
-                                            </ul>
-                                            <br>
-
-                                            <p class="text-secondary mb-0">
-                                                Providing clear information about the issue (and photos where
-                                                applicable) will
-                                                help
-                                                us process your request more efficiently.
-                                            </p>
-                                            <br>
-
-                                            <p class="text-secondary mb-0">
-                                                Our team aims to review and respond to all return requests
-                                                within 5
-                                                working
-                                                days. Once your request has been assessed, we will provide
-                                                instructions
-                                                on the next steps, which may include returning the item, issuing
-                                                a
-                                                replacement,
-                                                or
-                                                processing a refund where appropriate.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white shadow-sm sm:rounded-lg border border-gray-100 mb-4">
-                                <div class="p-8">
-                                    <div class="card-header bg-white border-bottom py-3 px-4">
-                                        <h5 class="fw-semibold mb-0 fs-6 text-dark">Returns Window</h5>
-                                    </div>
-                                    <div class="card-body px-4 py-4">
-                                        <div class="">
-                                            <p class="text-secondary mb-0">
-                                                Returns must be requested within 14 days of receiving your
-                                                order.
-                                                Requests made outside of this period may not be eligible for
-                                                return or
-                                                refund
-                                                unless
-                                                the item is faulty or incorrect.
-                                            </p>
-
-                                            <p>
-                                                Items must be unused, unopened, and in their original condition
-                                                and
-                                                packaging to qualify for a return.
-                                            </p>
-
-                                            <p class="text-danger fw-semibold">
-                                                Opened products cannot be accepted for returns unless they are
-                                                defective
-                                                or
-                                                damaged
-                                                upon arrival.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="bg-white shadow-sm sm:rounded-lg border border-gray-100 mb-4">
-                                <div class="p-8">
-                                    <div class="card-header bg-white border-bottom py-3 px-4">
-                                        <h5 class="fw-semibold mb-0 fs-6 text-dark">Additional Returns Conditions</h5>
-                                    </div>
-                                    <div class="card-body px-4 py-4">
-                                        <div class="">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">Customers may be responsible for
-                                                    return
-                                                    shipping
-                                                    costs unless the item is faulty, damaged, or sent in error.
-                                                </li>
-                                                <li class="list-group-item">Items returned without prior
-                                                    approval may
-                                                    not be
-                                                    processed.</li>
-                                                <li class="list-group-item">We recommend using a tracked
-                                                    shipping
-                                                    service when returning items.</li>
-                                                <li class="list-group-item">Refunds will be issued to the
-                                                    original
-                                                    payment
-                                                    method once approved.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="aboutus-title-section">
+            <div class="aboutus-title-content text-center">
+                <h1>Shipping & Refunds</h1>
             </div>
-        </div>
+        </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Shipping information section-->
+        <section class="brand-section">
+            <div class="brand-container">
+                <h2>Shipping Information</h2>
 
+                <p class="brand-description">We aim to process and dispatch all orders as quickly as possible to ensure
+                    a smooth and reliable delivery experience.<br>
+                    Orders placed before 12:00 PM (midday) on a working day are eligible for next working day delivery.
+                    Orders placed after this time, or during weekends and public holidays, will be processed on the next
+                    available working day.<br>
+                    Once your order has been dispatched, you may receive a confirmation email with delivery information.
+                    Delivery times may occasionally vary due to factors outside our control, such as courier delays,
+                    weather conditions, or peak periods.<br>
+                    Please ensure that your shipping address and contact details are entered correctly at checkout, as
+                    we cannot guarantee changes once an order has been processed.</p>
+            </div>
+        </section>
 
-        <footer>
-            @include('components/footer')
-        </footer>
-</body>
+        <!--Delivery Pricing section-->
+        <section class="brand-section alt-section">
+            <div class="brand-container">
+                <h2>Delivery Pricing</h2>
 
-</html>
+                <p class="brand-description mb-0">We offer the following delivery options to suit your needs:</p>
+                <ul class="brand-description mb-0" style="list-style-type: circle;">
+                    <li>Standard next working day delivery: £4.99 </li>
+                    <li>Optional shipping subscription: £12.99 per month</li>
+                </ul>
+                <p class="brand-description mb-0">
+                    Subscribers benefit from free delivery on all orders from Naturale.</p>
+            </div>
+        </section>
+
+        <!--Returns & Refunds section-->
+        <section class="brand-section">
+            <div class="brand-container">
+                <h2>Returns & Refunds</h2>
+
+                <p class="brand-description mb-0">We want you to be satisfied with your purchase. If you experience any
+                    issues with your order, our support team is here to help.<br>
+                    To start a return, you can:</p>
+                <ul class="brand-description mb-0" style="list-style-type: circle;">
+                    <li>Contact our support team with your order number and details about the issue.</li>
+                    <li>Visit the Orders page in your account and select the Return option for the relevant order.</li>
+                </ul>
+                <p class="brand-description mb-0">
+                    Providing clear information about the issue (and photos where applicable) will help us process your
+                    request more efficiently.<br>
+                    Our team aims to review and respond to all return requests within 5 working days. Once your request
+                    has been assessed, we will provide instructions on the next steps, which may include returning the
+                    item, issuing a replacement, or processing a refund where appropriate.</p>
+            </div>
+        </section>
+
+        <!--Returns window section-->
+        <section class="brand-section alt-section">
+            <div class="brand-container">
+                <h2>Returns Window</h2>
+
+                <p class="brand-description mb-0">Returns must be requested within 14 days of receiving your order.
+                    Requests made outside of this period may not be eligible for return or refund unless the item is
+                    faulty or incorrect.</p>
+                <p class="brand-description fw-semibold mb-0 fs-6 text-dark">Items must be unused, unopened, and in
+                    their original condition and packaging to qualify for a return.</p>
+                <p class="brand-description text-danger fw-semibold">
+                    Opened products cannot be accepted for returns unless they are defective or damaged upon arrival.
+                </p>
+            </div>
+        </section>
+
+        <!--Additional Returns Conditions section-->
+        <section class="brand-section">
+            <div class="brand-container">
+                <h2>Additional Returns Conditions</h2>
+
+                <p class="brand-description mb-0">Customers may be responsible for return shipping costs unless the item
+                    is faulty, damaged, or sent in error.<br>
+                    Items returned without prior approval may not be processed.<br>
+                    We recommend using a tracked shipping service when returning items.<br>
+                    Refunds will be issued to the original payment method once approved.</p>
+            </div>
+        </section>
+    </div>
+
+    <x-slot:scripts>
+        {{-- Put script links links here --}}
+    </x-slot:scripts>
+
+</x-layouts.storefront>

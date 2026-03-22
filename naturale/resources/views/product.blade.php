@@ -21,8 +21,7 @@
     </div>
 
     @if ($showWindow)
-        <div x-cloak x-data="{ show: true, visible: true }" x-show="show"
-      x-transition:enter="transition ease-out duration-300"
+        <div x-cloak x-data="{ show: true, visible: true }" x-show="show" x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
             x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100"
             x-transition:leave-end="opacity-0" class="fixed inset-0 bg-black/50 z-[998]"
@@ -34,8 +33,7 @@
                 x-transition:leave-start="opacity-100 translate-y-0"
                 x-transition:leave-end="opacity-0 translate-y-[-20px]"
                 class="fixed inset-0 z-[999] flex items-center justify-center p-4">
-                <div class="bg-white dark:bg-[var(--page)] rounded-xl shadow-2xl min-w-96 p-6 relative "
-                    @click.stop>
+                <div class="div-bg border rounded-3 shadow-2xl min-w-96 p-6 relative " @click.stop>
                     <button @click="visible = false; setTimeout(() => show = false, 200)"
                         class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold leading-none">
                         &times;
@@ -47,30 +45,30 @@
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                                 clip-rule="evenodd" />
                         </svg>
-                        <h2 class="text-base font-bold tracking-wide text-gray-800 dark:text-white">
+                        <h2 class="text-base font-bold tracking-wide">
                             Product Added Successfully
                         </h2>
                     </div>
 
-                    <div
-                        class="flex items-center gap-4 border border-gray-200 dark:border-gray-700 rounded-lg p-3 mb-6">
+                    <div class="flex items-center gap-4 div-bg border rounded-3 p-3 mb-6">
                         @if ($product->p_image)
                             <img src="{{ asset($product->p_image) }}" alt="{{ $product->p_name }}"
                                 class="w-16 h-16 object-contain rounded">
                         @endif
                         <div>
-                            <p class="font-semibold text-sm text-gray-800 dark:text-gray-100">{{ $product->p_name }}</p>
-                            <p class="text-sm text-gray-500">Qty: {{ $quantity }}</p>
+                            <p class="font-semibold text-sm ">{{ $product->p_name }}</p>
+                            <p class="text-sm text-gray-400">Qty: {{ $quantity }}</p>
                         </div>
                     </div>
 
                     <div class="flex gap-3">
                         <button @click="visible = false; setTimeout(() => show = false, 200)"
-                            class="flex-1 border border-gray-300 text-gray-700 dark:text-gray-200 font-medium py-2 px-4 rounded-md hover:bg-gray-50 dark:hover:bg-green-950 transition-colors">
+                            class="flex-1 div-bg border rounded-3 font-medium py-2 px-4 hover:bg-gray-50 dark:hover:bg-green-950 transition-colors">
                             Continue Shopping
                         </button>
                         <a href="{{ route('cart.view') }}"
-                            class="flex-1 text-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
+                            class="flex-1 flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                            style="text-decoration: none;">
                             Go to Cart
                         </a>
                     </div>
@@ -80,8 +78,8 @@
     @endif
 
     <div class="d-flex flex-column min-vh-100">
-        <div class="container">
-            <div class="flex items-center text-sm">
+        <div class="container border rounded-3 div-bg">
+            <div class="flex items-center text-sm pt-4">
                 <ol class="flex items-center">
                     <li class="flex items-center">
                         <a href="/" class="breadcrum-a" style="">Naturale</a>
@@ -89,7 +87,7 @@
                             class="w-4 h-4 mx-3">
                             <style>
                                 .s0 {
-                                    fill: #000000
+                                    fill: var(--footer-main)
                                 }
                             </style>
                             <path id="Shape 1" class="s0"
@@ -102,7 +100,7 @@
                             class="w-4 h-4 mx-3">
                             <style>
                                 .s0 {
-                                    fill: #000000
+                                    fill: var(--footer-main)
                                 }
                             </style>
                             <path id="Shape 1" class="s0"
@@ -178,7 +176,8 @@
                             <input type="number" name="quantity" value="1" min="1"
                                 max="{{ max(1, $product->p_stock) }}" @disabled($product->p_stock == 0)>
 
-                            <button type="submit" @disabled($product->p_stock == 0)>
+                            <button type="submit" @disabled($product->p_stock == 0)
+                                class="{{ $product->p_stock == 0 ? 'product-actions-button-disabled' : 'product-actions-button' }}">
                                 {{ $product->p_stock > 0 ? 'Add to Cart' : 'Unavailable' }}
                             </button>
                         </form>
@@ -201,12 +200,12 @@
                     </div>
                 </div>
 
-                <div class="container pb-5 info-cards">
+                <div class="container pb-3 info-cards">
                     <div class="row g-4">
                         <!-- How to Use -->
                         @if ($product->p_instructions)
                             <div class="col-md-6">
-                                <div class="info-card">
+                                <div class="info-card border rounded-3">
                                     <h4>How to use</h4>
                                     <p>{{ $product->p_instructions }}</p>
                                 </div>
@@ -216,7 +215,7 @@
                         <!-- Ingredients -->
                         @if ($product->p_ingredients)
                             <div class="col-md-6">
-                                <div class="info-card">
+                                <div class="info-card  border rounded-3">
                                     <h4>Ingredients</h4>
                                     <p>{{ $product->p_ingredients }}</p>
                                 </div>
@@ -226,13 +225,13 @@
                 </div>
             </div>
         </div>
-        <div id="reviews" class="container mb-5 py-5">
-            <div class="row g-5">
+        <div id="reviews" class="container mb-5 py-5 border rounded-3 div-bg">
+            <div class="row g-5 mx-2">
 
                 <div name="header" class="ml-2 flex items-center justify-between flex-wrap gap-3">
-                    <h2 class="font-semibold text-xl text-gray-900 leading-tight">
+                    <h2 class="font-semibold text-xl leading-tight">
                         {{ __('Reviews') }}
-                        <span class="ml-2 text-sm font-normal text-gray-400">({{ $reviews->total() }})</span>
+                        <span class="ml-2 text-sm font-normal text-gray-300">({{ $reviews->total() }})</span>
                     </h2>
 
                     <div class="flex items-center gap-2">
@@ -240,7 +239,7 @@
 
                         <a href="{{ request()->fullUrlWithQuery(['sort' => 'rid', 'direction' => 'asc']) }}#reviews"
                             class="inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium border transition-colors
-                          {{ $sort === 'rid' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900' }}">
+                            {{ $sort === 'rid' ? 'sort-active' : 'sort-inactive' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -251,7 +250,7 @@
 
                         <a href="{{ request()->fullUrlWithQuery(['sort' => 'r_rating', 'direction' => $sort === 'r_rating' && $direction === 'desc' ? 'asc' : 'desc']) }}#reviews"
                             class="inline-flex items-center gap-1 px-3 py-1.5 rounded-md text-sm font-medium border transition-colors
-                          {{ $sort === 'r_rating' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400 hover:text-gray-900' }}">
+                          {{ $sort === 'r_rating' ? 'sort-active' : 'sort-inactive' }}">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="currentColor"
                                 viewBox="0 0 20 20">
                                 <path
@@ -276,13 +275,13 @@
                     @forelse ($reviews as $review)
                         @if ($review->isVerified())
                             <div
-                                class="p-4 border border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:shadow-sm transition-all duration-150">
+                                class="p-4  border-gray-100 rounded-lg bg-gray-50 hover:bg-white hover:shadow-sm transition-all duration-150 border rounded-3 div-bg">
                                 <div class="flex items-start justify-between gap-4">
 
                                     <div class="flex items-center gap-3 min-w-0">
 
                                         <div class="min-w-0">
-                                            <p class="text-sm font-semibold text-gray-900 truncate">
+                                            <p class="text-sm font-semibold truncate">
                                                 {{ $review->r_title ?? __('Untitled Review') }}
                                             </p>
                                             <p class="text-xs text-gray-400">
@@ -309,7 +308,7 @@
                                 </div>
 
                                 @if (!empty($review->r_description))
-                                    <p class="mt-3 text-sm text-gray-700 leading-relaxed">
+                                    <p class="mt-3 text-sm  leading-relaxed">
                                         {{ $review->r_description }}
                                     </p>
                                 @endif

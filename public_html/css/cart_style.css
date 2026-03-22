@@ -20,7 +20,6 @@
 .empty-cart-container {
     text-align: center;
     padding: 80px 20px;
-    color: var(--text-dark);
 
     display: flex;
     flex-direction: column;
@@ -42,7 +41,7 @@
 }
 
 .empty-cart-container p {
-    color: var(--text-muted);
+    color: var(--footer-link-hover);
     margin-bottom: 25px;
 }
 
@@ -58,12 +57,34 @@
 }
 
 .empty-cart-button:hover {
-    background: var(--green-accent);
-    transform: translateY(-3px);
+    background: var(--bg) !important;
+    transform: translateY(3px);
 }
 
 .empty-cart-button {
-    background: var(--green-main) !important;
+    background: var(--footer-link) !important;
+}
+
+.div-bg {
+    background-color: var(--div-bg) !important;
+    border-color: #f3f4f6 !important;
+}
+
+.delete-btn {
+    fill: #dc2626;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.delete-btn:hover {
+    fill: white;
+
 }
 
 [x-cloak] { display: none !important; }
+
+.fade-enter      { transition: opacity 0.3s ease-out, transform 0.3s ease-out; }
+.fade-enter-from { opacity: 0; transform: translateY(-1rem); }
+.fade-enter-to   { opacity: 1; transform: translateY(0); }
+.fade-leave      { transition: opacity 0.2s ease-in, transform 0.2s ease-in; }
+.fade-leave-from { opacity: 1; transform: translateY(0); }
+.fade-leave-to   { opacity: 0; transform: translateY(-1rem); display: hidden !important;}
