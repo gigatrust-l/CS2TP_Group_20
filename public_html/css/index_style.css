@@ -1,17 +1,4 @@
 :root{
-    /* colors for buttons etc */
-    --green-main: rgba(76, 175, 114, 0.39);
-    --green-accent: #6fd98a;
-    --green-soft: #a6e3b8;
-
-    /* background colors */
-    --dark-bg: #0f3a2a;
-    --ligth-bg: #fafafa;
-
-    /* text */
-    --text-light: #d9e0d7;
-    --text-dark: #354024;
-    --text-muted: #8b9c93;
 
     /* fonts */
     --font-serif: 'Playfair Display', serif;
@@ -147,12 +134,12 @@ body{
 .dot.active{
     width: 24px;
     border-radius: 20px;
-    background: var(--green-main);
+    background: var(--footer-link);
 }
 
 /* BRAND SECTION */
 .brand-section{
-    background: var(--ligth-bg);
+    background: var(--page);
     padding: 90px 20px;
 }
 
@@ -192,9 +179,11 @@ body{
 
 .feature{
     text-align: left;
-    background: white;
+    background: var(--page);
     padding: 20px 20px 10px;
     border-radius: 10px;
+    border-color: #f3f4f6;
+    border-width: 2px;
 
     box-shadow:0 8px 20px rgba(0, 0, 0, 0.05);
     transition: transform .3s ease, box-shadow .3s ease;
@@ -235,7 +224,7 @@ body{
     background:linear-gradient(
         to bottom,
         #277043,
-        #fafafa
+        var(--page)
     );
 }
 
@@ -311,7 +300,7 @@ body{
 .category-text h3 {
     font-family: serif;
     font-size: 1rem;
-    color: var(--text-light);
+    color: #d9e0d7;
     line-height: 1.2;
 }
 
@@ -319,7 +308,7 @@ body{
     font-size: 9px;
     letter-spacing: .2rem;
     text-transform: uppercase;
-    color: var(--green-accent);
+    color: #d9e0d7;
     margin-top: 4px;
 }
 
@@ -341,7 +330,7 @@ body{
 
 .ingredients-section {
     /* background: #0F2412 or #0F1412 for dark mode */
-    background: #fafafa;
+    background: var(--page);
     padding: 80px 0;
 }
 

@@ -1,4 +1,4 @@
-<footer class="footer py-5 bg-light border-top">
+<footer class="footer py-5 border-top">
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-4">
@@ -54,6 +54,7 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        background-color: var(--page) !important;
     }
 
     footer {
@@ -62,13 +63,13 @@
 
     .nav-link {
 
-        color: #16a34a !important;
+        color: var(--footer-link) !important;
 
     }
 
     .nav-link:hover {
 
-        color: #718096 !important; 
+        color: var(--footer-link-hover) !important; 
 
     }
 </style>

@@ -19,6 +19,8 @@
         --footer-link: #3ab84e;
         --footer-link-hover: #4b5563;
         --shadow: white;
+        --header-button: #041608ba;
+        --header-button-hover: rgb(74 222 128 / 0.2)
     }
 
     html.dark {
@@ -35,6 +37,8 @@
         --footer-link: #16a34a;
         --footer-link-hover: #9ca3af;
         --shadow: #04160870;
+        --header-button: white;
+        --header-button-hover: rgb(74 222 128 / 0.2)
 
     }
 
