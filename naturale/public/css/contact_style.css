@@ -1,0 +1,82 @@
+.contact-page section{
+    background: var(--ligth-bg);
+    padding: 80px 20px;
+}
+
+.contact-page .container{
+    max-width: 900px;
+}
+
+.contact-page h2{
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--text-dark);
+    position: relative;
+    padding: 20px 20px;
+}
+
+.contact-page form{
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/*labels */
+.contact-page .form-label{
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/*inputs */
+.contact-page form .form-control, .contact-page form .form-select{
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    padding: 12px 14px;
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+/*input focus */
+.contact-page form .form-control:focus, .contact-page form .form-select:focus{
+    border-color: var(--green-main);
+    box-shadow: 0 0 0 2px rgba(76, 175, 114, 0.15);
+}
+
+/*textarea */
+.contact-page textarea{
+    resize: none;
+}
+
+/*button */
+.contact-page .btn-success{
+    background: var(--green-main);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 28px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-page .btn-success:hover{
+    background: var(--green-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-page .alert{
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px){
+    .contact-page section{
+        padding: 60px 20px;
+    }
+
+    .contact-page h2{
+        font-size: 1.8rem;
+    }
+}
