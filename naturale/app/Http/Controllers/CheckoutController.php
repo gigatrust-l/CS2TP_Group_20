@@ -83,12 +83,13 @@ class CheckoutController extends Controller
         return view('checkout.checkout_details', compact('cart', 'runningTotal', 'totalQuantity', 'addresses')); //returns view page for basket
     }
 
-    public function viewLogin() {
+    public function viewLogin()
+    {
 
         if (auth()->user()) {
             return redirect()->route('checkout.view');
         } else {
-            session()->put('checkout-redirect','true');
+            session()->put('checkout-redirect', 'true');
             return view('checkout.checkout_login');
         }
 
@@ -157,11 +158,13 @@ class CheckoutController extends Controller
             $customer = null;
 
             if ($userId) {
+                $customer = auth()->user()->customer; // access as property to get the model
+
                 $customer = Customer::firstOrCreate(
-                    ['c_uid' => $userId],
+                    ['c_uid' => $customer->c_uid],
                     [
                         'c_email' => $validated['email'],
-                        'c_name' => $validated['name']
+                        'c_name' => $validated['name'],
                     ]
                 );
 

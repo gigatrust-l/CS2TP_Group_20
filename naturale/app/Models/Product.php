@@ -32,6 +32,10 @@ class Product extends Model
             'ingredient_id'
         );
     }
+    public function orderItems()
+{
+    return $this->hasMany(OrderItem::class, 'oi_pid', 'pid');
+}
 
 }
 

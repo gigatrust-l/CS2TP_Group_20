@@ -68,12 +68,26 @@ class User extends Authenticatable implements MustVerifyEmail
     public function addresses()
     {
         return $this->hasManyThrough(
-            Address::class,  
-            Customer::class, 
-            'c_uid',         
-            'ca_cid',        
-            'id',            
-            'cid'            
+            Address::class,
+            Customer::class,
+            'c_uid',
+            'ca_cid',
+            'id',
+            'cid'
+        );
+    }
+
+
+
+    public function reviews()
+    {
+        return $this->hasManyThrough(
+            Review::class,
+            Customer::class,
+            'c_uid',
+            'r_cid',
+            'id',
+            'cid'
         );
     }
 
@@ -85,5 +99,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function isSubscriber()
     {
         return $this->subscribed == '1';
+    }
+
+    public function customer()
+    {
+        return $this->hasOne(Customer::class, 'c_uid', 'id');
     }
 }

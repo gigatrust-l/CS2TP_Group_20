@@ -22,7 +22,7 @@
                             <label class="form-label">Full Name</label>
                             <input type="text" class="form-control @error('name') is-invalid @enderror border div-bg rounded-3"
                                 id="name" name="name"
-                                value="{{ old('name', auth()->user() ? auth()->user()->name : '') }}" required {{auth()->user() ? "disabled" : ''}}>
+                                value="{{ old('name', auth()->user() ? auth()->user()->name : '') }}" required >
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -31,7 +31,7 @@
                             <label class="form-label">Email</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror border div-bg rounded-3"
                                 id="email" name="email"
-                                value="{{ old('email', auth()->user() ? auth()->user()->email : '') }}" required {{auth()->user() ? "disabled" : ''}}>
+                                value="{{ old('email', auth()->user() ? auth()->user()->email : '') }}" required >
                             @error('email')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

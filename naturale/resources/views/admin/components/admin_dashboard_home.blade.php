@@ -86,47 +86,6 @@
 
                 </div>
             </a>
-            <a href="/portal">
-                <div
-                    class="relative aspect-square bg-white shadow-sm sm:rounded-lg border border-gray-100 hover:bg-gray-200 transition ease-in-out duration-150">
-
-                    <div>
-
-                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                            style="width: 80%; height: auto; display: block; margin: auto; text-align:center;">
-                            <style>
-                                .sh3s0 {
-                                    fill: none;
-                                    stroke: #000000;
-                                    stroke-linejoin: round;
-                                    stroke-width: 16
-                                }
-                            </style>
-                            <path id="Shape 1" fill-rule="evenodd" class="sh3s0"
-                                d="m256 243c-47 0-85-38-85-85 0-47 37.99-85 85-85 47 0 85 37.99 85 85 0 47-38 85-85 85z" />
-                            <path id="Shape 2" fill-rule="evenodd" class="sh3s0"
-                                d="m147 206.3v-0.33c-134.33 17.66-96-180 16-123.67l-0.33 0.33c-131-50.33-136.73 151.66-15.67 123.67z" />
-                            <path id="Shape 2 copy" fill-rule="evenodd" class="sh3s0"
-                                d="m365.03 206.3v-0.33c134.55 17.66 96.15-180-16.03-123.67l0.33 0.33c131.22-50.33 136.95 151.66 15.7 123.67z" />
-                            <path id="Shape 3" fill-rule="evenodd" class="sh3s0"
-                                d="m9 350.3h-0.67c-8.33-63 14.34-126.67 68.67-147.33l5-2c-71 34-73.54 92.57-73 149.33z" />
-                            <path id="Shape 3 copy" fill-rule="evenodd" class="sh3s0"
-                                d="m503.45 351.3h0.67c8.33-63-14.33-126.67-68.67-147.33l-5-2c71 34 73.54 92.57 73 149.33z" />
-                            <path id="Shape 4" class="sh3s0"
-                                d="m146.86 438.86c-24.19 0-43.86-16.28-43.86-36.31v-54.46c0-70.18 68.23-105.12 153-105.12 84.77 0 154 34.94 154 105.12v54.46c0 20.03-19.67 36.31-43.86 36.31z" />
-                            <path id="Shape 5" fill-rule="evenodd" class="sh3s0" d="m8.5 350.54v-1.63h94.5v1.63z" />
-                            <path id="Shape 5 copy" fill-rule="evenodd" class="sh3s0"
-                                d="m410.5 352.54v-1.63h94.5v1.63z" />
-                        </svg>
-
-                    </div>
-
-                    <h2
-                        class="text-lg font-bold text-gray-900 ml-6 mt-4 mb-6 tracking-wider absolute bottom-0 left-0 ...">
-                        View Customers</h2>
-
-                </div>
-            </a>
         </div>
 
     </div>

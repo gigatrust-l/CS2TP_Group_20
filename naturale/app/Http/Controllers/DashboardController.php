@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\Address;
+use App\Models\Review;
 
 use Illuminate\Http\Request;
 
@@ -33,11 +34,38 @@ class DashboardController extends Controller
 
             return view('dashboard.dashboard', compact('orders'));
 
+        } else if ($slug == "subscription") {
+
+            $subscription = true;
+
+            return view('dashboard.dashboard', compact('subscription'));
+
         } else if ($slug == "addresses") {
 
             $addresses = auth()->user()->addresses()->get();
 
             return view('dashboard.dashboard', compact('addresses'));
+
+        } else if ($slug == "reviews") {
+            $customer = auth()->user()->customer;
+
+            $reviews = auth()->user()->reviews()
+                ->with('product')
+                ->paginate(10);
+
+            $reviewedProductIds = Review::where('r_cid', $customer->cid)->pluck('r_pid');
+
+            $reviewableProducts = Product::whereHas('orderItems', function ($query) use ($customer) {
+        $query->whereHas('order', function ($q) use ($customer) {
+            $q->where('o_cid', $customer->cid)
+              ->where('o_status', 'completed');
+        });
+    })
+    ->whereNotIn('pid', $reviewedProductIds)
+    ->where('pid', '!=', 0)
+    ->get();
+
+            return view('dashboard.dashboard', compact('reviews', 'reviewableProducts'));
 
         } else {
 
@@ -60,6 +88,13 @@ class DashboardController extends Controller
             $address = Address::findOrFail($order['o_address']);
 
             return view('dashboard.dashboard', compact('order', 'address'));
+
+        } else if ($slug = "reviews") {
+
+            $review = auth()->user()->reviews()->with('product')->where('rid', $id)->firstOrFail();
+
+            return view('dashboard.dashboard', compact('review'));
+
 
         } else {
 
@@ -84,4 +119,18 @@ class DashboardController extends Controller
 
         return redirect()->route('dashboard');
     }
+
+    public function toggle(Request $request)
+    {
+        $user = $request->user();
+        $user->subscribed = !$user->subscribed;
+        $user->save();
+
+        $message = $user->subscribed
+            ? 'You have successfully subscribed to delivery notifications.'
+            : 'You have unsubscribed from delivery notifications.';
+
+        return back()->with('success', $message);
+    }
 }
+

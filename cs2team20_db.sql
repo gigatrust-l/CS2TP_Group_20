@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 22, 2026 at 11:06 PM
+-- Generation Time: Mar 23, 2026 at 01:55 PM
 -- Server version: 8.0.45-0ubuntu0.22.04.1
 -- PHP Version: 8.3.30
 
@@ -110,8 +110,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-4a8690ed9696d1d30e0a5c053f084b3b:timer', 'i:1774209681;', 1774209681),
 ('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4', 'i:1;', 1774215994),
 ('naturale-cache-4d2361ef502131c22b02267cf1e0e8a4:timer', 'i:1774215994;', 1774215994),
-('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3', 'i:1;', 1774218613),
-('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3:timer', 'i:1774218613;', 1774218613),
+('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3', 'i:1;', 1774252190),
+('naturale-cache-53bd79f270fb9c3718bf7fd7df6606e3:timer', 'i:1774252190;', 1774252190),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb', 'i:1;', 1772127810),
 ('naturale-cache-55e84ac4605409a0d510e0c9aa8d11fb:timer', 'i:1772127810;', 1772127810),
 ('naturale-cache-58a529729abdfedf1f6a0f17c1ebdaf4', 'i:1;', 1772836527),
@@ -120,6 +120,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-5c532bc79d018dc9ac38283758c80d6f:timer', 'i:1772127815;', 1772127815),
 ('naturale-cache-5cb73e9308b7942fcb2bed29668c9e8e', 'i:1;', 1774209589),
 ('naturale-cache-5cb73e9308b7942fcb2bed29668c9e8e:timer', 'i:1774209589;', 1774209589),
+('naturale-cache-5d7e3406afc7f2b43f4b88009a3a43f2', 'i:1;', 1774221018),
+('naturale-cache-5d7e3406afc7f2b43f4b88009a3a43f2:timer', 'i:1774221018;', 1774221018),
 ('naturale-cache-5f0448203d901cad8fe0a10c4d09a204', 'i:1;', 1772127814),
 ('naturale-cache-5f0448203d901cad8fe0a10c4d09a204:timer', 'i:1772127814;', 1772127814),
 ('naturale-cache-5f27bf5f16b4ac417e73523f5e1b9088', 'i:1;', 1772127811),
@@ -128,10 +130,14 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-62b0d96531422c2cbc2065104a8eaeef:timer', 'i:1772127815;', 1772127815),
 ('naturale-cache-670985cfc002fc4a9df5477c8e7a3509', 'i:1;', 1773858163),
 ('naturale-cache-670985cfc002fc4a9df5477c8e7a3509:timer', 'i:1773858163;', 1773858163),
-('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0', 'i:1;', 1773931967),
-('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0:timer', 'i:1773931967;', 1773931967),
+('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0', 'i:1;', 1774274080),
+('naturale-cache-7917f5b81a318b8ea79ef3669eb21cc0:timer', 'i:1774274080;', 1774274080),
+('naturale-cache-7a95e4e5e661588257515d6ab3a45760', 'i:1;', 1774252277),
+('naturale-cache-7a95e4e5e661588257515d6ab3a45760:timer', 'i:1774252277;', 1774252277),
 ('naturale-cache-7e40d15013de21fac558fa8c6115d6e2', 'i:1;', 1772127811),
 ('naturale-cache-7e40d15013de21fac558fa8c6115d6e2:timer', 'i:1772127811;', 1772127811),
+('naturale-cache-8419fb10a3f37be7f288e7dbbdec2bbb', 'i:1;', 1774272771),
+('naturale-cache-8419fb10a3f37be7f288e7dbbdec2bbb:timer', 'i:1774272771;', 1774272771),
 ('naturale-cache-8bad034f06425eb724f717c4c98cac56', 'i:1;', 1772127811),
 ('naturale-cache-8bad034f06425eb724f717c4c98cac56:timer', 'i:1772127811;', 1772127811),
 ('naturale-cache-985fbafc6095b8dfe53beb317b6b4a24', 'i:1;', 1772722849),
@@ -206,6 +212,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-eb8a742efb64447d5b7675ca3532d0c8:timer', 'i:1772127813;', 1772127813),
 ('naturale-cache-eee10111ab16f9093b0b5b69fb8a171d', 'i:1;', 1772127809),
 ('naturale-cache-eee10111ab16f9093b0b5b69fb8a171d:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-eg@example.com|86.166.253.99', 'i:1;', 1774252277),
+('naturale-cache-eg@example.com|86.166.253.99:timer', 'i:1774252277;', 1774252277),
 ('naturale-cache-fb96c52aef7191114632fb50691f421c', 'i:1;', 1772121128),
 ('naturale-cache-fb96c52aef7191114632fb50691f421c:timer', 'i:1772121128;', 1772121128),
 ('naturale-cache-fortify.2fa_codes.049b2e43779dda39459f88efe97be3cc', 'i:59093262;', 1772797943),
@@ -228,10 +236,14 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 ('naturale-cache-samuel_dsouza@outlook.com|86.164.209.175:timer', 'i:1774209589;', 1774209589),
 ('naturale-cache-test@example.com|86.166.253.99', 'i:1;', 1773858163),
 ('naturale-cache-test@example.com|86.166.253.99:timer', 'i:1773858163;', 1773858163),
+('naturale-cache-test@test.com|86.166.253.99', 'i:1;', 1774252190),
+('naturale-cache-test@test.com|86.166.253.99:timer', 'i:1774252190;', 1774252190),
 ('naturale-cache-test@test.commm|86.164.209.175', 'i:1;', 1774211907),
 ('naturale-cache-test@test.commm|86.164.209.175:timer', 'i:1774211907;', 1774211907),
 ('naturale-cache-testuser999|88.170.43.205', 'i:1;', 1772127809),
-('naturale-cache-testuser999|88.170.43.205:timer', 'i:1772127809;', 1772127809);
+('naturale-cache-testuser999|88.170.43.205:timer', 'i:1772127809;', 1772127809),
+('naturale-cache-testy@test.com|86.164.209.175', 'i:1;', 1774221018),
+('naturale-cache-testy@test.com|86.164.209.175:timer', 'i:1774221018;', 1774221018);
 
 -- --------------------------------------------------------
 
@@ -579,7 +591,8 @@ INSERT INTO `orders` (`oid`, `o_cid`, `o_address`, `o_status`, `o_price`, `o_tim
 (93, 27, 31, 'Processing', 13.98, '2026-03-22 21:26:18'),
 (94, 27, 32, 'Processing', 13.98, '2026-03-22 21:32:48'),
 (95, 27, 32, 'Processing', 13.98, '2026-03-22 21:33:47'),
-(96, 2, 17, 'Processing', 11.98, '2026-03-22 21:45:57');
+(96, 2, 17, 'Processing', 11.98, '2026-03-22 21:45:57'),
+(97, 13, 16, 'completed', 9.99, '2026-03-23 13:37:30');
 
 -- --------------------------------------------------------
 
@@ -657,7 +670,9 @@ INSERT INTO `order_item` (`oiid`, `oi_oid`, `oi_pid`, `oi_quantity`, `oi_ind_pri
 (100, 95, 1, 1, 8.99),
 (101, 95, 0, 1, 4.99),
 (102, 96, 12, 1, 6.99),
-(103, 96, 0, 1, 4.99);
+(103, 96, 0, 1, 4.99),
+(104, 97, 25, 1, 5),
+(105, 97, 0, 1, 4.99);
 
 -- --------------------------------------------------------
 
@@ -703,7 +718,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, `p_stock`, `p_category`, `p_feature`, `p_ingredients`, `p_instructions`, `p_volume`) VALUES
-(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483628, 'shipping', '', NULL, NULL, NULL),
+(0, 'Shipping', 'Next working day delivery on orders before 12pm', '4.99', '', 2147483627, 'shipping', '', NULL, NULL, NULL),
 (1, 'Curl Bloom Nourishing Mask', 'A deeply hydrating curl-care mask designed to restore softness, enhance natural curl patterns, and lock in long-lasting moisture. It revitalizes dry or fatigued curls while boosting definition and reducing frizz.', '8.99', 'media/media_webp/products/product_1.webp', 27, 'Hair Masks', 'Shea Butter', 'Shea Butter, Aloe Vera, Coconut Oil, Water', 'Apply to clean damp hair. Leave 10 minutes, then rinse.', 200),
 (2, 'Silk Flow Smoothing Mask', 'A rich, smoothing treatment that helps soften rough texture, tame frizz, and enhance natural shine. Ideal for straight or wavy hair needing extra silkiness and manageability.', '8.99', 'media/media_webp/products/product_2.webp', 4, 'Hair Masks', 'Coconut Oil', 'Coconut Oil, Vitamin E, Water, Glycerin', 'Apply to damp hair. Leave 10 minutes and rinse.', 200),
 (3, 'Pure Roots Scalp Detox Mask', 'A purifying mask formulated to cleanse buildup, rebalance the scalp, and help reduce dandruff. It leaves the scalp feeling refreshed, soothed, and invigorated.', '8.99', 'media/media_webp/products/product_3.webp', 0, 'Hair Masks', 'Tea Tree Oil', 'Tea Tree Oil, Peppermint Extract, Aloe Vera, Water', 'Massage into scalp. Leave 5–7 minutes. Rinse well.', 200),
@@ -728,7 +743,7 @@ INSERT INTO `products` (`pid`, `p_name`, `p_description`, `p_price`, `p_image`, 
 (22, 'Gloss Paddle Brush', 'A smoothing paddle brush crafted to detangle, reduce breakage, and create sleek, polished styles. Ideal for medium to long straight or wavy hair.', '4.50', 'media/media_webp/products/product_22.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
 (23, 'Scalp Therapy Massager', 'A comfortable handheld massager that boosts scalp circulation, reduces tension, and helps support healthier hair growth when used regularly.', '4.99', 'media/media_webp/products/product_23.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
 (24, 'Silk Pillow Scrunchies', 'Ultra-soft silk scrunchies designed to prevent breakage, reduce frizz, and help hair retain moisture overnight. Gentle on all hair types.', '6.99', 'media/media_webp/products/product_24.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL),
-(25, 'Heat Shield Comb Set', 'A durable heat-resistant comb set ideal for styling with hot tools. Helps protect hair from damage while ensuring smooth, controlled styling.', '5.00', 'media/media_webp/products/product_25.webp', 49, 'Hair Accessory', '', NULL, NULL, NULL);
+(25, 'Heat Shield Comb Set', 'A durable heat-resistant comb set ideal for styling with hot tools. Helps protect hair from damage while ensuring smooth, controlled styling.', '5.00', 'media/media_webp/products/product_25.webp', 48, 'Hair Accessory', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -755,7 +770,7 @@ CREATE TABLE `reviews` (
 INSERT INTO `reviews` (`rid`, `r_cid`, `r_pid`, `r_rating`, `r_anonymous`, `r_title`, `r_description`, `r_image`, `r_approved`) VALUES
 (1, 1, 1, 5, 0, 'Best Product Ever', 'Yeah uh so I think this is great, like the greatest product ever, I never though I would find something this good but I did.', NULL, 1),
 (2, 13, 1, 2, 1, 'Its ok i guess', 'I dont get all the hype, i am still bald.', NULL, 1),
-(5, 22, 1, 4, 1, 'Really happy with this', 'Took a little while to see results but overall I am pleased with my purchase. Would buy again.', NULL, 1),
+(5, 22, 1, 4, 0, 'Really happy with this kindas', 'Took a little while to see results but overall I am pleased with my purchase. Would buy again. nice if bottle bigger', NULL, 1),
 (6, 22, 1, 3, 1, 'Decent, not amazing', 'Does what it says on the tin. Nothing extraordinary but it gets the job done.', NULL, 1),
 (7, 22, 1, 1, 1, 'Not for me', 'Tried it for two weeks and saw no difference whatsoever. Very disappointed.', NULL, 1),
 (8, 22, 2, 5, 1, 'Absolutely love it', 'I was skeptical at first but this completely won me over. Cannot imagine going without it now.', NULL, 1),
@@ -811,7 +826,8 @@ INSERT INTO `reviews` (`rid`, `r_cid`, `r_pid`, `r_rating`, `r_anonymous`, `r_ti
 (58, 22, 24, 3, 1, 'Take it or leave it', 'It is an okay product. Not something I would rave about but not something I would warn against either.', NULL, 1),
 (59, 22, 25, 5, 1, 'Top quality', 'Really impressed with this. Exactly what I needed and it works perfectly. Great purchase overall.', NULL, 1),
 (60, 22, 25, 3, 1, 'Fairly average', 'It is okay. Does the job but nothing that makes it stand out from similar products I have used.', NULL, 1),
-(61, 22, 25, 1, 1, 'Really disappointed', 'Had high hopes but this let me down. Does not perform as advertised at all. Would not recommend.', NULL, 1);
+(61, 22, 25, 1, 1, 'Really disappointed', 'Had high hopes but this let me down. Does not perform as advertised at all. Would not recommend.', NULL, 1),
+(62, 13, 25, 5, 0, 'Its a comb', 'It does comby things', NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -833,19 +849,15 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('5aiopvaDCAvGbwfFga6zLIH7JUKwLQ0LAzxRhheO', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUVhQdzdLbE5TWEgwU2J1U0xSYnltNTM3cG1TdEVmUkJnQndCWlBhYiI7czo0OiJjYXJ0IjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToyOntzOjM6InVybCI7czo2MjoiaHR0cHM6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrL2NoZWNrb3V0L2RldGFpbHMiO3M6NToicm91dGUiO3M6MTM6ImNoZWNrb3V0LnZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774217512),
-('5o4exYlrUAEpmR6z3AMQrQgGpLgRmQpgZjIfLket', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUkp3WjJGcXVLWkNvNXhmajVrdFdSY2Rod0VpbHBKUmU0UGRLRjFCMiI7czoxNzoiY2hlY2tvdXQtcmVkaXJlY3QiO3M6NDoidHJ1ZSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9sb2dpbiI7czo1OiJyb3V0ZSI7czoxNDoiY2hlY2tvdXQubG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774213679),
-('67tlFiQP0w9Z1tRIhTukDEFclwtnFCMiKfh4S1n6', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMlVNMFg4WFZBSjB3b0hBcWdzNzdFUkZPMEVyQ3pFODM3Yk91QUtQVCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NzM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmdyZWRpZW50cy9hdm9jYWRvLWV4dHJhY3QiO3M6NToicm91dGUiO047fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774220103),
-('78YpUIoMCDdvcKh053VLuMigs1Y4oKge07hjvJYr', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieEUwaG1UN3h3WGhYSUFWc0NMUW9hSFR0T0t1Tjd5WTVFV0pSS3hzZCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9jb21wbGV0ZSI7czo1OiJyb3V0ZSI7czoxNzoiY2hlY2tvdXQuY29tcGxldGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774214859),
-('bFVDQbxzRtx6HxoUGNbCYUlhMVXUgDtP1WJRf8pp', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSTdBUHR3VlBTTjBnd2hsbUF2QkRwNUx3M0JYUDB0UXpnOXd5NHlXRiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjM6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jaGVja291dC9jb21wbGV0ZSI7czo1OiJyb3V0ZSI7czoxNzoiY2hlY2tvdXQuY29tcGxldGUiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774215470),
-('E31korBtjA3JuV0qAJqHJ4ciudXRdYkFeddT2r14', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUk16MU9KWWFmRDE2OEhwMDBkVjFnUk45cWNTR0k4TXVxRmtHYVByMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NjQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cz9uYW1lPXRlc3QiO3M6NToicm91dGUiO3M6ODoicHJvZHVjdHMiO319', 1774220641),
-('G0eQCLuBZY4fHPU2jYbeS0LoK9dV08d9KqwHzn67', NULL, '138.186.117.57', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZkxnaDhKVE1SRG5sd1ZLblQyTDRDRnltaTh5V1laYjdxQ29NVzJYUCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6ODA6Imh0dHBzOi8vd3d3LmNzMnRlYW0yMC5jczI0MTAtd2ViMDFwdm0uYXN0b24uYWMudWsvcHJvZHVjdHM/dHlwZT1IYWlyJTIwQWNjZXNzb3J5IjtzOjU6InJvdXRlIjtzOjg6InByb2R1Y3RzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774214595),
-('ICi60oIZfAtcmUd9RVmC72K0ZfU44oEPgBUE6uac', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicmhpdmZKcUlYQlpuSkQyTnhXa3NpUnFsQzBSYTRIQTZ4cEszTmVsNiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9zaGlwcGluZyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774218705),
-('Juy4lobqclnmWRpu5huKDxG3cWlxkiYZEVxuOVAf', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWDFVZ1JxM09EdU40RDllRndkRjFUUTU5YklqODU3R0tXU0s2QllVcyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9zaGlwcGluZyI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774218643),
-('Syp6fzpYraD2sMFosxU2tqsF0iNsfdJQEIzhzf2e', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoib2k1WDNwRjRMTmhCb29PblA3dGxhUkE4QnpWUEhFU0FHbWE3VTIyQiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jYXJ0IjtzOjU6InJvdXRlIjtzOjk6ImNhcnQudmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774217513),
-('tZfS7elt6SN3BPtPjwU2867WabjnpENCtG8pZV2Q', NULL, '86.164.209.175', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiamt4VHV5RU1PSFdXSlBiOUJ3WWtuS2s5bkczVkx3NVZ2ZGlDb3VIYiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Njk6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9pbmdyZWRpZW50cy9zaGVhLWJ1dHRlciI7czo1OiJyb3V0ZSI7Tjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774219456),
-('w1OB0NqftxJMcTAJjJGNaj76mNBLZzkBkX33110Y', NULL, '94.10.6.45', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUHlvNmdyaVFjVFdIV2VzOUJ4a25DampHZG9TVk8xNEp1M21LUUNuRyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774217192),
-('x94v8ClhVlaWz7sW0arH6CyzSyASLlO37tcQis8H', 1, '86.166.253.99', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMU0ySEhOd29sakpkZGZuc2ZGNmNnZUladHJWSTBTY2h4YnQ2Q0s1QyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo4OiJ0YWItcGFnZSI7TjtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1774218559);
+('95lNQ1nIJQa3jaGx6tnVDAKPZC3IOVOIEIgdL3mG', NULL, '10.79.4.163', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYWROU0hnOFJnNTlrNlF4S0E0cGppMjJCSWhwOGFqVmI1Y2xBRmZaeSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ayI7czo1OiJyb3V0ZSI7czo1OiJpbmRleCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774274008),
+('BsxIyCGBbEMvwmLntdc16wBR1AgLybXJz4DDE4Na', NULL, '34.86.48.109', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicUhvY2kxOXpKaTJ5RnNSc1UwOHFxTWVXQnRPcXR4Y3Y4cmpBcHhDbCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrIjtzOjU6InJvdXRlIjtzOjU6ImluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774274026),
+('d7EQEmEfz7hsyoUt8kMoIFacKgQlDtEITKY9wauM', 20, '10.76.248.3', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibmFXVGJvYnR4UkZsa3ZReHFBS1NLU29HUjR4S1J3MGFkUjBoZVp3dCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTU6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9kYXNoYm9hcmQiO3M6NToicm91dGUiO3M6OToiZGFzaGJvYXJkIjt9czo4OiJ0YWItcGFnZSI7TjtzOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyMDt9', 1774274081),
+('DMxvQ4ls56Fp65F6VM9rFlNGI0hWB0m6OySxhV6R', NULL, '10.76.136.112', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaUY2dmhxendLd2NWUnVWMzVob3ZMZ255TEdZbWoyckxMSjhORmhyMSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTQ6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cyI7czo1OiJyb3V0ZSI7czo4OiJwcm9kdWN0cyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774270401),
+('dy8YyjgAyIz3wI6BjXxzuE3LRz3QlcAmoQhmCNxU', NULL, '10.76.248.3', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTUwyTU83MGxOQ25xSTlVWU1iQW1zeWRaajNRd05oQVB6NTdnMExvUCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jYXJ0IjtzOjU6InJvdXRlIjtzOjk6ImNhcnQudmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774272816),
+('GaGqZrDWiLsGvZfEIMcbFle7xumaPMkoDxWobFrw', NULL, '10.76.248.3', 'Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUE9USERBejV5UXhsRk5ieWtySkNlTVNvQVNWa0JyOEVrdTF0RnZzZyI7czo0OiJjYXJ0IjthOjA6e31zOjk6Il9wcmV2aW91cyI7YToyOntzOjM6InVybCI7czo2MjoiaHR0cHM6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrL2NoZWNrb3V0L2RldGFpbHMiO3M6NToicm91dGUiO3M6MTM6ImNoZWNrb3V0LnZpZXciO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1774272815),
+('iv9r4aQ07md4YE0OW4cGpTkLre5H5PGYndrexZuw', NULL, '34.86.48.109', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieGpHN1NSeUw3YmFhRkgzTkcyVU8zM0xxZjBRNGx5TnNaa1dPbTAyeCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NDQ6Imh0dHA6Ly9jczJ0ZWFtMjAuY3MyNDEwLXdlYjAxcHZtLmFzdG9uLmFjLnVrIjtzOjU6InJvdXRlIjtzOjU6ImluZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774274026),
+('QswpgelVucyQ37AimyRawnYEa2rkiFFyDynGhIiJ', NULL, '213.229.116.131', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTnczaEd6OEMwZzVra3EwTFlCTXM5dE5ObVIzdWJIT0dneTBuTWVscyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTY6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9wcm9kdWN0cy8xIjtzOjU6InJvdXRlIjtzOjEzOiJwcm9kdWN0cy5zaG93Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1774268351),
+('uFDGIybn0mEmX7GnqPHUdun6nHKMYDWPa2GjnHHs', NULL, '94.10.6.45', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:148.0) Gecko/20100101 Firefox/148.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUTMwR2dpa01LNWtFTUZMRDBwUjE3T3laNE5CN29OMUtZUHFGNDRUMSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6NTA6Imh0dHBzOi8vY3MydGVhbTIwLmNzMjQxMC13ZWIwMXB2bS5hc3Rvbi5hYy51ay9jYXJ0IjtzOjU6InJvdXRlIjtzOjk6ImNhcnQudmlldyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1774268428);
 
 -- --------------------------------------------------------
 
@@ -875,19 +887,19 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `google_id`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`, `isAdmin`, `subscribed`) VALUES
-(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'jkaZANrAsJZ431Lgcq0smEryL2QSEzCPWQrpcQb6Qs36Uzrav9x84fl4A3VT', '2025-10-21 18:33:32', '2026-03-06 22:40:50', 'customer', 1),
+(1, 'Testy User', NULL, 'test@test.com', '2026-02-16 18:49:11', '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, 'mHwOI5URtULNTM8nZnoI0UVCnoJO1myszjCwTMEsBj8mOu8Ptzm0TsFUke1k', '2025-10-21 18:33:32', '2026-03-23 13:53:45', 'customer', 0),
 (2, 'Ethan', NULL, '240090270@aston.ac.uk', '2026-02-16 19:07:46', '$2y$12$nSCXPsSoiOggti49.uwxLOcrXDGHKOE1Kkjl0f12aYnjUYhjuQV9u', 'eyJpdiI6Imozb25YV1ZGVUdYelpXWlp3aXZMdnc9PSIsInZhbHVlIjoiOWRNVnVxTUpsZjhOWG1ZbXpDdFFCRVhpRmgxK1RxT2xjNjM5YzlaSjBCcz0iLCJtYWMiOiJjY2JkYjU0ZTBkODMzMGE5MTZhY2NmZGM1NDA5ZWI0YTRjMjkyMzM0NjNlYTk5OTFkNWRlZTkwODIwZjk4Njg3IiwidGFnIjoiIn0=', 'eyJpdiI6ImkwRUtMY2t3VzVCdUIzUHB6SnJLRGc9PSIsInZhbHVlIjoiNW5UT29KWjQxRktXbXVGdkRXUGdDZ3JkUkgwVVordzNFTE5odWhmODRMUGd0ME5QS3VYM0xNOXhuVFNTcjB6QmJBM2NjK2ZhVzNJUXBVdVE5SjZ5VXRBZ2hrb3M5bDZoa3hJYTYwMkxyaUhHa3lWbFFHZHh4L0lQOVpvYmtwMGZLN2VVK0UzZ21hcElnT25xSzlJZTgzRWw0alZFaW9DdWtSMzExaG5qc0NLblkvTlVTMzVyVTRjWDd4STlkUW53QUNMSW5kYVZOR3lTRXJUTXh1eDVmS3AyNzF3SEU1b0srN1lBVnp1dzhudm5zSHJNVFYrdnQwUEN3NEd6eGdGd1EzOGJBQVJHQjYwSUo5cVNiZWZiMXc9PSIsIm1hYyI6ImNiZGI2YzVlN2EwOWM1MGVhOTA4MGFjNGI4YWUwOTUxNWZmOTM5Nzg4ZjQzNDQ2MTU4NGQ3M2I1YTUzODgxZDIiLCJ0YWciOiIifQ==', '2026-02-17 21:45:27', NULL, '2025-11-24 18:32:09', '2026-02-19 14:58:25', 'customer', 0),
 (3, 'ifza', NULL, 'ifza.1234@icloud.com', NULL, '$2y$12$2mgsNRobfpPUgPIxfb2U8.QBhL2dnZqu.kqRM4Yb3n6lymv16onHe', NULL, NULL, NULL, NULL, '2025-11-30 00:03:40', '2025-11-30 00:03:40', 'customer', 0),
-(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$ZTQ0wtIvGG.PWFT144cE8eFpEE62ZAXlxjJhrrxFLlYHWLfIq666O', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer', 0),
+(4, 'Hezekiah Calub', NULL, '230159329@aston.ac.uk', NULL, '$2y$12$zc.5yqf0XUJUqLg11a2kdeqrT778BowGb8jva0IPs5u2QecXqtXmO', NULL, NULL, NULL, NULL, '2025-12-05 11:47:53', '2025-12-05 11:48:15', 'customer', 0),
 (5, 'Emma Smith', NULL, 'emmasmith@example.com', NULL, '$2y$12$r7qn6N2jZ4nePwG.KZjjJOEUbLgbFuPArpogrdD7.m8XjLR5/Nutq', NULL, NULL, NULL, NULL, '2026-01-26 15:53:46', '2026-01-26 15:53:46', 'customer', 0),
 (6, 'Kanban Default', NULL, 'asd@asd.sad', NULL, '$2y$12$UnVuf3pNrFA8VD4dtzgFP.uCunCUnXz457wTsFjTs9uUIKH7TQGR2', NULL, NULL, NULL, NULL, '2026-02-10 13:21:42', '2026-02-10 13:21:42', 'customer', 0),
-(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-02-12 15:15:02', 'customer', 0),
+(7, 'Headunit', '102327321934308899532', 'headunitvan666@gmail.com', NULL, '$2y$12$Eu0e8UcUxljQ1eA7ON1oBulcgO/s4s6RMINmXRaOaLOO6UT3UX54i', NULL, NULL, NULL, NULL, '2026-02-12 15:15:02', '2026-03-23 13:52:04', 'customer', 1),
 (8, 'Sharon D\'souza', '112704981429629716778', 'shadso2012@gmail.com', NULL, '$2y$12$qRq/2p7nkRvR6zl12Fp2deVWT7DEfDsasQ6LlU6wj27cw7/YNdyNa', NULL, NULL, NULL, NULL, '2026-02-12 15:43:46', '2026-02-12 15:43:46', 'customer', 0),
 (9, 'Naturale Support', '108256848760918538326', 'naturalehelpdesk@gmail.com', '2026-02-17 22:03:25', '$2y$12$brrMzJupH/JKYvvPNhTqLuqnnyZp4vThYrjGMHymN8TbO5E.zuYuC', NULL, NULL, NULL, NULL, '2026-02-16 20:00:42', '2026-02-16 20:00:42', 'admin', 1),
 (10, 'HW786LEGEND', '112451828911674993144', 'hw786legend@gmail.com', NULL, '$2y$12$K9RqvNJrQhBRpQcFDNWzI.hsc1xG1fKyXtrhv7.XW2zix.8K8QMZ6', NULL, NULL, NULL, NULL, '2026-02-19 15:22:36', '2026-02-19 15:22:36', 'customer', 0),
 (11, 'Samuel D\'souza', '101710726500306880169', 'samuel_dsouza@outlook.com', NULL, '$2y$12$r5pNN2wD223JDvUsznOyHu4y.7K7TkriTLmFWhVWTYUcrBfNB0.Ri', NULL, NULL, NULL, NULL, '2026-03-13 13:17:16', '2026-03-13 13:17:16', 'customer', 0),
 (12, 'testroute', NULL, 'testroute@test.com', '2026-03-18 22:13:07', '$2y$12$vXWzecrbvLQZRoUmINtwWuyGsz/qkyYo.c6p1i001kAzpuzaVrkG6', NULL, NULL, NULL, NULL, '2026-03-18 22:12:54', '2026-03-18 22:12:54', 'admin', 0),
-(19, 'te', NULL, 'aa@aa.co', NULL, '$2y$12$JVwWlUrAqa2TQ.4kEuLiS.CoIdjteKXPDQ8IvG6Rk3iM7VPkujqDK', NULL, NULL, NULL, NULL, '2026-03-22 21:24:13', '2026-03-22 21:24:13', 'customer', 0);
+(20, 'test', NULL, 'test@test.comm', NULL, '$2y$12$7IR24G0uQxMD0YLSQcKkce8JZJIsmz4O.1xtvIPBHcLZnlxQ/ZOTa', NULL, NULL, NULL, NULL, '2026-03-23 13:54:40', '2026-03-23 13:54:40', 'customer', 0);
 
 --
 -- Indexes for dumped tables
@@ -1077,13 +1089,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `oid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `order_item`
 --
 ALTER TABLE `order_item`
-  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `oiid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -1095,13 +1107,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `rid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `rid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables

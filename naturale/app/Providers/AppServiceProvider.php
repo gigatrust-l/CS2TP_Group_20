@@ -23,8 +23,6 @@ class AppServiceProvider extends ServiceProvider
         	
         }
 
-        Paginator::useBootstrapFive();
-
         $this->app->singleton(LoginResponseContract::class, LoginResponse::class);
         
     }

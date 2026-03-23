@@ -28,11 +28,9 @@
                 </div>
             @endif
 
-            {{-- Display STOCK if 'products' is passed --}}
             @if(isset($products))
             @include('dashboard/components/dashboard_products')
 
-            {{-- Display ORDERS if 'orders' is passed --}}
             @elseif(isset($orders))
             @include('dashboard/components/dashboard_orders')
 
@@ -44,15 +42,27 @@
 
             @include('dashboard/components/dashboard_addresses')
 
+            @elseif(isset($reviews))
+
+            @include('dashboard/components/dashboard_reviews')
+
+            @elseif(isset($review))
+
+            @include('dashboard/components/dashboard_review')
+
             @elseif(isset($order))
 
             @include('dashboard/components/dashboard_order')
+
+            @elseif(isset($subscription))
+
+            @include('dashboard/components/dashboard_subscribe')
+
 
             @elseif(isset($address))
 
             @include('dashboard/components/dashboard_address')
 
-            {{-- Display HOME if no data is passed --}}
             @else
             @include('dashboard/components/dashboard_home')
             @endif
