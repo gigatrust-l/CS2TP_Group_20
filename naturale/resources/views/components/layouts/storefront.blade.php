@@ -39,6 +39,8 @@
     <div class="w-full">
         {{ $slot }}
     </div>
+    
+    @include('components/chatbot_button')
 
 
     @include('components/footer')
